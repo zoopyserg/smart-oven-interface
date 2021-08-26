@@ -18,16 +18,16 @@ namespace Oven_Interface
         {
             InitializeComponent();
 
-            ISerialConnection connection = GetConnection(this.label8);
+            ISerialConnection connection = GetConnection(this.labelConnectionStatus);
 
             if (connection != null)
                 using (var session = new ArduinoSession(connection))
-                    PerformBasicTest(session, this.label9);
+                    PerformBasicTest(session, this.labelLastCommandStatus);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -63,21 +63,21 @@ namespace Oven_Interface
         private void button7_Click(object sender, EventArgs e)
         {
             // Turn On 13th Pin
-            ISerialConnection connection = GetConnection(this.label8);
+            ISerialConnection connection = GetConnection(this.labelConnectionStatus);
 
             if (connection != null)
                 using (var session = new ArduinoSession(connection))
-                    TurnOn(session, this.label9);
+                    TurnOn(session, this.labelLastCommandStatus);
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             // Turn Off 13th Pin
-            ISerialConnection connection = GetConnection(this.label8);
+            ISerialConnection connection = GetConnection(this.labelConnectionStatus);
 
             if (connection != null)
                 using (var session = new ArduinoSession(connection))
-                    TurnOff(session, this.label9);
+                    TurnOff(session, this.labelLastCommandStatus);
         }
 
         private static void TurnOn(IFirmataProtocol session, Label SignalStatusLabel)
@@ -92,6 +92,42 @@ namespace Oven_Interface
             session.SetDigitalPinMode(13, PinMode.DigitalOutput);
             session.SetDigitalPin(13, false);
             SignalStatusLabel.Text = "Command sent: Light off (pin 13)";
+        }
+
+        private static void DisplayPortCapabilities()
+        {
+            using (var session = new ArduinoSession(new EnhancedSerialConnection("COM3", SerialBaudRate.Bps_57600)))
+            {
+                BoardCapability cap = session.GetBoardCapability();
+                Console.WriteLine();
+                Console.WriteLine("Board Capability:");
+
+                foreach (var pin in cap.Pins)
+                {
+                    Console.WriteLine("Pin {0}: Input: {1}, Output: {2}, Analog: {3}, Analog-Res: {4}, PWM: {5}, PWM-Res: {6}, Servo: {7}, Servo-Res: {8}, Serial: {9}, Encoder: {10}, Input-pullup: {11}",
+                        pin.PinNumber,
+                        pin.DigitalInput,
+                        pin.DigitalOutput,
+                        pin.Analog,
+                        pin.AnalogResolution,
+                        pin.Pwm,
+                        pin.PwmResolution,
+                        pin.Servo,
+                        pin.ServoResolution,
+                        pin.Serial,
+                        pin.Encoder,
+                        pin.InputPullup);
+                }
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            chartTemperatures.Series["Temperature"].Points.AddXY(0, 180);
+            chartTemperatures.Series["Temperature"].Points.AddXY(10, 240);
+            chartTemperatures.Series["Temperature"].Points.AddXY(40, 100);
+            chartTemperatures.Series["Temperature"].Points.AddXY(60, 20);
+            chartTemperatures.Series["Temperature"].Points.AddXY(80, 0);
         }
     }
 }
