@@ -12,17 +12,26 @@ using Solid.Arduino.Firmata;
 
 namespace Oven_Interface
 {
-    public partial class Form1 : Form
+    public partial class Dashboard : Form
     {
-        public Form1()
+        List<Bread> breads = new List<Bread>();
+
+        public Dashboard()
         {
             InitializeComponent();
+
+            UpdateBinding();
 
             ISerialConnection connection = GetConnection(this.labelConnectionStatus);
 
             if (connection != null)
                 using (var session = new ArduinoSession(connection))
                     PerformBasicTest(session, this.labelLastCommandStatus);
+        }
+        private void UpdateBinding()
+        {
+            breadsListBox.DataSource = breads;
+            breadsListBox.DisplayMember = "Name";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -128,6 +137,25 @@ namespace Oven_Interface
             chartTemperatures.Series["Temperature"].Points.AddXY(40, 100);
             chartTemperatures.Series["Temperature"].Points.AddXY(60, 20);
             chartTemperatures.Series["Temperature"].Points.AddXY(80, 0);
+        }
+
+        private void showBreadsButton_Click(object sender, EventArgs e)
+        {
+            DataAccess db = new DataAccess();
+
+            breads = db.GetBreads();
+
+            UpdateBinding();
+        }
+
+        private void createBread_Click(object sender, EventArgs e)
+        {
+            DataAccess db = new DataAccess();
+
+            db.InsertBread(newBreadNameTextBox.Text);
+            newBreadNameTextBox.Text = "";
+            breads = db.GetBreads();
+            UpdateBinding();
         }
     }
 }
