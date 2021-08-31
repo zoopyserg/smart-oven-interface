@@ -14,7 +14,7 @@ namespace Oven_Interface
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("OvenDataDB")))
             {
-                return connection.Query<Bread>($"select * from Breads").ToList();
+                return connection.Query<Bread>($"select * from dbo.Breads").ToList();
             }
         }
 
@@ -22,7 +22,7 @@ namespace Oven_Interface
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("OvenDataDB")))
             {
-                return connection.Query<Bread>($"dbo.Breads_GetByID @ID", new { ID = id } ).ToList();
+                return connection.Query<Bread>($"dbo.spBreads_GetById @ID", new { ID = id } ).ToList();
             }
         }
 
@@ -32,7 +32,7 @@ namespace Oven_Interface
             {
                 List<Bread> breads = new List<Bread>();
                 breads.Add(new Bread { Name = name });
-                connection.Execute("dbo.Breads_Insert @Name", breads);
+                connection.Execute("dbo.spBreads_Insert @Name", breads);
             }
         }
     }

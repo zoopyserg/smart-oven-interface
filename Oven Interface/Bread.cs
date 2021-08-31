@@ -8,9 +8,8 @@ namespace Oven_Interface
 {
     public class Bread
     {
-        public int id { get; set; }
+        public int Id { get; }
 
         public string Name { get; set; }
-         
     }
 }
