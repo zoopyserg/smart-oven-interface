@@ -1,0 +1,4 @@
+﻿CREATE TYPE [dbo].[BasicUDT] AS TABLE
+(
+   Name NVARCHAR(100)
+)

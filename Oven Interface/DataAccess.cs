@@ -14,7 +14,7 @@ namespace Oven_Interface
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("OvenDataDB")))
             {
-                return connection.Query<Bread>($"select * from dbo.Breads").ToList();
+                return connection.Query<Bread>($"select * from Breads").ToList();
             }
         }
 

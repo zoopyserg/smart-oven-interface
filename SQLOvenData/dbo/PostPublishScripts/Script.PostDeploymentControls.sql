@@ -10,6 +10,7 @@
 --------------------------------------------------------------------------------------
 */
 
+/*
 IF NOT EXISTS (SELECT * FROM dbo.Controls where Name = 'Температура') 
 BEGIN
   INSERT INTO dbo.Controls (Name) VALUES ('Температура');
@@ -24,3 +25,4 @@ IF NOT EXISTS (SELECT * FROM dbo.Controls where Name = 'Тиск Пару')
 BEGIN
   INSERT INTO dbo.Controls (Name) VALUES ('Тиск Пару');
 END
+*/
