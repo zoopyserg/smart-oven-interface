@@ -2,7 +2,8 @@
 	AS 
 	SELECT [b].[Id] AS BookId, 
 	       [b].[Name] AS BookName, 
-		   [c].[Id] AS ControlId, 
-		   [c].[Name] AS ControlName
+		   [t].[Id] AS ControlId, 
+		   [t].[Minute] AS TemperaturePointMinute,
+		   [t].[Value] AS TemperaturePointValue
 	FROM dbo.Breads b
-	LEFT JOIN dbo.Controls c on b.Id = c.BreadId
+	LEFT JOIN dbo.TemperaturePoints t on b.Id = t.BreadId

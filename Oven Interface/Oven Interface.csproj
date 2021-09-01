@@ -63,9 +63,10 @@
     </Compile>
     <Compile Include="DataAccess.cs" />
     <Compile Include="Helper.cs" />
-    <Compile Include="Models\Control.cs" />
     <Compile Include="Models\FullBread.cs" />
-    <Compile Include="Models\Point.cs" />
+    <Compile Include="Models\PressurePoint.cs" />
+    <Compile Include="Models\ValvePoint.cs" />
+    <Compile Include="Models\TemperaturePoint.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Dashboard.resx">

@@ -8,8 +8,6 @@ namespace Oven_Interface.Models
 {
     class FullBread : Bread
     {
-        public int Id { get; set; }
-        
         public List<TemperaturePoint> TemperaturePoints { get; set; }
 
         public List<PressurePoint> PressurePoints { get; set; }

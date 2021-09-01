@@ -45,16 +45,16 @@ namespace Oven_Interface
             }
         }
 
-        public FullBread GetBreadWithPoints(int id)
+        public List<FullBread> GetBreadWithPoints(int id)
         {
-            FullBread bread = null;
-            List<FullBread> breads = null;
-            List<TemperaturePoint> temperaturePoints = null;
-            List<PressurePoint> pressurePoints = null;
-            List<ValvePoint> valvePoints = null;
-
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.GetConnectionString()))
             {
+                FullBread bread = null;
+                List<FullBread> breads = null;
+                List<TemperaturePoint> temperaturePoints = null;
+                List<PressurePoint> pressurePoints = null;
+                List<ValvePoint> valvePoints = null;
+
                 var parameters = new
                 {
                     ID = id
@@ -85,9 +85,9 @@ namespace Oven_Interface
                 // trans.Rollback();
                 // plus some logging code
                 // something like that.
-            }
 
-            return bread;
+                return breads;
+            }
         }
     }
 }
