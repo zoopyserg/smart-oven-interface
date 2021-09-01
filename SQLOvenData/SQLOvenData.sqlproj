@@ -79,10 +79,9 @@
     <RefactorLog Include="dbo\SQLOvenData.refactorlog" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="dbo\PublishProfiles\SQLOvenData.publish.xml" />
-    <None Include="SQLOvenData.publish.xml" />
+    <PostDeploy Include="dbo\PostPublishScripts\Script.PostDeploymentControls.sql" />
   </ItemGroup>
   <ItemGroup>
-    <PostDeploy Include="dbo\PostPublishScripts\Script.PostDeploymentControls.sql" />
+    <None Include="SQLOvenData.publish.xml" />
   </ItemGroup>
 </Project>

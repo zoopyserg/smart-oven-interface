@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Oven_Interface.Models;
 using Solid.Arduino;
 using Solid.Arduino.Firmata;
 
@@ -14,7 +15,8 @@ namespace Oven_Interface
 {
     public partial class Dashboard : Form
     {
-        List<Bread> breads = new List<Bread>();
+        List<FullBread> breads = new List<FullBread>();
+        List<TemperaturePoint> temperaturePoints = new List<TemperaturePoint>();
 
         public Dashboard()
         {
@@ -32,6 +34,28 @@ namespace Oven_Interface
         {
             programsListBox.DataSource = breads;
             programsListBox.DisplayMember = "Name";
+
+            if ((breads.Count > 0) && (programsListBox.SelectedIndex > -1))
+            {
+                DataAccess db = new DataAccess();
+                temperaturePoints = db.GetTemperaturePoints(breads[programsListBox.SelectedIndex].Id);
+            }
+
+            temperaturePointsListBox.DataSource = temperaturePoints;
+            temperaturePointsListBox.DisplayMember = "Value";
+
+            chartTemperatures.DataSource = temperaturePoints;
+            chartTemperatures.Series[0].XValueMember = "Minute";
+            chartTemperatures.Series[0].YValueMembers = "Value";
+
+            chartTemperatures.ChartAreas[0].AxisX.Title = "Час (хв)";
+            chartTemperatures.ChartAreas[0].AxisY.Title = "Температура (С)";
+
+            chartTemperatures.ChartAreas[0].AxisX.Minimum = 0;
+            chartTemperatures.ChartAreas[0].AxisY.Minimum = 0;
+
+            chartTemperatures.DataBind();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -50,9 +74,9 @@ namespace Oven_Interface
             ISerialConnection connection = EnhancedSerialConnection.Find();
 
             if (connection == null)
-                ConnectionStatusLabel.Text = "No connection found. Make shure your Arduino board is attached to a USB port.";
+                ConnectionStatusLabel.Text = "Немає з'єднання з контролером. Перевірте, що Arduino включений в USB порт.";
             else
-                ConnectionStatusLabel.Text = $"Connected to port {connection.PortName} at {connection.BaudRate} baud.";
+                ConnectionStatusLabel.Text = $"Arduino контролер підключений до порта {connection.PortName}.";
 
             return connection;
         }
@@ -60,13 +84,11 @@ namespace Oven_Interface
         private static void PerformBasicTest(IFirmataProtocol session, Label SignalStatusLabel)
         {
             var firmware = session.GetFirmware();
-            /// Console.WriteLine($"Firmware: {firmware.Name} version {firmware.MajorVersion}.{firmware.MinorVersion}");
             var protocolVersion = session.GetProtocolVersion();
-            /// Console.WriteLine($"Firmata protocol version {protocolVersion.Major}.{protocolVersion.Minor}");
 
             session.SetDigitalPinMode(13, PinMode.DigitalOutput);
             session.SetDigitalPin(13, true);
-            SignalStatusLabel.Text = "Command sent: Light on (pin 13)";
+            SignalStatusLabel.Text = "13й пін включено";
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -93,14 +115,14 @@ namespace Oven_Interface
         {
             session.SetDigitalPinMode(13, PinMode.DigitalOutput);
             session.SetDigitalPin(13, true);
-            SignalStatusLabel.Text = "Command sent: Light on (pin 13)";
+            SignalStatusLabel.Text = "13й пін включено";
         }
 
         private static void TurnOff(IFirmataProtocol session, Label SignalStatusLabel)
         {
             session.SetDigitalPinMode(13, PinMode.DigitalOutput);
             session.SetDigitalPin(13, false);
-            SignalStatusLabel.Text = "Command sent: Light off (pin 13)";
+            SignalStatusLabel.Text = "13й пін виключено";
         }
 
         private static void DisplayPortCapabilities()
@@ -132,11 +154,10 @@ namespace Oven_Interface
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            chartTemperatures.Series["Temperature"].Points.AddXY(0, 180);
-            chartTemperatures.Series["Temperature"].Points.AddXY(10, 240);
-            chartTemperatures.Series["Temperature"].Points.AddXY(40, 100);
-            chartTemperatures.Series["Temperature"].Points.AddXY(60, 20);
-            chartTemperatures.Series["Temperature"].Points.AddXY(80, 0);
+            DataAccess db = new DataAccess();
+            breads = db.GetBreads();
+            // how do I get the ID of a selected bread?
+            UpdateBinding();
         }
 
         private void showBreadsButton_Click(object sender, EventArgs e)
@@ -144,7 +165,7 @@ namespace Oven_Interface
             DataAccess db = new DataAccess();
 
             breads = db.GetBreads();
-
+            
             UpdateBinding();
         }
 
@@ -158,9 +179,45 @@ namespace Oven_Interface
             UpdateBinding();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void programsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            UpdateBinding();
+        }
 
+        private void createTemperatureButton_Click(object sender, EventArgs e)
+        {
+            DataAccess db = new DataAccess();
+
+            int persistedIndex = programsListBox.SelectedIndex;
+            db.InsertTemperaturePoint(breads[persistedIndex].Id, Int32.Parse(newTemperaturePointMinuteTextBox.Text), Int32.Parse(newTemperaturePointValueTextBox.Text));
+            newTemperaturePointMinuteTextBox.Text = "";
+            newTemperaturePointValueTextBox.Text = "";
+            breads = db.GetBreads();
+            UpdateBinding();
+            programsListBox.SelectedIndex = persistedIndex;
+        }
+
+        private void buttonDeleteProgram_Click(object sender, EventArgs e)
+        {
+            DataAccess db = new DataAccess();
+            db.DeleteProgram(breads[programsListBox.SelectedIndex].Id);
+            breads = db.GetBreads();
+            UpdateBinding();
+        }
+
+        private void deleteTemperaturePointButton_Click(object sender, EventArgs e)
+        {
+            int persistedIndex = programsListBox.SelectedIndex;
+            DataAccess db = new DataAccess();
+            db.DeleteTemperaturePoint(temperaturePoints[temperaturePointsListBox.SelectedIndex].Id);
+            breads = db.GetBreads();
+            UpdateBinding();
+            programsListBox.SelectedIndex = persistedIndex;
+        }
+
+        private void showTemperaturePointsButton_Click(object sender, EventArgs e)
+        {
+            UpdateBinding();
         }
     }
 }

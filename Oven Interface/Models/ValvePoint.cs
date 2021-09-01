@@ -8,7 +8,7 @@ namespace Oven_Interface.Models
 {
     public class ValvePoint
     {
-        public int Id { get; }
+        public int Id { get; set; }
 
         public int Minute { get; set; }
         

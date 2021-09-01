@@ -11,11 +11,11 @@ namespace Oven_Interface
 {
     public class DataAccess
     {
-        public List<Bread> GetBreads()
+        public List<FullBread> GetBreads()
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.GetConnectionString()))
             {
-                return connection.Query<Bread>($"select * from Breads").ToList();
+                return connection.Query<FullBread>($"SELECT Id, Name FROM Breads").ToList();
             }
         }
 
@@ -42,6 +42,14 @@ namespace Oven_Interface
                 int newIdentity = parameters.Get<int>("@Id");
 
                 return newIdentity;
+            }
+        }
+
+        internal List<TemperaturePoint> GetTemperaturePoints(int breadId)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.GetConnectionString()))
+            {
+                return connection.Query<TemperaturePoint>($"SELECT Id, Minute, Value FROM TemperaturePoints WHERE BreadId = @BreadId ORDER BY Minute ASC", new { BreadId = breadId }).ToList();
             }
         }
 
@@ -87,6 +95,42 @@ namespace Oven_Interface
                 // something like that.
 
                 return breads;
+            }
+        }
+
+        public int InsertTemperaturePoint(int breadId, int minute, int value)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.GetConnectionString()))
+            {
+                var parameters = new DynamicParameters();
+                parameters.Add("@Id", 0, DbType.Int32, ParameterDirection.Output);
+                parameters.Add("@Minute", minute);
+                parameters.Add("@Value", value);
+                parameters.Add("@BreadId", breadId);
+
+                string sql = $@"insert into dbo.TemperaturePoints (Minute, Value, BreadId) values (@Minute, @Value, @BreadId); select @Id = @@IDENTITY";
+
+                connection.Execute(sql, parameters);
+
+                int newIdentity = parameters.Get<int>("@Id");
+
+                return newIdentity;
+            }
+        }
+
+        public void DeleteProgram(int breadId)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.GetConnectionString()))
+            {
+                connection.Query($"DELETE FROM TemperaturePoints WHERE BreadId = @ID; DELETE FROM Breads WHERE Id = @ID;", new { ID = breadId });
+            }
+        }
+
+        public void DeleteTemperaturePoint(int temperatutrePointId)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.GetConnectionString()))
+            {
+                connection.Query($"DELETE FROM TemperaturePoints WHERE Id = @ID", new { ID = temperatutrePointId });
             }
         }
     }
