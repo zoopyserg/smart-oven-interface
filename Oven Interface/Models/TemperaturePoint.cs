@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Oven_Interface.Models
 {
-    class Point
+    class TemperaturePoint
     {
         public int Id { get; }
 
@@ -15,7 +15,5 @@ namespace Oven_Interface.Models
         public int Value { get; set; }
 
         public int BreadId { get; set; }
-
-        public int ControlId { get; set; }
     }
 }

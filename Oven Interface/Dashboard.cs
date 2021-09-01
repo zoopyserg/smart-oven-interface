@@ -30,8 +30,8 @@ namespace Oven_Interface
         }
         private void UpdateBinding()
         {
-            breadsListBox.DataSource = breads;
-            breadsListBox.DisplayMember = "Name";
+            programsListBox.DataSource = breads;
+            programsListBox.DisplayMember = "Name";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -152,10 +152,15 @@ namespace Oven_Interface
         {
             DataAccess db = new DataAccess();
 
-            db.InsertBread(newBreadNameTextBox.Text);
-            newBreadNameTextBox.Text = "";
+            db.InsertBread(newProgramNameTextBox.Text);
+            newProgramNameTextBox.Text = "";
             breads = db.GetBreads();
             UpdateBinding();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

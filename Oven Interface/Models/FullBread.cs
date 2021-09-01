@@ -10,6 +10,10 @@ namespace Oven_Interface.Models
     {
         public int Id { get; set; }
         
-        public Point SomePoint { get; set; }
+        public List<TemperaturePoint> TemperaturePoints { get; set; }
+
+        public List<PressurePoint> PressurePoints { get; set; }
+
+        public List<ValvePoint> ValvePoints { get; set; }
     }
 }

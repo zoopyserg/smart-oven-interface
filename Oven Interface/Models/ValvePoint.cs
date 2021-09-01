@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace Oven_Interface.Models
 {
-    class Control
+    class ValvePoint
     {
         public int Id { get; }
 
-        public string Name { get; set; }
+        public int Minute { get; set; }
+        
+        public int Value { get; set; }
+
+        public int BreadId { get; set; }
     }
 }

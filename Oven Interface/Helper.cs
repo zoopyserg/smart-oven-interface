@@ -9,7 +9,7 @@ namespace Oven_Interface
 {
     public static class Helper
     {
-        public static string CnnVal(string name)
+        public static string GetConnectionString(string name = "OvenDataDB")
         {
             return ConfigurationManager.ConnectionStrings[name].ConnectionString;
         }
