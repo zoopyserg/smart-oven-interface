@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Oven_Interface.Models
 {
-    class FullBread : Bread
+    public class FullBread : Bread
     {
         public List<TemperaturePoint> TemperaturePoints { get; set; }
 

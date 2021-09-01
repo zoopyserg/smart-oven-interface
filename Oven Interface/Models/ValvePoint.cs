@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Oven_Interface.Models
 {
-    class ValvePoint
+    public class ValvePoint
     {
         public int Id { get; }
 
