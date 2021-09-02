@@ -15,7 +15,7 @@ namespace Oven_Interface
 {
     public partial class Dashboard : Form
     {
-        List<FullBread> breads = new List<FullBread>();
+        List<Bread> breads = new List<Bread>();
         List<TemperaturePoint> temperaturePoints = new List<TemperaturePoint>();
 
         public Dashboard()
@@ -254,6 +254,16 @@ namespace Oven_Interface
             {
                 temperaturePointsListBox.SelectedIndex = persistedIndex + 1;
             }
+        }
+
+        private void startProgramButton_Click(object sender, EventArgs e)
+        {
+            // создать инстанс запуска. для начала. факт запуска.
+            // и каждую секунду обновлять статус запуска (сколько минут прошло).
+            // и выставлять тот градус который надо выставлять согласно последней минуте.
+            // узнать сколько времени должен играть таймер (минуту последней температуры)
+            // стартануть таймер
+            // а таймер это воркер который смотрит сколько времени прошло и ... или как там я планировал...
         }
     }
 }

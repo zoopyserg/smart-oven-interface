@@ -29,10 +29,10 @@ namespace Oven_Interface
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title7 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.startProgramButton = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.chartTemperatures = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -104,6 +104,7 @@ namespace Oven_Interface
             this.startProgramButton.TabIndex = 0;
             this.startProgramButton.Text = "СТАРТ";
             this.startProgramButton.UseVisualStyleBackColor = true;
+            this.startProgramButton.Click += new System.EventHandler(this.startProgramButton_Click);
             // 
             // progressBar1
             // 
@@ -115,29 +116,29 @@ namespace Oven_Interface
             // 
             // chartTemperatures
             // 
-            chartArea6.Area3DStyle.PointDepth = 5;
-            chartArea6.Area3DStyle.Rotation = 20;
-            chartArea6.Name = "ChartArea1";
-            this.chartTemperatures.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chartTemperatures.Legends.Add(legend6);
+            chartArea7.Area3DStyle.PointDepth = 5;
+            chartArea7.Area3DStyle.Rotation = 20;
+            chartArea7.Name = "ChartArea1";
+            this.chartTemperatures.ChartAreas.Add(chartArea7);
+            legend7.Name = "Legend1";
+            this.chartTemperatures.Legends.Add(legend7);
             this.chartTemperatures.Location = new System.Drawing.Point(8, 24);
             this.chartTemperatures.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.chartTemperatures.Name = "chartTemperatures";
-            series6.BorderWidth = 4;
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
-            series6.IsValueShownAsLabel = true;
-            series6.LabelForeColor = System.Drawing.Color.DimGray;
-            series6.Legend = "Legend1";
-            series6.Name = "Температура";
-            series6.YValuesPerPoint = 6;
-            this.chartTemperatures.Series.Add(series6);
+            series7.BorderWidth = 4;
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
+            series7.IsValueShownAsLabel = true;
+            series7.LabelForeColor = System.Drawing.Color.DimGray;
+            series7.Legend = "Legend1";
+            series7.Name = "Температура";
+            series7.YValuesPerPoint = 6;
+            this.chartTemperatures.Series.Add(series7);
             this.chartTemperatures.Size = new System.Drawing.Size(788, 295);
             this.chartTemperatures.TabIndex = 4;
             this.chartTemperatures.Text = "chart1";
-            title6.Name = "Text";
-            this.chartTemperatures.Titles.Add(title6);
+            title7.Name = "Text";
+            this.chartTemperatures.Titles.Add(title7);
             // 
             // stopProgramButton
             // 

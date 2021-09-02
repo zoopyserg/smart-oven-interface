@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Oven_Interface.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,5 +12,11 @@ namespace Oven_Interface
         public int Id { get; set; }
 
         public string Name { get; set; }
+
+        public List<TemperaturePoint> TemperaturePoints { get; set; }
+
+        public List<PressurePoint> PressurePoints { get; set; }
+
+        public List<ValvePoint> ValvePoints { get; set; }
     }
 }

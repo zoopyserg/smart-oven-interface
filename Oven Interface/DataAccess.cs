@@ -11,11 +11,11 @@ namespace Oven_Interface
 {
     public class DataAccess
     {
-        public List<FullBread> GetBreads()
+        public List<Bread> GetBreads()
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.GetConnectionString()))
             {
-                return connection.Query<FullBread>($"SELECT Id, Name FROM Breads").ToList();
+                return connection.Query<Bread>($"SELECT Id, Name FROM Breads").ToList();
             }
         }
 
@@ -53,12 +53,12 @@ namespace Oven_Interface
             }
         }
 
-        public List<FullBread> GetBreadWithPoints(int id)
+        public List<Bread> GetBreadWithPoints(int id)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.GetConnectionString()))
             {
-                FullBread bread = null;
-                List<FullBread> breads = null;
+                Bread bread = null;
+                List<Bread> breads = null;
                 List<TemperaturePoint> temperaturePoints = null;
                 List<PressurePoint> pressurePoints = null;
                 List<ValvePoint> valvePoints = null;
@@ -72,7 +72,7 @@ namespace Oven_Interface
 
                 using (var lists = connection.QueryMultiple(sql, parameters))
                 {
-                    breads = lists.Read<FullBread>().ToList();
+                    breads = lists.Read<Bread>().ToList();
                     temperaturePoints = lists.Read<TemperaturePoint>().ToList();
                     pressurePoints = lists.Read<PressurePoint>().ToList();
                     valvePoints = lists.Read<ValvePoint>().ToList();
