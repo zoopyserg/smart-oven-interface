@@ -15,5 +15,9 @@ namespace Oven_Interface.Models
         public int Value { get; set; }
 
         public int BreadId { get; set; }
+        public string DisplayString
+        {
+            get { return $"На {Minute.ToString()}й хвилині відкрити клапан пари на {Value.ToString()} відсотків"; }
+        }
     }
 }

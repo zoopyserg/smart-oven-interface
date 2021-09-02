@@ -18,6 +18,9 @@ namespace Oven_Interface
     {
         List<Bread> breads = new List<Bread>();
         List<TemperaturePoint> temperaturePoints = new List<TemperaturePoint>();
+        List<PressurePoint> pressurePoints = new List<PressurePoint>();
+        List<ValvePoint> valvePoints = new List<ValvePoint>();
+
         List<LaunchInstance> launchInstances = new List<LaunchInstance>();
         System.Timers.Timer timer;
         int minutesPassed;
@@ -44,15 +47,26 @@ namespace Oven_Interface
             {
                 DataAccess db = new DataAccess();
                 temperaturePoints = db.GetTemperaturePoints(breads[programsListBox.SelectedIndex].Id);
+                pressurePoints = db.GetPressurePoints(breads[programsListBox.SelectedIndex].Id);
+                valvePoints = db.GetValvePoints(breads[programsListBox.SelectedIndex].Id);
                 launchInstances = db.GetLaunchInstances(breads[programsListBox.SelectedIndex].Id);
             }
 
+
+            // update list boxes
             temperaturePointsListBox.DataSource = temperaturePoints;
             temperaturePointsListBox.DisplayMember = "DisplayString";
+
+            pressurePointsListBox.DataSource = pressurePoints;
+            pressurePointsListBox.DisplayMember = "DisplayString";
+
+            valvePointsListBox.DataSource = valvePoints;
+            valvePointsListBox.DisplayMember = "DisplayString";
 
             historyListBox.DataSource = launchInstances;
             historyListBox.DisplayMember = "DisplayString";
 
+            // update temperatures chart
             chartTemperatures.DataSource = temperaturePoints;
             chartTemperatures.Series[0].XValueMember = "Minute";
             chartTemperatures.Series[0].YValueMembers = "Value";
@@ -64,7 +78,33 @@ namespace Oven_Interface
             chartTemperatures.ChartAreas[0].AxisY.Minimum = 0;
 
             chartTemperatures.DataBind();
+
+            // update pressures chart
+            pressuresChart.DataSource = pressurePoints;
+            pressuresChart.Series[0].XValueMember = "Minute";
+            pressuresChart.Series[0].YValueMembers = "Value";
             
+            pressuresChart.ChartAreas[0].AxisX.Title = "Час (хв)";
+            pressuresChart.ChartAreas[0].AxisY.Title = "Тиск Води (Па)";
+            
+            pressuresChart.ChartAreas[0].AxisX.Minimum = 0;
+            pressuresChart.ChartAreas[0].AxisY.Minimum = 0;
+            
+            pressuresChart.DataBind();
+
+            // update valve chart
+            valveChart.DataSource = valvePoints;
+            valveChart.Series[0].XValueMember = "Minute";
+            valveChart.Series[0].YValueMembers = "Value";
+            
+            valveChart.ChartAreas[0].AxisX.Title = "Час (хв)";
+            valveChart.ChartAreas[0].AxisY.Title = "Відкритість Клапану Пари (%)";
+            
+            valveChart.ChartAreas[0].AxisX.Minimum = 0;
+            valveChart.ChartAreas[0].AxisY.Minimum = 0;
+            
+            valveChart.DataBind();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -353,6 +393,98 @@ namespace Oven_Interface
         private void continueProgramButton_Click(object sender, EventArgs e)
         {
             timer.Start();
+        }
+
+        private void previousPressurePointButton_Click(object sender, EventArgs e)
+        {
+            int persistedIndex = pressurePointsListBox.SelectedIndex;
+            if (persistedIndex > 0)
+            {
+                pressurePointsListBox.SelectedIndex = persistedIndex - 1;
+            }
+        }
+
+        private void nextPressurePointButton_Click(object sender, EventArgs e)
+        {
+            int persistedIndex = pressurePointsListBox.SelectedIndex;
+            if (persistedIndex < (pressurePoints.Count - 1))
+            {
+                pressurePointsListBox.SelectedIndex = persistedIndex + 1;
+            }
+        }
+
+        private void deletePressurePointButton_Click(object sender, EventArgs e)
+        {
+            int persistedIndex = programsListBox.SelectedIndex;
+            DataAccess db = new DataAccess();
+            db.DeletePressurePoint(pressurePoints[pressurePointsListBox.SelectedIndex].Id);
+            breads = db.GetBreads();
+            UpdateBinding();
+            programsListBox.SelectedIndex = persistedIndex;
+        }
+
+        private void showPressurePointsButton_Click(object sender, EventArgs e)
+        {
+            UpdateBinding();
+        }
+
+        private void previousValvePointButton_Click(object sender, EventArgs e)
+        {
+            int persistedIndex = valvePointsListBox.SelectedIndex;
+            if (persistedIndex > 0)
+            {
+                valvePointsListBox.SelectedIndex = persistedIndex - 1;
+            }
+        }
+
+        private void nextValvePointButton_Click(object sender, EventArgs e)
+        {
+            int persistedIndex = valvePointsListBox.SelectedIndex;
+            if (persistedIndex < (valvePoints.Count - 1))
+            {
+                valvePointsListBox.SelectedIndex = persistedIndex + 1;
+            }
+        }
+
+        private void deleteValvePointButton_Click(object sender, EventArgs e)
+        {
+            int persistedIndex = programsListBox.SelectedIndex;
+            DataAccess db = new DataAccess();
+            db.DeleteValvePoint(pressurePoints[valvePointsListBox.SelectedIndex].Id);
+            breads = db.GetBreads();
+            UpdateBinding();
+            programsListBox.SelectedIndex = persistedIndex;
+        }
+
+        private void showValvepointsButton_Click(object sender, EventArgs e)
+        {
+            UpdateBinding();
+        }
+
+        private void createPressurePointButton_Click(object sender, EventArgs e)
+        {
+            DataAccess db = new DataAccess();
+
+            int persistedIndex = programsListBox.SelectedIndex;
+            db.InsertPressurePoint(breads[persistedIndex].Id, Int32.Parse(newPressurePointMinuteTextBox.Text), Int32.Parse(newPressurePointValueTextBox.Text));
+            newPressurePointMinuteTextBox.Text = "";
+            newPressurePointValueTextBox.Text = "";
+            breads = db.GetBreads();
+            UpdateBinding();
+            programsListBox.SelectedIndex = persistedIndex;
+        }
+
+        private void createValvePointButton_Click(object sender, EventArgs e)
+        {
+            DataAccess db = new DataAccess();
+
+            int persistedIndex = programsListBox.SelectedIndex;
+            db.InsertValvePoint(breads[persistedIndex].Id, Int32.Parse(newValvePointMinuteTextBox.Text), Int32.Parse(newValvePointValueTextBox.Text));
+            newValvePointMinuteTextBox.Text = "";
+            newValvePointValueTextBox.Text = "";
+            breads = db.GetBreads();
+            UpdateBinding();
+            programsListBox.SelectedIndex = persistedIndex;
         }
     }
 }

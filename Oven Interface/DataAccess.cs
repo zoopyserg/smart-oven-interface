@@ -15,7 +15,7 @@ namespace Oven_Interface
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.GetConnectionString()))
             {
-                return connection.Query<Bread>($"SELECT Id, Name, (SELECT MAX(Minute) FROM TemperaturePoints tp WHERE tp.BreadId = br.Id) AS Duration FROM Breads br").ToList();
+                return connection.Query<Bread>($"With AllMinutes AS (SELECT tp.Minute, tp.BreadId FROM TemperaturePoints tp UNION SELECT vp.Minute, vp.BreadId FROM ValvePoints vp UNION SELECT pp.Minute, pp.BreadId FROM PressurePoints pp ) SELECT Id, Name, (SELECT MAX(Minute) FROM AllMinutes am WHERE am.BreadId = br.Id ) AS Duration FROM Breads br").ToList();
             }
         }
 
@@ -50,6 +50,22 @@ namespace Oven_Interface
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.GetConnectionString()))
             {
                 return connection.Query<LaunchInstance>($"SELECT Id, Status, MinutesPassed, CreatedAt, BreadId FROM LaunchInstances WHERE BreadId = @BreadId ORDER BY CreatedAt DESC", new { BreadId = breadId }).ToList();
+            }
+        }
+
+        internal List<ValvePoint> GetValvePoints(int breadId)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.GetConnectionString()))
+            {
+                return connection.Query<ValvePoint>($"SELECT Id, Minute, Value FROM ValvePoints WHERE BreadId = @BreadId ORDER BY Minute ASC", new { BreadId = breadId }).ToList();
+            }
+        }
+
+        internal List<PressurePoint> GetPressurePoints(int breadId)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.GetConnectionString()))
+            {
+                return connection.Query<PressurePoint>($"SELECT Id, Minute, Value FROM PressurePoints WHERE BreadId = @BreadId ORDER BY Minute ASC", new { BreadId = breadId }).ToList();
             }
         }
 
@@ -193,6 +209,62 @@ namespace Oven_Interface
                 string sql = $@"UPDATE dbo.LaunchInstances SET Status=@Status WHERE (BreadId = @BreadId AND Status = 'started');";
 
                 connection.Execute(sql, parameters);
+            }
+        }
+
+        internal void DeletePressurePoint(int pressurePointId)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.GetConnectionString()))
+            {
+                connection.Query($"DELETE FROM PressurePoints WHERE Id = @ID", new { ID = pressurePointId });
+            }
+        }
+
+        internal void DeleteValvePoint(int valvePointId)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.GetConnectionString()))
+            {
+                connection.Query($"DELETE FROM ValvePoints WHERE Id = @ID", new { ID = valvePointId });
+            }
+        }
+
+        public int InsertPressurePoint(int breadId, int minute, int value)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.GetConnectionString()))
+            {
+                var parameters = new DynamicParameters();
+                parameters.Add("@Id", 0, DbType.Int32, ParameterDirection.Output);
+                parameters.Add("@Minute", minute);
+                parameters.Add("@Value", value);
+                parameters.Add("@BreadId", breadId);
+
+                string sql = $@"insert into dbo.PressurePoints (Minute, Value, BreadId) values (@Minute, @Value, @BreadId); select @Id = @@IDENTITY";
+
+                connection.Execute(sql, parameters);
+
+                int newIdentity = parameters.Get<int>("@Id");
+
+                return newIdentity;
+            }
+        }
+
+        public int InsertValvePoint(int breadId, int minute, int value)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.GetConnectionString()))
+            {
+                var parameters = new DynamicParameters();
+                parameters.Add("@Id", 0, DbType.Int32, ParameterDirection.Output);
+                parameters.Add("@Minute", minute);
+                parameters.Add("@Value", value);
+                parameters.Add("@BreadId", breadId);
+
+                string sql = $@"insert into dbo.ValvePoints (Minute, Value, BreadId) values (@Minute, @Value, @BreadId); select @Id = @@IDENTITY";
+
+                connection.Execute(sql, parameters);
+
+                int newIdentity = parameters.Get<int>("@Id");
+
+                return newIdentity;
             }
         }
     }
