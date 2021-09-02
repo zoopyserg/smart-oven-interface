@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
 using Oven_Interface.Models;
 using Solid.Arduino;
@@ -18,6 +19,8 @@ namespace Oven_Interface
         List<Bread> breads = new List<Bread>();
         List<TemperaturePoint> temperaturePoints = new List<TemperaturePoint>();
         List<LaunchInstance> launchInstances = new List<LaunchInstance>();
+        System.Timers.Timer timer;
+        int minutesPassed;
 
         public Dashboard()
         {
@@ -163,6 +166,35 @@ namespace Oven_Interface
             breads = db.GetBreads();
             // how do I get the ID of a selected bread?
             UpdateBinding();
+
+            timer = new System.Timers.Timer();
+            timer.Interval = 1000;
+            minutesPassed = 0;
+            timer.Elapsed += OnTimeEvent;
+        }
+
+        private void OnTimeEvent(object sender, ElapsedEventArgs e)
+        {
+            Invoke(new Action(() =>
+            {
+                int maxMinutes = 10;
+                bool finished = minutesPassed >= maxMinutes;
+
+                if (finished)
+                {
+                    labelLastCommandStatus.Text = "Finished";
+                    timer.Stop();
+                }
+                else
+                {
+                    minutesPassed += 1;
+                    labelLastCommandStatus.Text = minutesPassed.ToString();
+                    progressBar1.Minimum = 0;
+                    progressBar1.Maximum = 100;
+                    progressBar1.Value = minutesPassed;
+                    minutesLeftLabel.Text = minutesPassed.ToString();
+                }
+            }));
         }
 
         private void showBreadsButton_Click(object sender, EventArgs e)
@@ -272,11 +304,34 @@ namespace Oven_Interface
             UpdateBinding();
             programsListBox.SelectedIndex = persistedIndex;
 
+            timer.Start();
+
             // и каждую секунду обновлять статус запуска (сколько минут прошло).
             // и выставлять тот градус который надо выставлять согласно последней минуте.
             // узнать сколько времени должен играть таймер (минуту последней температуры)
             // стартануть таймер
             // а таймер это воркер который смотрит сколько времени прошло и ... или как там я планировал...
+        }
+
+        private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            timer.Stop();
+            Application.DoEvents();
+        }
+
+        private void stopProgramButton_Click(object sender, EventArgs e)
+        {
+            timer.Stop();
+        }
+
+        private void pauseProgramButton_Click(object sender, EventArgs e)
+        {
+            timer.Stop();
+        }
+
+        private void continueProgramButton_Click(object sender, EventArgs e)
+        {
+            timer.Start();
         }
     }
 }

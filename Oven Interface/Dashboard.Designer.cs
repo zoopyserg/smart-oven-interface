@@ -29,10 +29,10 @@ namespace Oven_Interface
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.startProgramButton = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.chartTemperatures = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -121,29 +121,29 @@ namespace Oven_Interface
             // 
             // chartTemperatures
             // 
-            chartArea2.Area3DStyle.PointDepth = 5;
-            chartArea2.Area3DStyle.Rotation = 20;
-            chartArea2.Name = "ChartArea1";
-            this.chartTemperatures.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartTemperatures.Legends.Add(legend2);
+            chartArea6.Area3DStyle.PointDepth = 5;
+            chartArea6.Area3DStyle.Rotation = 20;
+            chartArea6.Name = "ChartArea1";
+            this.chartTemperatures.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chartTemperatures.Legends.Add(legend6);
             this.chartTemperatures.Location = new System.Drawing.Point(8, 24);
             this.chartTemperatures.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.chartTemperatures.Name = "chartTemperatures";
-            series2.BorderWidth = 4;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
-            series2.IsValueShownAsLabel = true;
-            series2.LabelForeColor = System.Drawing.Color.DimGray;
-            series2.Legend = "Legend1";
-            series2.Name = "Температура";
-            series2.YValuesPerPoint = 6;
-            this.chartTemperatures.Series.Add(series2);
+            series6.BorderWidth = 4;
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
+            series6.IsValueShownAsLabel = true;
+            series6.LabelForeColor = System.Drawing.Color.DimGray;
+            series6.Legend = "Legend1";
+            series6.Name = "Температура";
+            series6.YValuesPerPoint = 6;
+            this.chartTemperatures.Series.Add(series6);
             this.chartTemperatures.Size = new System.Drawing.Size(788, 295);
             this.chartTemperatures.TabIndex = 4;
             this.chartTemperatures.Text = "chart1";
-            title2.Name = "Text";
-            this.chartTemperatures.Titles.Add(title2);
+            title6.Name = "Text";
+            this.chartTemperatures.Titles.Add(title6);
             // 
             // stopProgramButton
             // 
@@ -154,6 +154,7 @@ namespace Oven_Interface
             this.stopProgramButton.TabIndex = 5;
             this.stopProgramButton.Text = "СТОП";
             this.stopProgramButton.UseVisualStyleBackColor = true;
+            this.stopProgramButton.Click += new System.EventHandler(this.stopProgramButton_Click);
             // 
             // continueProgramButton
             // 
@@ -164,6 +165,7 @@ namespace Oven_Interface
             this.continueProgramButton.TabIndex = 6;
             this.continueProgramButton.Text = "ПРОДОВЖИТИ";
             this.continueProgramButton.UseVisualStyleBackColor = true;
+            this.continueProgramButton.Click += new System.EventHandler(this.continueProgramButton_Click);
             // 
             // pauseProgramButton
             // 
@@ -174,6 +176,7 @@ namespace Oven_Interface
             this.pauseProgramButton.TabIndex = 7;
             this.pauseProgramButton.Text = "ПАУЗА";
             this.pauseProgramButton.UseVisualStyleBackColor = true;
+            this.pauseProgramButton.Click += new System.EventHandler(this.pauseProgramButton_Click);
             // 
             // progressInfoLabel
             // 
@@ -658,6 +661,7 @@ namespace Oven_Interface
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "Dashboard";
             this.Text = "Терморегулятор Пічки";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Dashboard_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chartTemperatures)).EndInit();
             this.programFormGroupBox.ResumeLayout(false);
