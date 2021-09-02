@@ -42,7 +42,7 @@ namespace Oven_Interface
             }
 
             temperaturePointsListBox.DataSource = temperaturePoints;
-            temperaturePointsListBox.DisplayMember = "Value";
+            temperaturePointsListBox.DisplayMember = "DisplayString";
 
             chartTemperatures.DataSource = temperaturePoints;
             chartTemperatures.Series[0].XValueMember = "Minute";
@@ -218,6 +218,42 @@ namespace Oven_Interface
         private void showTemperaturePointsButton_Click(object sender, EventArgs e)
         {
             UpdateBinding();
+        }
+
+        private void buttonPreviousProgram_Click(object sender, EventArgs e)
+        {
+            int persistedIndex = programsListBox.SelectedIndex;
+            if (persistedIndex > 0)
+            {
+                programsListBox.SelectedIndex = persistedIndex - 1;
+            }
+        }
+
+        private void nextProgram_Click(object sender, EventArgs e)
+        {
+            int persistedIndex = programsListBox.SelectedIndex;
+            if (persistedIndex < (breads.Count - 1))
+            {
+                programsListBox.SelectedIndex = persistedIndex + 1;
+            }
+        }
+
+        private void previousTemperaturePointButton_Click(object sender, EventArgs e)
+        {
+            int persistedIndex = temperaturePointsListBox.SelectedIndex;
+            if (persistedIndex > 0)
+            {
+                temperaturePointsListBox.SelectedIndex = persistedIndex - 1;
+            }
+        }
+
+        private void nextTemperaturePointButton_Click(object sender, EventArgs e)
+        {
+            int persistedIndex = temperaturePointsListBox.SelectedIndex;
+            if (persistedIndex < (temperaturePoints.Count - 1))
+            {
+                temperaturePointsListBox.SelectedIndex = persistedIndex + 1;
+            }
         }
     }
 }

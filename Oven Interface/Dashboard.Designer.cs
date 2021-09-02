@@ -29,10 +29,10 @@ namespace Oven_Interface
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.startProgramButton = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.chartTemperatures = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -80,9 +80,6 @@ namespace Oven_Interface
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tableTab = new System.Windows.Forms.TabPage();
             this.chartTab = new System.Windows.Forms.TabPage();
-            this.temperaturePointsListView = new System.Windows.Forms.ListView();
-            this.minuteColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.valueColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.chartTemperatures)).BeginInit();
             this.programFormGroupBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -118,23 +115,29 @@ namespace Oven_Interface
             // 
             // chartTemperatures
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartTemperatures.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartTemperatures.Legends.Add(legend2);
+            chartArea6.Area3DStyle.PointDepth = 5;
+            chartArea6.Area3DStyle.Rotation = 20;
+            chartArea6.Name = "ChartArea1";
+            this.chartTemperatures.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chartTemperatures.Legends.Add(legend6);
             this.chartTemperatures.Location = new System.Drawing.Point(8, 24);
             this.chartTemperatures.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.chartTemperatures.Name = "chartTemperatures";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Legend = "Legend1";
-            series2.Name = "Temperature";
-            this.chartTemperatures.Series.Add(series2);
+            series6.BorderWidth = 4;
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
+            series6.IsValueShownAsLabel = true;
+            series6.LabelForeColor = System.Drawing.Color.DimGray;
+            series6.Legend = "Legend1";
+            series6.Name = "Температура";
+            series6.YValuesPerPoint = 6;
+            this.chartTemperatures.Series.Add(series6);
             this.chartTemperatures.Size = new System.Drawing.Size(788, 295);
             this.chartTemperatures.TabIndex = 4;
             this.chartTemperatures.Text = "chart1";
-            title2.Name = "Text";
-            this.chartTemperatures.Titles.Add(title2);
+            title6.Name = "Text";
+            this.chartTemperatures.Titles.Add(title6);
             // 
             // stopProgramButton
             // 
@@ -346,6 +349,7 @@ namespace Oven_Interface
             this.buttonPreviousProgram.TabIndex = 27;
             this.buttonPreviousProgram.Text = "< Попередній";
             this.buttonPreviousProgram.UseVisualStyleBackColor = true;
+            this.buttonPreviousProgram.Click += new System.EventHandler(this.buttonPreviousProgram_Click);
             // 
             // buttonNextProgram
             // 
@@ -356,7 +360,7 @@ namespace Oven_Interface
             this.buttonNextProgram.TabIndex = 2;
             this.buttonNextProgram.Text = "Наступний >";
             this.buttonNextProgram.UseVisualStyleBackColor = true;
-            this.buttonNextProgram.Click += new System.EventHandler(this.button2_Click);
+            this.buttonNextProgram.Click += new System.EventHandler(this.nextProgram_Click);
             // 
             // groupBox1
             // 
@@ -440,7 +444,6 @@ namespace Oven_Interface
             // 
             // temperaturePointsIndexGroupBox
             // 
-            this.temperaturePointsIndexGroupBox.Controls.Add(this.temperaturePointsListView);
             this.temperaturePointsIndexGroupBox.Controls.Add(this.deleteTemperaturePointButton);
             this.temperaturePointsIndexGroupBox.Controls.Add(this.temperaturePointsListBox);
             this.temperaturePointsIndexGroupBox.Controls.Add(this.showTemperaturePointsButton);
@@ -469,9 +472,9 @@ namespace Oven_Interface
             this.temperaturePointsListBox.ColumnWidth = 2;
             this.temperaturePointsListBox.FormattingEnabled = true;
             this.temperaturePointsListBox.ItemHeight = 18;
-            this.temperaturePointsListBox.Location = new System.Drawing.Point(10, 148);
+            this.temperaturePointsListBox.Location = new System.Drawing.Point(10, 22);
             this.temperaturePointsListBox.Name = "temperaturePointsListBox";
-            this.temperaturePointsListBox.Size = new System.Drawing.Size(784, 130);
+            this.temperaturePointsListBox.Size = new System.Drawing.Size(784, 256);
             this.temperaturePointsListBox.TabIndex = 29;
             // 
             // showTemperaturePointsButton
@@ -493,6 +496,7 @@ namespace Oven_Interface
             this.previousTemperaturePointButton.TabIndex = 27;
             this.previousTemperaturePointButton.Text = "< Попередній";
             this.previousTemperaturePointButton.UseVisualStyleBackColor = true;
+            this.previousTemperaturePointButton.Click += new System.EventHandler(this.previousTemperaturePointButton_Click);
             // 
             // nextTemperaturePointButton
             // 
@@ -503,6 +507,7 @@ namespace Oven_Interface
             this.nextTemperaturePointButton.TabIndex = 2;
             this.nextTemperaturePointButton.Text = "Наступний >";
             this.nextTemperaturePointButton.UseVisualStyleBackColor = true;
+            this.nextTemperaturePointButton.Click += new System.EventHandler(this.nextTemperaturePointButton_Click);
             // 
             // actionGroupBox
             // 
@@ -603,27 +608,6 @@ namespace Oven_Interface
             this.chartTab.Text = "Графік Температур";
             this.chartTab.UseVisualStyleBackColor = true;
             // 
-            // temperaturePointsListView
-            // 
-            this.temperaturePointsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.minuteColumn,
-            this.valueColumn});
-            this.temperaturePointsListView.HideSelection = false;
-            this.temperaturePointsListView.Location = new System.Drawing.Point(7, 24);
-            this.temperaturePointsListView.Name = "temperaturePointsListView";
-            this.temperaturePointsListView.Size = new System.Drawing.Size(787, 118);
-            this.temperaturePointsListView.TabIndex = 33;
-            this.temperaturePointsListView.UseCompatibleStateImageBehavior = false;
-            this.temperaturePointsListView.View = System.Windows.Forms.View.Details;
-            // 
-            // minuteColumn
-            // 
-            this.minuteColumn.Text = "Хвилина";
-            // 
-            // valueColumn
-            // 
-            this.valueColumn.Text = "Температура";
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -709,9 +693,6 @@ namespace Oven_Interface
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tableTab;
         private System.Windows.Forms.TabPage chartTab;
-        private System.Windows.Forms.ListView temperaturePointsListView;
-        private System.Windows.Forms.ColumnHeader minuteColumn;
-        private System.Windows.Forms.ColumnHeader valueColumn;
     }
 }
 

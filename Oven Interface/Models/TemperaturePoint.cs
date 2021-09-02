@@ -15,5 +15,11 @@ namespace Oven_Interface.Models
         public int Value { get; set; }
 
         public int BreadId { get; set; }
+
+        public string DisplayString
+        {
+            get { return $"На {Minute.ToString()}й хвилині виставити {Value.ToString()} градусів"; }
+        }
+
     }
 }
