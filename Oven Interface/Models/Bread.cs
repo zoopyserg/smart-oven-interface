@@ -19,5 +19,13 @@ namespace Oven_Interface
 
         public List<ValvePoint> ValvePoints { get; set; }
 
+        public int Duration { get; set; }
+
+        public string DisplayString
+        {
+            get { return $"{ Name } (Тривалість: {Duration}хв)"; }
+        }
+
+
     }
 }

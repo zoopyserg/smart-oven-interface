@@ -21,6 +21,7 @@ namespace Oven_Interface
         List<LaunchInstance> launchInstances = new List<LaunchInstance>();
         System.Timers.Timer timer;
         int minutesPassed;
+        Bread runningProgram;
 
         public Dashboard()
         {
@@ -37,7 +38,7 @@ namespace Oven_Interface
         private void UpdateBinding()
         {
             programsListBox.DataSource = breads;
-            programsListBox.DisplayMember = "Name";
+            programsListBox.DisplayMember = "DisplayString";
 
             if ((breads.Count > 0) && (programsListBox.SelectedIndex > -1))
             {
@@ -177,24 +178,41 @@ namespace Oven_Interface
         {
             Invoke(new Action(() =>
             {
-                int maxMinutes = 10;
-                bool finished = minutesPassed >= maxMinutes;
-
-                if (finished)
+                if (minutesPassed >= runningProgram.Duration)
                 {
-                    labelLastCommandStatus.Text = "Finished";
+                    CommitProgramFinilization();
                     timer.Stop();
                 }
                 else
                 {
                     minutesPassed += 1;
-                    labelLastCommandStatus.Text = minutesPassed.ToString();
+                    // perform temperature adjustments
+                    DataAccess db = new DataAccess();
+                    db.UpdateProgramTimePassed(runningProgram.Id, minutesPassed);
                     progressBar1.Minimum = 0;
-                    progressBar1.Maximum = 100;
+                    progressBar1.Maximum = runningProgram.Duration;
                     progressBar1.Value = minutesPassed;
-                    minutesLeftLabel.Text = minutesPassed.ToString();
+                    minutesLeftLabel.Text = (runningProgram.Duration - minutesPassed).ToString();
+                    int persistedIndex = programsListBox.SelectedIndex;
+                    breads = db.GetBreads();
+                    UpdateBinding();
+                    programsListBox.SelectedIndex = persistedIndex;
                 }
             }));
+        }
+
+        public void CommitProgramFinilization()
+        {
+            int persistedIndex = programsListBox.SelectedIndex;
+            labelLastCommandStatus.Text = $"Програму {runningProgram.Name} завершено";
+            DataAccess db = new DataAccess();
+            db.FinishProgram(runningProgram.Id);
+            runningProgram = null;
+            minutesPassed = 0;
+            progressBar1.Value = 0;
+            breads = db.GetBreads();
+            UpdateBinding();
+            programsListBox.SelectedIndex = persistedIndex;
         }
 
         private void showBreadsButton_Click(object sender, EventArgs e)
@@ -299,7 +317,8 @@ namespace Oven_Interface
             DataAccess db = new DataAccess();
 
             int persistedIndex = programsListBox.SelectedIndex;
-            db.InsertLaunchInstance(breads[persistedIndex].Id);
+            runningProgram = breads[persistedIndex];
+            db.InsertLaunchInstance(runningProgram.Id);
             breads = db.GetBreads();
             UpdateBinding();
             programsListBox.SelectedIndex = persistedIndex;
@@ -321,11 +340,13 @@ namespace Oven_Interface
 
         private void stopProgramButton_Click(object sender, EventArgs e)
         {
+            CommitProgramFinilization();
             timer.Stop();
         }
 
         private void pauseProgramButton_Click(object sender, EventArgs e)
         {
+            CommitProgramFinilization();
             timer.Stop();
         }
 

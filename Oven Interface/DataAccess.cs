@@ -15,7 +15,7 @@ namespace Oven_Interface
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.GetConnectionString()))
             {
-                return connection.Query<Bread>($"SELECT Id, Name FROM Breads").ToList();
+                return connection.Query<Bread>($"SELECT Id, Name, (SELECT MAX(Minute) FROM TemperaturePoints tp WHERE tp.BreadId = br.Id) AS Duration FROM Breads br").ToList();
             }
         }
 
@@ -76,7 +76,10 @@ namespace Oven_Interface
                     ID = id
                 };
 
-                string sql = @"select * from dbo.Breads where Id = @ID; select * from dbo.TemperaturePoints where BreadId = @ID; select * from dbo.PressurePoints where BreadId = @ID; select * from dbo.ValvePoints where BreadId = @ID;";
+                string sql = @"select *, (SELECT MAX(Minute) FROM TemperaturePoints WHERE tp.BreadId = @Id) AS Duration from dbo.Breads where Id = @ID; 
+                               select * from dbo.TemperaturePoints where BreadId = @ID; 
+                               select * from dbo.PressurePoints where BreadId = @ID; 
+                               select * from dbo.ValvePoints where BreadId = @ID;";
 
                 using (var lists = connection.QueryMultiple(sql, parameters))
                 {
@@ -160,6 +163,36 @@ namespace Oven_Interface
                 int newIdentity = parameters.Get<int>("@Id");
 
                 return newIdentity;
+            }
+        }
+
+        public void UpdateProgramTimePassed(int breadId, int minutesPassed)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.GetConnectionString()))
+            {
+                var parameters = new DynamicParameters();
+                parameters.Add("@Id", 0, DbType.Int32, ParameterDirection.Output);
+                parameters.Add("@MinutesPassed", minutesPassed);
+                parameters.Add("@BreadId", breadId);
+
+                string sql = $@"UPDATE dbo.LaunchInstances SET MinutesPassed=@MinutesPassed WHERE (BreadId = @BreadId AND Status = 'started');";
+
+                connection.Execute(sql, parameters);
+            }
+        }
+
+        public void FinishProgram(int breadId)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.GetConnectionString()))
+            {
+                var parameters = new DynamicParameters();
+                parameters.Add("@Id", 0, DbType.Int32, ParameterDirection.Output);
+                parameters.Add("@Status", "finished");
+                parameters.Add("@BreadId", breadId);
+
+                string sql = $@"UPDATE dbo.LaunchInstances SET Status=@Status WHERE (BreadId = @BreadId AND Status = 'started');";
+
+                connection.Execute(sql, parameters);
             }
         }
     }
