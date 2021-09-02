@@ -45,6 +45,14 @@ namespace Oven_Interface
             }
         }
 
+        internal List<LaunchInstance> GetLaunchInstances(int breadId)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.GetConnectionString()))
+            {
+                return connection.Query<LaunchInstance>($"SELECT Id, Status, MinutesPassed, CreatedAt, BreadId FROM LaunchInstances WHERE BreadId = @BreadId ORDER BY CreatedAt DESC", new { BreadId = breadId }).ToList();
+            }
+        }
+
         internal List<TemperaturePoint> GetTemperaturePoints(int breadId)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.GetConnectionString()))
@@ -122,7 +130,7 @@ namespace Oven_Interface
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.GetConnectionString()))
             {
-                connection.Query($"DELETE FROM TemperaturePoints WHERE BreadId = @ID; DELETE FROM Breads WHERE Id = @ID;", new { ID = breadId });
+                connection.Query($"DELETE FROM TemperaturePoints WHERE BreadId = @ID; DELETE FROM LaunchInstances WHERE BreadId = @ID; DELETE FROM Breads WHERE Id = @ID;", new { ID = breadId });
             }
         }
 
@@ -131,6 +139,27 @@ namespace Oven_Interface
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.GetConnectionString()))
             {
                 connection.Query($"DELETE FROM TemperaturePoints WHERE Id = @ID", new { ID = temperatutrePointId });
+            }
+        }
+
+        public int InsertLaunchInstance(int breadId)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.GetConnectionString()))
+            {
+                var parameters = new DynamicParameters();
+                parameters.Add("@Id", 0, DbType.Int32, ParameterDirection.Output);
+                parameters.Add("@Status", "started");
+                parameters.Add("@MinutesPassed", 0);
+                parameters.Add("@CreatedAt", DateTime.Now);
+                parameters.Add("@BreadId", breadId);
+
+                string sql = $@"insert into dbo.LaunchInstances (Status, MinutesPassed, BreadId, CreatedAt) values (@Status, @MinutesPassed, @BreadId, @CreatedAt); select @Id = @@IDENTITY";
+
+                connection.Execute(sql, parameters);
+
+                int newIdentity = parameters.Get<int>("@Id");
+
+                return newIdentity;
             }
         }
     }

@@ -63,6 +63,7 @@
     </Compile>
     <Compile Include="DataAccess.cs" />
     <Compile Include="Helper.cs" />
+    <Compile Include="Models\LaunchInstance.cs" />
     <Compile Include="Models\PressurePoint.cs" />
     <Compile Include="Models\ValvePoint.cs" />
     <Compile Include="Models\TemperaturePoint.cs" />

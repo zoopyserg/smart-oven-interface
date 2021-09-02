@@ -17,6 +17,7 @@ namespace Oven_Interface
     {
         List<Bread> breads = new List<Bread>();
         List<TemperaturePoint> temperaturePoints = new List<TemperaturePoint>();
+        List<LaunchInstance> launchInstances = new List<LaunchInstance>();
 
         public Dashboard()
         {
@@ -39,10 +40,14 @@ namespace Oven_Interface
             {
                 DataAccess db = new DataAccess();
                 temperaturePoints = db.GetTemperaturePoints(breads[programsListBox.SelectedIndex].Id);
+                launchInstances = db.GetLaunchInstances(breads[programsListBox.SelectedIndex].Id);
             }
 
             temperaturePointsListBox.DataSource = temperaturePoints;
             temperaturePointsListBox.DisplayMember = "DisplayString";
+
+            historyListBox.DataSource = launchInstances;
+            historyListBox.DisplayMember = "DisplayString";
 
             chartTemperatures.DataSource = temperaturePoints;
             chartTemperatures.Series[0].XValueMember = "Minute";
@@ -259,6 +264,14 @@ namespace Oven_Interface
         private void startProgramButton_Click(object sender, EventArgs e)
         {
             // создать инстанс запуска. для начала. факт запуска.
+            DataAccess db = new DataAccess();
+
+            int persistedIndex = programsListBox.SelectedIndex;
+            db.InsertLaunchInstance(breads[persistedIndex].Id);
+            breads = db.GetBreads();
+            UpdateBinding();
+            programsListBox.SelectedIndex = persistedIndex;
+
             // и каждую секунду обновлять статус запуска (сколько минут прошло).
             // и выставлять тот градус который надо выставлять согласно последней минуте.
             // узнать сколько времени должен играть таймер (минуту последней температуры)

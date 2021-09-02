@@ -18,5 +18,6 @@ namespace Oven_Interface
         public List<PressurePoint> PressurePoints { get; set; }
 
         public List<ValvePoint> ValvePoints { get; set; }
+
     }
 }
