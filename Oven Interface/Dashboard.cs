@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Timers;
-using System.Windows.Forms;
-using Oven_Interface.Models;
+﻿using Oven_Interface.Models;
 using Solid.Arduino;
 using Solid.Arduino.Firmata;
+using System;
+using System.Collections.Generic;
+using System.Timers;
+using System.Windows.Forms;
 
 namespace Oven_Interface
 {
@@ -68,52 +62,18 @@ namespace Oven_Interface
 
             // update temperatures chart
             chartTemperatures.DataSource = temperaturePoints;
-            chartTemperatures.Series[0].XValueMember = "Minute";
-            chartTemperatures.Series[0].YValueMembers = "Value";
-
-            chartTemperatures.ChartAreas[0].AxisX.Title = "Час (хв)";
-            chartTemperatures.ChartAreas[0].AxisY.Title = "Температура (С)";
-
-            chartTemperatures.ChartAreas[0].AxisX.Minimum = 0;
-            chartTemperatures.ChartAreas[0].AxisY.Minimum = 0;
 
             chartTemperatures.DataBind();
 
             // update pressures chart
             pressuresChart.DataSource = pressurePoints;
-            pressuresChart.Series[0].XValueMember = "Minute";
-            pressuresChart.Series[0].YValueMembers = "Value";
-            
-            pressuresChart.ChartAreas[0].AxisX.Title = "Час (хв)";
-            pressuresChart.ChartAreas[0].AxisY.Title = "Тиск Води (Па)";
-            
-            pressuresChart.ChartAreas[0].AxisX.Minimum = 0;
-            pressuresChart.ChartAreas[0].AxisY.Minimum = 0;
             
             pressuresChart.DataBind();
 
             // update valve chart
             valveChart.DataSource = valvePoints;
-            valveChart.Series[0].XValueMember = "Minute";
-            valveChart.Series[0].YValueMembers = "Value";
-            
-            valveChart.ChartAreas[0].AxisX.Title = "Час (хв)";
-            valveChart.ChartAreas[0].AxisY.Title = "Відкритість Клапану Пари (%)";
-            
-            valveChart.ChartAreas[0].AxisX.Minimum = 0;
-            valveChart.ChartAreas[0].AxisY.Minimum = 0;
             
             valveChart.DataBind();
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
 
         }
 

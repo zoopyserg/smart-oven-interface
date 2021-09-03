@@ -29,18 +29,18 @@ namespace Oven_Interface
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea40 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend40 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series40 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title40 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea41 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend41 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series41 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title41 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea42 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend42 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series42 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title42 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.startProgramButton = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.stopProgramButton = new System.Windows.Forms.Button();
@@ -235,7 +235,6 @@ namespace Oven_Interface
             this.minutesLeftLabel.Size = new System.Drawing.Size(23, 15);
             this.minutesLeftLabel.TabIndex = 9;
             this.minutesLeftLabel.Text = "12";
-            this.minutesLeftLabel.Click += new System.EventHandler(this.label2_Click);
             // 
             // minutesLeftInfoLabel
             // 
@@ -620,29 +619,34 @@ namespace Oven_Interface
             // 
             // chartTemperatures
             // 
-            chartArea40.Area3DStyle.PointDepth = 5;
-            chartArea40.Area3DStyle.Rotation = 20;
-            chartArea40.Name = "ChartArea1";
-            this.chartTemperatures.ChartAreas.Add(chartArea40);
-            legend40.Name = "Legend1";
-            this.chartTemperatures.Legends.Add(legend40);
+            chartArea1.Area3DStyle.PointDepth = 5;
+            chartArea1.Area3DStyle.Rotation = 20;
+            chartArea1.AxisX.Minimum = 0D;
+            chartArea1.AxisX.Title = "Час (хв)";
+            chartArea1.AxisY.Title = "Температура (С)";
+            chartArea1.Name = "ChartArea1";
+            this.chartTemperatures.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartTemperatures.Legends.Add(legend1);
             this.chartTemperatures.Location = new System.Drawing.Point(6, 20);
             this.chartTemperatures.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chartTemperatures.Name = "chartTemperatures";
-            series40.BorderWidth = 4;
-            series40.ChartArea = "ChartArea1";
-            series40.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
-            series40.IsValueShownAsLabel = true;
-            series40.LabelForeColor = System.Drawing.Color.DimGray;
-            series40.Legend = "Legend1";
-            series40.Name = "Температура";
-            series40.YValuesPerPoint = 6;
-            this.chartTemperatures.Series.Add(series40);
+            series1.BorderWidth = 4;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
+            series1.IsValueShownAsLabel = true;
+            series1.LabelForeColor = System.Drawing.Color.DimGray;
+            series1.Legend = "Legend1";
+            series1.Name = "Температура";
+            series1.XValueMember = "Minute";
+            series1.YValueMembers = "Value";
+            series1.YValuesPerPoint = 6;
+            this.chartTemperatures.Series.Add(series1);
             this.chartTemperatures.Size = new System.Drawing.Size(802, 346);
             this.chartTemperatures.TabIndex = 4;
             this.chartTemperatures.Text = "chart1";
-            title40.Name = "Text";
-            this.chartTemperatures.Titles.Add(title40);
+            title1.Name = "Text";
+            this.chartTemperatures.Titles.Add(title1);
             // 
             // temperatureTableTabPage
             // 
@@ -774,29 +778,34 @@ namespace Oven_Interface
             // 
             // pressuresChart
             // 
-            chartArea41.Area3DStyle.PointDepth = 5;
-            chartArea41.Area3DStyle.Rotation = 20;
-            chartArea41.Name = "ChartArea1";
-            this.pressuresChart.ChartAreas.Add(chartArea41);
-            legend41.Name = "Legend1";
-            this.pressuresChart.Legends.Add(legend41);
+            chartArea2.Area3DStyle.PointDepth = 5;
+            chartArea2.Area3DStyle.Rotation = 20;
+            chartArea2.AxisX.Minimum = 0D;
+            chartArea2.AxisX.Title = "Час (хв)";
+            chartArea2.AxisY.Title = "Тиск Води (Па)";
+            chartArea2.Name = "ChartArea1";
+            this.pressuresChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.pressuresChart.Legends.Add(legend2);
             this.pressuresChart.Location = new System.Drawing.Point(6, 20);
             this.pressuresChart.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pressuresChart.Name = "pressuresChart";
-            series41.BorderWidth = 4;
-            series41.ChartArea = "ChartArea1";
-            series41.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
-            series41.IsValueShownAsLabel = true;
-            series41.LabelForeColor = System.Drawing.Color.DimGray;
-            series41.Legend = "Legend1";
-            series41.Name = "Тиск Води";
-            series41.YValuesPerPoint = 6;
-            this.pressuresChart.Series.Add(series41);
+            series2.BorderWidth = 4;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
+            series2.IsValueShownAsLabel = true;
+            series2.LabelForeColor = System.Drawing.Color.DimGray;
+            series2.Legend = "Legend1";
+            series2.Name = "Тиск Води";
+            series2.XValueMember = "Minute";
+            series2.YValueMembers = "Value";
+            series2.YValuesPerPoint = 6;
+            this.pressuresChart.Series.Add(series2);
             this.pressuresChart.Size = new System.Drawing.Size(802, 356);
             this.pressuresChart.TabIndex = 4;
             this.pressuresChart.Text = "chart1";
-            title41.Name = "Text";
-            this.pressuresChart.Titles.Add(title41);
+            title2.Name = "Text";
+            this.pressuresChart.Titles.Add(title2);
             // 
             // pressureTableTabPage
             // 
@@ -928,29 +937,34 @@ namespace Oven_Interface
             // 
             // valveChart
             // 
-            chartArea42.Area3DStyle.PointDepth = 5;
-            chartArea42.Area3DStyle.Rotation = 20;
-            chartArea42.Name = "ChartArea1";
-            this.valveChart.ChartAreas.Add(chartArea42);
-            legend42.Name = "Legend1";
-            this.valveChart.Legends.Add(legend42);
+            chartArea3.Area3DStyle.PointDepth = 5;
+            chartArea3.Area3DStyle.Rotation = 20;
+            chartArea3.AxisX.Minimum = 0D;
+            chartArea3.AxisX.Title = "Час (хв)";
+            chartArea3.AxisY.Title = "Відкритість Клапану Пари (%)";
+            chartArea3.Name = "ChartArea1";
+            this.valveChart.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.valveChart.Legends.Add(legend3);
             this.valveChart.Location = new System.Drawing.Point(6, 20);
             this.valveChart.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.valveChart.Name = "valveChart";
-            series42.BorderWidth = 4;
-            series42.ChartArea = "ChartArea1";
-            series42.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
-            series42.IsValueShownAsLabel = true;
-            series42.LabelForeColor = System.Drawing.Color.DimGray;
-            series42.Legend = "Legend1";
-            series42.Name = "Рівень Пари";
-            series42.YValuesPerPoint = 6;
-            this.valveChart.Series.Add(series42);
+            series3.BorderWidth = 4;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
+            series3.IsValueShownAsLabel = true;
+            series3.LabelForeColor = System.Drawing.Color.DimGray;
+            series3.Legend = "Legend1";
+            series3.Name = "Рівень Пари";
+            series3.XValueMember = "Minute";
+            series3.YValueMembers = "Value";
+            series3.YValuesPerPoint = 6;
+            this.valveChart.Series.Add(series3);
             this.valveChart.Size = new System.Drawing.Size(802, 356);
             this.valveChart.TabIndex = 4;
             this.valveChart.Text = "chart1";
-            title42.Name = "Text";
-            this.valveChart.Titles.Add(title42);
+            title3.Name = "Text";
+            this.valveChart.Titles.Add(title3);
             // 
             // valveTableTabPage
             // 
