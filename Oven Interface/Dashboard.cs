@@ -68,12 +68,12 @@ namespace Oven_Interface
 
             // update pressures chart
             pressuresChart.DataSource = pressurePoints;
-            
+
             pressuresChart.DataBind();
 
             // update valve chart
             valveChart.DataSource = valvePoints;
-            
+
             valveChart.DataBind();
 
         }
@@ -267,37 +267,39 @@ namespace Oven_Interface
 
         private void buttonPreviousProgram_Click(object sender, EventArgs e)
         {
-            int persistedIndex = programsListBox.SelectedIndex;
-            if (persistedIndex > 0)
-            {
-                programsListBox.SelectedIndex = persistedIndex - 1;
-            }
+            selectPreviousElementInTheList(programsListBox);
         }
 
         private void nextProgram_Click(object sender, EventArgs e)
         {
-            int persistedIndex = programsListBox.SelectedIndex;
-            if (persistedIndex < (breads.Count - 1))
-            {
-                programsListBox.SelectedIndex = persistedIndex + 1;
-            }
+            selectNextElementInTheList<Bread>(programsListBox, breads);
         }
 
         private void previousTemperaturePointButton_Click(object sender, EventArgs e)
         {
-            int persistedIndex = temperaturePointsListBox.SelectedIndex;
-            if (persistedIndex > 0)
-            {
-                temperaturePointsListBox.SelectedIndex = persistedIndex - 1;
-            }
+            selectPreviousElementInTheList(temperaturePointsListBox);
         }
 
         private void nextTemperaturePointButton_Click(object sender, EventArgs e)
         {
-            int persistedIndex = temperaturePointsListBox.SelectedIndex;
-            if (persistedIndex < (temperaturePoints.Count - 1))
+            selectNextElementInTheList<TemperaturePoint>(temperaturePointsListBox, temperaturePoints);
+        }
+
+        private void selectPreviousElementInTheList(ListBox listBox)
+        {
+            int persistedIndex = listBox.SelectedIndex;
+            if (persistedIndex > 0)
             {
-                temperaturePointsListBox.SelectedIndex = persistedIndex + 1;
+                listBox.SelectedIndex = persistedIndex - 1;
+            }
+        }
+
+        private void selectNextElementInTheList<T>(ListBox listBox, List<T> relatedVariable)
+        {
+            int persistedIndex = listBox.SelectedIndex;
+            if (persistedIndex < (relatedVariable.Count - 1))
+            {
+                listBox.SelectedIndex = persistedIndex + 1;
             }
         }
 
@@ -345,20 +347,12 @@ namespace Oven_Interface
 
         private void previousPressurePointButton_Click(object sender, EventArgs e)
         {
-            int persistedIndex = pressurePointsListBox.SelectedIndex;
-            if (persistedIndex > 0)
-            {
-                pressurePointsListBox.SelectedIndex = persistedIndex - 1;
-            }
+            selectPreviousElementInTheList(pressurePointsListBox);
         }
 
         private void nextPressurePointButton_Click(object sender, EventArgs e)
         {
-            int persistedIndex = pressurePointsListBox.SelectedIndex;
-            if (persistedIndex < (pressurePoints.Count - 1))
-            {
-                pressurePointsListBox.SelectedIndex = persistedIndex + 1;
-            }
+            selectNextElementInTheList<PressurePoint>(pressurePointsListBox, pressurePoints);
         }
 
         private void deletePressurePointButton_Click(object sender, EventArgs e)
@@ -377,20 +371,12 @@ namespace Oven_Interface
 
         private void previousValvePointButton_Click(object sender, EventArgs e)
         {
-            int persistedIndex = valvePointsListBox.SelectedIndex;
-            if (persistedIndex > 0)
-            {
-                valvePointsListBox.SelectedIndex = persistedIndex - 1;
-            }
+            selectPreviousElementInTheList(valvePointsListBox);
         }
 
         private void nextValvePointButton_Click(object sender, EventArgs e)
         {
-            int persistedIndex = valvePointsListBox.SelectedIndex;
-            if (persistedIndex < (valvePoints.Count - 1))
-            {
-                valvePointsListBox.SelectedIndex = persistedIndex + 1;
-            }
+            selectNextElementInTheList<ValvePoint>(valvePointsListBox, valvePoints);
         }
 
         private void deleteValvePointButton_Click(object sender, EventArgs e)
