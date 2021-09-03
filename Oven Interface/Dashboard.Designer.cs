@@ -29,18 +29,19 @@ namespace Oven_Interface
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.startProgramButton = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.stopProgramButton = new System.Windows.Forms.Button();
@@ -58,7 +59,7 @@ namespace Oven_Interface
             this.projectNameLabel = new System.Windows.Forms.Label();
             this.testPinInfoLabel = new System.Windows.Forms.Label();
             this.programsListBox = new System.Windows.Forms.ListBox();
-            this.buttonShowProgram = new System.Windows.Forms.Button();
+            this.breadBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.newProgramNameTextBox = new System.Windows.Forms.TextBox();
             this.createProgramButton = new System.Windows.Forms.Button();
             this.programNameLabel = new System.Windows.Forms.Label();
@@ -88,7 +89,6 @@ namespace Oven_Interface
             this.temperaturePointsTableGroupBox = new System.Windows.Forms.GroupBox();
             this.deleteTemperaturePointButton = new System.Windows.Forms.Button();
             this.temperaturePointsListBox = new System.Windows.Forms.ListBox();
-            this.showTemperaturePointsButton = new System.Windows.Forms.Button();
             this.previousTemperaturePointButton = new System.Windows.Forms.Button();
             this.nextTemperaturePointButton = new System.Windows.Forms.Button();
             this.pressuresPage = new System.Windows.Forms.TabPage();
@@ -100,7 +100,6 @@ namespace Oven_Interface
             this.pressurePointsTableGroupBox = new System.Windows.Forms.GroupBox();
             this.deletePressurePointButton = new System.Windows.Forms.Button();
             this.pressurePointsListBox = new System.Windows.Forms.ListBox();
-            this.showPressurePointsButton = new System.Windows.Forms.Button();
             this.previousPressurePointButton = new System.Windows.Forms.Button();
             this.nextPressurePointButton = new System.Windows.Forms.Button();
             this.valvesPage = new System.Windows.Forms.TabPage();
@@ -112,7 +111,6 @@ namespace Oven_Interface
             this.valvePointsTableGroupBox = new System.Windows.Forms.GroupBox();
             this.deleteValvePointButton = new System.Windows.Forms.Button();
             this.valvePointsListBox = new System.Windows.Forms.ListBox();
-            this.showValvepointsButton = new System.Windows.Forms.Button();
             this.previousValvePointButton = new System.Windows.Forms.Button();
             this.nextValvePointButton = new System.Windows.Forms.Button();
             this.historyPage = new System.Windows.Forms.TabPage();
@@ -129,6 +127,8 @@ namespace Oven_Interface
             this.actionGroupBox = new System.Windows.Forms.GroupBox();
             this.statusGroupBox = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.refreshInfoButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.breadBindingSource)).BeginInit();
             this.programFormGroupBox.SuspendLayout();
             this.allInformationGroupBox.SuspendLayout();
             this.valvePointFormGroupBox.SuspendLayout();
@@ -172,10 +172,10 @@ namespace Oven_Interface
             // 
             // startProgramButton
             // 
-            this.startProgramButton.Location = new System.Drawing.Point(6, 143);
+            this.startProgramButton.Location = new System.Drawing.Point(152, 28);
             this.startProgramButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.startProgramButton.Name = "startProgramButton";
-            this.startProgramButton.Size = new System.Drawing.Size(138, 35);
+            this.startProgramButton.Size = new System.Drawing.Size(198, 152);
             this.startProgramButton.TabIndex = 0;
             this.startProgramButton.Text = "СТАРТ";
             this.startProgramButton.UseVisualStyleBackColor = true;
@@ -191,10 +191,10 @@ namespace Oven_Interface
             // 
             // stopProgramButton
             // 
-            this.stopProgramButton.Location = new System.Drawing.Point(6, 100);
+            this.stopProgramButton.Location = new System.Drawing.Point(6, 140);
             this.stopProgramButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.stopProgramButton.Name = "stopProgramButton";
-            this.stopProgramButton.Size = new System.Drawing.Size(138, 35);
+            this.stopProgramButton.Size = new System.Drawing.Size(138, 40);
             this.stopProgramButton.TabIndex = 5;
             this.stopProgramButton.Text = "СТОП";
             this.stopProgramButton.UseVisualStyleBackColor = true;
@@ -202,10 +202,10 @@ namespace Oven_Interface
             // 
             // continueProgramButton
             // 
-            this.continueProgramButton.Location = new System.Drawing.Point(6, 59);
+            this.continueProgramButton.Location = new System.Drawing.Point(6, 84);
             this.continueProgramButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.continueProgramButton.Name = "continueProgramButton";
-            this.continueProgramButton.Size = new System.Drawing.Size(138, 35);
+            this.continueProgramButton.Size = new System.Drawing.Size(138, 40);
             this.continueProgramButton.TabIndex = 6;
             this.continueProgramButton.Text = "ПРОДОВЖИТИ";
             this.continueProgramButton.UseVisualStyleBackColor = true;
@@ -213,10 +213,10 @@ namespace Oven_Interface
             // 
             // pauseProgramButton
             // 
-            this.pauseProgramButton.Location = new System.Drawing.Point(6, 18);
+            this.pauseProgramButton.Location = new System.Drawing.Point(6, 28);
             this.pauseProgramButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pauseProgramButton.Name = "pauseProgramButton";
-            this.pauseProgramButton.Size = new System.Drawing.Size(138, 35);
+            this.pauseProgramButton.Size = new System.Drawing.Size(138, 40);
             this.pauseProgramButton.TabIndex = 7;
             this.pauseProgramButton.Text = "ПАУЗА";
             this.pauseProgramButton.UseVisualStyleBackColor = true;
@@ -254,7 +254,7 @@ namespace Oven_Interface
             // 
             // turnOnTestDiodButton
             // 
-            this.turnOnTestDiodButton.Location = new System.Drawing.Point(97, 47);
+            this.turnOnTestDiodButton.Location = new System.Drawing.Point(73, 22);
             this.turnOnTestDiodButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.turnOnTestDiodButton.Name = "turnOnTestDiodButton";
             this.turnOnTestDiodButton.Size = new System.Drawing.Size(57, 26);
@@ -265,7 +265,7 @@ namespace Oven_Interface
             // 
             // turnOffTestDiodButton
             // 
-            this.turnOffTestDiodButton.Location = new System.Drawing.Point(97, 74);
+            this.turnOffTestDiodButton.Location = new System.Drawing.Point(136, 22);
             this.turnOffTestDiodButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.turnOffTestDiodButton.Name = "turnOffTestDiodButton";
             this.turnOffTestDiodButton.Size = new System.Drawing.Size(57, 26);
@@ -328,7 +328,7 @@ namespace Oven_Interface
             // testPinInfoLabel
             // 
             this.testPinInfoLabel.AutoSize = true;
-            this.testPinInfoLabel.Location = new System.Drawing.Point(7, 65);
+            this.testPinInfoLabel.Location = new System.Drawing.Point(4, 28);
             this.testPinInfoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.testPinInfoLabel.Name = "testPinInfoLabel";
             this.testPinInfoLabel.Size = new System.Drawing.Size(59, 15);
@@ -337,6 +337,7 @@ namespace Oven_Interface
             // 
             // programsListBox
             // 
+            this.programsListBox.DataSource = this.breadBindingSource;
             this.programsListBox.FormattingEnabled = true;
             this.programsListBox.ItemHeight = 15;
             this.programsListBox.Location = new System.Drawing.Point(8, 18);
@@ -346,16 +347,9 @@ namespace Oven_Interface
             this.programsListBox.TabIndex = 29;
             this.programsListBox.SelectedIndexChanged += new System.EventHandler(this.programsListBox_SelectedIndexChanged);
             // 
-            // buttonShowProgram
+            // breadBindingSource
             // 
-            this.buttonShowProgram.Location = new System.Drawing.Point(591, 102);
-            this.buttonShowProgram.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonShowProgram.Name = "buttonShowProgram";
-            this.buttonShowProgram.Size = new System.Drawing.Size(126, 29);
-            this.buttonShowProgram.TabIndex = 30;
-            this.buttonShowProgram.Text = "Оновити Список";
-            this.buttonShowProgram.UseVisualStyleBackColor = true;
-            this.buttonShowProgram.Click += new System.EventHandler(this.showBreadsButton_Click);
+            this.breadBindingSource.DataSource = typeof(Oven_Interface.Bread);
             // 
             // newProgramNameTextBox
             // 
@@ -651,34 +645,34 @@ namespace Oven_Interface
             // 
             // chartTemperatures
             // 
-            chartArea4.Area3DStyle.PointDepth = 5;
-            chartArea4.Area3DStyle.Rotation = 20;
-            chartArea4.AxisX.Minimum = 0D;
-            chartArea4.AxisX.Title = "Час (хв)";
-            chartArea4.AxisY.Title = "Температура (С)";
-            chartArea4.Name = "ChartArea1";
-            this.chartTemperatures.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chartTemperatures.Legends.Add(legend4);
+            chartArea1.Area3DStyle.PointDepth = 5;
+            chartArea1.Area3DStyle.Rotation = 20;
+            chartArea1.AxisX.Minimum = 0D;
+            chartArea1.AxisX.Title = "Час (хв)";
+            chartArea1.AxisY.Title = "Температура (С)";
+            chartArea1.Name = "ChartArea1";
+            this.chartTemperatures.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartTemperatures.Legends.Add(legend1);
             this.chartTemperatures.Location = new System.Drawing.Point(6, 20);
             this.chartTemperatures.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chartTemperatures.Name = "chartTemperatures";
-            series4.BorderWidth = 4;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
-            series4.IsValueShownAsLabel = true;
-            series4.LabelForeColor = System.Drawing.Color.DimGray;
-            series4.Legend = "Legend1";
-            series4.Name = "Температура";
-            series4.XValueMember = "Minute";
-            series4.YValueMembers = "Value";
-            series4.YValuesPerPoint = 6;
-            this.chartTemperatures.Series.Add(series4);
+            series1.BorderWidth = 4;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
+            series1.IsValueShownAsLabel = true;
+            series1.LabelForeColor = System.Drawing.Color.DimGray;
+            series1.Legend = "Legend1";
+            series1.Name = "Температура";
+            series1.XValueMember = "Minute";
+            series1.YValueMembers = "Value";
+            series1.YValuesPerPoint = 6;
+            this.chartTemperatures.Series.Add(series1);
             this.chartTemperatures.Size = new System.Drawing.Size(802, 346);
             this.chartTemperatures.TabIndex = 4;
             this.chartTemperatures.Text = "chart1";
-            title4.Name = "Text";
-            this.chartTemperatures.Titles.Add(title4);
+            title1.Name = "Text";
+            this.chartTemperatures.Titles.Add(title1);
             // 
             // temperatureTableTabPage
             // 
@@ -696,7 +690,6 @@ namespace Oven_Interface
             // 
             this.temperaturePointsTableGroupBox.Controls.Add(this.deleteTemperaturePointButton);
             this.temperaturePointsTableGroupBox.Controls.Add(this.temperaturePointsListBox);
-            this.temperaturePointsTableGroupBox.Controls.Add(this.showTemperaturePointsButton);
             this.temperaturePointsTableGroupBox.Controls.Add(this.previousTemperaturePointButton);
             this.temperaturePointsTableGroupBox.Controls.Add(this.nextTemperaturePointButton);
             this.temperaturePointsTableGroupBox.Location = new System.Drawing.Point(8, 5);
@@ -710,7 +703,7 @@ namespace Oven_Interface
             // 
             // deleteTemperaturePointButton
             // 
-            this.deleteTemperaturePointButton.Location = new System.Drawing.Point(581, 327);
+            this.deleteTemperaturePointButton.Location = new System.Drawing.Point(716, 327);
             this.deleteTemperaturePointButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.deleteTemperaturePointButton.Name = "deleteTemperaturePointButton";
             this.deleteTemperaturePointButton.Size = new System.Drawing.Size(85, 30);
@@ -729,17 +722,6 @@ namespace Oven_Interface
             this.temperaturePointsListBox.Name = "temperaturePointsListBox";
             this.temperaturePointsListBox.Size = new System.Drawing.Size(795, 304);
             this.temperaturePointsListBox.TabIndex = 29;
-            // 
-            // showTemperaturePointsButton
-            // 
-            this.showTemperaturePointsButton.Location = new System.Drawing.Point(673, 327);
-            this.showTemperaturePointsButton.Margin = new System.Windows.Forms.Padding(2);
-            this.showTemperaturePointsButton.Name = "showTemperaturePointsButton";
-            this.showTemperaturePointsButton.Size = new System.Drawing.Size(126, 29);
-            this.showTemperaturePointsButton.TabIndex = 30;
-            this.showTemperaturePointsButton.Text = "Оновити Список";
-            this.showTemperaturePointsButton.UseVisualStyleBackColor = true;
-            this.showTemperaturePointsButton.Click += new System.EventHandler(this.showTemperaturePointsButton_Click);
             // 
             // previousTemperaturePointButton
             // 
@@ -810,34 +792,34 @@ namespace Oven_Interface
             // 
             // pressuresChart
             // 
-            chartArea5.Area3DStyle.PointDepth = 5;
-            chartArea5.Area3DStyle.Rotation = 20;
-            chartArea5.AxisX.Minimum = 0D;
-            chartArea5.AxisX.Title = "Час (хв)";
-            chartArea5.AxisY.Title = "Тиск Води (Па)";
-            chartArea5.Name = "ChartArea1";
-            this.pressuresChart.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.pressuresChart.Legends.Add(legend5);
+            chartArea2.Area3DStyle.PointDepth = 5;
+            chartArea2.Area3DStyle.Rotation = 20;
+            chartArea2.AxisX.Minimum = 0D;
+            chartArea2.AxisX.Title = "Час (хв)";
+            chartArea2.AxisY.Title = "Тиск Води (Па)";
+            chartArea2.Name = "ChartArea1";
+            this.pressuresChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.pressuresChart.Legends.Add(legend2);
             this.pressuresChart.Location = new System.Drawing.Point(6, 20);
             this.pressuresChart.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pressuresChart.Name = "pressuresChart";
-            series5.BorderWidth = 4;
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
-            series5.IsValueShownAsLabel = true;
-            series5.LabelForeColor = System.Drawing.Color.DimGray;
-            series5.Legend = "Legend1";
-            series5.Name = "Тиск Води";
-            series5.XValueMember = "Minute";
-            series5.YValueMembers = "Value";
-            series5.YValuesPerPoint = 6;
-            this.pressuresChart.Series.Add(series5);
+            series2.BorderWidth = 4;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
+            series2.IsValueShownAsLabel = true;
+            series2.LabelForeColor = System.Drawing.Color.DimGray;
+            series2.Legend = "Legend1";
+            series2.Name = "Тиск Води";
+            series2.XValueMember = "Minute";
+            series2.YValueMembers = "Value";
+            series2.YValuesPerPoint = 6;
+            this.pressuresChart.Series.Add(series2);
             this.pressuresChart.Size = new System.Drawing.Size(802, 356);
             this.pressuresChart.TabIndex = 4;
             this.pressuresChart.Text = "chart1";
-            title5.Name = "Text";
-            this.pressuresChart.Titles.Add(title5);
+            title2.Name = "Text";
+            this.pressuresChart.Titles.Add(title2);
             // 
             // pressureTableTabPage
             // 
@@ -855,7 +837,6 @@ namespace Oven_Interface
             // 
             this.pressurePointsTableGroupBox.Controls.Add(this.deletePressurePointButton);
             this.pressurePointsTableGroupBox.Controls.Add(this.pressurePointsListBox);
-            this.pressurePointsTableGroupBox.Controls.Add(this.showPressurePointsButton);
             this.pressurePointsTableGroupBox.Controls.Add(this.previousPressurePointButton);
             this.pressurePointsTableGroupBox.Controls.Add(this.nextPressurePointButton);
             this.pressurePointsTableGroupBox.Location = new System.Drawing.Point(8, 5);
@@ -869,7 +850,7 @@ namespace Oven_Interface
             // 
             // deletePressurePointButton
             // 
-            this.deletePressurePointButton.Location = new System.Drawing.Point(584, 347);
+            this.deletePressurePointButton.Location = new System.Drawing.Point(717, 347);
             this.deletePressurePointButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.deletePressurePointButton.Name = "deletePressurePointButton";
             this.deletePressurePointButton.Size = new System.Drawing.Size(85, 30);
@@ -888,17 +869,6 @@ namespace Oven_Interface
             this.pressurePointsListBox.Name = "pressurePointsListBox";
             this.pressurePointsListBox.Size = new System.Drawing.Size(794, 304);
             this.pressurePointsListBox.TabIndex = 29;
-            // 
-            // showPressurePointsButton
-            // 
-            this.showPressurePointsButton.Location = new System.Drawing.Point(676, 347);
-            this.showPressurePointsButton.Margin = new System.Windows.Forms.Padding(2);
-            this.showPressurePointsButton.Name = "showPressurePointsButton";
-            this.showPressurePointsButton.Size = new System.Drawing.Size(126, 29);
-            this.showPressurePointsButton.TabIndex = 30;
-            this.showPressurePointsButton.Text = "Оновити Список";
-            this.showPressurePointsButton.UseVisualStyleBackColor = true;
-            this.showPressurePointsButton.Click += new System.EventHandler(this.showPressurePointsButton_Click);
             // 
             // previousPressurePointButton
             // 
@@ -969,34 +939,34 @@ namespace Oven_Interface
             // 
             // valveChart
             // 
-            chartArea6.Area3DStyle.PointDepth = 5;
-            chartArea6.Area3DStyle.Rotation = 20;
-            chartArea6.AxisX.Minimum = 0D;
-            chartArea6.AxisX.Title = "Час (хв)";
-            chartArea6.AxisY.Title = "Відкритість Клапану Пари (%)";
-            chartArea6.Name = "ChartArea1";
-            this.valveChart.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.valveChart.Legends.Add(legend6);
+            chartArea3.Area3DStyle.PointDepth = 5;
+            chartArea3.Area3DStyle.Rotation = 20;
+            chartArea3.AxisX.Minimum = 0D;
+            chartArea3.AxisX.Title = "Час (хв)";
+            chartArea3.AxisY.Title = "Відкритість Клапану Пари (%)";
+            chartArea3.Name = "ChartArea1";
+            this.valveChart.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.valveChart.Legends.Add(legend3);
             this.valveChart.Location = new System.Drawing.Point(6, 20);
             this.valveChart.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.valveChart.Name = "valveChart";
-            series6.BorderWidth = 4;
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
-            series6.IsValueShownAsLabel = true;
-            series6.LabelForeColor = System.Drawing.Color.DimGray;
-            series6.Legend = "Legend1";
-            series6.Name = "Рівень Пари";
-            series6.XValueMember = "Minute";
-            series6.YValueMembers = "Value";
-            series6.YValuesPerPoint = 6;
-            this.valveChart.Series.Add(series6);
+            series3.BorderWidth = 4;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
+            series3.IsValueShownAsLabel = true;
+            series3.LabelForeColor = System.Drawing.Color.DimGray;
+            series3.Legend = "Legend1";
+            series3.Name = "Рівень Пари";
+            series3.XValueMember = "Minute";
+            series3.YValueMembers = "Value";
+            series3.YValuesPerPoint = 6;
+            this.valveChart.Series.Add(series3);
             this.valveChart.Size = new System.Drawing.Size(802, 356);
             this.valveChart.TabIndex = 4;
             this.valveChart.Text = "chart1";
-            title6.Name = "Text";
-            this.valveChart.Titles.Add(title6);
+            title3.Name = "Text";
+            this.valveChart.Titles.Add(title3);
             // 
             // valveTableTabPage
             // 
@@ -1014,7 +984,6 @@ namespace Oven_Interface
             // 
             this.valvePointsTableGroupBox.Controls.Add(this.deleteValvePointButton);
             this.valvePointsTableGroupBox.Controls.Add(this.valvePointsListBox);
-            this.valvePointsTableGroupBox.Controls.Add(this.showValvepointsButton);
             this.valvePointsTableGroupBox.Controls.Add(this.previousValvePointButton);
             this.valvePointsTableGroupBox.Controls.Add(this.nextValvePointButton);
             this.valvePointsTableGroupBox.Location = new System.Drawing.Point(8, 5);
@@ -1028,7 +997,7 @@ namespace Oven_Interface
             // 
             // deleteValvePointButton
             // 
-            this.deleteValvePointButton.Location = new System.Drawing.Point(581, 347);
+            this.deleteValvePointButton.Location = new System.Drawing.Point(716, 347);
             this.deleteValvePointButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.deleteValvePointButton.Name = "deleteValvePointButton";
             this.deleteValvePointButton.Size = new System.Drawing.Size(85, 30);
@@ -1047,17 +1016,6 @@ namespace Oven_Interface
             this.valvePointsListBox.Name = "valvePointsListBox";
             this.valvePointsListBox.Size = new System.Drawing.Size(791, 319);
             this.valvePointsListBox.TabIndex = 29;
-            // 
-            // showValvepointsButton
-            // 
-            this.showValvepointsButton.Location = new System.Drawing.Point(673, 347);
-            this.showValvepointsButton.Margin = new System.Windows.Forms.Padding(2);
-            this.showValvepointsButton.Name = "showValvepointsButton";
-            this.showValvepointsButton.Size = new System.Drawing.Size(126, 29);
-            this.showValvepointsButton.TabIndex = 30;
-            this.showValvepointsButton.Text = "Оновити Список";
-            this.showValvepointsButton.UseVisualStyleBackColor = true;
-            this.showValvepointsButton.Click += new System.EventHandler(this.showValvepointsButton_Click);
             // 
             // previousValvePointButton
             // 
@@ -1195,7 +1153,6 @@ namespace Oven_Interface
             // 
             this.programsIndexGroupBox.Controls.Add(this.buttonDeleteProgram);
             this.programsIndexGroupBox.Controls.Add(this.programsListBox);
-            this.programsIndexGroupBox.Controls.Add(this.buttonShowProgram);
             this.programsIndexGroupBox.Controls.Add(this.buttonPreviousProgram);
             this.programsIndexGroupBox.Controls.Add(this.buttonNextProgram);
             this.programsIndexGroupBox.Location = new System.Drawing.Point(12, 19);
@@ -1209,7 +1166,7 @@ namespace Oven_Interface
             // 
             // buttonDeleteProgram
             // 
-            this.buttonDeleteProgram.Location = new System.Drawing.Point(504, 101);
+            this.buttonDeleteProgram.Location = new System.Drawing.Point(632, 101);
             this.buttonDeleteProgram.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonDeleteProgram.Name = "buttonDeleteProgram";
             this.buttonDeleteProgram.Size = new System.Drawing.Size(83, 30);
@@ -1224,11 +1181,11 @@ namespace Oven_Interface
             this.actionGroupBox.Controls.Add(this.startProgramButton);
             this.actionGroupBox.Controls.Add(this.stopProgramButton);
             this.actionGroupBox.Controls.Add(this.continueProgramButton);
-            this.actionGroupBox.Location = new System.Drawing.Point(938, 671);
+            this.actionGroupBox.Location = new System.Drawing.Point(737, 671);
             this.actionGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.actionGroupBox.Name = "actionGroupBox";
             this.actionGroupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.actionGroupBox.Size = new System.Drawing.Size(155, 186);
+            this.actionGroupBox.Size = new System.Drawing.Size(356, 186);
             this.actionGroupBox.TabIndex = 38;
             this.actionGroupBox.TabStop = false;
             this.actionGroupBox.Text = "Дії";
@@ -1254,17 +1211,29 @@ namespace Oven_Interface
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.refreshInfoButton);
             this.groupBox4.Controls.Add(this.testPinInfoLabel);
             this.groupBox4.Controls.Add(this.turnOnTestDiodButton);
             this.groupBox4.Controls.Add(this.turnOffTestDiodButton);
-            this.groupBox4.Location = new System.Drawing.Point(722, 738);
+            this.groupBox4.Location = new System.Drawing.Point(11, 671);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Size = new System.Drawing.Size(170, 119);
+            this.groupBox4.Size = new System.Drawing.Size(707, 53);
             this.groupBox4.TabIndex = 37;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Перевірка З\'єднання";
+            // 
+            // refreshInfoButton
+            // 
+            this.refreshInfoButton.Location = new System.Drawing.Point(533, 14);
+            this.refreshInfoButton.Margin = new System.Windows.Forms.Padding(2);
+            this.refreshInfoButton.Name = "refreshInfoButton";
+            this.refreshInfoButton.Size = new System.Drawing.Size(170, 29);
+            this.refreshInfoButton.TabIndex = 32;
+            this.refreshInfoButton.Text = "Оновити Інформацію";
+            this.refreshInfoButton.UseVisualStyleBackColor = true;
+            this.refreshInfoButton.Click += new System.EventHandler(this.refreshInfoButton_Click);
             // 
             // Dashboard
             // 
@@ -1282,6 +1251,7 @@ namespace Oven_Interface
             this.Text = "Терморегулятор Пічки";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Dashboard_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.breadBindingSource)).EndInit();
             this.programFormGroupBox.ResumeLayout(false);
             this.programFormGroupBox.PerformLayout();
             this.allInformationGroupBox.ResumeLayout(false);
@@ -1351,7 +1321,6 @@ namespace Oven_Interface
         private System.Windows.Forms.Label projectNameLabel;
         private System.Windows.Forms.Label testPinInfoLabel;
         private System.Windows.Forms.ListBox programsListBox;
-        private System.Windows.Forms.Button buttonShowProgram;
         private System.Windows.Forms.TextBox newProgramNameTextBox;
         private System.Windows.Forms.Button createProgramButton;
         private System.Windows.Forms.Label programNameLabel;
@@ -1389,7 +1358,6 @@ namespace Oven_Interface
         private System.Windows.Forms.GroupBox temperaturePointsTableGroupBox;
         private System.Windows.Forms.Button deleteTemperaturePointButton;
         private System.Windows.Forms.ListBox temperaturePointsListBox;
-        private System.Windows.Forms.Button showTemperaturePointsButton;
         private System.Windows.Forms.Button previousTemperaturePointButton;
         private System.Windows.Forms.Button nextTemperaturePointButton;
         private System.Windows.Forms.TabPage pressuresPage;
@@ -1401,7 +1369,6 @@ namespace Oven_Interface
         private System.Windows.Forms.GroupBox pressurePointsTableGroupBox;
         private System.Windows.Forms.Button deletePressurePointButton;
         private System.Windows.Forms.ListBox pressurePointsListBox;
-        private System.Windows.Forms.Button showPressurePointsButton;
         private System.Windows.Forms.Button previousPressurePointButton;
         private System.Windows.Forms.Button nextPressurePointButton;
         private System.Windows.Forms.TabPage valvesPage;
@@ -1413,7 +1380,6 @@ namespace Oven_Interface
         private System.Windows.Forms.GroupBox valvePointsTableGroupBox;
         private System.Windows.Forms.Button deleteValvePointButton;
         private System.Windows.Forms.ListBox valvePointsListBox;
-        private System.Windows.Forms.Button showValvepointsButton;
         private System.Windows.Forms.Button previousValvePointButton;
         private System.Windows.Forms.Button nextValvePointButton;
         private System.Windows.Forms.NumericUpDown newValvePointValueTextBox;
@@ -1422,6 +1388,8 @@ namespace Oven_Interface
         private System.Windows.Forms.NumericUpDown newPressurePointMinuteTextBox;
         private System.Windows.Forms.NumericUpDown newTemperaturePointValueTextBox;
         private System.Windows.Forms.NumericUpDown newTemperaturePointMinuteTextBox;
+        private System.Windows.Forms.BindingSource breadBindingSource;
+        private System.Windows.Forms.Button refreshInfoButton;
     }
 }
 

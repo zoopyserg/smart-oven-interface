@@ -33,49 +33,98 @@ namespace Oven_Interface
                 using (var session = new ArduinoSession(connection))
                     PerformBasicTest(session, this.labelLastCommandStatus);
         }
-        private void UpdateBinding()
+        private void UpdateBinding(bool refreshEverything = true)
         {
-            programsListBox.DataSource = breads;
-            programsListBox.DisplayMember = "DisplayString";
-
-            if ((breads.Count > 0) && (programsListBox.SelectedIndex > -1))
+            int persistedIndex = -1;
+            
+            if (refreshEverything)
             {
-                int selectedBreadId = breads[programsListBox.SelectedIndex].Id;
+                breads = BreadsController.Index();
+            }
+            
+            if ((programsListBox.SelectedIndex < 0) || (programsListBox.SelectedIndex > (breads.Count - 1)))
+            {
+                if (breads.Count > 0)
+                {
+                    persistedIndex = 0;
+                } else
+                {
+                    persistedIndex = -1;
+                }
+            } else
+            {
+                persistedIndex = programsListBox.SelectedIndex;
+            }
+
+            if ((breads.Count > 0) && (persistedIndex > -1))
+            {
+                int selectedBreadId = breads[persistedIndex].Id;
                 temperaturePoints = TemperaturePointsController.Index(selectedBreadId);
                 pressurePoints = PressurePointsController.Index(selectedBreadId);
                 valvePoints = ValvePointsController.Index(selectedBreadId);
                 launchInstances = LaunchInstancesController.Index(selectedBreadId);
             }
 
+            UpdateProgramsListBox();
+            UpdatePressurePointsListBox();
+            UpdateTemperaturePointsListBox();
+            UpdateValvePointsListBox();
+            UpdateHistoryListBox();
 
-            // update list boxes
-            temperaturePointsListBox.DataSource = temperaturePoints;
-            temperaturePointsListBox.DisplayMember = "DisplayString";
+            UpdatePressurePointsChart();
+            UpdateValvePointsChart();
+            UpdateTemperaturePointsChart();
 
-            pressurePointsListBox.DataSource = pressurePoints;
-            pressurePointsListBox.DisplayMember = "DisplayString";
+            if (refreshEverything)
+            {
+                programsListBox.SelectedIndex = persistedIndex;
+            }
+        }
 
-            valvePointsListBox.DataSource = valvePoints;
-            valvePointsListBox.DisplayMember = "DisplayString";
+        private void UpdateProgramsListBox()
+        {
+            programsListBox.DataSource = breads;
+            programsListBox.DisplayMember = "DisplayString";
+        }
 
+        private void UpdateHistoryListBox()
+        {
             historyListBox.DataSource = launchInstances;
             historyListBox.DisplayMember = "DisplayString";
+        }
 
-            // update temperatures chart
+        private void UpdatePressurePointsListBox()
+        {
+            pressurePointsListBox.DataSource = pressurePoints;
+            pressurePointsListBox.DisplayMember = "DisplayString";
+        }
+        private void UpdateTemperaturePointsListBox()
+        {
+            temperaturePointsListBox.DataSource = temperaturePoints;
+            temperaturePointsListBox.DisplayMember = "DisplayString";
+        }
+        private void UpdateValvePointsListBox()
+        {
+            valvePointsListBox.DataSource = valvePoints;
+            valvePointsListBox.DisplayMember = "DisplayString";
+        }
+
+        private void UpdateTemperaturePointsChart()
+        {
             chartTemperatures.DataSource = temperaturePoints;
-
             chartTemperatures.DataBind();
+        }
 
-            // update pressures chart
+        private void UpdatePressurePointsChart()
+        {
             pressuresChart.DataSource = pressurePoints;
-
             pressuresChart.DataBind();
+        }
 
-            // update valve chart
+        private void UpdateValvePointsChart()
+        {
             valveChart.DataSource = valvePoints;
-
             valveChart.DataBind();
-
         }
 
         private static ISerialConnection GetConnection(Label ConnectionStatusLabel)
@@ -135,37 +184,8 @@ namespace Oven_Interface
             SignalStatusLabel.Text = "13й пін виключено";
         }
 
-        private static void DisplayPortCapabilities()
-        {
-            using (var session = new ArduinoSession(new EnhancedSerialConnection("COM3", SerialBaudRate.Bps_57600)))
-            {
-                BoardCapability cap = session.GetBoardCapability();
-                Console.WriteLine();
-                Console.WriteLine("Board Capability:");
-
-                foreach (var pin in cap.Pins)
-                {
-                    Console.WriteLine("Pin {0}: Input: {1}, Output: {2}, Analog: {3}, Analog-Res: {4}, PWM: {5}, PWM-Res: {6}, Servo: {7}, Servo-Res: {8}, Serial: {9}, Encoder: {10}, Input-pullup: {11}",
-                        pin.PinNumber,
-                        pin.DigitalInput,
-                        pin.DigitalOutput,
-                        pin.Analog,
-                        pin.AnalogResolution,
-                        pin.Pwm,
-                        pin.PwmResolution,
-                        pin.Servo,
-                        pin.ServoResolution,
-                        pin.Serial,
-                        pin.Encoder,
-                        pin.InputPullup);
-                }
-            }
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
-            breads = BreadsController.Index();
-            // how do I get the ID of a selected bread?
             UpdateBinding();
 
             timer = new System.Timers.Timer();
@@ -194,7 +214,7 @@ namespace Oven_Interface
                     minutesLeftLabel.Text = (runningProgram.Duration - minutesPassed).ToString();
                     int persistedIndex = programsListBox.SelectedIndex;
                     breads = BreadsController.Index();
-                    UpdateBinding();
+                    UpdateBinding(false);
                     programsListBox.SelectedIndex = persistedIndex;
                 }
             }));
@@ -202,21 +222,11 @@ namespace Oven_Interface
 
         public void CommitProgramFinilization()
         {
-            int persistedIndex = programsListBox.SelectedIndex;
             labelLastCommandStatus.Text = $"Програму {runningProgram.Name} завершено";
             BreadsController.Finish(runningProgram.Id);
             runningProgram = null;
             minutesPassed = 0;
             progressBar1.Value = 0;
-            breads = BreadsController.Index();
-            UpdateBinding();
-            programsListBox.SelectedIndex = persistedIndex;
-        }
-
-        private void showBreadsButton_Click(object sender, EventArgs e)
-        {
-            breads = BreadsController.Index();
-
             UpdateBinding();
         }
 
@@ -224,13 +234,12 @@ namespace Oven_Interface
         {
             BreadsController.Create(newProgramNameTextBox.Text);
             newProgramNameTextBox.Text = "";
-            breads = BreadsController.Index();
             UpdateBinding();
         }
 
         private void programsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            UpdateBinding();
+            UpdateBinding(false);
         }
 
         private void createTemperatureButton_Click(object sender, EventArgs e)
@@ -239,29 +248,18 @@ namespace Oven_Interface
             TemperaturePointsController.Create(breads[persistedIndex].Id, Decimal.ToInt32(newTemperaturePointMinuteTextBox.Value), Decimal.ToInt32(newTemperaturePointValueTextBox.Value));
             newTemperaturePointMinuteTextBox.Value = 0;
             newTemperaturePointValueTextBox.Value = 0;
-            breads = BreadsController.Index();
             UpdateBinding();
-            programsListBox.SelectedIndex = persistedIndex;
         }
 
         private void buttonDeleteProgram_Click(object sender, EventArgs e)
         {
             BreadsController.Delete(breads[programsListBox.SelectedIndex].Id);
-            breads = BreadsController.Index();
             UpdateBinding();
         }
 
         private void deleteTemperaturePointButton_Click(object sender, EventArgs e)
         {
-            int persistedIndex = programsListBox.SelectedIndex;
             TemperaturePointsController.Delete(temperaturePoints[temperaturePointsListBox.SelectedIndex].Id);
-            breads = BreadsController.Index();
-            UpdateBinding();
-            programsListBox.SelectedIndex = persistedIndex;
-        }
-
-        private void showTemperaturePointsButton_Click(object sender, EventArgs e)
-        {
             UpdateBinding();
         }
 
@@ -309,10 +307,7 @@ namespace Oven_Interface
             int persistedIndex = programsListBox.SelectedIndex;
             runningProgram = breads[persistedIndex];
             LaunchInstancesController.Create(runningProgram.Id);
-            breads = BreadsController.Index();
             UpdateBinding();
-            programsListBox.SelectedIndex = persistedIndex;
-
             timer.Start();
 
             // и каждую секунду обновлять статус запуска (сколько минут прошло).
@@ -357,15 +352,7 @@ namespace Oven_Interface
 
         private void deletePressurePointButton_Click(object sender, EventArgs e)
         {
-            int persistedIndex = programsListBox.SelectedIndex;
             PressurePointsController.Delete(pressurePoints[pressurePointsListBox.SelectedIndex].Id);
-            breads = BreadsController.Index();
-            UpdateBinding();
-            programsListBox.SelectedIndex = persistedIndex;
-        }
-
-        private void showPressurePointsButton_Click(object sender, EventArgs e)
-        {
             UpdateBinding();
         }
 
@@ -381,15 +368,7 @@ namespace Oven_Interface
 
         private void deleteValvePointButton_Click(object sender, EventArgs e)
         {
-            int persistedIndex = programsListBox.SelectedIndex;
-            ValvePointsController.Delete(pressurePoints[valvePointsListBox.SelectedIndex].Id);
-            breads = BreadsController.Index();
-            UpdateBinding();
-            programsListBox.SelectedIndex = persistedIndex;
-        }
-
-        private void showValvepointsButton_Click(object sender, EventArgs e)
-        {
+            ValvePointsController.Delete(valvePoints[valvePointsListBox.SelectedIndex].Id);
             UpdateBinding();
         }
 
@@ -399,22 +378,21 @@ namespace Oven_Interface
             PressurePointsController.Create(breads[persistedIndex].Id, Decimal.ToInt32(newPressurePointMinuteTextBox.Value), Decimal.ToInt32(newPressurePointValueTextBox.Value));
             newPressurePointMinuteTextBox.Value = 0;
             newPressurePointValueTextBox.Value = 0;
-            breads = BreadsController.Index();
             UpdateBinding();
-            programsListBox.SelectedIndex = persistedIndex;
         }
 
         private void createValvePointButton_Click(object sender, EventArgs e)
         {
-            DataAccess db = new DataAccess();
-
             int persistedIndex = programsListBox.SelectedIndex;
             ValvePointsController.Create(breads[persistedIndex].Id, Decimal.ToInt32(newValvePointMinuteTextBox.Value), Decimal.ToInt32(newValvePointValueTextBox.Value));
             newValvePointMinuteTextBox.Value = 0;
             newValvePointValueTextBox.Value = 0;
-            breads = BreadsController.Index();
             UpdateBinding();
-            programsListBox.SelectedIndex = persistedIndex;
+        }
+
+        private void refreshInfoButton_Click(object sender, EventArgs e)
+        {
+            UpdateBinding();
         }
     }
 }
