@@ -68,16 +68,12 @@ namespace Oven_Interface
             this.allInformationGroupBox = new System.Windows.Forms.GroupBox();
             this.valvePointFormGroupBox = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.newValvePointValueTextBox = new System.Windows.Forms.TextBox();
             this.createValvePointButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.newValvePointMinuteTextBox = new System.Windows.Forms.TextBox();
             this.pressurePointFormGroupBox = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.newPressurePointValueTextBox = new System.Windows.Forms.TextBox();
             this.createPressurePointButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.newPressurePointMinuteTextBox = new System.Windows.Forms.TextBox();
             this.allActionsTabControl = new System.Windows.Forms.TabControl();
             this.temperaturesPage = new System.Windows.Forms.TabPage();
             this.temperaturePointsTabControl = new System.Windows.Forms.TabControl();
@@ -120,15 +116,19 @@ namespace Oven_Interface
             this.historyListBox = new System.Windows.Forms.ListBox();
             this.temperaturePointFormGroupBox = new System.Windows.Forms.GroupBox();
             this.temperaturePointValueLabel = new System.Windows.Forms.Label();
-            this.newTemperaturePointValueTextBox = new System.Windows.Forms.TextBox();
             this.createTemperaturePointButton = new System.Windows.Forms.Button();
             this.temperaturePointMinuteLabel = new System.Windows.Forms.Label();
-            this.newTemperaturePointMinuteTextBox = new System.Windows.Forms.TextBox();
             this.programsIndexGroupBox = new System.Windows.Forms.GroupBox();
             this.buttonDeleteProgram = new System.Windows.Forms.Button();
             this.actionGroupBox = new System.Windows.Forms.GroupBox();
             this.statusGroupBox = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.newTemperaturePointMinuteTextBox = new System.Windows.Forms.NumericUpDown();
+            this.newTemperaturePointValueTextBox = new System.Windows.Forms.NumericUpDown();
+            this.newPressurePointMinuteTextBox = new System.Windows.Forms.NumericUpDown();
+            this.newPressurePointValueTextBox = new System.Windows.Forms.NumericUpDown();
+            this.newValvePointMinuteTextBox = new System.Windows.Forms.NumericUpDown();
+            this.newValvePointValueTextBox = new System.Windows.Forms.NumericUpDown();
             this.programFormGroupBox.SuspendLayout();
             this.allInformationGroupBox.SuspendLayout();
             this.valvePointFormGroupBox.SuspendLayout();
@@ -162,6 +162,12 @@ namespace Oven_Interface
             this.actionGroupBox.SuspendLayout();
             this.statusGroupBox.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.newTemperaturePointMinuteTextBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newTemperaturePointValueTextBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newPressurePointMinuteTextBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newPressurePointValueTextBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newValvePointMinuteTextBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newValvePointValueTextBox)).BeginInit();
             this.SuspendLayout();
             // 
             // startProgramButton
@@ -435,11 +441,11 @@ namespace Oven_Interface
             // 
             // valvePointFormGroupBox
             // 
-            this.valvePointFormGroupBox.Controls.Add(this.label3);
             this.valvePointFormGroupBox.Controls.Add(this.newValvePointValueTextBox);
+            this.valvePointFormGroupBox.Controls.Add(this.newValvePointMinuteTextBox);
+            this.valvePointFormGroupBox.Controls.Add(this.label3);
             this.valvePointFormGroupBox.Controls.Add(this.createValvePointButton);
             this.valvePointFormGroupBox.Controls.Add(this.label4);
-            this.valvePointFormGroupBox.Controls.Add(this.newValvePointMinuteTextBox);
             this.valvePointFormGroupBox.Location = new System.Drawing.Point(857, 418);
             this.valvePointFormGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.valvePointFormGroupBox.Name = "valvePointFormGroupBox";
@@ -458,14 +464,6 @@ namespace Oven_Interface
             this.label3.Size = new System.Drawing.Size(75, 15);
             this.label3.TabIndex = 35;
             this.label3.Text = "Значення:";
-            // 
-            // newValvePointValueTextBox
-            // 
-            this.newValvePointValueTextBox.Location = new System.Drawing.Point(86, 50);
-            this.newValvePointValueTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.newValvePointValueTextBox.Name = "newValvePointValueTextBox";
-            this.newValvePointValueTextBox.Size = new System.Drawing.Size(66, 21);
-            this.newValvePointValueTextBox.TabIndex = 34;
             // 
             // createValvePointButton
             // 
@@ -488,21 +486,13 @@ namespace Oven_Interface
             this.label4.TabIndex = 33;
             this.label4.Text = "Хвилина:";
             // 
-            // newValvePointMinuteTextBox
-            // 
-            this.newValvePointMinuteTextBox.Location = new System.Drawing.Point(86, 24);
-            this.newValvePointMinuteTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.newValvePointMinuteTextBox.Name = "newValvePointMinuteTextBox";
-            this.newValvePointMinuteTextBox.Size = new System.Drawing.Size(66, 21);
-            this.newValvePointMinuteTextBox.TabIndex = 31;
-            // 
             // pressurePointFormGroupBox
             // 
-            this.pressurePointFormGroupBox.Controls.Add(this.label1);
             this.pressurePointFormGroupBox.Controls.Add(this.newPressurePointValueTextBox);
+            this.pressurePointFormGroupBox.Controls.Add(this.newPressurePointMinuteTextBox);
+            this.pressurePointFormGroupBox.Controls.Add(this.label1);
             this.pressurePointFormGroupBox.Controls.Add(this.createPressurePointButton);
             this.pressurePointFormGroupBox.Controls.Add(this.label2);
-            this.pressurePointFormGroupBox.Controls.Add(this.newPressurePointMinuteTextBox);
             this.pressurePointFormGroupBox.Location = new System.Drawing.Point(857, 303);
             this.pressurePointFormGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.pressurePointFormGroupBox.Name = "pressurePointFormGroupBox";
@@ -522,17 +512,9 @@ namespace Oven_Interface
             this.label1.TabIndex = 35;
             this.label1.Text = "Значення:";
             // 
-            // newPressurePointValueTextBox
-            // 
-            this.newPressurePointValueTextBox.Location = new System.Drawing.Point(86, 50);
-            this.newPressurePointValueTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.newPressurePointValueTextBox.Name = "newPressurePointValueTextBox";
-            this.newPressurePointValueTextBox.Size = new System.Drawing.Size(66, 21);
-            this.newPressurePointValueTextBox.TabIndex = 34;
-            // 
             // createPressurePointButton
             // 
-            this.createPressurePointButton.Location = new System.Drawing.Point(59, 75);
+            this.createPressurePointButton.Location = new System.Drawing.Point(109, 77);
             this.createPressurePointButton.Margin = new System.Windows.Forms.Padding(2);
             this.createPressurePointButton.Name = "createPressurePointButton";
             this.createPressurePointButton.Size = new System.Drawing.Size(92, 29);
@@ -550,14 +532,6 @@ namespace Oven_Interface
             this.label2.Size = new System.Drawing.Size(68, 15);
             this.label2.TabIndex = 33;
             this.label2.Text = "Хвилина:";
-            // 
-            // newPressurePointMinuteTextBox
-            // 
-            this.newPressurePointMinuteTextBox.Location = new System.Drawing.Point(86, 24);
-            this.newPressurePointMinuteTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.newPressurePointMinuteTextBox.Name = "newPressurePointMinuteTextBox";
-            this.newPressurePointMinuteTextBox.Size = new System.Drawing.Size(66, 21);
-            this.newPressurePointMinuteTextBox.TabIndex = 31;
             // 
             // allActionsTabControl
             // 
@@ -1085,11 +1059,11 @@ namespace Oven_Interface
             // 
             // temperaturePointFormGroupBox
             // 
-            this.temperaturePointFormGroupBox.Controls.Add(this.temperaturePointValueLabel);
             this.temperaturePointFormGroupBox.Controls.Add(this.newTemperaturePointValueTextBox);
+            this.temperaturePointFormGroupBox.Controls.Add(this.newTemperaturePointMinuteTextBox);
+            this.temperaturePointFormGroupBox.Controls.Add(this.temperaturePointValueLabel);
             this.temperaturePointFormGroupBox.Controls.Add(this.createTemperaturePointButton);
             this.temperaturePointFormGroupBox.Controls.Add(this.temperaturePointMinuteLabel);
-            this.temperaturePointFormGroupBox.Controls.Add(this.newTemperaturePointMinuteTextBox);
             this.temperaturePointFormGroupBox.Location = new System.Drawing.Point(857, 188);
             this.temperaturePointFormGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.temperaturePointFormGroupBox.Name = "temperaturePointFormGroupBox";
@@ -1109,17 +1083,9 @@ namespace Oven_Interface
             this.temperaturePointValueLabel.TabIndex = 35;
             this.temperaturePointValueLabel.Text = "Значення:";
             // 
-            // newTemperaturePointValueTextBox
-            // 
-            this.newTemperaturePointValueTextBox.Location = new System.Drawing.Point(86, 50);
-            this.newTemperaturePointValueTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.newTemperaturePointValueTextBox.Name = "newTemperaturePointValueTextBox";
-            this.newTemperaturePointValueTextBox.Size = new System.Drawing.Size(66, 21);
-            this.newTemperaturePointValueTextBox.TabIndex = 34;
-            // 
             // createTemperaturePointButton
             // 
-            this.createTemperaturePointButton.Location = new System.Drawing.Point(59, 75);
+            this.createTemperaturePointButton.Location = new System.Drawing.Point(109, 75);
             this.createTemperaturePointButton.Margin = new System.Windows.Forms.Padding(2);
             this.createTemperaturePointButton.Name = "createTemperaturePointButton";
             this.createTemperaturePointButton.Size = new System.Drawing.Size(92, 29);
@@ -1137,14 +1103,6 @@ namespace Oven_Interface
             this.temperaturePointMinuteLabel.Size = new System.Drawing.Size(68, 15);
             this.temperaturePointMinuteLabel.TabIndex = 33;
             this.temperaturePointMinuteLabel.Text = "Хвилина:";
-            // 
-            // newTemperaturePointMinuteTextBox
-            // 
-            this.newTemperaturePointMinuteTextBox.Location = new System.Drawing.Point(86, 24);
-            this.newTemperaturePointMinuteTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.newTemperaturePointMinuteTextBox.Name = "newTemperaturePointMinuteTextBox";
-            this.newTemperaturePointMinuteTextBox.Size = new System.Drawing.Size(66, 21);
-            this.newTemperaturePointMinuteTextBox.TabIndex = 31;
             // 
             // programsIndexGroupBox
             // 
@@ -1221,6 +1179,93 @@ namespace Oven_Interface
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Перевірка З\'єднання";
             // 
+            // newTemperaturePointMinuteTextBox
+            // 
+            this.newTemperaturePointMinuteTextBox.Location = new System.Drawing.Point(95, 23);
+            this.newTemperaturePointMinuteTextBox.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.newTemperaturePointMinuteTextBox.Name = "newTemperaturePointMinuteTextBox";
+            this.newTemperaturePointMinuteTextBox.Size = new System.Drawing.Size(106, 21);
+            this.newTemperaturePointMinuteTextBox.TabIndex = 36;
+            // 
+            // newTemperaturePointValueTextBox
+            // 
+            this.newTemperaturePointValueTextBox.Location = new System.Drawing.Point(94, 49);
+            this.newTemperaturePointValueTextBox.Maximum = new decimal(new int[] {
+            6000,
+            0,
+            0,
+            0});
+            this.newTemperaturePointValueTextBox.Minimum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            -2147483648});
+            this.newTemperaturePointValueTextBox.Name = "newTemperaturePointValueTextBox";
+            this.newTemperaturePointValueTextBox.Size = new System.Drawing.Size(106, 21);
+            this.newTemperaturePointValueTextBox.TabIndex = 37;
+            // 
+            // newPressurePointMinuteTextBox
+            // 
+            this.newPressurePointMinuteTextBox.Location = new System.Drawing.Point(94, 26);
+            this.newPressurePointMinuteTextBox.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.newPressurePointMinuteTextBox.Name = "newPressurePointMinuteTextBox";
+            this.newPressurePointMinuteTextBox.Size = new System.Drawing.Size(106, 21);
+            this.newPressurePointMinuteTextBox.TabIndex = 38;
+            // 
+            // newPressurePointValueTextBox
+            // 
+            this.newPressurePointValueTextBox.Location = new System.Drawing.Point(93, 51);
+            this.newPressurePointValueTextBox.Maximum = new decimal(new int[] {
+            6000,
+            0,
+            0,
+            0});
+            this.newPressurePointValueTextBox.Minimum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            -2147483648});
+            this.newPressurePointValueTextBox.Name = "newPressurePointValueTextBox";
+            this.newPressurePointValueTextBox.Size = new System.Drawing.Size(106, 21);
+            this.newPressurePointValueTextBox.TabIndex = 39;
+            // 
+            // newValvePointMinuteTextBox
+            // 
+            this.newValvePointMinuteTextBox.Location = new System.Drawing.Point(95, 26);
+            this.newValvePointMinuteTextBox.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.newValvePointMinuteTextBox.Name = "newValvePointMinuteTextBox";
+            this.newValvePointMinuteTextBox.Size = new System.Drawing.Size(106, 21);
+            this.newValvePointMinuteTextBox.TabIndex = 40;
+            // 
+            // newValvePointValueTextBox
+            // 
+            this.newValvePointValueTextBox.Location = new System.Drawing.Point(94, 52);
+            this.newValvePointValueTextBox.Maximum = new decimal(new int[] {
+            6000,
+            0,
+            0,
+            0});
+            this.newValvePointValueTextBox.Minimum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            -2147483648});
+            this.newValvePointValueTextBox.Name = "newValvePointValueTextBox";
+            this.newValvePointValueTextBox.Size = new System.Drawing.Size(106, 21);
+            this.newValvePointValueTextBox.TabIndex = 41;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -1276,6 +1321,12 @@ namespace Oven_Interface
             this.statusGroupBox.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.newTemperaturePointMinuteTextBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newTemperaturePointValueTextBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newPressurePointMinuteTextBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newPressurePointValueTextBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newValvePointMinuteTextBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newValvePointValueTextBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1315,9 +1366,7 @@ namespace Oven_Interface
         private System.Windows.Forms.GroupBox temperaturePointFormGroupBox;
         private System.Windows.Forms.Button createTemperaturePointButton;
         private System.Windows.Forms.Label temperaturePointMinuteLabel;
-        private System.Windows.Forms.TextBox newTemperaturePointMinuteTextBox;
         private System.Windows.Forms.Label temperaturePointValueLabel;
-        private System.Windows.Forms.TextBox newTemperaturePointValueTextBox;
         private System.Windows.Forms.Button buttonDeleteProgram;
         private System.Windows.Forms.TabControl allActionsTabControl;
         private System.Windows.Forms.TabPage historyPage;
@@ -1325,16 +1374,12 @@ namespace Oven_Interface
         private System.Windows.Forms.ListBox historyListBox;
         private System.Windows.Forms.GroupBox valvePointFormGroupBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox newValvePointValueTextBox;
         private System.Windows.Forms.Button createValvePointButton;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox newValvePointMinuteTextBox;
         private System.Windows.Forms.GroupBox pressurePointFormGroupBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox newPressurePointValueTextBox;
         private System.Windows.Forms.Button createPressurePointButton;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox newPressurePointMinuteTextBox;
         private System.Windows.Forms.TabPage temperaturesPage;
         private System.Windows.Forms.TabControl temperaturePointsTabControl;
         private System.Windows.Forms.TabPage temperatureChartTabPage;
@@ -1371,6 +1416,12 @@ namespace Oven_Interface
         private System.Windows.Forms.Button showValvepointsButton;
         private System.Windows.Forms.Button previousValvePointButton;
         private System.Windows.Forms.Button nextValvePointButton;
+        private System.Windows.Forms.NumericUpDown newValvePointValueTextBox;
+        private System.Windows.Forms.NumericUpDown newValvePointMinuteTextBox;
+        private System.Windows.Forms.NumericUpDown newPressurePointValueTextBox;
+        private System.Windows.Forms.NumericUpDown newPressurePointMinuteTextBox;
+        private System.Windows.Forms.NumericUpDown newTemperaturePointValueTextBox;
+        private System.Windows.Forms.NumericUpDown newTemperaturePointMinuteTextBox;
     }
 }
 

@@ -244,9 +244,9 @@ namespace Oven_Interface
             DataAccess db = new DataAccess();
 
             int persistedIndex = programsListBox.SelectedIndex;
-            db.InsertTemperaturePoint(breads[persistedIndex].Id, Int32.Parse(newTemperaturePointMinuteTextBox.Text), Int32.Parse(newTemperaturePointValueTextBox.Text));
-            newTemperaturePointMinuteTextBox.Text = "";
-            newTemperaturePointValueTextBox.Text = "";
+            db.InsertTemperaturePoint(breads[persistedIndex].Id, Decimal.ToInt32(newTemperaturePointMinuteTextBox.Value), Decimal.ToInt32(newTemperaturePointValueTextBox.Value));
+            newTemperaturePointMinuteTextBox.Value = 0;
+            newTemperaturePointValueTextBox.Value = 0;
             breads = db.GetBreads();
             UpdateBinding();
             programsListBox.SelectedIndex = persistedIndex;
@@ -426,9 +426,9 @@ namespace Oven_Interface
             DataAccess db = new DataAccess();
 
             int persistedIndex = programsListBox.SelectedIndex;
-            db.InsertPressurePoint(breads[persistedIndex].Id, Int32.Parse(newPressurePointMinuteTextBox.Text), Int32.Parse(newPressurePointValueTextBox.Text));
-            newPressurePointMinuteTextBox.Text = "";
-            newPressurePointValueTextBox.Text = "";
+            db.InsertPressurePoint(breads[persistedIndex].Id, Decimal.ToInt32(newPressurePointMinuteTextBox.Value), Decimal.ToInt32(newPressurePointValueTextBox.Value));
+            newPressurePointMinuteTextBox.Value = 0;
+            newPressurePointValueTextBox.Value = 0;
             breads = db.GetBreads();
             UpdateBinding();
             programsListBox.SelectedIndex = persistedIndex;
@@ -439,9 +439,9 @@ namespace Oven_Interface
             DataAccess db = new DataAccess();
 
             int persistedIndex = programsListBox.SelectedIndex;
-            db.InsertValvePoint(breads[persistedIndex].Id, Int32.Parse(newValvePointMinuteTextBox.Text), Int32.Parse(newValvePointValueTextBox.Text));
-            newValvePointMinuteTextBox.Text = "";
-            newValvePointValueTextBox.Text = "";
+            db.InsertValvePoint(breads[persistedIndex].Id, Decimal.ToInt32(newValvePointMinuteTextBox.Value), Decimal.ToInt32(newValvePointValueTextBox.Value));
+            newValvePointMinuteTextBox.Value = 0;
+            newValvePointValueTextBox.Value = 0;
             breads = db.GetBreads();
             UpdateBinding();
             programsListBox.SelectedIndex = persistedIndex;
