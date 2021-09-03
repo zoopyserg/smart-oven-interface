@@ -54,6 +54,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\BreadsController.cs" />
+    <Compile Include="Controllers\LaunchInstancesController.cs" />
+    <Compile Include="Controllers\PressurePointsController.cs" />
+    <Compile Include="Controllers\TemperaturePointsController.cs" />
+    <Compile Include="Controllers\ValvePointsController.cs" />
     <Compile Include="Models\Bread.cs" />
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>

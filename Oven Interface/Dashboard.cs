@@ -1,4 +1,5 @@
-﻿using Oven_Interface.Models;
+﻿using Oven_Interface.Controllers;
+using Oven_Interface.Models;
 using Solid.Arduino;
 using Solid.Arduino.Firmata;
 using System;
@@ -39,11 +40,11 @@ namespace Oven_Interface
 
             if ((breads.Count > 0) && (programsListBox.SelectedIndex > -1))
             {
-                DataAccess db = new DataAccess();
-                temperaturePoints = db.GetTemperaturePoints(breads[programsListBox.SelectedIndex].Id);
-                pressurePoints = db.GetPressurePoints(breads[programsListBox.SelectedIndex].Id);
-                valvePoints = db.GetValvePoints(breads[programsListBox.SelectedIndex].Id);
-                launchInstances = db.GetLaunchInstances(breads[programsListBox.SelectedIndex].Id);
+                int selectedBreadId = breads[programsListBox.SelectedIndex].Id;
+                temperaturePoints = TemperaturePointsController.Index(selectedBreadId);
+                pressurePoints = PressurePointsController.Index(selectedBreadId);
+                valvePoints = ValvePointsController.Index(selectedBreadId);
+                launchInstances = LaunchInstancesController.Index(selectedBreadId);
             }
 
 
@@ -163,8 +164,7 @@ namespace Oven_Interface
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            DataAccess db = new DataAccess();
-            breads = db.GetBreads();
+            breads = BreadsController.Index();
             // how do I get the ID of a selected bread?
             UpdateBinding();
 
@@ -187,14 +187,13 @@ namespace Oven_Interface
                 {
                     minutesPassed += 1;
                     // perform temperature adjustments
-                    DataAccess db = new DataAccess();
-                    db.UpdateProgramTimePassed(runningProgram.Id, minutesPassed);
+                    BreadsController.Update(runningProgram.Id, minutesPassed);
                     progressBar1.Minimum = 0;
                     progressBar1.Maximum = runningProgram.Duration;
                     progressBar1.Value = minutesPassed;
                     minutesLeftLabel.Text = (runningProgram.Duration - minutesPassed).ToString();
                     int persistedIndex = programsListBox.SelectedIndex;
-                    breads = db.GetBreads();
+                    breads = BreadsController.Index();
                     UpdateBinding();
                     programsListBox.SelectedIndex = persistedIndex;
                 }
@@ -205,32 +204,27 @@ namespace Oven_Interface
         {
             int persistedIndex = programsListBox.SelectedIndex;
             labelLastCommandStatus.Text = $"Програму {runningProgram.Name} завершено";
-            DataAccess db = new DataAccess();
-            db.FinishProgram(runningProgram.Id);
+            BreadsController.Finish(runningProgram.Id);
             runningProgram = null;
             minutesPassed = 0;
             progressBar1.Value = 0;
-            breads = db.GetBreads();
+            breads = BreadsController.Index();
             UpdateBinding();
             programsListBox.SelectedIndex = persistedIndex;
         }
 
         private void showBreadsButton_Click(object sender, EventArgs e)
         {
-            DataAccess db = new DataAccess();
+            breads = BreadsController.Index();
 
-            breads = db.GetBreads();
-            
             UpdateBinding();
         }
 
         private void createBread_Click(object sender, EventArgs e)
         {
-            DataAccess db = new DataAccess();
-
-            db.InsertBread(newProgramNameTextBox.Text);
+            BreadsController.Create(newProgramNameTextBox.Text);
             newProgramNameTextBox.Text = "";
-            breads = db.GetBreads();
+            breads = BreadsController.Index();
             UpdateBinding();
         }
 
@@ -241,31 +235,27 @@ namespace Oven_Interface
 
         private void createTemperatureButton_Click(object sender, EventArgs e)
         {
-            DataAccess db = new DataAccess();
-
             int persistedIndex = programsListBox.SelectedIndex;
-            db.InsertTemperaturePoint(breads[persistedIndex].Id, Decimal.ToInt32(newTemperaturePointMinuteTextBox.Value), Decimal.ToInt32(newTemperaturePointValueTextBox.Value));
+            TemperaturePointsController.Create(breads[persistedIndex].Id, Decimal.ToInt32(newTemperaturePointMinuteTextBox.Value), Decimal.ToInt32(newTemperaturePointValueTextBox.Value));
             newTemperaturePointMinuteTextBox.Value = 0;
             newTemperaturePointValueTextBox.Value = 0;
-            breads = db.GetBreads();
+            breads = BreadsController.Index();
             UpdateBinding();
             programsListBox.SelectedIndex = persistedIndex;
         }
 
         private void buttonDeleteProgram_Click(object sender, EventArgs e)
         {
-            DataAccess db = new DataAccess();
-            db.DeleteProgram(breads[programsListBox.SelectedIndex].Id);
-            breads = db.GetBreads();
+            BreadsController.Delete(breads[programsListBox.SelectedIndex].Id);
+            breads = BreadsController.Index();
             UpdateBinding();
         }
 
         private void deleteTemperaturePointButton_Click(object sender, EventArgs e)
         {
             int persistedIndex = programsListBox.SelectedIndex;
-            DataAccess db = new DataAccess();
-            db.DeleteTemperaturePoint(temperaturePoints[temperaturePointsListBox.SelectedIndex].Id);
-            breads = db.GetBreads();
+            TemperaturePointsController.Delete(temperaturePoints[temperaturePointsListBox.SelectedIndex].Id);
+            breads = BreadsController.Index();
             UpdateBinding();
             programsListBox.SelectedIndex = persistedIndex;
         }
@@ -314,12 +304,10 @@ namespace Oven_Interface
         private void startProgramButton_Click(object sender, EventArgs e)
         {
             // создать инстанс запуска. для начала. факт запуска.
-            DataAccess db = new DataAccess();
-
             int persistedIndex = programsListBox.SelectedIndex;
             runningProgram = breads[persistedIndex];
-            db.InsertLaunchInstance(runningProgram.Id);
-            breads = db.GetBreads();
+            LaunchInstancesController.Create(runningProgram.Id);
+            breads = BreadsController.Index();
             UpdateBinding();
             programsListBox.SelectedIndex = persistedIndex;
 
@@ -376,9 +364,8 @@ namespace Oven_Interface
         private void deletePressurePointButton_Click(object sender, EventArgs e)
         {
             int persistedIndex = programsListBox.SelectedIndex;
-            DataAccess db = new DataAccess();
-            db.DeletePressurePoint(pressurePoints[pressurePointsListBox.SelectedIndex].Id);
-            breads = db.GetBreads();
+            PressurePointsController.Delete(pressurePoints[pressurePointsListBox.SelectedIndex].Id);
+            breads = BreadsController.Index();
             UpdateBinding();
             programsListBox.SelectedIndex = persistedIndex;
         }
@@ -409,9 +396,8 @@ namespace Oven_Interface
         private void deleteValvePointButton_Click(object sender, EventArgs e)
         {
             int persistedIndex = programsListBox.SelectedIndex;
-            DataAccess db = new DataAccess();
-            db.DeleteValvePoint(pressurePoints[valvePointsListBox.SelectedIndex].Id);
-            breads = db.GetBreads();
+            ValvePointsController.Delete(pressurePoints[valvePointsListBox.SelectedIndex].Id);
+            breads = BreadsController.Index();
             UpdateBinding();
             programsListBox.SelectedIndex = persistedIndex;
         }
@@ -423,13 +409,11 @@ namespace Oven_Interface
 
         private void createPressurePointButton_Click(object sender, EventArgs e)
         {
-            DataAccess db = new DataAccess();
-
             int persistedIndex = programsListBox.SelectedIndex;
-            db.InsertPressurePoint(breads[persistedIndex].Id, Decimal.ToInt32(newPressurePointMinuteTextBox.Value), Decimal.ToInt32(newPressurePointValueTextBox.Value));
+            PressurePointsController.Create(breads[persistedIndex].Id, Decimal.ToInt32(newPressurePointMinuteTextBox.Value), Decimal.ToInt32(newPressurePointValueTextBox.Value));
             newPressurePointMinuteTextBox.Value = 0;
             newPressurePointValueTextBox.Value = 0;
-            breads = db.GetBreads();
+            breads = BreadsController.Index();
             UpdateBinding();
             programsListBox.SelectedIndex = persistedIndex;
         }
@@ -439,10 +423,10 @@ namespace Oven_Interface
             DataAccess db = new DataAccess();
 
             int persistedIndex = programsListBox.SelectedIndex;
-            db.InsertValvePoint(breads[persistedIndex].Id, Decimal.ToInt32(newValvePointMinuteTextBox.Value), Decimal.ToInt32(newValvePointValueTextBox.Value));
+            ValvePointsController.Create(breads[persistedIndex].Id, Decimal.ToInt32(newValvePointMinuteTextBox.Value), Decimal.ToInt32(newValvePointValueTextBox.Value));
             newValvePointMinuteTextBox.Value = 0;
             newValvePointValueTextBox.Value = 0;
-            breads = db.GetBreads();
+            breads = BreadsController.Index();
             UpdateBinding();
             programsListBox.SelectedIndex = persistedIndex;
         }
