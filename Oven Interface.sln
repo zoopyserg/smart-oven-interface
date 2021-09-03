@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oven Interface", "Oven Inte
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SQLOvenData", "SQLOvenData\SQLOvenData.sqlproj", "{7948B969-7598-41AF-88AD-0A80DED38374}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OvenInterface.Tests", "OvenInterface.Specs\OvenInterface.Tests.csproj", "{401CC7C9-7702-43AB-8001-E30C7D9D5CB1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{7948B969-7598-41AF-88AD-0A80DED38374}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7948B969-7598-41AF-88AD-0A80DED38374}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7948B969-7598-41AF-88AD-0A80DED38374}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{401CC7C9-7702-43AB-8001-E30C7D9D5CB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{401CC7C9-7702-43AB-8001-E30C7D9D5CB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{401CC7C9-7702-43AB-8001-E30C7D9D5CB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{401CC7C9-7702-43AB-8001-E30C7D9D5CB1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

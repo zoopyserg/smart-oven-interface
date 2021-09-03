@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Oven_Interface.Models
 {
-    class LaunchInstance
+    public class LaunchInstance
     {
         public int Id { get; set; }
         
