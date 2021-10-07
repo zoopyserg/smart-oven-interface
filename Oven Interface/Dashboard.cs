@@ -31,7 +31,7 @@ namespace Oven_Interface
 
             if (connection != null)
                 using (var session = new ArduinoSession(connection))
-                    PerformBasicTest(session, this.labelLastCommandStatus);
+                    PerformInitialization(session, this.labelLastCommandStatus);
         }
         private void UpdateBinding(bool refreshEverything = true)
         {
@@ -140,48 +140,57 @@ namespace Oven_Interface
             return connection;
         }
 
-        private static void PerformBasicTest(IFirmataProtocol session, Label SignalStatusLabel)
+        private static void PerformInitialization(IFirmataProtocol session, Label SignalStatusLabel)
         {
             var firmware = session.GetFirmware();
             var protocolVersion = session.GetProtocolVersion();
 
+            session.SetDigitalPinMode(2, PinMode.DigitalOutput);
+            session.SetDigitalPinMode(3, PinMode.DigitalOutput);
+            session.SetDigitalPinMode(4, PinMode.DigitalOutput);
+            session.SetDigitalPinMode(5, PinMode.DigitalOutput);
+            session.SetDigitalPinMode(6, PinMode.DigitalOutput);
+            session.SetDigitalPinMode(7, PinMode.DigitalOutput);
+            session.SetDigitalPinMode(8, PinMode.DigitalOutput);
+            session.SetDigitalPinMode(9, PinMode.DigitalOutput);
+            session.SetDigitalPinMode(10, PinMode.DigitalOutput);
+            session.SetDigitalPinMode(11, PinMode.DigitalOutput);
+            session.SetDigitalPinMode(12, PinMode.DigitalOutput);
             session.SetDigitalPinMode(13, PinMode.DigitalOutput);
+
+            // посылаю true потому что купил плату которая при LOW включена... пофиксить новой платой.
+            session.SetDigitalPin(2, true);
+            session.SetDigitalPin(3, true);
+            session.SetDigitalPin(4, true);
+            session.SetDigitalPin(5, true);
+            session.SetDigitalPin(6, true);
+            session.SetDigitalPin(7, true);
+            session.SetDigitalPin(8, true);
+            session.SetDigitalPin(9, true);
+            session.SetDigitalPin(10, true);
+            session.SetDigitalPin(11, true);
+            session.SetDigitalPin(12, true);
             session.SetDigitalPin(13, true);
-            SignalStatusLabel.Text = "13й пін включено";
+
+            SignalStatusLabel.Text = "Готовий до роботи.";
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            // Turn On 13th Pin
             ISerialConnection connection = GetConnection(this.labelConnectionStatus);
 
             if (connection != null)
                 using (var session = new ArduinoSession(connection))
-                    TurnOn(session, this.labelLastCommandStatus);
+                    TestPinsController.TurnOnPin(session, this.labelLastCommandStatus, 13);
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            // Turn Off 13th Pin
             ISerialConnection connection = GetConnection(this.labelConnectionStatus);
 
             if (connection != null)
                 using (var session = new ArduinoSession(connection))
-                    TurnOff(session, this.labelLastCommandStatus);
-        }
-
-        private static void TurnOn(IFirmataProtocol session, Label SignalStatusLabel)
-        {
-            session.SetDigitalPinMode(13, PinMode.DigitalOutput);
-            session.SetDigitalPin(13, true);
-            SignalStatusLabel.Text = "13й пін включено";
-        }
-
-        private static void TurnOff(IFirmataProtocol session, Label SignalStatusLabel)
-        {
-            session.SetDigitalPinMode(13, PinMode.DigitalOutput);
-            session.SetDigitalPin(13, false);
-            SignalStatusLabel.Text = "13й пін виключено";
+                    TestPinsController.TurnOffPin(session, this.labelLastCommandStatus, 13);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -393,6 +402,60 @@ namespace Oven_Interface
         private void refreshInfoButton_Click(object sender, EventArgs e)
         {
             UpdateBinding();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ISerialConnection connection = GetConnection(this.labelConnectionStatus);
+
+            if (connection != null)
+                using (var session = new ArduinoSession(connection))
+                    TestPinsController.TurnOnPin(session, this.labelLastCommandStatus, 4);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ISerialConnection connection = GetConnection(this.labelConnectionStatus);
+
+            if (connection != null)
+                using (var session = new ArduinoSession(connection))
+                    TestPinsController.TurnOnPin(session, this.labelLastCommandStatus, 3);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ISerialConnection connection = GetConnection(this.labelConnectionStatus);
+
+            if (connection != null)
+                using (var session = new ArduinoSession(connection))
+                    TestPinsController.TurnOnPin(session, this.labelLastCommandStatus, 2);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ISerialConnection connection = GetConnection(this.labelConnectionStatus);
+
+            if (connection != null)
+                using (var session = new ArduinoSession(connection))
+                    TestPinsController.TurnOffPin(session, this.labelLastCommandStatus, 4);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ISerialConnection connection = GetConnection(this.labelConnectionStatus);
+
+            if (connection != null)
+                using (var session = new ArduinoSession(connection))
+                    TestPinsController.TurnOffPin(session, this.labelLastCommandStatus, 3);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            ISerialConnection connection = GetConnection(this.labelConnectionStatus);
+
+            if (connection != null)
+                using (var session = new ArduinoSession(connection))
+                    TestPinsController.TurnOffPin(session, this.labelLastCommandStatus, 2);
         }
     }
 }

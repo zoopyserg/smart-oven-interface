@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oven Interface", "Oven Inte
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SQLOvenData", "SQLOvenData\SQLOvenData.sqlproj", "{7948B969-7598-41AF-88AD-0A80DED38374}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OvenInterface.Tests", "OvenInterface.Specs\OvenInterface.Tests.csproj", "{401CC7C9-7702-43AB-8001-E30C7D9D5CB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OvenInterface.Tests", "OvenInterface.Specs\OvenInterface.Tests.csproj", "{401CC7C9-7702-43AB-8001-E30C7D9D5CB1}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{7F935882-245B-46CC-A9B9-7E66FFDCAAE3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,9 @@ Global
 		{401CC7C9-7702-43AB-8001-E30C7D9D5CB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{401CC7C9-7702-43AB-8001-E30C7D9D5CB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{401CC7C9-7702-43AB-8001-E30C7D9D5CB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F935882-245B-46CC-A9B9-7E66FFDCAAE3}.Debug|Any CPU.ActiveCfg = Release
+		{7F935882-245B-46CC-A9B9-7E66FFDCAAE3}.Debug|Any CPU.Build.0 = Release
+		{7F935882-245B-46CC-A9B9-7E66FFDCAAE3}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
