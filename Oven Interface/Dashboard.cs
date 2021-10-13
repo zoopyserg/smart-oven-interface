@@ -15,6 +15,9 @@ namespace Oven_Interface
         List<TemperaturePoint> temperaturePoints = new List<TemperaturePoint>();
         List<PressurePoint> pressurePoints = new List<PressurePoint>();
         List<ValvePoint> valvePoints = new List<ValvePoint>();
+        //List<StatusLine> statusLines = new List<StatusLine>();
+
+        public List<StatusLine> statusLines { get; set; }
 
         List<LaunchInstance> launchInstances = new List<LaunchInstance>();
         System.Timers.Timer timer;
@@ -23,15 +26,17 @@ namespace Oven_Interface
 
         public Dashboard()
         {
-            InitializeComponent();
+            this.statusLines = new List<StatusLine>();
 
+            InitializeComponent();
             UpdateBinding();
 
-            ISerialConnection connection = GetConnection(this.labelConnectionStatus);
+            ISerialConnection connection = GetConnection();
 
             if (connection != null)
                 using (var session = new ArduinoSession(connection))
-                    PerformInitialization(session, this.labelLastCommandStatus);
+                    PerformInitialization(session);
+
         }
         private void UpdateBinding(bool refreshEverything = true)
         {
@@ -83,30 +88,46 @@ namespace Oven_Interface
 
         private void UpdateProgramsListBox()
         {
+            programsListBox.DataSource = null;
             programsListBox.DataSource = breads;
             programsListBox.DisplayMember = "DisplayString";
         }
 
         private void UpdateHistoryListBox()
         {
+            historyListBox.DataSource = null;
             historyListBox.DataSource = launchInstances;
             historyListBox.DisplayMember = "DisplayString";
         }
 
         private void UpdatePressurePointsListBox()
         {
+            pressurePointsListBox.DataSource = null;
             pressurePointsListBox.DataSource = pressurePoints;
             pressurePointsListBox.DisplayMember = "DisplayString";
         }
         private void UpdateTemperaturePointsListBox()
         {
+            temperaturePointsListBox.DataSource = null;
             temperaturePointsListBox.DataSource = temperaturePoints;
             temperaturePointsListBox.DisplayMember = "DisplayString";
         }
         private void UpdateValvePointsListBox()
         {
+            valvePointsListBox.DataSource = null;
             valvePointsListBox.DataSource = valvePoints;
             valvePointsListBox.DisplayMember = "DisplayString";
+        }
+
+        public void UpdateStatusListBox(string name)
+        {
+            StatusLine statusLine = new StatusLine();
+            statusLine.Name = name;
+            statusLine.CreatedAt = DateTime.Now;
+            this.statusLines.Add(statusLine);
+            statusListBox.DataSource = null;
+            statusListBox.DataSource = this.statusLines;
+            statusListBox.DisplayMember = "DisplayString";
         }
 
         private void UpdateTemperaturePointsChart()
@@ -127,20 +148,20 @@ namespace Oven_Interface
             valveChart.DataBind();
         }
 
-        private static ISerialConnection GetConnection(Label ConnectionStatusLabel)
+        private ISerialConnection GetConnection()
         {
-            Console.WriteLine("Searching Arduino connection...");
+            UpdateStatusListBox("Searching Arduino connection...");
             ISerialConnection connection = EnhancedSerialConnection.Find();
 
             if (connection == null)
-                ConnectionStatusLabel.Text = "Немає з'єднання з контролером. Перевірте, що Arduino включений в USB порт.";
+                UpdateStatusListBox("Немає з'єднання з контролером. Перевірте, що Arduino включений в USB порт.");
             else
-                ConnectionStatusLabel.Text = $"Arduino контролер підключений до порта {connection.PortName}.";
+                UpdateStatusListBox($"Arduino контролер підключений до порта {connection.PortName}.");
 
             return connection;
         }
 
-        private static void PerformInitialization(IFirmataProtocol session, Label SignalStatusLabel)
+        private void PerformInitialization(IFirmataProtocol session)
         {
             var firmware = session.GetFirmware();
             var protocolVersion = session.GetProtocolVersion();
@@ -172,25 +193,25 @@ namespace Oven_Interface
             session.SetDigitalPin(12, true);
             session.SetDigitalPin(13, true);
 
-            SignalStatusLabel.Text = "Готовий до роботи.";
+            UpdateStatusListBox("Готовий до роботи.");
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            ISerialConnection connection = GetConnection(this.labelConnectionStatus);
+            ISerialConnection connection = GetConnection();
 
             if (connection != null)
                 using (var session = new ArduinoSession(connection))
-                    TestPinsController.TurnOnPin(session, this.labelLastCommandStatus, 13);
+                    TestPinsController.TurnOnPin(this, session, 13);
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            ISerialConnection connection = GetConnection(this.labelConnectionStatus);
+            ISerialConnection connection = GetConnection();
 
             if (connection != null)
                 using (var session = new ArduinoSession(connection))
-                    TestPinsController.TurnOffPin(session, this.labelLastCommandStatus, 13);
+                    TestPinsController.TurnOffPin(this, session, 13);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -231,7 +252,7 @@ namespace Oven_Interface
 
         public void CommitProgramFinilization()
         {
-            labelLastCommandStatus.Text = $"Програму {runningProgram.Name} завершено";
+            UpdateStatusListBox($"Програму {runningProgram.Name} завершено");
             BreadsController.Finish(runningProgram.Id);
             runningProgram = null;
             minutesPassed = 0;
@@ -406,56 +427,80 @@ namespace Oven_Interface
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ISerialConnection connection = GetConnection(this.labelConnectionStatus);
+            ISerialConnection connection = GetConnection();
 
             if (connection != null)
                 using (var session = new ArduinoSession(connection))
-                    TestPinsController.TurnOnPin(session, this.labelLastCommandStatus, 4);
+                    TestPinsController.TurnOnPin(this, session, 4);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ISerialConnection connection = GetConnection(this.labelConnectionStatus);
+            ISerialConnection connection = GetConnection();
 
             if (connection != null)
                 using (var session = new ArduinoSession(connection))
-                    TestPinsController.TurnOnPin(session, this.labelLastCommandStatus, 3);
+                    TestPinsController.TurnOnPin(this, session, 3);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            ISerialConnection connection = GetConnection(this.labelConnectionStatus);
+            ISerialConnection connection = GetConnection();
 
             if (connection != null)
                 using (var session = new ArduinoSession(connection))
-                    TestPinsController.TurnOnPin(session, this.labelLastCommandStatus, 2);
+                    TestPinsController.TurnOnPin(this, session, 2);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ISerialConnection connection = GetConnection(this.labelConnectionStatus);
+            ISerialConnection connection = GetConnection();
 
             if (connection != null)
                 using (var session = new ArduinoSession(connection))
-                    TestPinsController.TurnOffPin(session, this.labelLastCommandStatus, 4);
+                    TestPinsController.TurnOffPin(this, session, 4);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            ISerialConnection connection = GetConnection(this.labelConnectionStatus);
+            ISerialConnection connection = GetConnection();
 
             if (connection != null)
                 using (var session = new ArduinoSession(connection))
-                    TestPinsController.TurnOffPin(session, this.labelLastCommandStatus, 3);
+                    TestPinsController.TurnOffPin(this, session, 3);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            ISerialConnection connection = GetConnection(this.labelConnectionStatus);
+            ISerialConnection connection = GetConnection();
 
             if (connection != null)
                 using (var session = new ArduinoSession(connection))
-                    TestPinsController.TurnOffPin(session, this.labelLastCommandStatus, 2);
+                    TestPinsController.TurnOffPin(this, session, 2);
+        }
+
+        private void DisplayPortCapabilities()
+        {
+            ISerialConnection connection = GetConnection();
+
+            if (connection != null)
+            {
+                using (var session = new ArduinoSession(connection))
+                {
+                    BoardCapability cap = session.GetBoardCapability();
+                    UpdateStatusListBox("Board Capability:");
+
+                    foreach (var pin in cap.Pins)
+                    {
+                        UpdateStatusListBox($"Pin {pin.PinNumber}: Input: {pin.DigitalInput}, Output: {pin.DigitalOutput}, Analog: {pin.Analog}, Analog-Res: {pin.AnalogResolution}, PWM: {pin.Pwm}, PWM-Res: {pin.PwmResolution}, Servo: {pin.Servo}, Servo-Res: {pin.ServoResolution}, Serial: {pin.Serial}, Encoder: {pin.Encoder}, Input-pullup: {pin.InputPullup}");
+                    }
+                }
+            }
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            DisplayPortCapabilities();
         }
     }
 }

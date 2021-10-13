@@ -10,18 +10,18 @@ namespace Oven_Interface.Controllers
 {
     public static class TestPinsController
     {
-        public static void TurnOnPin(IFirmataProtocol session, Label SignalStatusLabel, int pinNumber)
+        public static void TurnOnPin(Dashboard sender, IFirmataProtocol session, int pinNumber)
         {
             session.SetDigitalPinMode(pinNumber, PinMode.DigitalOutput);
             session.SetDigitalPin(pinNumber, false); //  посылаю true потому что купил плату которая при LOW включена... пофиксить новой платой.
-            SignalStatusLabel.Text = $"{ pinNumber }й пін включено";
+            sender.UpdateStatusListBox($"{ pinNumber }й пін включено");
         }
 
-        public static void TurnOffPin(IFirmataProtocol session, Label SignalStatusLabel, int pinNumber)
+        public static void TurnOffPin(Dashboard sender, IFirmataProtocol session, int pinNumber)
         {
             session.SetDigitalPinMode(pinNumber, PinMode.DigitalOutput);
             session.SetDigitalPin(pinNumber, true); //  посылаю true потому что купил плату которая при LOW включена... пофиксить новой платой.
-            SignalStatusLabel.Text = $"{ pinNumber }й пін виключено";
+            sender.UpdateStatusListBox($"{ pinNumber }й пін виключено");
         }
     }
 }
