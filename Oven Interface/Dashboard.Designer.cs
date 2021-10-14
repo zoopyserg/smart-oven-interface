@@ -140,6 +140,8 @@ namespace Oven_Interface
             this.button9 = new System.Windows.Forms.Button();
             this.temperatureLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.sensorValueLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.breadBindingSource)).BeginInit();
             this.programFormGroupBox.SuspendLayout();
             this.allInformationGroupBox.SuspendLayout();
@@ -382,6 +384,8 @@ namespace Oven_Interface
             // 
             // allInformationGroupBox
             // 
+            this.allInformationGroupBox.Controls.Add(this.sensorValueLabel);
+            this.allInformationGroupBox.Controls.Add(this.label6);
             this.allInformationGroupBox.Controls.Add(this.label5);
             this.allInformationGroupBox.Controls.Add(this.temperatureLabel);
             this.allInformationGroupBox.Controls.Add(this.valvePointFormGroupBox);
@@ -1371,6 +1375,24 @@ namespace Oven_Interface
             this.label5.TabIndex = 44;
             this.label5.Text = "Поточна Температура:";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(858, 541);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(130, 15);
+            this.label6.TabIndex = 45;
+            this.label6.Text = "Показник Датчика";
+            // 
+            // sensorValueLabel
+            // 
+            this.sensorValueLabel.AutoSize = true;
+            this.sensorValueLabel.Location = new System.Drawing.Point(994, 541);
+            this.sensorValueLabel.Name = "sensorValueLabel";
+            this.sensorValueLabel.Size = new System.Drawing.Size(31, 15);
+            this.sensorValueLabel.TabIndex = 46;
+            this.sensorValueLabel.Text = "420";
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -1544,6 +1566,8 @@ namespace Oven_Interface
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label temperatureLabel;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label sensorValueLabel;
+        private System.Windows.Forms.Label label6;
     }
 }
 

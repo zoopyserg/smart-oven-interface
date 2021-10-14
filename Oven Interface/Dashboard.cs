@@ -139,7 +139,8 @@ namespace Oven_Interface
                 return;
             }
 
-            temperatureLabel.Text = $"{eventArgs.Value.Level.ToString()} C";
+            sensorValueLabel.Text = $"{eventArgs.Value.Level.ToString()}";
+            temperatureLabel.Text = $"{ ( eventArgs.Value.Level - 414 ).ToString()} C";
         }
 
         private void UpdateTemperaturePointsChart()

@@ -36,6 +36,7 @@ namespace Oven_Interface
                     firmata = session;
                     ReportCapabilities();
                     PerformInitialization();
+                    ListenTemperature();
                 }
                 else
                 {
