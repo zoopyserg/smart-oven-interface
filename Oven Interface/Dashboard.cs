@@ -4,6 +4,7 @@ using Solid.Arduino;
 using Solid.Arduino.Firmata;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Threading;
 using System.Timers;
@@ -11,35 +12,32 @@ using System.Windows.Forms;
 
 namespace Oven_Interface
 {
-    public partial class Dashboard : Form, IObserver<AnalogState>
+    public partial class Dashboard : Form
 
     {
         List<Bread> breads = new List<Bread>();
         List<TemperaturePoint> temperaturePoints = new List<TemperaturePoint>();
         List<PressurePoint> pressurePoints = new List<PressurePoint>();
-        List<ValvePoint> valvePoints = new List<ValvePoint>();
-        //List<StatusLine> statusLines = new List<StatusLine>();
+        List<ValvePoint> valvePoints = new List<ValvePoint>();        
+        List<LaunchInstance> launchInstances = new List<LaunchInstance>();
 
         public List<StatusLine> statusLines { get; set; }
 
-        List<LaunchInstance> launchInstances = new List<LaunchInstance>();
         System.Timers.Timer timer;
         int minutesPassed;
         Bread runningProgram;
 
+        public ArduinoAccess ArduinoConnection { get; set; }
+
         public Dashboard()
         {
             this.statusLines = new List<StatusLine>();
-
+            
             InitializeComponent();
+
+            this.ArduinoConnection = new ArduinoAccess(this);
+            
             UpdateBinding();
-
-            ISerialConnection connection = GetConnection();
-
-            if (connection != null)
-                using (var session = new ArduinoSession(connection))
-                    PerformInitialization(session);
-
         }
         private void UpdateBinding(bool refreshEverything = true)
         {
@@ -133,6 +131,17 @@ namespace Oven_Interface
             statusListBox.DisplayMember = "DisplayString";
         }
 
+        public void UpdateStatusListBoxAsync(object sender, FirmataEventArgs<AnalogState> eventArgs)
+        {
+            if (InvokeRequired)
+            {
+                Invoke(new Action<object, FirmataEventArgs<AnalogState>>(UpdateStatusListBoxAsync), sender, eventArgs);
+                return;
+            }
+
+            temperatureLabel.Text = $"{eventArgs.Value.Level.ToString()} C";
+        }
+
         private void UpdateTemperaturePointsChart()
         {
             chartTemperatures.DataSource = temperaturePoints;
@@ -151,70 +160,14 @@ namespace Oven_Interface
             valveChart.DataBind();
         }
 
-        private ISerialConnection GetConnection()
-        {
-            UpdateStatusListBox("Searching Arduino connection...");
-            ISerialConnection connection = EnhancedSerialConnection.Find();
-
-            if (connection == null)
-                UpdateStatusListBox("Немає з'єднання з контролером. Перевірте, що Arduino включений в USB порт.");
-            else
-                UpdateStatusListBox($"Arduino контролер підключений до порта {connection.PortName}.");
-
-            return connection;
-        }
-
-        private void PerformInitialization(IFirmataProtocol session)
-        {
-            var firmware = session.GetFirmware();
-            var protocolVersion = session.GetProtocolVersion();
-
-            session.SetDigitalPinMode(2, PinMode.DigitalOutput);
-            session.SetDigitalPinMode(3, PinMode.DigitalOutput);
-            session.SetDigitalPinMode(4, PinMode.DigitalOutput);
-            session.SetDigitalPinMode(5, PinMode.DigitalOutput);
-            session.SetDigitalPinMode(6, PinMode.DigitalOutput);
-            session.SetDigitalPinMode(7, PinMode.DigitalOutput);
-            session.SetDigitalPinMode(8, PinMode.DigitalOutput);
-            session.SetDigitalPinMode(9, PinMode.DigitalOutput);
-            session.SetDigitalPinMode(10, PinMode.DigitalOutput);
-            session.SetDigitalPinMode(11, PinMode.DigitalOutput);
-            session.SetDigitalPinMode(12, PinMode.DigitalOutput);
-            session.SetDigitalPinMode(13, PinMode.DigitalOutput);
-
-            // посылаю true потому что купил плату которая при LOW включена... пофиксить новой платой.
-            session.SetDigitalPin(2, true);
-            session.SetDigitalPin(3, true);
-            session.SetDigitalPin(4, true);
-            session.SetDigitalPin(5, true);
-            session.SetDigitalPin(6, true);
-            session.SetDigitalPin(7, true);
-            session.SetDigitalPin(8, true);
-            session.SetDigitalPin(9, true);
-            session.SetDigitalPin(10, true);
-            session.SetDigitalPin(11, true);
-            session.SetDigitalPin(12, true);
-            session.SetDigitalPin(13, true);
-
-            UpdateStatusListBox("Готовий до роботи.");
-        }
-
         private void button7_Click(object sender, EventArgs e)
         {
-            ISerialConnection connection = GetConnection();
-
-            if (connection != null)
-                using (var session = new ArduinoSession(connection))
-                    TestPinsController.TurnOnPin(this, session, 13);
+            this.ArduinoConnection.TurnOnPin(13);
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            ISerialConnection connection = GetConnection();
-
-            if (connection != null)
-                using (var session = new ArduinoSession(connection))
-                    TestPinsController.TurnOffPin(this, session, 13);
+            this.ArduinoConnection.TurnOffPin(13);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -430,232 +383,42 @@ namespace Oven_Interface
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ISerialConnection connection = GetConnection();
-
-            if (connection != null)
-                using (var session = new ArduinoSession(connection))
-                    TestPinsController.TurnOnPin(this, session, 4);
+            this.ArduinoConnection.TurnOnPin(4);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ISerialConnection connection = GetConnection();
-
-            if (connection != null)
-                using (var session = new ArduinoSession(connection))
-                    TestPinsController.TurnOnPin(this, session, 3);
+            this.ArduinoConnection.TurnOnPin(3);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            ISerialConnection connection = GetConnection();
-
-            if (connection != null)
-                using (var session = new ArduinoSession(connection))
-                    TestPinsController.TurnOnPin(this, session, 2);
+            this.ArduinoConnection.TurnOnPin(2);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ISerialConnection connection = GetConnection();
-
-            if (connection != null)
-                using (var session = new ArduinoSession(connection))
-                    TestPinsController.TurnOffPin(this, session, 4);
+            this.ArduinoConnection.TurnOffPin(4);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            ISerialConnection connection = GetConnection();
-
-            if (connection != null)
-                using (var session = new ArduinoSession(connection))
-                    TestPinsController.TurnOffPin(this, session, 3);
+            this.ArduinoConnection.TurnOffPin(3);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            ISerialConnection connection = GetConnection();
-
-            if (connection != null)
-                using (var session = new ArduinoSession(connection))
-                    TestPinsController.TurnOffPin(this, session, 2);
-        }
-
-        private void DisplayPortCapabilities()
-        {
-            ISerialConnection connection = GetConnection();
-
-            if (connection != null)
-            {
-                using (var session = new ArduinoSession(connection))
-                {
-                    BoardCapability cap = session.GetBoardCapability();
-                    UpdateStatusListBox("Board Capability:");
-
-                    foreach (var pin in cap.Pins)
-                    {
-                        UpdateStatusListBox($"Pin {pin.PinNumber}: Input: {pin.DigitalInput}, Output: {pin.DigitalOutput}, Analog: {pin.Analog}, Analog-Res: {pin.AnalogResolution}, PWM: {pin.Pwm}, PWM-Res: {pin.PwmResolution}, Servo: {pin.Servo}, Servo-Res: {pin.ServoResolution}, Serial: {pin.Serial}, Encoder: {pin.Encoder}, Input-pullup: {pin.InputPullup}");
-                    }
-                }
-            }
+            this.ArduinoConnection.TurnOffPin(2);
         }
 
         private void button7_Click_1(object sender, EventArgs e)
         {
-            DisplayPortCapabilities();
+            this.ArduinoConnection.ReportCapabilities();
         }
-
-        private void button8_Click_1(object sender, EventArgs e)
-        {
-            ISerialConnection connection = GetConnection();
-
-            if (connection != null)
-            {
-                using (var session = new ArduinoSession(connection))
-                {
-                    IFirmataProtocol firmata = session;
-
-                    firmata.AnalogStateReceived += Session_OnAnalogStateReceived;
-                    firmata.DigitalStateReceived += Session_OnDigitalStateReceived;
-
-                    Firmware firm = firmata.GetFirmware();
-                    UpdateStatusListBox($"Firmware: {firm.Name} {firm.MajorVersion}.{firm.MinorVersion}");
-
-                    ProtocolVersion version = firmata.GetProtocolVersion();
-                    UpdateStatusListBox($"Protocol version: {version.Major}.{version.Minor}");
-
-                    BoardCapability cap = firmata.GetBoardCapability();
-                    UpdateStatusListBox("Board Capability:");
-
-                    foreach (var pin in cap.Pins)
-                    {
-                        UpdateStatusListBox($"Pin {pin.PinNumber}: Input: {pin.DigitalInput}, Output: {pin.DigitalOutput}, Analog: {pin.Analog}, Analog-Res: {pin.AnalogResolution}, PWM: {pin.Pwm}, PWM-Res: {pin.PwmResolution}, Servo: {pin.Servo}, Servo-Res: {pin.ServoResolution}, Serial: {pin.Serial}, Encoder: {pin.Encoder}, Input-pullup: {pin.InputPullup}");
-                    }
-                    
-                    var analogMapping = firmata.GetBoardAnalogMapping();
-                    UpdateStatusListBox("Analog channel mappings:");
-
-                    foreach (var mapping in analogMapping.PinMappings)
-                    {
-                        UpdateStatusListBox($"Channel {mapping.Channel} is mapped to pin {mapping.PinNumber}.");
-                    }
-
-                    firmata.ResetBoard();
-
-                    UpdateStatusListBox("Digital port states:");
-
-                    foreach (var pincap in cap.Pins.Where(c => (c.DigitalInput || c.DigitalOutput) && !c.Analog))
-                    {
-                        var pinState = firmata.GetPinState(pincap.PinNumber);
-                        UpdateStatusListBox($"Pin {pincap.PinNumber}: Mode = {pinState.Mode}, Value = {pinState.Value}");
-                    }
-                    
-                    firmata.SetDigitalPort(0, 0x04);
-                    firmata.SetDigitalPort(1, 0xff);
-                    firmata.SetDigitalPinMode(10, PinMode.DigitalOutput);
-                    firmata.SetDigitalPinMode(11, PinMode.ServoControl);
-                    firmata.SetDigitalPin(11, 90);
-
-                    firmata.SetAnalogReportMode(5, true);
-
-                    Thread.Sleep(500);
-                    int hi = 0;
-
-                    for (int a = 0; a <= 179; a += 1)
-                    {
-                        firmata.SetDigitalPin(11, a);
-                        Thread.Sleep(100);
-                        firmata.SetDigitalPort(1, hi);
-                        hi ^= 4;
-                        UpdateStatusListBox($"{a};");
-                    }
-
-                    firmata.SetDigitalPinMode(6, PinMode.DigitalInput);
-
-                    //firmata.SetDigitalPortState(2, 255);
-                    //firmata.SetDigitalPortState(3, 255);
-
-                    firmata.SetSamplingInterval(500);
-                    firmata.SetAnalogReportMode(0, false);
-
-                    UpdateStatusListBox("Setting digital report modes:");
-                    firmata.SetDigitalReportMode(0, true);
-                    firmata.SetDigitalReportMode(1, true);
-                    firmata.SetDigitalReportMode(2, true);
-                    
-                    foreach (var pinCap in cap.Pins.Where(c => (c.DigitalInput || c.DigitalOutput) && !c.Analog))
-                    {
-                        PinState state = firmata.GetPinState(pinCap.PinNumber);
-                        UpdateStatusListBox($"Digital {state.Mode} pin {state.PinNumber}: {state.Value}");
-                    }
-                    
-                    firmata.SetAnalogReportMode(0, false);
-                    firmata.SetDigitalReportMode(0, false);
-                    firmata.SetDigitalReportMode(1, false);
-                    firmata.SetDigitalReportMode(2, false);
-                    UpdateStatusListBox("Ready.");
-                }
-            }
-        }
-
-        public void OnNext(AnalogState state)
-        {
-            UpdateStatusListBox("something");
-        }
-
-        public void OnError(Exception error)
-        {
-            UpdateStatusListBox("error");
-        }
-
-        public void OnCompleted()
-        {
-            UpdateStatusListBox("completed");
-        }
-
-        private void Session_OnDigitalStateReceived(object sender, FirmataEventArgs<DigitalPortState> eventArgs)
-        {
-            var smth = eventArgs.Value.IsSet(6) ? 'X' : 'O';
-            UpdateStatusListBox($"Digital level of port {eventArgs.Value.Port}: { smth }");
-        }
-
-        private void Session_OnAnalogStateReceived(object sender, FirmataEventArgs<AnalogState> eventArgs)
-        {
-            UpdateStatusListBox($"Analog level of pin {eventArgs.Value.Channel}: {eventArgs.Value.Level}");
-        }
-
+        
         private void button9_Click(object sender, EventArgs e)
         {
-            ISerialConnection connection = GetConnection();
-
-            if (connection != null)
-            {
-                using (var session = new ArduinoSession(connection))
-                {
-                    //PinState pinState = session.GetPinState(19);
-                    //string result = pinState.Value.ToString();
-                    //UpdateStatusListBox(result);
-
-                    //PinState pinState;
-                    //string result;
-
-                    session.SetAnalogReportMode(5, true);
-                    session.AnalogStateReceived += Session_AnalogStateReceived;
-
-                    //session.SetDigitalPin(10, true);
-                    //Console.WriteLine("Command sent: Light on (pin 10)");
-                    //Console.WriteLine("Press a key");
-                    //Console.ReadKey(true);
-                    //session.SetDigitalPin(10, false);
-                    //Console.WriteLine("Command sent: Light off");
-                }
-            }
-        }
-
-        private void Session_AnalogStateReceived(object sender, FirmataEventArgs<AnalogState> eventArgs)
-        {
-            UpdateStatusListBox($"Analog level of pin {eventArgs.Value.Channel}: {eventArgs.Value.Level}");
+            this.ArduinoConnection.ListenTemperature();
         }
     }
 }

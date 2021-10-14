@@ -137,9 +137,9 @@ namespace Oven_Interface
             this.refreshInfoButton = new System.Windows.Forms.Button();
             this.progressGroupBox = new System.Windows.Forms.GroupBox();
             this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.temperatureLabel = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.breadBindingSource)).BeginInit();
             this.programFormGroupBox.SuspendLayout();
             this.allInformationGroupBox.SuspendLayout();
@@ -382,6 +382,8 @@ namespace Oven_Interface
             // 
             // allInformationGroupBox
             // 
+            this.allInformationGroupBox.Controls.Add(this.label5);
+            this.allInformationGroupBox.Controls.Add(this.temperatureLabel);
             this.allInformationGroupBox.Controls.Add(this.valvePointFormGroupBox);
             this.allInformationGroupBox.Controls.Add(this.pressurePointFormGroupBox);
             this.allInformationGroupBox.Controls.Add(this.allActionsTabControl);
@@ -1341,16 +1343,6 @@ namespace Oven_Interface
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click_1);
             // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(10, 713);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(253, 23);
-            this.button8.TabIndex = 41;
-            this.button8.Text = "Запустити все";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click_1);
-            // 
             // button9
             // 
             this.button9.Location = new System.Drawing.Point(10, 743);
@@ -1364,20 +1356,27 @@ namespace Oven_Interface
             // temperatureLabel
             // 
             this.temperatureLabel.AutoSize = true;
-            this.temperatureLabel.Location = new System.Drawing.Point(448, 691);
+            this.temperatureLabel.Location = new System.Drawing.Point(1024, 567);
             this.temperatureLabel.Name = "temperatureLabel";
-            this.temperatureLabel.Size = new System.Drawing.Size(47, 15);
+            this.temperatureLabel.Size = new System.Drawing.Size(36, 15);
             this.temperatureLabel.TabIndex = 43;
-            this.temperatureLabel.Text = "label5";
+            this.temperatureLabel.Text = "25 C";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(858, 567);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(160, 15);
+            this.label5.TabIndex = 44;
+            this.label5.Text = "Поточна Температура:";
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1336, 808);
-            this.Controls.Add(this.temperatureLabel);
             this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.refreshInfoButton);
             this.Controls.Add(this.progressGroupBox);
@@ -1396,6 +1395,7 @@ namespace Oven_Interface
             this.programFormGroupBox.ResumeLayout(false);
             this.programFormGroupBox.PerformLayout();
             this.allInformationGroupBox.ResumeLayout(false);
+            this.allInformationGroupBox.PerformLayout();
             this.valvePointFormGroupBox.ResumeLayout(false);
             this.valvePointFormGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.newValvePointValueTextBox)).EndInit();
@@ -1541,9 +1541,9 @@ namespace Oven_Interface
         private System.Windows.Forms.TabPage statusPage;
         private System.Windows.Forms.ListBox statusListBox;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label temperatureLabel;
+        private System.Windows.Forms.Label label5;
     }
 }
 
