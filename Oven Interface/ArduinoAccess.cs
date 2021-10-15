@@ -123,7 +123,7 @@ namespace Oven_Interface
             firmata.AnalogStateReceived += Session_OnAnalogStateReceived;
             firmata.DigitalStateReceived += Session_OnDigitalStateReceived;
             firmata.ResetBoard();
-            firmata.SetAnalogReportMode(5, true);
+            firmata.SetAnalogReportMode(Properties.Settings.Default.channelTemperatureSensor, true);
             firmata.SetSamplingInterval(500);
         }
     }

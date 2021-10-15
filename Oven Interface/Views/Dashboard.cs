@@ -209,10 +209,10 @@ namespace Oven_Interface
 
                     if (this.CurrentTemperature < this.ExpectedTemperature)
                     {
-                        this.ArduinoConnection.TurnOnPin(3);
+                        this.ArduinoConnection.TurnOnPin(Properties.Settings.Default.pinTemperatureRelay);
                     } else
                     {
-                        this.ArduinoConnection.TurnOffPin(3);
+                        this.ArduinoConnection.TurnOffPin(Properties.Settings.Default.pinTemperatureRelay);
                     }
 
                     // perform temperature display
@@ -459,6 +459,12 @@ namespace Oven_Interface
         {
             Form temperatureCalibration = new TemperatureCalibration(this);
             temperatureCalibration.Show();
+        }
+
+        private void роліПінівToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form pinSettings = new PinSettings();
+            pinSettings.Show();
         }
     }
 }

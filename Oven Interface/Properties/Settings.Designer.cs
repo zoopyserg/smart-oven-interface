@@ -58,5 +58,29 @@ namespace Oven_Interface.Properties {
                 this["temperatureCoefficientC"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5")]
+        public int channelTemperatureSensor {
+            get {
+                return ((int)(this["channelTemperatureSensor"]));
+            }
+            set {
+                this["channelTemperatureSensor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("3")]
+        public int pinTemperatureRelay {
+            get {
+                return ((int)(this["pinTemperatureRelay"]));
+            }
+            set {
+                this["pinTemperatureRelay"] = value;
+            }
+        }
     }
 }

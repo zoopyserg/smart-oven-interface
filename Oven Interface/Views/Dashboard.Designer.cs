@@ -120,11 +120,11 @@ namespace Oven_Interface
             this.оновитиІнформаціюПроДоступніПіниToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.режимиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оновитиІнформаціюПроДоступніРежимиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.налаштуванняToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.калібруванняТермодатчикаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.роліПінівToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.breadBindingSource)).BeginInit();
             this.programFormGroupBox.SuspendLayout();
             this.allInformationGroupBox.SuspendLayout();
@@ -1074,6 +1074,29 @@ namespace Oven_Interface
             this.оновитиІнформаціюПроДоступніРежимиToolStripMenuItem.Text = "Оновити Інформацію Про Доступні Режими";
             this.оновитиІнформаціюПроДоступніРежимиToolStripMenuItem.Click += new System.EventHandler(this.оновитиІнформаціюПроДоступніРежимиToolStripMenuItem_Click);
             // 
+            // налаштуванняToolStripMenuItem
+            // 
+            this.налаштуванняToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.калібруванняТермодатчикаToolStripMenuItem,
+            this.роліПінівToolStripMenuItem});
+            this.налаштуванняToolStripMenuItem.Name = "налаштуванняToolStripMenuItem";
+            this.налаштуванняToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
+            this.налаштуванняToolStripMenuItem.Text = "Налаштування";
+            // 
+            // калібруванняТермодатчикаToolStripMenuItem
+            // 
+            this.калібруванняТермодатчикаToolStripMenuItem.Name = "калібруванняТермодатчикаToolStripMenuItem";
+            this.калібруванняТермодатчикаToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
+            this.калібруванняТермодатчикаToolStripMenuItem.Text = "Калібрування Термодатчика";
+            this.калібруванняТермодатчикаToolStripMenuItem.Click += new System.EventHandler(this.калібруванняТермодатчикаToolStripMenuItem_Click);
+            // 
+            // роліПінівToolStripMenuItem
+            // 
+            this.роліПінівToolStripMenuItem.Name = "роліПінівToolStripMenuItem";
+            this.роліПінівToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
+            this.роліПінівToolStripMenuItem.Text = "Ролі Пінів";
+            this.роліПінівToolStripMenuItem.Click += new System.EventHandler(this.роліПінівToolStripMenuItem_Click);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.LaunchedProgramLabel);
@@ -1098,28 +1121,6 @@ namespace Oven_Interface
             this.groupBox3.TabIndex = 45;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Температура";
-            // 
-            // налаштуванняToolStripMenuItem
-            // 
-            this.налаштуванняToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.калібруванняТермодатчикаToolStripMenuItem,
-            this.роліПінівToolStripMenuItem});
-            this.налаштуванняToolStripMenuItem.Name = "налаштуванняToolStripMenuItem";
-            this.налаштуванняToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
-            this.налаштуванняToolStripMenuItem.Text = "Налаштування";
-            // 
-            // калібруванняТермодатчикаToolStripMenuItem
-            // 
-            this.калібруванняТермодатчикаToolStripMenuItem.Name = "калібруванняТермодатчикаToolStripMenuItem";
-            this.калібруванняТермодатчикаToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
-            this.калібруванняТермодатчикаToolStripMenuItem.Text = "Калібрування Термодатчика";
-            this.калібруванняТермодатчикаToolStripMenuItem.Click += new System.EventHandler(this.калібруванняТермодатчикаToolStripMenuItem_Click);
-            // 
-            // роліПінівToolStripMenuItem
-            // 
-            this.роліПінівToolStripMenuItem.Name = "роліПінівToolStripMenuItem";
-            this.роліПінівToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
-            this.роліПінівToolStripMenuItem.Text = "Ролі Пінів";
             // 
             // Dashboard
             // 

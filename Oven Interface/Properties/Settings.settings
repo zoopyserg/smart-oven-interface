@@ -11,5 +11,11 @@
     <Setting Name="temperatureCoefficientC" Type="System.Decimal" Scope="User">
       <Value Profile="(Default)">-409</Value>
     </Setting>
+    <Setting Name="channelTemperatureSensor" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="pinTemperatureRelay" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
