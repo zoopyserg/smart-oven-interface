@@ -27,6 +27,9 @@ namespace Oven_Interface
         int minutesPassed;
         Bread runningProgram;
 
+        public long CurrentTemperature { get; set; }
+        public long ExpectedTemperature { get; set; }
+
         public ArduinoAccess ArduinoConnection { get; set; }
 
         public Dashboard()
@@ -140,7 +143,8 @@ namespace Oven_Interface
             }
 
             sensorValueLabel.Text = $"{eventArgs.Value.Level.ToString()}";
-            temperatureLabel.Text = $"{ ( eventArgs.Value.Level - 414 ).ToString()} C";
+            this.CurrentTemperature = eventArgs.Value.Level - 414;
+            temperatureLabel.Text = $"{ this.CurrentTemperature.ToString()} C";
         }
 
         private void UpdateTemperaturePointsChart()
@@ -192,8 +196,20 @@ namespace Oven_Interface
                 }
                 else
                 {
+                    // increase timer
                     minutesPassed += 1;
-                    // perform temperature adjustments
+                    // turn on the relay if needed
+                    ExpectedTemperature = runningProgram.CurrentExpectedTemperature(minutesPassed);
+                    // todo: histerisis (maybe add a couple degrees to the expected temperature)
+                    if (this.CurrentTemperature < this.ExpectedTemperature)
+                    {
+                        this.ArduinoConnection.TurnOnPin(3);
+                    } else
+                    {
+                        this.ArduinoConnection.TurnOffPin(3);
+                    }
+
+                    // perform temperature display
                     BreadsController.Update(runningProgram.Id, minutesPassed);
                     progressBar1.Minimum = 0;
                     progressBar1.Maximum = runningProgram.Duration;
@@ -293,6 +309,9 @@ namespace Oven_Interface
             // создать инстанс запуска. для начала. факт запуска.
             int persistedIndex = programsListBox.SelectedIndex;
             runningProgram = breads[persistedIndex];
+            runningProgram.TemperaturePoints = TemperaturePointsController.Index(runningProgram.Id);
+            runningProgram.PressurePoints = PressurePointsController.Index(runningProgram.Id);
+            runningProgram.ValvePoints = ValvePointsController.Index(runningProgram.Id);
             LaunchInstancesController.Create(runningProgram.Id);
             UpdateBinding();
             timer.Start();

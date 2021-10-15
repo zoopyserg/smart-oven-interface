@@ -26,6 +26,18 @@ namespace Oven_Interface
             get { return $"{ Name } (Тривалість: {Duration}хв)"; }
         }
 
+        public long CurrentExpectedTemperature(int minute)
+        {
+            long temp = 0;
+            List<TemperaturePoint> sortedTempPoints = this.TemperaturePoints;
+            sortedTempPoints = sortedTempPoints.Where(temperaturePoint => temperaturePoint.Minute <= minute).ToList();
+            sortedTempPoints.Sort((a, b) => b.Minute.CompareTo(a.Minute));
+            TemperaturePoint lastPoint = sortedTempPoints.First();
+            
+            temp = lastPoint.Value;
+            return temp;
+        }
+
 
     }
 }
