@@ -40,6 +40,7 @@ namespace OvenInterface.Specs
             bread.TemperaturePoints.Add(tp2);
             bread.TemperaturePoints.Add(tp3);
 
+            Assert.Equal(0, bread.CurrentExpectedTemperature(0));
             Assert.Equal(2, bread.CurrentExpectedTemperature(1));
             Assert.Equal(2, bread.CurrentExpectedTemperature(3));
             Assert.Equal(10, bread.CurrentExpectedTemperature(5));

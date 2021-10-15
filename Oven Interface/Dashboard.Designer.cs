@@ -63,6 +63,12 @@ namespace Oven_Interface
             this.buttonPreviousProgram = new System.Windows.Forms.Button();
             this.buttonNextProgram = new System.Windows.Forms.Button();
             this.allInformationGroupBox = new System.Windows.Forms.GroupBox();
+            this.expectedTemperatureLabel = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.sensorValueLabel = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.temperatureLabel = new System.Windows.Forms.Label();
             this.valvePointFormGroupBox = new System.Windows.Forms.GroupBox();
             this.newValvePointValueTextBox = new System.Windows.Forms.NumericUpDown();
             this.newValvePointMinuteTextBox = new System.Windows.Forms.NumericUpDown();
@@ -138,10 +144,6 @@ namespace Oven_Interface
             this.progressGroupBox = new System.Windows.Forms.GroupBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.temperatureLabel = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.sensorValueLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.breadBindingSource)).BeginInit();
             this.programFormGroupBox.SuspendLayout();
             this.allInformationGroupBox.SuspendLayout();
@@ -384,6 +386,8 @@ namespace Oven_Interface
             // 
             // allInformationGroupBox
             // 
+            this.allInformationGroupBox.Controls.Add(this.expectedTemperatureLabel);
+            this.allInformationGroupBox.Controls.Add(this.label7);
             this.allInformationGroupBox.Controls.Add(this.sensorValueLabel);
             this.allInformationGroupBox.Controls.Add(this.label6);
             this.allInformationGroupBox.Controls.Add(this.label5);
@@ -402,6 +406,60 @@ namespace Oven_Interface
             this.allInformationGroupBox.TabIndex = 35;
             this.allInformationGroupBox.TabStop = false;
             this.allInformationGroupBox.Text = "Режими Роботи";
+            // 
+            // expectedTemperatureLabel
+            // 
+            this.expectedTemperatureLabel.AutoSize = true;
+            this.expectedTemperatureLabel.Location = new System.Drawing.Point(1033, 594);
+            this.expectedTemperatureLabel.Name = "expectedTemperatureLabel";
+            this.expectedTemperatureLabel.Size = new System.Drawing.Size(12, 15);
+            this.expectedTemperatureLabel.TabIndex = 48;
+            this.expectedTemperatureLabel.Text = "-";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(858, 594);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(169, 15);
+            this.label7.TabIndex = 47;
+            this.label7.Text = "Очікувана Температура:";
+            // 
+            // sensorValueLabel
+            // 
+            this.sensorValueLabel.AutoSize = true;
+            this.sensorValueLabel.Location = new System.Drawing.Point(994, 541);
+            this.sensorValueLabel.Name = "sensorValueLabel";
+            this.sensorValueLabel.Size = new System.Drawing.Size(31, 15);
+            this.sensorValueLabel.TabIndex = 46;
+            this.sensorValueLabel.Text = "420";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(858, 541);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(130, 15);
+            this.label6.TabIndex = 45;
+            this.label6.Text = "Показник Датчика";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(858, 567);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(160, 15);
+            this.label5.TabIndex = 44;
+            this.label5.Text = "Поточна Температура:";
+            // 
+            // temperatureLabel
+            // 
+            this.temperatureLabel.AutoSize = true;
+            this.temperatureLabel.Location = new System.Drawing.Point(1024, 567);
+            this.temperatureLabel.Name = "temperatureLabel";
+            this.temperatureLabel.Size = new System.Drawing.Size(36, 15);
+            this.temperatureLabel.TabIndex = 43;
+            this.temperatureLabel.Text = "25 C";
             // 
             // valvePointFormGroupBox
             // 
@@ -1357,42 +1415,6 @@ namespace Oven_Interface
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // temperatureLabel
-            // 
-            this.temperatureLabel.AutoSize = true;
-            this.temperatureLabel.Location = new System.Drawing.Point(1024, 567);
-            this.temperatureLabel.Name = "temperatureLabel";
-            this.temperatureLabel.Size = new System.Drawing.Size(36, 15);
-            this.temperatureLabel.TabIndex = 43;
-            this.temperatureLabel.Text = "25 C";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(858, 567);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(160, 15);
-            this.label5.TabIndex = 44;
-            this.label5.Text = "Поточна Температура:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(858, 541);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(130, 15);
-            this.label6.TabIndex = 45;
-            this.label6.Text = "Показник Датчика";
-            // 
-            // sensorValueLabel
-            // 
-            this.sensorValueLabel.AutoSize = true;
-            this.sensorValueLabel.Location = new System.Drawing.Point(994, 541);
-            this.sensorValueLabel.Name = "sensorValueLabel";
-            this.sensorValueLabel.Size = new System.Drawing.Size(31, 15);
-            this.sensorValueLabel.TabIndex = 46;
-            this.sensorValueLabel.Text = "420";
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -1568,6 +1590,8 @@ namespace Oven_Interface
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label sensorValueLabel;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label expectedTemperatureLabel;
+        private System.Windows.Forms.Label label7;
     }
 }
 

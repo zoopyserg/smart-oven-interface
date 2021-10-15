@@ -30,12 +30,26 @@ namespace Oven_Interface
         {
             long temp = 0;
             List<TemperaturePoint> sortedTempPoints = this.TemperaturePoints;
-            sortedTempPoints = sortedTempPoints.Where(temperaturePoint => temperaturePoint.Minute <= minute).ToList();
-            sortedTempPoints.Sort((a, b) => b.Minute.CompareTo(a.Minute));
-            TemperaturePoint lastPoint = sortedTempPoints.First();
-            
-            temp = lastPoint.Value;
+            if (sortedTempPoints.Count > 0)
+            {
+                sortedTempPoints = sortedTempPoints.Where(temperaturePoint => temperaturePoint.Minute <= minute).ToList();
+                if (sortedTempPoints.Count > 0)
+                {
+                    sortedTempPoints.Sort((a, b) => b.Minute.CompareTo(a.Minute));
+                    TemperaturePoint lastPoint = sortedTempPoints.First();
+                    temp = lastPoint.Value;
+                } else
+                {
+                    temp = 0;
+                }
+            }
+            else
+            {
+                temp = 0;
+            }
+
             return temp;
+
         }
 
 

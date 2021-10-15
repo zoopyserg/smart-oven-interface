@@ -201,6 +201,8 @@ namespace Oven_Interface
                     // turn on the relay if needed
                     ExpectedTemperature = runningProgram.CurrentExpectedTemperature(minutesPassed);
                     // todo: histerisis (maybe add a couple degrees to the expected temperature)
+                    expectedTemperatureLabel.Text = $"{ ExpectedTemperature.ToString() } C";
+
                     if (this.CurrentTemperature < this.ExpectedTemperature)
                     {
                         this.ArduinoConnection.TurnOnPin(3);
