@@ -80,10 +80,10 @@
     <Compile Include="Controllers\TestPinsController.cs" />
     <Compile Include="Controllers\ValvePointsController.cs" />
     <Compile Include="Models\Bread.cs" />
-    <Compile Include="Dashboard.cs">
+    <Compile Include="Views\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dashboard.Designer.cs">
+    <Compile Include="Views\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="DataAccess.cs" />
@@ -95,7 +95,13 @@
     <Compile Include="Models\TemperaturePoint.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Dashboard.resx">
+    <Compile Include="Views\PinTesting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PinTesting.Designer.cs">
+      <DependentUpon>PinTesting.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -107,6 +113,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\PinTesting.resx">
+      <DependentUpon>PinTesting.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Oven Interface_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Bread.datasource" />

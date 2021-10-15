@@ -1,5 +1,6 @@
 ﻿using Oven_Interface.Controllers;
 using Oven_Interface.Models;
+using Oven_Interface.Views;
 using Solid.Arduino;
 using Solid.Arduino.Firmata;
 using System;
@@ -217,10 +218,10 @@ namespace Oven_Interface
                     progressBar1.Maximum = runningProgram.Duration;
                     progressBar1.Value = minutesPassed;
                     minutesLeftLabel.Text = (runningProgram.Duration - minutesPassed).ToString();
-                    int persistedIndex = programsListBox.SelectedIndex;
-                    breads = BreadsController.Index();
-                    UpdateBinding(false);
-                    programsListBox.SelectedIndex = persistedIndex;
+                    //int persistedIndex = programsListBox.SelectedIndex;
+                    //breads = BreadsController.Index();
+                    //UpdateBinding(false);
+                    //programsListBox.SelectedIndex = persistedIndex;
                 }
             }));
         }
@@ -441,6 +442,12 @@ namespace Oven_Interface
         private void button9_Click(object sender, EventArgs e)
         {
             this.ArduinoConnection.ListenTemperature();
+        }
+
+        private void перевіркаПінівToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form pinTesting = new PinTesting(this.ArduinoConnection);
+            pinTesting.Show();
         }
     }
 }

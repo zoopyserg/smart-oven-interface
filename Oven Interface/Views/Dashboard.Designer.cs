@@ -50,10 +50,7 @@ namespace Oven_Interface
             this.pauseProgramButton = new System.Windows.Forms.Button();
             this.minutesLeftLabel = new System.Windows.Forms.Label();
             this.minutesLeftInfoLabel = new System.Windows.Forms.Label();
-            this.turnOnTestDiodButton = new System.Windows.Forms.Button();
-            this.turnOffTestDiodButton = new System.Windows.Forms.Button();
             this.projectNameLabel = new System.Windows.Forms.Label();
-            this.testPin13InfoLabel = new System.Windows.Forms.Label();
             this.programsListBox = new System.Windows.Forms.ListBox();
             this.breadBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.newProgramNameTextBox = new System.Windows.Forms.TextBox();
@@ -130,20 +127,15 @@ namespace Oven_Interface
             this.programsIndexGroupBox = new System.Windows.Forms.GroupBox();
             this.buttonDeleteProgram = new System.Windows.Forms.Button();
             this.actionGroupBox = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.testPin2InfoLabel = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.testPin3InfoLabel = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.testPin4InfoLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.refreshInfoButton = new System.Windows.Forms.Button();
             this.progressGroupBox = new System.Windows.Forms.GroupBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.програмаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вихідToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.діагностикаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.перевіркаПінівToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.breadBindingSource)).BeginInit();
             this.programFormGroupBox.SuspendLayout();
             this.allInformationGroupBox.SuspendLayout();
@@ -184,8 +176,8 @@ namespace Oven_Interface
             ((System.ComponentModel.ISupportInitialize)(this.newTemperaturePointMinuteTextBox)).BeginInit();
             this.programsIndexGroupBox.SuspendLayout();
             this.actionGroupBox.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.progressGroupBox.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // startProgramButton
@@ -260,28 +252,6 @@ namespace Oven_Interface
             this.minutesLeftInfoLabel.TabIndex = 10;
             this.minutesLeftInfoLabel.Text = "хвилин до закінчення";
             // 
-            // turnOnTestDiodButton
-            // 
-            this.turnOnTestDiodButton.Location = new System.Drawing.Point(79, 120);
-            this.turnOnTestDiodButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.turnOnTestDiodButton.Name = "turnOnTestDiodButton";
-            this.turnOnTestDiodButton.Size = new System.Drawing.Size(57, 26);
-            this.turnOnTestDiodButton.TabIndex = 19;
-            this.turnOnTestDiodButton.Text = "ВКЛ";
-            this.turnOnTestDiodButton.UseVisualStyleBackColor = true;
-            this.turnOnTestDiodButton.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // turnOffTestDiodButton
-            // 
-            this.turnOffTestDiodButton.Location = new System.Drawing.Point(142, 120);
-            this.turnOffTestDiodButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.turnOffTestDiodButton.Name = "turnOffTestDiodButton";
-            this.turnOffTestDiodButton.Size = new System.Drawing.Size(57, 26);
-            this.turnOffTestDiodButton.TabIndex = 20;
-            this.turnOffTestDiodButton.Text = "ВИКЛ";
-            this.turnOffTestDiodButton.UseVisualStyleBackColor = true;
-            this.turnOffTestDiodButton.Click += new System.EventHandler(this.button8_Click);
-            // 
             // projectNameLabel
             // 
             this.projectNameLabel.AutoSize = true;
@@ -292,16 +262,6 @@ namespace Oven_Interface
             this.projectNameLabel.Size = new System.Drawing.Size(358, 37);
             this.projectNameLabel.TabIndex = 26;
             this.projectNameLabel.Text = "Терморегулятор Пічки";
-            // 
-            // testPin13InfoLabel
-            // 
-            this.testPin13InfoLabel.AutoSize = true;
-            this.testPin13InfoLabel.Location = new System.Drawing.Point(10, 126);
-            this.testPin13InfoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.testPin13InfoLabel.Name = "testPin13InfoLabel";
-            this.testPin13InfoLabel.Size = new System.Drawing.Size(59, 15);
-            this.testPin13InfoLabel.TabIndex = 28;
-            this.testPin13InfoLabel.Text = "13й пін:";
             // 
             // programsListBox
             // 
@@ -1253,125 +1213,6 @@ namespace Oven_Interface
             this.actionGroupBox.TabStop = false;
             this.actionGroupBox.Text = "Дії";
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.testPin2InfoLabel);
-            this.groupBox4.Controls.Add(this.button5);
-            this.groupBox4.Controls.Add(this.button6);
-            this.groupBox4.Controls.Add(this.testPin3InfoLabel);
-            this.groupBox4.Controls.Add(this.button3);
-            this.groupBox4.Controls.Add(this.button4);
-            this.groupBox4.Controls.Add(this.testPin4InfoLabel);
-            this.groupBox4.Controls.Add(this.button1);
-            this.groupBox4.Controls.Add(this.button2);
-            this.groupBox4.Controls.Add(this.testPin13InfoLabel);
-            this.groupBox4.Controls.Add(this.turnOnTestDiodButton);
-            this.groupBox4.Controls.Add(this.turnOffTestDiodButton);
-            this.groupBox4.Location = new System.Drawing.Point(1115, 48);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Size = new System.Drawing.Size(203, 159);
-            this.groupBox4.TabIndex = 37;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Перевірка З\'єднання";
-            // 
-            // testPin2InfoLabel
-            // 
-            this.testPin2InfoLabel.AutoSize = true;
-            this.testPin2InfoLabel.Location = new System.Drawing.Point(10, 30);
-            this.testPin2InfoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.testPin2InfoLabel.Name = "testPin2InfoLabel";
-            this.testPin2InfoLabel.Size = new System.Drawing.Size(51, 15);
-            this.testPin2InfoLabel.TabIndex = 37;
-            this.testPin2InfoLabel.Text = "2й пін:";
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(79, 24);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(57, 26);
-            this.button5.TabIndex = 35;
-            this.button5.Text = "ВКЛ";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(142, 24);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(57, 26);
-            this.button6.TabIndex = 36;
-            this.button6.Text = "ВИКЛ";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // testPin3InfoLabel
-            // 
-            this.testPin3InfoLabel.AutoSize = true;
-            this.testPin3InfoLabel.Location = new System.Drawing.Point(10, 62);
-            this.testPin3InfoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.testPin3InfoLabel.Name = "testPin3InfoLabel";
-            this.testPin3InfoLabel.Size = new System.Drawing.Size(51, 15);
-            this.testPin3InfoLabel.TabIndex = 34;
-            this.testPin3InfoLabel.Text = "3й пін:";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(79, 56);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(57, 26);
-            this.button3.TabIndex = 32;
-            this.button3.Text = "ВКЛ";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(142, 56);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(57, 26);
-            this.button4.TabIndex = 33;
-            this.button4.Text = "ВИКЛ";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // testPin4InfoLabel
-            // 
-            this.testPin4InfoLabel.AutoSize = true;
-            this.testPin4InfoLabel.Location = new System.Drawing.Point(10, 94);
-            this.testPin4InfoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.testPin4InfoLabel.Name = "testPin4InfoLabel";
-            this.testPin4InfoLabel.Size = new System.Drawing.Size(51, 15);
-            this.testPin4InfoLabel.TabIndex = 31;
-            this.testPin4InfoLabel.Text = "4й пін:";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(79, 88);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(57, 26);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "ВКЛ";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(142, 88);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(57, 26);
-            this.button2.TabIndex = 30;
-            this.button2.Text = "ВИКЛ";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // refreshInfoButton
             // 
             this.refreshInfoButton.Location = new System.Drawing.Point(1117, 212);
@@ -1415,6 +1256,46 @@ namespace Oven_Interface
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.програмаToolStripMenuItem,
+            this.діагностикаToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1336, 24);
+            this.menuStrip1.TabIndex = 43;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // програмаToolStripMenuItem
+            // 
+            this.програмаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.вихідToolStripMenuItem});
+            this.програмаToolStripMenuItem.Name = "програмаToolStripMenuItem";
+            this.програмаToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.програмаToolStripMenuItem.Text = "Програма";
+            // 
+            // вихідToolStripMenuItem
+            // 
+            this.вихідToolStripMenuItem.Name = "вихідToolStripMenuItem";
+            this.вихідToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.вихідToolStripMenuItem.Text = "Вихід";
+            // 
+            // діагностикаToolStripMenuItem
+            // 
+            this.діагностикаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.перевіркаПінівToolStripMenuItem});
+            this.діагностикаToolStripMenuItem.Name = "діагностикаToolStripMenuItem";
+            this.діагностикаToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
+            this.діагностикаToolStripMenuItem.Text = "Діагностика";
+            // 
+            // перевіркаПінівToolStripMenuItem
+            // 
+            this.перевіркаПінівToolStripMenuItem.Name = "перевіркаПінівToolStripMenuItem";
+            this.перевіркаПінівToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.перевіркаПінівToolStripMenuItem.Text = "Перевірка Пінів";
+            this.перевіркаПінівToolStripMenuItem.Click += new System.EventHandler(this.перевіркаПінівToolStripMenuItem_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -1424,12 +1305,13 @@ namespace Oven_Interface
             this.Controls.Add(this.button7);
             this.Controls.Add(this.refreshInfoButton);
             this.Controls.Add(this.progressGroupBox);
-            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.allInformationGroupBox);
             this.Controls.Add(this.projectNameLabel);
             this.Controls.Add(this.actionGroupBox);
+            this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Dashboard";
             this.Text = "Терморегулятор Пічки";
@@ -1480,10 +1362,10 @@ namespace Oven_Interface
             ((System.ComponentModel.ISupportInitialize)(this.newTemperaturePointMinuteTextBox)).EndInit();
             this.programsIndexGroupBox.ResumeLayout(false);
             this.actionGroupBox.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.progressGroupBox.ResumeLayout(false);
             this.progressGroupBox.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1498,10 +1380,7 @@ namespace Oven_Interface
         private System.Windows.Forms.Button pauseProgramButton;
         private System.Windows.Forms.Label minutesLeftLabel;
         private System.Windows.Forms.Label minutesLeftInfoLabel;
-        private System.Windows.Forms.Button turnOnTestDiodButton;
-        private System.Windows.Forms.Button turnOffTestDiodButton;
         private System.Windows.Forms.Label projectNameLabel;
-        private System.Windows.Forms.Label testPin13InfoLabel;
         private System.Windows.Forms.ListBox programsListBox;
         private System.Windows.Forms.TextBox newProgramNameTextBox;
         private System.Windows.Forms.Button createProgramButton;
@@ -1512,7 +1391,6 @@ namespace Oven_Interface
         private System.Windows.Forms.GroupBox allInformationGroupBox;
         private System.Windows.Forms.GroupBox programsIndexGroupBox;
         private System.Windows.Forms.GroupBox statusGroupBox;
-        private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox actionGroupBox;
         private System.Windows.Forms.GroupBox temperaturePointFormGroupBox;
         private System.Windows.Forms.Button createTemperaturePointButton;
@@ -1573,15 +1451,6 @@ namespace Oven_Interface
         private System.Windows.Forms.BindingSource breadBindingSource;
         private System.Windows.Forms.Button refreshInfoButton;
         private System.Windows.Forms.GroupBox progressGroupBox;
-        private System.Windows.Forms.Label testPin2InfoLabel;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label testPin3InfoLabel;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label testPin4InfoLabel;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TabPage statusPage;
         private System.Windows.Forms.ListBox statusListBox;
         private System.Windows.Forms.Button button7;
@@ -1592,6 +1461,11 @@ namespace Oven_Interface
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label expectedTemperatureLabel;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem програмаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem вихідToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem діагностикаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem перевіркаПінівToolStripMenuItem;
     }
 }
 
