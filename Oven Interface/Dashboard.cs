@@ -143,7 +143,7 @@ namespace Oven_Interface
             }
 
             sensorValueLabel.Text = $"{eventArgs.Value.Level.ToString()}";
-            this.CurrentTemperature = eventArgs.Value.Level - 414;
+            this.CurrentTemperature = eventArgs.Value.Level - 409;
             temperatureLabel.Text = $"{ this.CurrentTemperature.ToString()} C";
         }
 
