@@ -33,9 +33,9 @@ namespace Oven_Interface.Views
 
         private void saveCoefficientsButton_Click(object sender, EventArgs e)
         {
-            Properties.Settings.Default.temperatureCoefficientA = Decimal.ToInt32(coefficientA.Value);
-            Properties.Settings.Default.temperatureCoefficientB = Decimal.ToInt32(coefficientB.Value);
-            Properties.Settings.Default.temperatureCoefficientC = Decimal.ToInt32(coefficientC.Value);
+            Properties.Settings.Default.temperatureCoefficientA = coefficientA.Value;
+            Properties.Settings.Default.temperatureCoefficientB = coefficientB.Value;
+            Properties.Settings.Default.temperatureCoefficientC = coefficientC.Value;
             Properties.Settings.Default.Save();
             this.Close();
         }

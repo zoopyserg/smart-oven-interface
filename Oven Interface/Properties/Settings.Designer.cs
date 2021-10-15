@@ -26,9 +26,9 @@ namespace Oven_Interface.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public long temperatureCoefficientA {
+        public decimal temperatureCoefficientA {
             get {
-                return ((long)(this["temperatureCoefficientA"]));
+                return ((decimal)(this["temperatureCoefficientA"]));
             }
             set {
                 this["temperatureCoefficientA"] = value;
@@ -38,9 +38,9 @@ namespace Oven_Interface.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public long temperatureCoefficientB {
+        public decimal temperatureCoefficientB {
             get {
-                return ((long)(this["temperatureCoefficientB"]));
+                return ((decimal)(this["temperatureCoefficientB"]));
             }
             set {
                 this["temperatureCoefficientB"] = value;
@@ -50,9 +50,9 @@ namespace Oven_Interface.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("-409")]
-        public long temperatureCoefficientC {
+        public decimal temperatureCoefficientC {
             get {
-                return ((long)(this["temperatureCoefficientC"]));
+                return ((decimal)(this["temperatureCoefficientC"]));
             }
             set {
                 this["temperatureCoefficientC"] = value;

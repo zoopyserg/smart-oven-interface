@@ -2,13 +2,13 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Oven_Interface.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="temperatureCoefficientA" Type="System.Int64" Scope="User">
+    <Setting Name="temperatureCoefficientA" Type="System.Decimal" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="temperatureCoefficientB" Type="System.Int64" Scope="User">
+    <Setting Name="temperatureCoefficientB" Type="System.Decimal" Scope="User">
       <Value Profile="(Default)">1</Value>
     </Setting>
-    <Setting Name="temperatureCoefficientC" Type="System.Int64" Scope="User">
+    <Setting Name="temperatureCoefficientC" Type="System.Decimal" Scope="User">
       <Value Profile="(Default)">-409</Value>
     </Setting>
   </Settings>

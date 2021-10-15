@@ -146,7 +146,7 @@ namespace Oven_Interface
 
             this.CurrentSensorValue = eventArgs.Value.Level;
             sensorValueLabel.Text = $"{this.CurrentSensorValue.ToString()}";
-            this.CurrentTemperature = Properties.Settings.Default.temperatureCoefficientA * this.CurrentSensorValue * this.CurrentSensorValue + Properties.Settings.Default.temperatureCoefficientB * this.CurrentSensorValue + Properties.Settings.Default.temperatureCoefficientC;
+            this.CurrentTemperature = Decimal.ToInt32(Properties.Settings.Default.temperatureCoefficientA * this.CurrentSensorValue * this.CurrentSensorValue + Properties.Settings.Default.temperatureCoefficientB * this.CurrentSensorValue + Properties.Settings.Default.temperatureCoefficientC);
 
             temperatureLabel.Text = $"{ this.CurrentTemperature.ToString()} C";
         }

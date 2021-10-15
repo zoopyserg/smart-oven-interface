@@ -195,6 +195,7 @@ namespace Oven_Interface.Views
             // 
             // coefficientB
             // 
+            this.coefficientB.DecimalPlaces = 6;
             this.coefficientB.Location = new System.Drawing.Point(38, 61);
             this.coefficientB.Maximum = new decimal(new int[] {
             10000,
@@ -207,11 +208,12 @@ namespace Oven_Interface.Views
             0,
             -2147483648});
             this.coefficientB.Name = "coefficientB";
-            this.coefficientB.Size = new System.Drawing.Size(59, 20);
+            this.coefficientB.Size = new System.Drawing.Size(152, 20);
             this.coefficientB.TabIndex = 39;
             // 
             // coefficientA
             // 
+            this.coefficientA.DecimalPlaces = 6;
             this.coefficientA.Location = new System.Drawing.Point(38, 34);
             this.coefficientA.Maximum = new decimal(new int[] {
             10000,
@@ -224,7 +226,7 @@ namespace Oven_Interface.Views
             0,
             -2147483648});
             this.coefficientA.Name = "coefficientA";
-            this.coefficientA.Size = new System.Drawing.Size(59, 20);
+            this.coefficientA.Size = new System.Drawing.Size(152, 20);
             this.coefficientA.TabIndex = 38;
             // 
             // label9
@@ -259,6 +261,7 @@ namespace Oven_Interface.Views
             // 
             // coefficientC
             // 
+            this.coefficientC.DecimalPlaces = 6;
             this.coefficientC.Location = new System.Drawing.Point(38, 90);
             this.coefficientC.Maximum = new decimal(new int[] {
             10000,
@@ -271,7 +274,7 @@ namespace Oven_Interface.Views
             0,
             -2147483648});
             this.coefficientC.Name = "coefficientC";
-            this.coefficientC.Size = new System.Drawing.Size(59, 20);
+            this.coefficientC.Size = new System.Drawing.Size(152, 20);
             this.coefficientC.TabIndex = 42;
             // 
             // label10
