@@ -19,9 +19,12 @@ namespace Oven_Interface
         public IFirmataProtocol firmata { get; set; }
         public Dashboard form { get; set; }
 
+        public List<int> AvailablePins { get; set; }
+
         public ArduinoAccess(Dashboard _form)
         {
             form = _form;
+            AvailablePins = new List<int>();
             Reconnect();
         }
 
@@ -100,6 +103,7 @@ namespace Oven_Interface
             foreach (var pin in cap.Pins)
             {
                 form.UpdateStatusListBox($"Pin {pin.PinNumber}: Input: {pin.DigitalInput}, Output: {pin.DigitalOutput}, Analog: {pin.Analog}, Analog-Res: {pin.AnalogResolution}, PWM: {pin.Pwm}, PWM-Res: {pin.PwmResolution}, Servo: {pin.Servo}, Servo-Res: {pin.ServoResolution}, Serial: {pin.Serial}, Encoder: {pin.Encoder}, Input-pullup: {pin.InputPullup}");
+                AvailablePins.Add(pin.PinNumber);
             }
         }
 

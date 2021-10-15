@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,6 +18,174 @@ namespace Oven_Interface.Views
         {
             InitializeComponent();
             this.ArduinoConnection = arduinoConnection;
+
+            if (arduinoConnection.AvailablePins.Contains(1))
+            {
+                turnOnPin1Button.Enabled = true;
+                turnOffPin1Button.Enabled = true;
+            }
+
+            if (arduinoConnection.AvailablePins.Contains(2))
+            {
+                turnOnPin2Button.Enabled = true;
+                turnOffPin2Button.Enabled = true;
+            }
+
+            if (arduinoConnection.AvailablePins.Contains(3))
+            {
+                turnOnPin3Button.Enabled = true;
+                turnOffPin3Button.Enabled = true;
+            }
+
+            if (arduinoConnection.AvailablePins.Contains(4))
+            {
+                turnOnPin4Button.Enabled = true;
+                turnOffPin4Button.Enabled = true;
+            }
+
+            if (arduinoConnection.AvailablePins.Contains(5))
+            {
+                turnOnPin5Button.Enabled = true;
+                turnOffPin5Button.Enabled = true;
+            }
+
+            if (arduinoConnection.AvailablePins.Contains(6))
+            {
+                turnOnPin6Button.Enabled = true;
+                turnOffPin6Button.Enabled = true;
+            }
+
+            if (arduinoConnection.AvailablePins.Contains(7))
+            {
+                turnOnPin7Button.Enabled = true;
+                turnOffPin7Button.Enabled = true;
+            }
+
+            if (arduinoConnection.AvailablePins.Contains(8))
+            {
+                turnOnPin8Button.Enabled = true;
+                turnOffPin8Button.Enabled = true;
+            }
+
+            if (arduinoConnection.AvailablePins.Contains(9))
+            {
+                turnOnPin9Button.Enabled = true;
+                turnOffPin9Button.Enabled = true;
+            }
+
+            if (arduinoConnection.AvailablePins.Contains(10))
+            {
+                turnOnPin10Button.Enabled = true;
+                turnOffPin10Button.Enabled = true;
+            }
+
+            if (arduinoConnection.AvailablePins.Contains(11))
+            {
+                turnOnPin11Button.Enabled = true;
+                turnOffPin11Button.Enabled = true;
+            }
+
+            if (arduinoConnection.AvailablePins.Contains(12))
+            {
+                turnOnPin12Button.Enabled = true;
+                turnOffPin12Button.Enabled = true;
+            }
+
+            if (arduinoConnection.AvailablePins.Contains(13))
+            {
+                turnOnPin13Button.Enabled = true;
+                turnOffPin13Button.Enabled = true;
+            }
+
+            if (arduinoConnection.AvailablePins.Contains(14))
+            {
+                turnOnPin14Button.Enabled = true;
+                turnOffPin14Button.Enabled = true;
+            }
+
+            if (arduinoConnection.AvailablePins.Contains(15))
+            {
+                turnOnPin15Button.Enabled = true;
+                turnOffPin15Button.Enabled = true;
+            }
+
+            if (arduinoConnection.AvailablePins.Contains(16))
+            {
+                turnOnPin16Button.Enabled = true;
+                turnOffPin16Button.Enabled = true;
+            }
+
+            if (arduinoConnection.AvailablePins.Contains(17))
+            {
+                turnOnPin17Button.Enabled = true;
+                turnOffPin17Button.Enabled = true;
+            }
+
+            if (arduinoConnection.AvailablePins.Contains(18))
+            {
+                turnOnPin18Button.Enabled = true;
+                turnOffPin18Button.Enabled = true;
+            }
+
+            if (arduinoConnection.AvailablePins.Contains(19))
+            {
+                turnOnPin19Button.Enabled = true;
+                turnOffPin19Button.Enabled = true;
+            }
+
+            if (arduinoConnection.AvailablePins.Contains(20))
+            {
+                turnOnPin20Button.Enabled = true;
+                turnOffPin20Button.Enabled = true;
+            }
+
+            if (arduinoConnection.AvailablePins.Contains(21))
+            {
+                turnOnPin21Button.Enabled = true;
+                turnOffPin21Button.Enabled = true;
+            }
+
+            if (arduinoConnection.AvailablePins.Contains(22))
+            {
+                turnOnPin22Button.Enabled = true;
+                turnOffPin22Button.Enabled = true;
+            }
+
+            if (arduinoConnection.AvailablePins.Contains(23))
+            {
+                turnOnPin23Button.Enabled = true;
+                turnOffPin23Button.Enabled = true;
+            }
+
+            if (arduinoConnection.AvailablePins.Contains(24))
+            {
+                turnOnPin24Button.Enabled = true;
+                turnOffPin24Button.Enabled = true;
+            }
+
+            if (arduinoConnection.AvailablePins.Contains(25))
+            {
+                turnOnPin25Button.Enabled = true;
+                turnOffPin25Button.Enabled = true;
+            }
+
+            if (arduinoConnection.AvailablePins.Contains(26))
+            {
+                turnOnPin26Button.Enabled = true;
+                turnOffPin26Button.Enabled = true;
+            }
+
+            if (arduinoConnection.AvailablePins.Contains(27))
+            {
+                turnOnPin27Button.Enabled = true;
+                turnOffPin27Button.Enabled = true;
+            }
+
+            if (arduinoConnection.AvailablePins.Count > 0)
+            {
+                turnOnAllPinsButton.Enabled = true;
+                turnOffAllPinsButton.Enabled = true;
+            }
         }
 
         private void button31_Click(object sender, EventArgs e)
@@ -156,9 +325,9 @@ namespace Oven_Interface.Views
 
         private void button53_Click(object sender, EventArgs e)
         {
-            for (int i = 1; i < 28; i++)
+            foreach (var pin in this.ArduinoConnection.AvailablePins)
             {
-                this.ArduinoConnection.TurnOnPin(i);
+                this.ArduinoConnection.TurnOnPin(pin);
             }
         }
 
@@ -304,9 +473,9 @@ namespace Oven_Interface.Views
 
         private void button54_Click(object sender, EventArgs e)
         {
-            for (int i = 1; i < 28; i++)
+            foreach (var pin in this.ArduinoConnection.AvailablePins)
             {
-                this.ArduinoConnection.TurnOffPin(i);
+                this.ArduinoConnection.TurnOffPin(pin);
             }
         }
     }

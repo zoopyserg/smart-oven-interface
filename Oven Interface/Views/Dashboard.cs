@@ -449,5 +449,10 @@ namespace Oven_Interface
             Form pinTesting = new PinTesting(this.ArduinoConnection);
             pinTesting.Show();
         }
+
+        private void вихідToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

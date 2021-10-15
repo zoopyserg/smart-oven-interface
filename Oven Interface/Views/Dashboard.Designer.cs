@@ -1280,6 +1280,7 @@ namespace Oven_Interface
             this.вихідToolStripMenuItem.Name = "вихідToolStripMenuItem";
             this.вихідToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.вихідToolStripMenuItem.Text = "Вихід";
+            this.вихідToolStripMenuItem.Click += new System.EventHandler(this.вихідToolStripMenuItem_Click);
             // 
             // діагностикаToolStripMenuItem
             // 
@@ -1292,7 +1293,7 @@ namespace Oven_Interface
             // перевіркаПінівToolStripMenuItem
             // 
             this.перевіркаПінівToolStripMenuItem.Name = "перевіркаПінівToolStripMenuItem";
-            this.перевіркаПінівToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.перевіркаПінівToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.перевіркаПінівToolStripMenuItem.Text = "Перевірка Пінів";
             this.перевіркаПінівToolStripMenuItem.Click += new System.EventHandler(this.перевіркаПінівToolStripMenuItem_Click);
             // 
