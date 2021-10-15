@@ -101,6 +101,12 @@
     <Compile Include="Views\PinTesting.Designer.cs">
       <DependentUpon>PinTesting.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\TemperatureCalibration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TemperatureCalibration.Designer.cs">
+      <DependentUpon>TemperatureCalibration.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Views\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,6 +121,9 @@
     </Compile>
     <EmbeddedResource Include="Views\PinTesting.resx">
       <DependentUpon>PinTesting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TemperatureCalibration.resx">
+      <DependentUpon>TemperatureCalibration.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Oven Interface_TemporaryKey.pfx" />
     <None Include="packages.config" />

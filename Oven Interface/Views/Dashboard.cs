@@ -28,6 +28,7 @@ namespace Oven_Interface
         int minutesPassed;
         Bread runningProgram;
 
+        public long CurrentSensorValue { get; set; }
         public long CurrentTemperature { get; set; }
         public long ExpectedTemperature { get; set; }
 
@@ -40,7 +41,7 @@ namespace Oven_Interface
             InitializeComponent();
 
             this.ArduinoConnection = new ArduinoAccess(this);
-            
+
             UpdateBinding();
         }
         private void UpdateBinding(bool refreshEverything = true)
@@ -143,8 +144,10 @@ namespace Oven_Interface
                 return;
             }
 
-            sensorValueLabel.Text = $"{eventArgs.Value.Level.ToString()}";
-            this.CurrentTemperature = eventArgs.Value.Level - 409;
+            this.CurrentSensorValue = eventArgs.Value.Level;
+            sensorValueLabel.Text = $"{this.CurrentSensorValue.ToString()}";
+            this.CurrentTemperature = Properties.Settings.Default.temperatureCoefficientA * this.CurrentSensorValue * this.CurrentSensorValue + Properties.Settings.Default.temperatureCoefficientB * this.CurrentSensorValue + Properties.Settings.Default.temperatureCoefficientC;
+
             temperatureLabel.Text = $"{ this.CurrentTemperature.ToString()} C";
         }
 
@@ -233,6 +236,7 @@ namespace Oven_Interface
             runningProgram = null;
             minutesPassed = 0;
             progressBar1.Value = 0;
+            LaunchedProgramLabel.Text = "-";
             UpdateBinding();
         }
 
@@ -316,6 +320,7 @@ namespace Oven_Interface
             runningProgram.PressurePoints = PressurePointsController.Index(runningProgram.Id);
             runningProgram.ValvePoints = ValvePointsController.Index(runningProgram.Id);
             LaunchInstancesController.Create(runningProgram.Id);
+            LaunchedProgramLabel.Text = runningProgram.Name;
             UpdateBinding();
             timer.Start();
 
@@ -399,11 +404,6 @@ namespace Oven_Interface
             UpdateBinding();
         }
 
-        private void refreshInfoButton_Click(object sender, EventArgs e)
-        {
-            UpdateBinding();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             this.ArduinoConnection.TurnOnPin(4);
@@ -434,16 +434,6 @@ namespace Oven_Interface
             this.ArduinoConnection.TurnOffPin(2);
         }
 
-        private void button7_Click_1(object sender, EventArgs e)
-        {
-            this.ArduinoConnection.ReportCapabilities();
-        }
-        
-        private void button9_Click(object sender, EventArgs e)
-        {
-            this.ArduinoConnection.ListenTemperature();
-        }
-
         private void перевіркаПінівToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form pinTesting = new PinTesting(this.ArduinoConnection);
@@ -453,6 +443,22 @@ namespace Oven_Interface
         private void вихідToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void оновитиІнформаціюПроДоступніПіниToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.ArduinoConnection.ReportCapabilities();
+        }
+
+        private void оновитиІнформаціюПроДоступніРежимиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UpdateBinding();
+        }
+
+        private void калібруванняТермодатчикаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form temperatureCalibration = new TemperatureCalibration(this);
+            temperatureCalibration.Show();
         }
     }
 }
