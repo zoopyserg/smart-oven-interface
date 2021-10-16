@@ -19,20 +19,15 @@ namespace Oven_Interface
         List<Bread> breads = new List<Bread>();
         List<TemperaturePoint> temperaturePoints = new List<TemperaturePoint>();
         List<PressurePoint> pressurePoints = new List<PressurePoint>();
-        List<ValvePoint> valvePoints = new List<ValvePoint>();        
+        List<ValvePoint> valvePoints = new List<ValvePoint>();
         List<LaunchInstance> launchInstances = new List<LaunchInstance>();
 
         public List<StatusLine> statusLines { get; set; }
 
-        System.Timers.Timer timer;
-        int minutesPassed;
-        Bread runningProgram;
-
+        public ArduinoAccess ArduinoConnection { get; set; }
+        public ProgramProcessor programProcessor { get; set; }
         public long CurrentSensorValue { get; set; }
         public long CurrentTemperature { get; set; }
-        public long ExpectedTemperature { get; set; }
-
-        public ArduinoAccess ArduinoConnection { get; set; }
 
         public Dashboard()
         {
@@ -41,10 +36,11 @@ namespace Oven_Interface
             InitializeComponent();
 
             this.ArduinoConnection = new ArduinoAccess(this);
+            this.programProcessor = new ProgramProcessor(this);
 
             UpdateBinding();
         }
-        private void UpdateBinding(bool refreshEverything = true)
+        public void UpdateBinding(bool refreshEverything = true)
         {
             int persistedIndex = -1;
             
@@ -151,6 +147,53 @@ namespace Oven_Interface
             temperatureLabel.Text = $"{ this.CurrentTemperature.ToString()} C";
         }
 
+        public void UpdateActiveProgramNameLabelAsync(object sender, string programName)
+        {
+            if (InvokeRequired)
+            {
+                Invoke(new Action<object, string>(UpdateActiveProgramNameLabelAsync), sender, programName);
+                return;
+            }
+
+            LaunchedProgramLabel.Text = programName;
+        }
+
+        public void UpdateProgressBarAsync(object sender, int minimum, int passed, int maximum)
+        {
+            if (InvokeRequired)
+            {
+                Invoke(new Action<object, int, int, int>(UpdateProgressBarAsync), sender, minimum, passed, maximum);
+                return;
+            }
+
+            progressBar1.Minimum = minimum;
+            progressBar1.Maximum = maximum;
+            progressBar1.Value = passed;
+
+        }
+
+        public void UpdateTimeLeftAsync(object sender, string text)
+        {
+            if (InvokeRequired)
+            {
+                Invoke(new Action<object, string>(UpdateTimeLeftAsync), sender, text);
+                return;
+            }
+
+            minutesLeftLabel.Text = text;
+        }
+
+        public void UpdateExpectedTemperatureAsync(object sender, long temperature)
+        {
+            if (InvokeRequired)
+            {
+                Invoke(new Action<object, long>(UpdateExpectedTemperatureAsync), sender, temperature);
+                return;
+            }
+
+            expectedTemperatureLabel.Text = $"{ temperature.ToString() } C";
+        }
+
         private void UpdateTemperaturePointsChart()
         {
             chartTemperatures.DataSource = temperaturePoints;
@@ -181,62 +224,6 @@ namespace Oven_Interface
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            UpdateBinding();
-
-            timer = new System.Timers.Timer();
-            timer.Interval = 1000;
-            minutesPassed = 0;
-            timer.Elapsed += OnTimeEvent;
-        }
-
-        private void OnTimeEvent(object sender, ElapsedEventArgs e)
-        {
-            Invoke(new Action(() =>
-            {
-                if (minutesPassed >= runningProgram.Duration)
-                {
-                    CommitProgramFinilization();
-                    timer.Stop();
-                }
-                else
-                {
-                    // increase timer
-                    minutesPassed += 1;
-                    // turn on the relay if needed
-                    ExpectedTemperature = runningProgram.CurrentExpectedTemperature(minutesPassed);
-                    // todo: histerisis (maybe add a couple degrees to the expected temperature)
-                    expectedTemperatureLabel.Text = $"{ ExpectedTemperature.ToString() } C";
-
-                    if (this.CurrentTemperature < this.ExpectedTemperature)
-                    {
-                        this.ArduinoConnection.TurnOnPin(Properties.Settings.Default.pinTemperatureRelay);
-                    } else
-                    {
-                        this.ArduinoConnection.TurnOffPin(Properties.Settings.Default.pinTemperatureRelay);
-                    }
-
-                    // perform temperature display
-                    BreadsController.Update(runningProgram.Id, minutesPassed);
-                    progressBar1.Minimum = 0;
-                    progressBar1.Maximum = runningProgram.Duration;
-                    progressBar1.Value = minutesPassed;
-                    minutesLeftLabel.Text = (runningProgram.Duration - minutesPassed).ToString();
-                    //int persistedIndex = programsListBox.SelectedIndex;
-                    //breads = BreadsController.Index();
-                    //UpdateBinding(false);
-                    //programsListBox.SelectedIndex = persistedIndex;
-                }
-            }));
-        }
-
-        public void CommitProgramFinilization()
-        {
-            UpdateStatusListBox($"Програму {runningProgram.Name} завершено");
-            BreadsController.Finish(runningProgram.Id);
-            runningProgram = null;
-            minutesPassed = 0;
-            progressBar1.Value = 0;
-            LaunchedProgramLabel.Text = "-";
             UpdateBinding();
         }
 
@@ -311,47 +298,39 @@ namespace Oven_Interface
             }
         }
 
+        private int ActiveProgramId()
+        {
+            int selectedIndex = programsListBox.SelectedIndex;
+            int activeId = breads[selectedIndex].Id;
+            Properties.Settings.Default.ActiveProgramId = activeId;
+            Properties.Settings.Default.Save();
+            return activeId;
+        }
+
         private void startProgramButton_Click(object sender, EventArgs e)
         {
-            // создать инстанс запуска. для начала. факт запуска.
-            int persistedIndex = programsListBox.SelectedIndex;
-            runningProgram = breads[persistedIndex];
-            runningProgram.TemperaturePoints = TemperaturePointsController.Index(runningProgram.Id);
-            runningProgram.PressurePoints = PressurePointsController.Index(runningProgram.Id);
-            runningProgram.ValvePoints = ValvePointsController.Index(runningProgram.Id);
-            LaunchInstancesController.Create(runningProgram.Id);
-            LaunchedProgramLabel.Text = runningProgram.Name;
-            UpdateBinding();
-            timer.Start();
-
-            // и каждую секунду обновлять статус запуска (сколько минут прошло).
-            // и выставлять тот градус который надо выставлять согласно последней минуте.
-            // узнать сколько времени должен играть таймер (минуту последней температуры)
-            // стартануть таймер
-            // а таймер это воркер который смотрит сколько времени прошло и ... или как там я планировал...
+            programProcessor.Start(ActiveProgramId());
         }
 
         private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
         {
-            timer.Stop();
+            programProcessor.Stop();
             Application.DoEvents();
         }
 
         private void stopProgramButton_Click(object sender, EventArgs e)
         {
-            CommitProgramFinilization();
-            timer.Stop();
+            programProcessor.Stop();
         }
 
         private void pauseProgramButton_Click(object sender, EventArgs e)
         {
-            CommitProgramFinilization();
-            timer.Stop();
+            programProcessor.Pause();
         }
 
         private void continueProgramButton_Click(object sender, EventArgs e)
         {
-            timer.Start();
+            programProcessor.Continue();
         }
 
         private void previousPressurePointButton_Click(object sender, EventArgs e)

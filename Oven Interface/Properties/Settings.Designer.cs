@@ -82,5 +82,17 @@ namespace Oven_Interface.Properties {
                 this["pinTemperatureRelay"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("-1")]
+        public int ActiveProgramId {
+            get {
+                return ((int)(this["ActiveProgramId"]));
+            }
+            set {
+                this["ActiveProgramId"] = value;
+            }
+        }
     }
 }

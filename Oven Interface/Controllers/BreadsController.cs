@@ -18,6 +18,14 @@ namespace Oven_Interface.Controllers
             return db.Query<Bread>(sql, parameters);
         }
 
+        public static List<Bread> IndexUnfinished()
+        {
+            DynamicParameters parameters = new DynamicParameters();
+            string sql = $"With AllMinutes AS (SELECT tp.Minute, tp.BreadId FROM TemperaturePoints tp UNION SELECT vp.Minute, vp.BreadId FROM ValvePoints vp UNION SELECT pp.Minute, pp.BreadId FROM PressurePoints pp ) SELECT Id, Name, (SELECT MAX(Minute) FROM AllMinutes am WHERE am.BreadId = br.Id ) AS Duration FROM Breads br JOIN LaunchInstances li WHERE br.Id = li.BreadId AND li.Status != 'finished'";
+            DataAccess db = new DataAccess();
+            return db.Query<Bread>(sql, parameters);
+        }
+
         public static int Create(string name)
         {
             DynamicParameters parameters = new DynamicParameters();

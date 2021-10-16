@@ -80,6 +80,7 @@
     <Compile Include="Controllers\TestPinsController.cs" />
     <Compile Include="Controllers\ValvePointsController.cs" />
     <Compile Include="Models\Bread.cs" />
+    <Compile Include="ProgramProcessor.cs" />
     <Compile Include="Views\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
