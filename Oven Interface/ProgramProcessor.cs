@@ -14,7 +14,8 @@ namespace Oven_Interface
         public int minutesPassed { get; set; }
         public Bread runningProgram { get; set; }
         public Dashboard form { get; set; }
-        
+        public bool IsRunning { get; set; }
+
         public long ExpectedTemperature { get; set; }
 
         public ProgramProcessor(Dashboard form)
@@ -24,6 +25,7 @@ namespace Oven_Interface
             timer.Interval = 1000; // todo: make it an adjustable setting.
             minutesPassed = 0;
             timer.Elapsed += OnTimeEvent;
+            this.IsRunning = false;
         }
         
         public void Start(int activeProgramId)
@@ -35,13 +37,11 @@ namespace Oven_Interface
         public void Stop()
         {
             CommitProgramFinilization();
-            timer.Stop();
         }
 
         public void Pause()
         {
             CommitProgramPausing();
-            timer.Stop();
         }
 
         public void Continue()
@@ -57,11 +57,16 @@ namespace Oven_Interface
             runningProgram.TemperaturePoints = TemperaturePointsController.Index(activeProgramId);
             runningProgram.PressurePoints = PressurePointsController.Index(activeProgramId);
             runningProgram.ValvePoints = ValvePointsController.Index(activeProgramId);
-            LaunchInstancesController.Create(activeProgramId); // for now requires UpdateBinding();
+            LaunchInstancesController.Create(activeProgramId);
             Properties.Settings.Default.ActiveProgramId = activeProgramId;
             Properties.Settings.Default.Save();
             form.UpdateBinding();
             form.UpdateActiveProgramNameLabelAsync(form, runningProgram.Name);
+            IsRunning = true;
+            form.EnableDisableContinueButton();
+            form.EnableDisableStartButton();
+            form.EnableDisablePauseButton();
+            form.EnableDisableStopButton();
             timer.Start();
         }
 
@@ -72,7 +77,6 @@ namespace Oven_Interface
                 if (minutesPassed >= runningProgram.Duration)
                 {
                     CommitProgramFinilization();
-                    timer.Stop();
                 }
                 else
                 {
@@ -98,6 +102,7 @@ namespace Oven_Interface
 
         public void CommitProgramFinilization()
         {
+            timer.Stop();
             if (runningProgram != null)
             {
                 form.UpdateStatusListBox($"Програму {runningProgram.Name} завершено");
@@ -109,12 +114,17 @@ namespace Oven_Interface
                 form.UpdateExpectedTemperatureAsync(form, "-");
                 Properties.Settings.Default.ActiveProgramId = -1;
                 Properties.Settings.Default.Save();
+                IsRunning = false;
                 form.EnableDisableContinueButton();
+                form.EnableDisableStartButton();
+                form.EnableDisablePauseButton();
+                form.EnableDisableStopButton();
             }
         }
 
         public void CommitProgramPausing()
         {
+            timer.Stop();
             if (runningProgram != null)
             {
                 form.UpdateStatusListBox($"Програму {runningProgram.Name} поставлено на паузу");
@@ -123,7 +133,11 @@ namespace Oven_Interface
                 form.UpdateTimeLeftAsync(form, "-");
                 form.UpdateBinding();
                 form.UpdateExpectedTemperatureAsync(form, "-");
+                IsRunning = false;
                 form.EnableDisableContinueButton();
+                form.EnableDisableStartButton();
+                form.EnableDisablePauseButton();
+                form.EnableDisableStopButton();
             }
         }
     }

@@ -37,8 +37,11 @@ namespace Oven_Interface
 
             this.ArduinoConnection = new ArduinoAccess(this);
             this.programProcessor = new ProgramProcessor(this);
-            
+
             EnableDisableContinueButton();
+            EnableDisableStartButton();
+            EnableDisablePauseButton();
+            EnableDisableStopButton();
 
             UpdateBinding();
         }
@@ -92,7 +95,22 @@ namespace Oven_Interface
 
         public void EnableDisableContinueButton()
         {
-            continueProgramButton.Enabled = (Properties.Settings.Default.ActiveProgramId >= 0);
+            continueProgramButton.Enabled = (Properties.Settings.Default.ActiveProgramId >= 0 && !programProcessor.IsRunning);
+        }
+
+        public void EnableDisableStartButton()
+        {
+            startProgramButton.Enabled = (!programProcessor.IsRunning);
+        }
+
+        public void EnableDisablePauseButton()
+        {
+            pauseProgramButton.Enabled = programProcessor.IsRunning;
+        }
+
+        public void EnableDisableStopButton()
+        {
+            stopProgramButton.Enabled = programProcessor.IsRunning;
         }
 
         private void UpdateProgramsListBox()
