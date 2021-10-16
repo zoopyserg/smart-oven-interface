@@ -79,18 +79,27 @@ namespace Oven_Interface
             this.temperatureChartTabPage = new System.Windows.Forms.TabPage();
             this.chartTemperatures = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.temperatureTableTabPage = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.deleteTemperaturePointButton = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.temperaturePointsListBox = new System.Windows.Forms.ListBox();
             this.pressuresPage = new System.Windows.Forms.TabPage();
             this.pressurePointsTabControl = new System.Windows.Forms.TabControl();
             this.pressureChartTabPage = new System.Windows.Forms.TabPage();
             this.pressuresChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pressureTableTabPage = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
+            this.deletePressurePointButton = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.pressurePointsListBox = new System.Windows.Forms.ListBox();
             this.valvesPage = new System.Windows.Forms.TabPage();
             this.valvePointsTabControl = new System.Windows.Forms.TabControl();
             this.valveChartTabPage = new System.Windows.Forms.TabPage();
             this.valveChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.valveTableTabPage = new System.Windows.Forms.TabPage();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.deleteSteamPointButton = new System.Windows.Forms.Button();
             this.valvePointsListBox = new System.Windows.Forms.ListBox();
             this.historyPage = new System.Windows.Forms.TabPage();
             this.historyListBox = new System.Windows.Forms.ListBox();
@@ -402,10 +411,10 @@ namespace Oven_Interface
             // 
             // createValvePointButton
             // 
-            this.createValvePointButton.Location = new System.Drawing.Point(62, 78);
+            this.createValvePointButton.Location = new System.Drawing.Point(8, 78);
             this.createValvePointButton.Margin = new System.Windows.Forms.Padding(2);
             this.createValvePointButton.Name = "createValvePointButton";
-            this.createValvePointButton.Size = new System.Drawing.Size(92, 29);
+            this.createValvePointButton.Size = new System.Drawing.Size(146, 29);
             this.createValvePointButton.TabIndex = 32;
             this.createValvePointButton.Text = "Створити";
             this.createValvePointButton.UseVisualStyleBackColor = true;
@@ -478,10 +487,10 @@ namespace Oven_Interface
             // 
             // createPressurePointButton
             // 
-            this.createPressurePointButton.Location = new System.Drawing.Point(60, 78);
+            this.createPressurePointButton.Location = new System.Drawing.Point(8, 78);
             this.createPressurePointButton.Margin = new System.Windows.Forms.Padding(2);
             this.createPressurePointButton.Name = "createPressurePointButton";
-            this.createPressurePointButton.Size = new System.Drawing.Size(92, 29);
+            this.createPressurePointButton.Size = new System.Drawing.Size(144, 29);
             this.createPressurePointButton.TabIndex = 32;
             this.createPressurePointButton.Text = "Створити";
             this.createPressurePointButton.UseVisualStyleBackColor = true;
@@ -589,6 +598,9 @@ namespace Oven_Interface
             // 
             // temperatureTableTabPage
             // 
+            this.temperatureTableTabPage.Controls.Add(this.button1);
+            this.temperatureTableTabPage.Controls.Add(this.deleteTemperaturePointButton);
+            this.temperatureTableTabPage.Controls.Add(this.button2);
             this.temperatureTableTabPage.Controls.Add(this.temperaturePointsListBox);
             this.temperatureTableTabPage.Location = new System.Drawing.Point(4, 24);
             this.temperatureTableTabPage.Margin = new System.Windows.Forms.Padding(2);
@@ -598,6 +610,39 @@ namespace Oven_Interface
             this.temperatureTableTabPage.TabIndex = 0;
             this.temperatureTableTabPage.Text = "Таблиця Температур";
             this.temperatureTableTabPage.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(497, 185);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(105, 29);
+            this.button1.TabIndex = 45;
+            this.button1.Text = "< Попередній";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.previousTemperaturePointButton_Click);
+            // 
+            // deleteTemperaturePointButton
+            // 
+            this.deleteTemperaturePointButton.Location = new System.Drawing.Point(721, 185);
+            this.deleteTemperaturePointButton.Margin = new System.Windows.Forms.Padding(2);
+            this.deleteTemperaturePointButton.Name = "deleteTemperaturePointButton";
+            this.deleteTemperaturePointButton.Size = new System.Drawing.Size(92, 29);
+            this.deleteTemperaturePointButton.TabIndex = 34;
+            this.deleteTemperaturePointButton.Text = "Видалити";
+            this.deleteTemperaturePointButton.UseVisualStyleBackColor = true;
+            this.deleteTemperaturePointButton.Click += new System.EventHandler(this.deleteTemperaturePointButton_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(610, 185);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(105, 29);
+            this.button2.TabIndex = 44;
+            this.button2.Text = "Наступний >";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.nextTemperaturePointButton_Click);
             // 
             // temperaturePointsListBox
             // 
@@ -676,6 +721,9 @@ namespace Oven_Interface
             // 
             // pressureTableTabPage
             // 
+            this.pressureTableTabPage.Controls.Add(this.button3);
+            this.pressureTableTabPage.Controls.Add(this.deletePressurePointButton);
+            this.pressureTableTabPage.Controls.Add(this.button4);
             this.pressureTableTabPage.Controls.Add(this.pressurePointsListBox);
             this.pressureTableTabPage.Location = new System.Drawing.Point(4, 24);
             this.pressureTableTabPage.Margin = new System.Windows.Forms.Padding(2);
@@ -685,6 +733,39 @@ namespace Oven_Interface
             this.pressureTableTabPage.TabIndex = 0;
             this.pressureTableTabPage.Text = "Таблиця Тиску Води";
             this.pressureTableTabPage.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(501, 191);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(105, 27);
+            this.button3.TabIndex = 47;
+            this.button3.Text = "< Попередній";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.previousPressurePointButton_Click);
+            // 
+            // deletePressurePointButton
+            // 
+            this.deletePressurePointButton.Location = new System.Drawing.Point(725, 191);
+            this.deletePressurePointButton.Margin = new System.Windows.Forms.Padding(2);
+            this.deletePressurePointButton.Name = "deletePressurePointButton";
+            this.deletePressurePointButton.Size = new System.Drawing.Size(92, 27);
+            this.deletePressurePointButton.TabIndex = 44;
+            this.deletePressurePointButton.Text = "Видалити";
+            this.deletePressurePointButton.UseVisualStyleBackColor = true;
+            this.deletePressurePointButton.Click += new System.EventHandler(this.deletePressurePointButton_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(614, 191);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(105, 27);
+            this.button4.TabIndex = 46;
+            this.button4.Text = "Наступний >";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.nextPressurePointButton_Click);
             // 
             // pressurePointsListBox
             // 
@@ -763,6 +844,9 @@ namespace Oven_Interface
             // 
             // valveTableTabPage
             // 
+            this.valveTableTabPage.Controls.Add(this.button5);
+            this.valveTableTabPage.Controls.Add(this.button6);
+            this.valveTableTabPage.Controls.Add(this.deleteSteamPointButton);
             this.valveTableTabPage.Controls.Add(this.valvePointsListBox);
             this.valveTableTabPage.Location = new System.Drawing.Point(4, 24);
             this.valveTableTabPage.Margin = new System.Windows.Forms.Padding(2);
@@ -772,6 +856,39 @@ namespace Oven_Interface
             this.valveTableTabPage.TabIndex = 0;
             this.valveTableTabPage.Text = "Таблиця Рівня Пари";
             this.valveTableTabPage.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(498, 189);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(105, 29);
+            this.button5.TabIndex = 47;
+            this.button5.Text = "< Попередній";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.previousValvePointButton_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(611, 189);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(105, 29);
+            this.button6.TabIndex = 46;
+            this.button6.Text = "Наступний >";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.nextValvePointButton_Click);
+            // 
+            // deleteSteamPointButton
+            // 
+            this.deleteSteamPointButton.Location = new System.Drawing.Point(721, 189);
+            this.deleteSteamPointButton.Margin = new System.Windows.Forms.Padding(2);
+            this.deleteSteamPointButton.Name = "deleteSteamPointButton";
+            this.deleteSteamPointButton.Size = new System.Drawing.Size(92, 29);
+            this.deleteSteamPointButton.TabIndex = 45;
+            this.deleteSteamPointButton.Text = "Видалити";
+            this.deleteSteamPointButton.UseVisualStyleBackColor = true;
+            this.deleteSteamPointButton.Click += new System.EventHandler(this.deleteValvePointButton_Click);
             // 
             // valvePointsListBox
             // 
@@ -885,10 +1002,10 @@ namespace Oven_Interface
             // 
             // createTemperaturePointButton
             // 
-            this.createTemperaturePointButton.Location = new System.Drawing.Point(62, 72);
+            this.createTemperaturePointButton.Location = new System.Drawing.Point(8, 72);
             this.createTemperaturePointButton.Margin = new System.Windows.Forms.Padding(2);
             this.createTemperaturePointButton.Name = "createTemperaturePointButton";
-            this.createTemperaturePointButton.Size = new System.Drawing.Size(92, 29);
+            this.createTemperaturePointButton.Size = new System.Drawing.Size(146, 29);
             this.createTemperaturePointButton.TabIndex = 32;
             this.createTemperaturePointButton.Text = "Створити";
             this.createTemperaturePointButton.UseVisualStyleBackColor = true;
@@ -1274,6 +1391,15 @@ namespace Oven_Interface
         private System.Windows.Forms.ToolStripMenuItem налаштуванняToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem калібруванняТермодатчикаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem роліПінівToolStripMenuItem;
+        private System.Windows.Forms.Button deleteTemperaturePointButton;
+        private System.Windows.Forms.Button deletePressurePointButton;
+        private System.Windows.Forms.Button deleteSteamPointButton;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }
 

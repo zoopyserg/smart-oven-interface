@@ -37,6 +37,8 @@ namespace Oven_Interface
 
             this.ArduinoConnection = new ArduinoAccess(this);
             this.programProcessor = new ProgramProcessor(this);
+            
+            EnableDisableContinueButton();
 
             UpdateBinding();
         }
@@ -86,6 +88,11 @@ namespace Oven_Interface
             {
                 programsListBox.SelectedIndex = persistedIndex;
             }
+        }
+
+        public void EnableDisableContinueButton()
+        {
+            continueProgramButton.Enabled = (Properties.Settings.Default.ActiveProgramId >= 0);
         }
 
         private void UpdateProgramsListBox()
@@ -183,15 +190,15 @@ namespace Oven_Interface
             minutesLeftLabel.Text = text;
         }
 
-        public void UpdateExpectedTemperatureAsync(object sender, long temperature)
+        public void UpdateExpectedTemperatureAsync(object sender, string temperature)
         {
             if (InvokeRequired)
             {
-                Invoke(new Action<object, long>(UpdateExpectedTemperatureAsync), sender, temperature);
+                Invoke(new Action<object, string>(UpdateExpectedTemperatureAsync), sender, temperature);
                 return;
             }
 
-            expectedTemperatureLabel.Text = $"{ temperature.ToString() } C";
+            expectedTemperatureLabel.Text = temperature;
         }
 
         private void UpdateTemperaturePointsChart()

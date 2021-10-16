@@ -81,5 +81,18 @@ namespace Oven_Interface.Controllers
             DataAccess db = new DataAccess();
             db.Execute(sql, parameters);
         }
+
+        public static void Pause(int breadId)
+        {
+            DynamicParameters parameters = new DynamicParameters();
+            parameters.Add("@Id", 0, DbType.Int32, ParameterDirection.Output);
+            parameters.Add("@Status", "paused");
+            parameters.Add("@BreadId", breadId);
+
+            string sql = $@"UPDATE dbo.LaunchInstances SET Status=@Status WHERE (BreadId = @BreadId AND Status = 'started');";
+
+            DataAccess db = new DataAccess();
+            db.Execute(sql, parameters);
+        }
     }
 }

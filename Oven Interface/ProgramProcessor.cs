@@ -28,7 +28,6 @@ namespace Oven_Interface
         
         public void Start(int activeProgramId)
         {
-            runningProgram = BreadsController.Index().Where(o => o.Id == activeProgramId).First();
             minutesPassed = 0;
             StartTimer(activeProgramId);
         }
@@ -41,12 +40,12 @@ namespace Oven_Interface
 
         public void Pause()
         {
-            CommitProgramFinilization();
+            CommitProgramPausing();
             timer.Stop();
         }
 
         public void Continue()
-        {
+        {   // todo: сделать все ланч инстансы финишд кроме той которую продолжили.
             int activeProgramId = Properties.Settings.Default.ActiveProgramId;
             minutesPassed = LaunchInstancesController.Index(activeProgramId).Where(o => (o.Status != "finished")).First().MinutesPassed;
             StartTimer(activeProgramId);
@@ -59,6 +58,8 @@ namespace Oven_Interface
             runningProgram.PressurePoints = PressurePointsController.Index(activeProgramId);
             runningProgram.ValvePoints = ValvePointsController.Index(activeProgramId);
             LaunchInstancesController.Create(activeProgramId); // for now requires UpdateBinding();
+            Properties.Settings.Default.ActiveProgramId = activeProgramId;
+            Properties.Settings.Default.Save();
             form.UpdateBinding();
             form.UpdateActiveProgramNameLabelAsync(form, runningProgram.Name);
             timer.Start();
@@ -77,7 +78,7 @@ namespace Oven_Interface
                 {
                     minutesPassed += 1;
                     ExpectedTemperature = runningProgram.CurrentExpectedTemperature(minutesPassed);
-                    form.UpdateExpectedTemperatureAsync(form, ExpectedTemperature);
+                    form.UpdateExpectedTemperatureAsync(form, $"{ ExpectedTemperature.ToString() } C");
                     
                     if (form.CurrentTemperature < ExpectedTemperature)
                     {
@@ -105,6 +106,24 @@ namespace Oven_Interface
                 runningProgram = null;
                 form.UpdateTimeLeftAsync(form, "-");
                 form.UpdateBinding();
+                form.UpdateExpectedTemperatureAsync(form, "-");
+                Properties.Settings.Default.ActiveProgramId = -1;
+                Properties.Settings.Default.Save();
+                form.EnableDisableContinueButton();
+            }
+        }
+
+        public void CommitProgramPausing()
+        {
+            if (runningProgram != null)
+            {
+                form.UpdateStatusListBox($"Програму {runningProgram.Name} поставлено на паузу");
+                BreadsController.Pause(runningProgram.Id);
+                //form.UpdateProgressBarAsync(form, 0, 0, runningProgram.Duration);
+                form.UpdateTimeLeftAsync(form, "-");
+                form.UpdateBinding();
+                form.UpdateExpectedTemperatureAsync(form, "-");
+                form.EnableDisableContinueButton();
             }
         }
     }
