@@ -340,6 +340,7 @@ namespace Oven_Interface
         private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
         {
             programProcessor.Stop();
+            ArduinoConnection.Disconnect();
             Application.DoEvents();
         }
 

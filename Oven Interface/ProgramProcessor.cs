@@ -72,32 +72,35 @@ namespace Oven_Interface
 
         private void OnTimeEvent(object sender, ElapsedEventArgs e)
         {
-            form.Invoke(new Action(() =>
+            if (runningProgram != null)
             {
-                if (minutesPassed >= runningProgram.Duration)
+                form.Invoke(new Action(() =>
                 {
-                    CommitProgramFinilization();
-                }
-                else
-                {
-                    minutesPassed += 1;
-                    ExpectedTemperature = runningProgram.CurrentExpectedTemperature(minutesPassed);
-                    form.UpdateExpectedTemperatureAsync(form, $"{ ExpectedTemperature.ToString() } C");
-                    
-                    if (form.CurrentTemperature < ExpectedTemperature)
+                    if (minutesPassed >= runningProgram.Duration)
                     {
-                        form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.pinTemperatureRelay);
+                        CommitProgramFinilization();
                     }
                     else
                     {
-                        form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.pinTemperatureRelay);
-                    }
+                        minutesPassed += 1;
+                        ExpectedTemperature = runningProgram.CurrentExpectedTemperature(minutesPassed);
+                        form.UpdateExpectedTemperatureAsync(form, $"{ ExpectedTemperature.ToString() } C");
 
-                    BreadsController.Update(runningProgram.Id, minutesPassed);
-                    form.UpdateProgressBarAsync(form, 0, minutesPassed, runningProgram.Duration);
-                    form.UpdateTimeLeftAsync(form, (runningProgram.Duration - minutesPassed).ToString());
-                }
-            }));
+                        if (form.CurrentTemperature < ExpectedTemperature)
+                        {
+                            form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.pinTemperatureRelay);
+                        }
+                        else
+                        {
+                            form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.pinTemperatureRelay);
+                        }
+
+                        BreadsController.Update(runningProgram.Id, minutesPassed);
+                        form.UpdateProgressBarAsync(form, 0, minutesPassed, runningProgram.Duration);
+                        form.UpdateTimeLeftAsync(form, (runningProgram.Duration - minutesPassed).ToString());
+                    }
+                }));
+            }
         }
 
         public void CommitProgramFinilization()

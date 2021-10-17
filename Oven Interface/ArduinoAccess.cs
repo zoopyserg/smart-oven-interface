@@ -126,5 +126,13 @@ namespace Oven_Interface
             firmata.SetAnalogReportMode(Properties.Settings.Default.channelTemperatureSensor, true);
             firmata.SetSamplingInterval(500);
         }
+
+        public void Disconnect()
+        {
+            if (connection != null)
+            {
+                connection.Close();
+            }
+        }
     }
 }
