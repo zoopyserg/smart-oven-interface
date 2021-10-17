@@ -95,6 +95,18 @@ namespace Oven_Interface
             form.UpdateStatusListBox($"{ pinNumber }й пін виключено");
         }
 
+        public void TurnOffAllPins()
+        {
+            foreach (var pin in AvailablePins)
+                TurnOffPin(pin);
+        }
+
+        public void TurnOnAllPins()
+        {
+            foreach (var pin in AvailablePins)
+                TurnOnPin(pin);
+        }
+
         public void ReportCapabilities()
         {
             BoardCapability cap = session.GetBoardCapability();

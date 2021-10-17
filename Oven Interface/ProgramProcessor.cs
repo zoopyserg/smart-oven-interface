@@ -22,7 +22,7 @@ namespace Oven_Interface
         {
             this.form = form;
             timer = new System.Timers.Timer();
-            timer.Interval = 1000; // todo: make it an adjustable setting.
+            timer.Interval = 60000;
             minutesPassed = 0;
             timer.Elapsed += OnTimeEvent;
             this.IsRunning = false;
@@ -67,10 +67,44 @@ namespace Oven_Interface
             form.EnableDisableStartButton();
             form.EnableDisablePauseButton();
             form.EnableDisableStopButton();
+            DoSameThingOnZerothSecond();
             timer.Start();
         }
 
         private void OnTimeEvent(object sender, ElapsedEventArgs e)
+        {
+            if (runningProgram != null)
+            {
+                form.Invoke(new Action(() =>
+                {
+                    if (minutesPassed >= runningProgram.Duration)
+                    {
+                        CommitProgramFinilization();
+                    }
+                    else
+                    {
+                        minutesPassed += 1;
+                        ExpectedTemperature = runningProgram.CurrentExpectedTemperature(minutesPassed);
+                        form.UpdateExpectedTemperatureAsync(form, $"{ ExpectedTemperature.ToString() } C");
+
+                        if (form.CurrentTemperature < ExpectedTemperature)
+                        {
+                            form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.pinTemperatureRelay);
+                        }
+                        else
+                        {
+                            form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.pinTemperatureRelay);
+                        }
+
+                        BreadsController.Update(runningProgram.Id, minutesPassed);
+                        form.UpdateProgressBarAsync(form, 0, minutesPassed, runningProgram.Duration);
+                        form.UpdateTimeLeftAsync(form, (runningProgram.Duration - minutesPassed).ToString());
+                    }
+                }));
+            }
+        }
+
+        private void DoSameThingOnZerothSecond()
         {
             if (runningProgram != null)
             {
@@ -122,6 +156,7 @@ namespace Oven_Interface
                 form.EnableDisableStartButton();
                 form.EnableDisablePauseButton();
                 form.EnableDisableStopButton();
+                form.ArduinoConnection.TurnOffAllPins();
             }
         }
 
@@ -141,6 +176,7 @@ namespace Oven_Interface
                 form.EnableDisableStartButton();
                 form.EnableDisablePauseButton();
                 form.EnableDisableStopButton();
+                form.ArduinoConnection.TurnOffAllPins();
             }
         }
     }

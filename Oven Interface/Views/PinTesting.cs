@@ -325,10 +325,7 @@ namespace Oven_Interface.Views
 
         private void button53_Click(object sender, EventArgs e)
         {
-            foreach (var pin in this.ArduinoConnection.AvailablePins)
-            {
-                this.ArduinoConnection.TurnOnPin(pin);
-            }
+            this.ArduinoConnection.TurnOnAllPins();
         }
 
         private void button55_Click(object sender, EventArgs e)
@@ -473,10 +470,7 @@ namespace Oven_Interface.Views
 
         private void button54_Click(object sender, EventArgs e)
         {
-            foreach (var pin in this.ArduinoConnection.AvailablePins)
-            {
-                this.ArduinoConnection.TurnOffPin(pin);
-            }
+            this.ArduinoConnection.TurnOffAllPins();
         }
     }
 }
