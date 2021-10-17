@@ -85,7 +85,6 @@ namespace Oven_Interface
             session.SetDigitalPinMode(pinNumber, PinMode.DigitalOutput);
             session.SetDigitalPin(pinNumber, false); //  посылаю true потому что купил плату которая при LOW включена... пофиксить новой платой.
             form.UpdateStatusListBox($"{ pinNumber }й пін включено");
-
         }
 
         public void TurnOffPin(int pinNumber)

@@ -155,6 +155,8 @@ namespace Oven_Interface
             statusListBox.DataSource = null;
             statusListBox.DataSource = this.statusLines;
             statusListBox.DisplayMember = "DisplayString";
+            int visibleItems = statusListBox.ClientSize.Height / statusListBox.ItemHeight;
+            statusListBox.TopIndex = Math.Max(statusListBox.Items.Count - visibleItems + 1, 0);
         }
 
         public void UpdateStatusListBoxAsync(object sender, FirmataEventArgs<AnalogState> eventArgs)
@@ -166,7 +168,6 @@ namespace Oven_Interface
             }
 
             this.CurrentSensorValue = eventArgs.Value.Level;
-            sensorValueLabel.Text = $"{this.CurrentSensorValue.ToString()}";
             this.CurrentTemperature = Decimal.ToInt32(Properties.Settings.Default.temperatureCoefficientA * this.CurrentSensorValue * this.CurrentSensorValue + Properties.Settings.Default.temperatureCoefficientB * this.CurrentSensorValue + Properties.Settings.Default.temperatureCoefficientC);
 
             temperatureLabel.Text = $"{ this.CurrentTemperature.ToString()} C";
