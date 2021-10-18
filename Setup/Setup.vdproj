@@ -15,26 +15,14 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_0E4FBB1670494ABC828104ADE6E85BAD"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_0F32903A2A73480E8A3A6BF2242BE3A6"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_30869D38E2854D2BAE0EE43136A13A9F"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_503CD9FC0CEFD291A15C16B00A35FD01"
+        "MsmKey" = "8:_1B15BBAB2A508FA770D3820AB53992B5"
         "OwnerKey" = "8:_8B0E9F6555554B9182D132B7376DA1ED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_4A7BCECFE6B24ACBBE37ACAB01C47025"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -45,50 +33,50 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_68C4F323098F434FA0EA7686A1992520"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_8233E9E0DAC14355980471CEB301829F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_8B0E9F6555554B9182D132B7376DA1ED"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_A772C4D15B59CFA34D07B75C14A5B754"
-        "OwnerKey" = "8:_8B0E9F6555554B9182D132B7376DA1ED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_BC61FB48290D47E3BE4C354B829E99DF"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_AE24A44E1DA610E7A1C4847503B1368E"
         "OwnerKey" = "8:_8B0E9F6555554B9182D132B7376DA1ED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0E4FBB1670494ABC828104ADE6E85BAD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A772C4D15B59CFA34D07B75C14A5B754"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_503CD9FC0CEFD291A15C16B00A35FD01"
+        "OwnerKey" = "8:_8B0E9F6555554B9182D132B7376DA1ED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_5D1A99C540845D49987E4D6ADD194A56"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_1B15BBAB2A508FA770D3820AB53992B5"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_AE24A44E1DA610E7A1C4847503B1368E"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -137,7 +125,7 @@
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
         "OutputFilename" = "8:Release\\Setup.msi"
-        "PackageFilesAs" = "3:2"
+        "PackageFilesAs" = "3:1"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
         "Compression" = "3:2"
@@ -152,7 +140,7 @@
             "PromptEnabled" = "11:TRUE"
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
-            "ComponentsUrl" = "8:"
+            "ComponentsUrl" = "8:C:\\Users\\serge\\Downloads\\Oven Dependencies"
                 "Items"
                 {
                     "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
@@ -196,91 +184,20 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0E4FBB1670494ABC828104ADE6E85BAD"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1B15BBAB2A508FA770D3820AB53992B5"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:SQL2019-SSEI-Expr, Version=15.2002.0.0, Culture=neutral, PublicKeyToken=57d8c1d10de9dc02, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:Solid.Arduino, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_0E4FBB1670494ABC828104ADE6E85BAD"
+                    "_1B15BBAB2A508FA770D3820AB53992B5"
                     {
-                    "Name" = "8:SQL2019-SSEI-Expr.exe"
+                    "Name" = "8:Solid.Arduino.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:..\\..\\..\\..\\..\\..\\..\\Downloads\\Shared\\SQL2019-SSEI-Expr.exe"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_9FFB037E6F854A96BE83E0B73FC85864"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0F32903A2A73480E8A3A6BF2242BE3A6"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\..\\..\\..\\Desktop\\dbo.OvenDataDB_log.ldf"
-            "TargetName" = "8:dbo.OvenDataDB_log.ldf"
-            "Tag" = "8:"
-            "Folder" = "8:_E820F042B4594B67B55B4C2394D20E36"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_30869D38E2854D2BAE0EE43136A13A9F"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\..\\..\\..\\Desktop\\dbo.OvenDataDB.mdf"
-            "TargetName" = "8:dbo.OvenDataDB.mdf"
-            "Tag" = "8:"
-            "Folder" = "8:_E820F042B4594B67B55B4C2394D20E36"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_503CD9FC0CEFD291A15C16B00A35FD01"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_503CD9FC0CEFD291A15C16B00A35FD01"
-                    {
-                    "Name" = "8:Dapper.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Dapper.dll"
+            "SourcePath" = "8:Solid.Arduino.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_9FFB037E6F854A96BE83E0B73FC85864"
@@ -296,6 +213,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4A7BCECFE6B24ACBBE37ACAB01C47025"
+            {
+            "SourcePath" = "8:C:\\Users\\serge\\Desktop\\dbo.OvenDataDB.mdf"
+            "TargetName" = "8:dbo.OvenDataDB.mdf"
+            "Tag" = "8:"
+            "Folder" = "8:_E820F042B4594B67B55B4C2394D20E36"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5D1A99C540845D49987E4D6ADD194A56"
@@ -329,20 +266,60 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A772C4D15B59CFA34D07B75C14A5B754"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_68C4F323098F434FA0EA7686A1992520"
+            {
+            "SourcePath" = "8:C:\\Users\\serge\\Desktop\\dbo.OvenDataDB_log.ldf"
+            "TargetName" = "8:dbo.OvenDataDB_log.ldf"
+            "Tag" = "8:"
+            "Folder" = "8:_E820F042B4594B67B55B4C2394D20E36"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8233E9E0DAC14355980471CEB301829F"
+            {
+            "SourcePath" = "8:..\\microwave-oven-svgrepo-com.ico"
+            "TargetName" = "8:microwave-oven-svgrepo-com.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_9FFB037E6F854A96BE83E0B73FC85864"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_AE24A44E1DA610E7A1C4847503B1368E"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Solid.Arduino, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_A772C4D15B59CFA34D07B75C14A5B754"
+                    "_AE24A44E1DA610E7A1C4847503B1368E"
                     {
-                    "Name" = "8:Solid.Arduino.dll"
+                    "Name" = "8:Dapper.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:Solid.Arduino.dll"
+            "SourcePath" = "8:Dapper.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_9FFB037E6F854A96BE83E0B73FC85864"
@@ -358,26 +335,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BC61FB48290D47E3BE4C354B829E99DF"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\microwave-oven-svgrepo-com.ico"
-            "TargetName" = "8:oven.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_9FFB037E6F854A96BE83E0B73FC85864"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
         }
@@ -492,7 +449,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Oven Thermoregulator"
         "ProductCode" = "8:{2C1FD43C-41AD-41C5-BC75-3433207DC8B2}"
-        "PackageCode" = "8:{FE52100A-07D3-45C5-BF4C-D0EDF2B3F1EE}"
+        "PackageCode" = "8:{7760C7D7-0AA3-4976-BB41-AAE2913A7864}"
         "UpgradeCode" = "8:{11A5A588-DB17-40C6-804D-FD8BC9F180BF}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -623,7 +580,7 @@
             "Target" = "8:_8B0E9F6555554B9182D132B7376DA1ED"
             "Folder" = "8:_9E50E512E8F746128BA39EFDCC9D3917"
             "WorkingFolder" = "8:_9FFB037E6F854A96BE83E0B73FC85864"
-            "Icon" = "8:"
+            "Icon" = "8:_8233E9E0DAC14355980471CEB301829F"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_B9749BFBCC13470AAB28FB81CDE7A89F"
@@ -637,7 +594,7 @@
             "Target" = "8:_8B0E9F6555554B9182D132B7376DA1ED"
             "Folder" = "8:_05B5C8D1488A462182ADC4D956083983"
             "WorkingFolder" = "8:_9FFB037E6F854A96BE83E0B73FC85864"
-            "Icon" = "8:"
+            "Icon" = "8:_8233E9E0DAC14355980471CEB301829F"
             "Feature" = "8:"
             }
         }
@@ -1041,7 +998,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_8B0E9F6555554B9182D132B7376DA1ED"
             {
-            "SourcePath" = "8:..\\Oven Interface\\obj\\Release\\Oven Interface.exe"
+            "SourcePath" = "8:..\\Oven Interface\\obj\\Debug\\Oven Interface.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_9FFB037E6F854A96BE83E0B73FC85864"

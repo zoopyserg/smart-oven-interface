@@ -22,7 +22,7 @@ namespace Oven_Interface
         {
             this.form = form;
             timer = new System.Timers.Timer();
-            timer.Interval = 60000;
+            timer.Interval = 1000;
             minutesPassed = 0;
             timer.Elapsed += OnTimeEvent;
             this.IsRunning = false;
@@ -139,24 +139,27 @@ namespace Oven_Interface
 
         public void CommitProgramFinilization()
         {
-            timer.Stop();
-            if (runningProgram != null)
+            if (IsRunning)
             {
-                form.UpdateStatusListBox($"Програму {runningProgram.Name} завершено");
-                BreadsController.Finish(runningProgram.Id);
-                form.UpdateProgressBarAsync(form, 0, 0, runningProgram.Duration);
-                runningProgram = null;
-                form.UpdateTimeLeftAsync(form, "-");
-                form.UpdateBinding();
-                form.UpdateExpectedTemperatureAsync(form, "-");
-                Properties.Settings.Default.ActiveProgramId = -1;
-                Properties.Settings.Default.Save();
-                IsRunning = false;
-                form.EnableDisableContinueButton();
-                form.EnableDisableStartButton();
-                form.EnableDisablePauseButton();
-                form.EnableDisableStopButton();
-                form.ArduinoConnection.TurnOffAllPins();
+                timer.Stop();
+                if (runningProgram != null)
+                {
+                    form.UpdateStatusListBox($"Програму {runningProgram.Name} завершено");
+                    BreadsController.Finish(runningProgram.Id);
+                    form.UpdateProgressBarAsync(form, 0, 0, runningProgram.Duration);
+                    runningProgram = null;
+                    form.UpdateTimeLeftAsync(form, "-");
+                    form.UpdateBinding();
+                    form.UpdateExpectedTemperatureAsync(form, "-");
+                    Properties.Settings.Default.ActiveProgramId = -1;
+                    Properties.Settings.Default.Save();
+                    IsRunning = false;
+                    form.EnableDisableContinueButton();
+                    form.EnableDisableStartButton();
+                    form.EnableDisablePauseButton();
+                    form.EnableDisableStopButton();
+                    form.ArduinoConnection.TurnOffAllPins();
+                }
             }
         }
 

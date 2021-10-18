@@ -1,0 +1,101 @@
+﻿CREATE DATABASE [dbo].[OvenDataDB]
+GO
+USE [dbo].[OvenDataDB]
+GO
+
+CREATE TABLE [dbo].[Breads] (
+    [Id]   INT            IDENTITY (1, 1) NOT NULL,
+    [Name] NVARCHAR (100) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+CREATE TABLE [dbo].[LaunchInstances] (
+    [Id]            INT            IDENTITY (1, 1) NOT NULL,
+    [BreadId]       INT            NOT NULL,
+    [MinutesPassed] INT            NOT NULL,
+    [Status]        NVARCHAR (100) NOT NULL,
+    [CreatedAt]     DATETIME       NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_LaunchInstances_To_Breads] FOREIGN KEY ([BreadId]) REFERENCES [dbo].[Breads] ([Id])
+);
+
+CREATE TABLE [dbo].[PressurePoints] (
+    [Id]      INT IDENTITY (1, 1) NOT NULL,
+    [Minute]  INT NOT NULL,
+    [Value]   INT NOT NULL,
+    [BreadId] INT NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_PressirePoints_To_Breads] FOREIGN KEY ([BreadId]) REFERENCES [dbo].[Breads] ([Id])
+);
+
+CREATE TABLE [dbo].[TemperaturePoints] (
+    [Id]      INT IDENTITY (1, 1) NOT NULL,
+    [Minute]  INT NOT NULL,
+    [Value]   INT NOT NULL,
+    [BreadId] INT NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_TemperaturePoints_To_Breads] FOREIGN KEY ([BreadId]) REFERENCES [dbo].[Breads] ([Id])
+);
+
+CREATE TABLE [dbo].[ValvePoints] (
+    [Id]      INT IDENTITY (1, 1) NOT NULL,
+    [Minute]  INT NOT NULL,
+    [Value]   INT NOT NULL,
+    [BreadId] INT NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_ValvePoints_To_Breads] FOREIGN KEY ([BreadId]) REFERENCES [dbo].[Breads] ([Id])
+);
+
+CREATE VIEW [dbo].[FullBread]
+	AS 
+	SELECT [b].[Id] AS BookId, 
+	       [b].[Name] AS BookName, 
+		   [t].[Id] AS ControlId, 
+		   [t].[Minute] AS TemperaturePointMinute,
+		   [t].[Value] AS TemperaturePointValue
+	FROM dbo.Breads b
+	LEFT JOIN dbo.TemperaturePoints t on b.Id = t.BreadId
+	
+CREATE PROCEDURE [dbo].[spBread_GetBreads]
+AS
+    With AllMinutes AS (
+      SELECT tp.Minute, tp.BreadId FROM TemperaturePoints tp
+      UNION
+      SELECT vp.Minute, vp.BreadId FROM ValvePoints vp
+      UNION
+      SELECT pp.Minute, pp.BreadId FROM PressurePoints pp
+    )
+
+    SELECT Id, Name, (SELECT MAX(Minute) FROM AllMinutes am WHERE am.BreadId = br.Id ) AS Duration
+    FROM Breads br
+RETURN 0
+
+CREATE PROCEDURE [dbo].[spBread_InsertSet]
+	@breads BasicUDT readonly
+AS
+BEGIN
+	INSERT INTO dbo.Breads(Name)
+	SELECT [Name]
+	FROM @breads
+END
+
+CREATE PROCEDURE [dbo].[spBreads_GetById]
+	@ID int
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT *
+	FROM dbo.Breads
+	WHERE id = @ID;
+END
+
+CREATE PROCEDURE [dbo].[spBreads_Insert]
+    @NAME nvarchar(100)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	INSERT INTO dbo.Breads (Name)
+	VALUES (@NAME)
+END
