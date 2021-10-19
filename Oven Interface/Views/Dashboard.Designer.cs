@@ -132,6 +132,7 @@ namespace Oven_Interface
             this.роліПінівToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.breadBindingSource)).BeginInit();
             this.programFormGroupBox.SuspendLayout();
             this.allInformationGroupBox.SuspendLayout();
@@ -1217,11 +1218,22 @@ namespace Oven_Interface
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Температура";
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(1045, 212);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(207, 67);
+            this.button7.TabIndex = 46;
+            this.button7.Text = "З\'єднати";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click_1);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1269, 591);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.allInformationGroupBox);
@@ -1376,6 +1388,7 @@ namespace Oven_Interface
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }
 

@@ -15,13 +15,19 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_19D495F4DDD644E7BBB7D2F56578F203"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_1B15BBAB2A508FA770D3820AB53992B5"
         "OwnerKey" = "8:_8B0E9F6555554B9182D132B7376DA1ED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_4A7BCECFE6B24ACBBE37ACAB01C47025"
+        "MsmKey" = "8:_1D017571E7224BB4A1FC198646B04713"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -33,7 +39,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_68C4F323098F434FA0EA7686A1992520"
+        "MsmKey" = "8:_6CE755F84C654363A60A740D64822FBD"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -172,6 +178,16 @@
         {
             "LaunchCondition"
             {
+                "{A06ECF26-33A3-4562-8140-9B0E340D4F24}:_A85CDD7D4C0C46BD843EF7F512C20CC3"
+                {
+                "Name" = "8:.NET Core"
+                "Message" = "8:[VSDNETCOREMSG]"
+                "AllowLaterVersions" = "11:FALSE"
+                "InstallUrl" = "8:https://dotnet.microsoft.com/download/dotnet-core/[NetCoreVerMajorDotMinor]"
+                "IsNETCore" = "11:TRUE"
+                "Architecture" = "2:0"
+                "Runtime" = "2:0"
+                }
                 "{A06ECF26-33A3-4562-8140-9B0E340D4F24}:_A96B7AA6BB5F4301A94FECEE294A0483"
                 {
                 "Name" = "8:.NET Framework"
@@ -184,6 +200,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_19D495F4DDD644E7BBB7D2F56578F203"
+            {
+            "SourcePath" = "8:..\\Oven Interface\\GrantAccessToFiles.bat"
+            "TargetName" = "8:GrantAccessToFiles.bat"
+            "Tag" = "8:"
+            "Folder" = "8:_9FFB037E6F854A96BE83E0B73FC85864"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1B15BBAB2A508FA770D3820AB53992B5"
             {
             "AssemblyRegister" = "3:1"
@@ -215,12 +251,12 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4A7BCECFE6B24ACBBE37ACAB01C47025"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1D017571E7224BB4A1FC198646B04713"
             {
-            "SourcePath" = "8:C:\\Users\\serge\\Desktop\\dbo.OvenDataDB.mdf"
-            "TargetName" = "8:dbo.OvenDataDB.mdf"
+            "SourcePath" = "8:..\\Oven Interface\\OvenDatabase.mdf"
+            "TargetName" = "8:OvenDatabase.mdf"
             "Tag" = "8:"
-            "Folder" = "8:_E820F042B4594B67B55B4C2394D20E36"
+            "Folder" = "8:_AE0D67BFC2AA491F95E1C57A01B18380"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -266,12 +302,12 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_68C4F323098F434FA0EA7686A1992520"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6CE755F84C654363A60A740D64822FBD"
             {
-            "SourcePath" = "8:C:\\Users\\serge\\Desktop\\dbo.OvenDataDB_log.ldf"
-            "TargetName" = "8:dbo.OvenDataDB_log.ldf"
+            "SourcePath" = "8:..\\Oven Interface\\OvenDatabase_log.ldf"
+            "TargetName" = "8:OvenDatabase_log.ldf"
             "Tag" = "8:"
-            "Folder" = "8:_E820F042B4594B67B55B4C2394D20E36"
+            "Folder" = "8:_AE0D67BFC2AA491F95E1C57A01B18380"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -354,6 +390,29 @@
                 {
                 }
             }
+            "{994432C3-9487-495D-8656-3E829A8DBDDE}:_0C25EAAD76344845B50AFC6C844B644D"
+            {
+            "DefaultLocation" = "8:[CommonAppDataFolder]"
+            "Name" = "8:Custom folder"
+            "AlwaysCreate" = "11:FALSE"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Property" = "8:NEWPROPERTY1"
+                "Folders"
+                {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_AE0D67BFC2AA491F95E1C57A01B18380"
+                    {
+                    "Name" = "8:Oven Interface"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_D4C3C89A3EF1482B85D8C39C0D767A3F"
+                        "Folders"
+                        {
+                        }
+                    }
+                }
+            }
             "{1525181F-901A-416C-8A58-119130FE478E}:_9E50E512E8F746128BA39EFDCC9D3917"
             {
             "Name" = "8:#1919"
@@ -377,61 +436,6 @@
                 {
                 }
             }
-            "{1525181F-901A-416C-8A58-119130FE478E}:_D117462789B34A3B8E84079700F75391"
-            {
-            "Name" = "8:#1912"
-            "AlwaysCreate" = "11:FALSE"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Property" = "8:ProgramFilesFolder"
-                "Folders"
-                {
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_DD349DB2198845C3BAE3DFB704EEC972"
-                    {
-                    "Name" = "8:Microsoft SQL Server"
-                    "AlwaysCreate" = "11:FALSE"
-                    "Condition" = "8:"
-                    "Transitive" = "11:FALSE"
-                    "Property" = "8:_2DA804FEE5BC404D8528AFCFA84B2E76"
-                        "Folders"
-                        {
-                            "{9EF0B969-E518-4E46-987F-47570745A589}:_DECBEEE9878441138390AF3A534E81F4"
-                            {
-                            "Name" = "8:MSSQL 15.SQLEXPRESS"
-                            "AlwaysCreate" = "11:FALSE"
-                            "Condition" = "8:"
-                            "Transitive" = "11:FALSE"
-                            "Property" = "8:_0814929C58BB4D5991B85F8C9CDC1C7D"
-                                "Folders"
-                                {
-                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_97EAC73A17A14824A2D298DC4EDA0812"
-                                    {
-                                    "Name" = "8:MSSQL"
-                                    "AlwaysCreate" = "11:FALSE"
-                                    "Condition" = "8:"
-                                    "Transitive" = "11:FALSE"
-                                    "Property" = "8:_5DA3CDF4226E4E64A58CCA696216FE95"
-                                        "Folders"
-                                        {
-                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_E820F042B4594B67B55B4C2394D20E36"
-                                            {
-                                            "Name" = "8:DATA"
-                                            "AlwaysCreate" = "11:FALSE"
-                                            "Condition" = "8:"
-                                            "Transitive" = "11:FALSE"
-                                            "Property" = "8:_B2722D4D976E430EA0863CB65773ACDF"
-                                                "Folders"
-                                                {
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
         }
         "LaunchCondition"
         {
@@ -449,7 +453,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Oven Thermoregulator"
         "ProductCode" = "8:{2C1FD43C-41AD-41C5-BC75-3433207DC8B2}"
-        "PackageCode" = "8:{7760C7D7-0AA3-4976-BB41-AAE2913A7864}"
+        "PackageCode" = "8:{4F5A557A-F2ED-4BC8-884B-219C5427E830}"
         "UpgradeCode" = "8:{11A5A588-DB17-40C6-804D-FD8BC9F180BF}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -998,7 +1002,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_8B0E9F6555554B9182D132B7376DA1ED"
             {
-            "SourcePath" = "8:..\\Oven Interface\\obj\\Debug\\Oven Interface.exe"
+            "SourcePath" = "8:..\\Oven Interface\\obj\\x64\\Debug\\Oven Interface.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_9FFB037E6F854A96BE83E0B73FC85864"

@@ -251,6 +251,7 @@ namespace Oven_Interface
         private void Form1_Load(object sender, EventArgs e)
         {
             UpdateBinding();
+            //ArduinoConnection.Reconnect();
         }
 
         private void createBread_Click(object sender, EventArgs e)
@@ -471,6 +472,11 @@ namespace Oven_Interface
         {
             Form pinSettings = new PinSettings();
             pinSettings.Show();
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            ArduinoConnection.Reconnect();
         }
     }
 }

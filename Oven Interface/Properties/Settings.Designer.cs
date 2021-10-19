@@ -94,5 +94,16 @@ namespace Oven_Interface.Properties {
                 this["ActiveProgramId"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\OvenDatabase." +
+            "mdf;Integrated Security=True")]
+        public string OvenDatabaseConnectionString {
+            get {
+                return ((string)(this["OvenDatabaseConnectionString"]));
+            }
+        }
     }
 }

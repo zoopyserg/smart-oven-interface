@@ -25,10 +25,9 @@ namespace Oven_Interface
         {
             form = _form;
             AvailablePins = new List<int>();
-            Reconnect();
         }
 
-        private void Reconnect()
+        public void Reconnect()
         {
             if (connection != null)
             {

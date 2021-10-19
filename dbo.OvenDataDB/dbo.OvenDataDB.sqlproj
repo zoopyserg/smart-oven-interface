@@ -1,30 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <Name>SQLOvenData</Name>
+    <Name>dbo.OvenDataDB</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
-    <ProjectGuid>{7948b969-7598-41af-88ad-0a80ded38374}</ProjectGuid>
-    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider</DSP>
+    <ProjectGuid>{3de44515-57bb-438d-8bf6-5191adb96407}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
-    <RootNamespace>SQLOvenData</RootNamespace>
-    <AssemblyName>SQLOvenData</AssemblyName>
+    <RootNamespace>dbo.OvenDataDB</RootNamespace>
+    <AssemblyName>dbo.OvenDataDB</AssemblyName>
     <ModelCollation>1033, CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetLanguage>CS</TargetLanguage>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
-    <GenerateCreateScript>True</GenerateCreateScript>
-    <TargetFrameworkProfile />
-    <DacVersion>1.0.0</DacVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -59,34 +57,27 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
-    <Folder Include="dbo" />
-    <Folder Include="dbo\Tables" />
-    <Folder Include="dbo\PublishProfiles" />
-    <Folder Include="dbo\Views" />
-    <Folder Include="dbo\Stored Procedures" />
-    <Folder Include="dbo\PostPublishScripts" />
-    <Folder Include="dbo\Types" />
+    <Folder Include="ContinuousDeployment" />
+    <Folder Include="ContinuousDeployment\StaticTables" />
+    <Folder Include="ContinuousDeployment\StoredProcedures" />
+    <Folder Include="Scripts" />
+    <Folder Include="ContinuousDeployment\Tables" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="dbo\Tables\Breads.sql" />
-    <Build Include="dbo\Views\FullBread.sql" />
-    <Build Include="dbo\Stored Procedures\spBreads_Insert.sql" />
-    <Build Include="dbo\Stored Procedures\spBreads_GetById.sql" />
-    <Build Include="dbo\Tables\TemperaturePoints.sql" />
-    <Build Include="dbo\Types\BasicUDT.sql" />
-    <Build Include="dbo\Stored Procedures\spBread_InsertSet.sql" />
-    <Build Include="dbo\Tables\PressurePoints.sql" />
-    <Build Include="dbo\Tables\ValvePoints.sql" />
-    <Build Include="dbo\Tables\LaunchInstances.sql" />
-    <Build Include="dbo\Stored Procedures\spBread_GetBreads.sql" />
+    <Build Include="ContinuousDeployment\StoredProcedures\sp_generate_merge.sql" />
+    <Build Include="ContinuousDeployment\StoredProcedures\sp_execute_cd_script.sql" />
+    <Build Include="ContinuousDeployment\Tables\__MigrationLog.sql" />
   </ItemGroup>
   <ItemGroup>
-    <RefactorLog Include="dbo\SQLOvenData.refactorlog" />
+    <PreDeploy Include="Scripts\Script.PreDeployment.sql" />
   </ItemGroup>
   <ItemGroup>
-    <PostDeploy Include="dbo\PostPublishScripts\Script.PostDeploymentControls.sql" />
+    <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="SQLOvenData.publish.xml" />
+    <None Include="ContinuousDeployment\1.PreDeployment.Updates.sql" />
+    <None Include="ContinuousDeployment\3.PostDeployment.Updates.sql" />
+    <None Include="ContinuousDeployment\2.PostDeployment.StaticTablesList.sql" />
+    <None Include="ContinuousDeployment\StaticTables\StaticTableExample.sql" />
   </ItemGroup>
 </Project>
