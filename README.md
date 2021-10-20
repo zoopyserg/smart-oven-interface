@@ -5,13 +5,13 @@ Interface to turn a simple heating element into a smart oven (with temperature c
 
 Installer for Windows 10:
 
-https://github.com/zoopyserg/smart-oven-interface/raw/master/Oven%20Thermoregulator.zip
+https://github.com/zoopyserg/oven-interface-website/raw/main/Oven%20Thermoregulator.zip
 
 Make sure you read installation instructions in README.
 
 # Website
 
-https://zoopyserg.github.io/smart-oven-interface/
+https://zoopyserg.github.io/oven-interface-website/index.html
 
 # Required Hardware
 
@@ -22,11 +22,11 @@ https://zoopyserg.github.io/smart-oven-interface/
 
 # Interface screenshot:
 
-![Alt text](assets/img/oven%20demo2.png?raw=true "Screenshot")
+![Alt text](https://zoopyserg.github.io/oven-interface-website/assets/img/oven%20demo2.png?raw=true "Screenshot")
 
 # Setup Diagram
 
-![Alt text](assets/img/Scheme.png?raw=true "Diagram")
+![Alt text](https://zoopyserg.github.io/oven-interface-website/assets/img/Scheme.png?raw=true "Diagram")
 
 Connection takes 5 minutes:
 
