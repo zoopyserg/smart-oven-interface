@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OvenInterface.Tests", "Oven
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{7F935882-245B-46CC-A9B9-7E66FFDCAAE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangeAccessRights", "ChangeAccessRights\ChangeAccessRights.csproj", "{F1A9A222-A84E-4D8E-AB0F-7247F1839A77}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,14 +54,6 @@ Global
 		{7F935882-245B-46CC-A9B9-7E66FFDCAAE3}.Release|Any CPU.ActiveCfg = Release
 		{7F935882-245B-46CC-A9B9-7E66FFDCAAE3}.Release|x64.ActiveCfg = Release
 		{7F935882-245B-46CC-A9B9-7E66FFDCAAE3}.Release|x64.Build.0 = Release
-		{F1A9A222-A84E-4D8E-AB0F-7247F1839A77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F1A9A222-A84E-4D8E-AB0F-7247F1839A77}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F1A9A222-A84E-4D8E-AB0F-7247F1839A77}.Debug|x64.ActiveCfg = Debug|x64
-		{F1A9A222-A84E-4D8E-AB0F-7247F1839A77}.Debug|x64.Build.0 = Debug|x64
-		{F1A9A222-A84E-4D8E-AB0F-7247F1839A77}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F1A9A222-A84E-4D8E-AB0F-7247F1839A77}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F1A9A222-A84E-4D8E-AB0F-7247F1839A77}.Release|x64.ActiveCfg = Release|x64
-		{F1A9A222-A84E-4D8E-AB0F-7247F1839A77}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

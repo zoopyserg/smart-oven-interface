@@ -17,7 +17,7 @@ namespace Oven_Interface.Models
         public int BreadId { get; set; }
         public string DisplayString
         {
-            get { return $"На {Minute.ToString()}й хвилині виставити тиск води {Value.ToString()} Па"; }
+            get { return $"На {(Minute/60).ToString()}й хвилині виставити тиск води {Value.ToString()} Па"; }
         }
     }
 }

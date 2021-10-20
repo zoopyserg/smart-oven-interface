@@ -20,7 +20,7 @@ namespace Oven_Interface.Models
 
         public string DisplayString
         {
-            get { return $"Запуск в {CreatedAt.ToString()}. Тривав: {MinutesPassed.ToString()}хв. Статус: {Status.ToString()}."; }
+            get { return $"Запуск в {CreatedAt.ToString()}. Тривав: {(MinutesPassed / 60).ToString()}хв. Статус: {Status.ToString()}."; }
         }
     }
 }

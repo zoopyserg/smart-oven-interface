@@ -98,7 +98,7 @@ namespace Oven_Interface
 
                         BreadsController.Update(runningProgram.Id, minutesPassed);
                         form.UpdateProgressBarAsync(form, 0, minutesPassed, runningProgram.Duration);
-                        form.UpdateTimeLeftAsync(form, (runningProgram.Duration - minutesPassed).ToString());
+                        form.UpdateTimeLeftAsync(form, ((runningProgram.Duration - minutesPassed)/60).ToString());
                     }
                 }));
             }
@@ -131,7 +131,7 @@ namespace Oven_Interface
 
                         BreadsController.Update(runningProgram.Id, minutesPassed);
                         form.UpdateProgressBarAsync(form, 0, minutesPassed, runningProgram.Duration);
-                        form.UpdateTimeLeftAsync(form, (runningProgram.Duration - minutesPassed).ToString());
+                        form.UpdateTimeLeftAsync(form, ((runningProgram.Duration - minutesPassed) / 60).ToString());
                     }
                 }));
             }

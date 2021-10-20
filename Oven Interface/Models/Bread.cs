@@ -23,7 +23,7 @@ namespace Oven_Interface
 
         public string DisplayString
         {
-            get { return $"{ Name } (Тривалість: {Duration}хв)"; }
+            get { return $"{ Name } (Тривалість: {(Duration/60)}хв)"; }
         }
 
         public long CurrentExpectedTemperature(int minute)

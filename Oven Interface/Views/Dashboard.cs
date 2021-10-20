@@ -10,6 +10,7 @@ using System.Linq;
 using System.Threading;
 using System.Timers;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Oven_Interface
 {
@@ -224,18 +225,48 @@ namespace Oven_Interface
         {
             chartTemperatures.DataSource = temperaturePoints;
             chartTemperatures.DataBind();
+            CreateCustomChartLabels(chartTemperatures);
+        }
+
+        private void CreateCustomChartLabels(Chart chart)
+        {
+            if (programsListBox.SelectedIndex >= 0)
+            {
+                int period = 900;
+                int duration = breads[programsListBox.SelectedIndex].Duration;
+                int displayedDuration = duration + period;
+
+                List<string> labelNames = new List<string>();
+                for (int i = 0; i <= displayedDuration; i = i + period)
+                {
+                    labelNames.Add((i / 60).ToString());
+                };
+
+                int startOffset = -period;
+                int endOffset = period;
+
+                foreach (string fifteenminutes in labelNames)
+                {
+                    CustomLabel theLabel = new CustomLabel(startOffset, endOffset, fifteenminutes, 0, LabelMarkStyle.None);
+                    chart.ChartAreas[0].AxisX.CustomLabels.Add(theLabel);
+                    startOffset = startOffset + period;
+                    endOffset = endOffset + period;
+                }
+            }
         }
 
         private void UpdatePressurePointsChart()
         {
             pressuresChart.DataSource = pressurePoints;
             pressuresChart.DataBind();
+            CreateCustomChartLabels(pressuresChart);
         }
 
         private void UpdateValvePointsChart()
         {
             valveChart.DataSource = valvePoints;
             valveChart.DataBind();
+            CreateCustomChartLabels(valveChart);
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -269,9 +300,12 @@ namespace Oven_Interface
         private void createTemperatureButton_Click(object sender, EventArgs e)
         {
             int persistedIndex = programsListBox.SelectedIndex;
-            TemperaturePointsController.Create(breads[persistedIndex].Id, Decimal.ToInt32(newTemperaturePointMinuteTextBox.Value), Decimal.ToInt32(newTemperaturePointValueTextBox.Value));
-            newTemperaturePointMinuteTextBox.Value = 0;
+            TemperaturePointsController.Create(breads[persistedIndex].Id, (Decimal.ToInt32(newTemperaturePointHoursNumber.Value) * 3600 + Decimal.ToInt32(newTemperaturePointMinutesNumber.Value) * 60 + Decimal.ToInt32(newTemperaturePointSecondsNumber.Value)), Decimal.ToInt32(newTemperaturePointValueTextBox.Value));
+            newTemperaturePointHoursNumber.Value = 0;
+            newTemperaturePointMinutesNumber.Value = 0;
+            newTemperaturePointSecondsNumber.Value = 0;
             newTemperaturePointValueTextBox.Value = 0;
+            
             UpdateBinding();
         }
 
@@ -396,8 +430,10 @@ namespace Oven_Interface
         private void createPressurePointButton_Click(object sender, EventArgs e)
         {
             int persistedIndex = programsListBox.SelectedIndex;
-            PressurePointsController.Create(breads[persistedIndex].Id, Decimal.ToInt32(newPressurePointMinuteTextBox.Value), Decimal.ToInt32(newPressurePointValueTextBox.Value));
-            newPressurePointMinuteTextBox.Value = 0;
+            PressurePointsController.Create(breads[persistedIndex].Id, (Decimal.ToInt32(newPressurePointHoursNumber.Value) * 3600 + Decimal.ToInt32(newPressurePointMinutesNumber.Value) * 60 + Decimal.ToInt32(newPressurePointSecondsNumber.Value)), Decimal.ToInt32(newPressurePointValueTextBox.Value));
+            newPressurePointHoursNumber.Value = 0;
+            newPressurePointMinutesNumber.Value = 0;
+            newPressurePointSecondsNumber.Value = 0;
             newPressurePointValueTextBox.Value = 0;
             UpdateBinding();
         }
@@ -405,8 +441,10 @@ namespace Oven_Interface
         private void createValvePointButton_Click(object sender, EventArgs e)
         {
             int persistedIndex = programsListBox.SelectedIndex;
-            ValvePointsController.Create(breads[persistedIndex].Id, Decimal.ToInt32(newValvePointMinuteTextBox.Value), Decimal.ToInt32(newValvePointValueTextBox.Value));
-            newValvePointMinuteTextBox.Value = 0;
+            ValvePointsController.Create(breads[persistedIndex].Id, (Decimal.ToInt32(newValvePointHoursNumber.Value) * 3600 + Decimal.ToInt32(newValvePointMinutesNumber.Value) * 60 + Decimal.ToInt32(newValvePointSecondsNumber.Value)), Decimal.ToInt32(newValvePointValueTextBox.Value));
+            newValvePointHoursNumber.Value = 0;
+            newValvePointMinutesNumber.Value = 0;
+            newValvePointSecondsNumber.Value = 0;
             newValvePointValueTextBox.Value = 0;
             UpdateBinding();
         }
