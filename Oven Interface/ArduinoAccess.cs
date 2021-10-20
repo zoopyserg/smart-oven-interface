@@ -87,16 +87,14 @@ namespace Oven_Interface
 
         public void TurnOnPin(int pinNumber)
         {
-            session.SetDigitalPinMode(pinNumber, PinMode.DigitalOutput);
+            //session.SetDigitalPinMode(pinNumber, PinMode.DigitalOutput);
             session.SetDigitalPin(pinNumber, false); //  посылаю true потому что купил плату которая при LOW включена... пофиксить новой платой.
-            form.UpdateStatusListBox($"{ pinNumber }й пін включено");
         }
 
         public void TurnOffPin(int pinNumber)
         {
-            session.SetDigitalPinMode(pinNumber, PinMode.DigitalOutput);
+            //session.SetDigitalPinMode(pinNumber, PinMode.DigitalOutput);
             session.SetDigitalPin(pinNumber, true); //  посылаю true потому что купил плату которая при LOW включена... пофиксить новой платой.
-            form.UpdateStatusListBox($"{ pinNumber }й пін виключено");
         }
 
         public void TurnOffAllPins()
@@ -121,6 +119,8 @@ namespace Oven_Interface
                 form.UpdateStatusListBox($"Pin {pin.PinNumber}: Input: {pin.DigitalInput}, Output: {pin.DigitalOutput}, Analog: {pin.Analog}, Analog-Res: {pin.AnalogResolution}, PWM: {pin.Pwm}, PWM-Res: {pin.PwmResolution}, Servo: {pin.Servo}, Servo-Res: {pin.ServoResolution}, Serial: {pin.Serial}, Encoder: {pin.Encoder}, Input-pullup: {pin.InputPullup}");
                 AvailablePins.Add(pin.PinNumber);
             }
+
+            form.allActionsTabControl.SelectedTab = form.statusPage;
         }
 
         private void Session_OnDigitalStateReceived(object sender, FirmataEventArgs<DigitalPortState> eventArgs)

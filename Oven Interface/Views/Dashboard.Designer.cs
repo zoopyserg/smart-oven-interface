@@ -1538,7 +1538,7 @@ namespace Oven_Interface
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label minutesLeftLabel;
         private System.Windows.Forms.Label minutesLeftInfoLabel;
-        private System.Windows.Forms.TabControl allActionsTabControl;
+        public System.Windows.Forms.TabControl allActionsTabControl;
         private System.Windows.Forms.TabPage temperaturesPage;
         private System.Windows.Forms.TabControl temperaturePointsTabControl;
         private System.Windows.Forms.TabPage temperatureChartTabPage;
@@ -1568,7 +1568,7 @@ namespace Oven_Interface
         private System.Windows.Forms.ListBox valvePointsListBox;
         private System.Windows.Forms.TabPage historyPage;
         private System.Windows.Forms.ListBox historyListBox;
-        private System.Windows.Forms.TabPage statusPage;
+        public System.Windows.Forms.TabPage statusPage;
         private System.Windows.Forms.ListBox statusListBox;
         private System.Windows.Forms.GroupBox temperaturePointFormGroupBox;
         private System.Windows.Forms.NumericUpDown newTemperaturePointValueTextBox;
