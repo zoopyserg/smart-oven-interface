@@ -3,8 +3,11 @@ Interface to turn a simple heating element into a smart oven (with temperature c
 
 # Download
 
+Installer for Windows 10:
+
 https://github.com/zoopyserg/smart-oven-interface/raw/master/Oven%20Thermoregulator.zip
 
+Make sure you read installation instructions in README.
 
 # Required Hardware
 
