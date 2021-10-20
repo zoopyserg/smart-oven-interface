@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Products - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+</head>
+
+<body style="background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url('assets/img/bg.jpg');">
+    <h1 class="text-center text-white d-none d-lg-block site-heading"><span class="text-primary site-heading-upper mb-3">перетворення промислової пічки на розумну</span><span class="site-heading-lower">Інтерфейс "Розумна пічка"</span></h1>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark py-lg-4" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand text-uppercase d-lg-none text-expanded" href="#">Розумна Пічка</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarResponsive"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Головна</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Про Нас</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Продукт</a></li>
+                    <li class="nav-item"><a class="nav-link" href="download.html">Скачати</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="page-section">
+        <div class="container">
+            <div class="product-item">
+                <div class="d-flex product-item-title">
+                    <div class="d-flex me-auto bg-faded p-5 rounded">
+                        <h2 class="section-heading mb-0"><span class="section-heading-upper">Прості</span><span class="section-heading-lower">доступні Компоненти</span></h2>
+                    </div>
+                </div><img class="img-fluid d-flex mx-auto product-item-img mb-3 mb-lg-0 rounded" src="assets/img/image-asset.png">
+                <div class="bg-faded p-5 rounded">
+                    <p class="mb-0">Необхідні компоненти коштують недорого, їх легко знайти в будь якому магазині електроніки чи в Інтернеті.</p>
+                    <p class="mb-0">Для роботи потрібно:</p>
+                    <ul>
+                        <li>Комп'ютер на Windows (будь який)</li>
+                        <li>Arduino UNO з прошивкою Firmata Standard (чи будь яка плата Arduino)</li>
+                        <li>Модуль реле (8-pin relay module)</li>
+                        <li>Коннектори DuPont і бредборд</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="page-section">
+        <div class="container">
+            <div class="product-item">
+                <div class="d-flex product-item-title">
+                    <div class="d-flex ms-auto bg-faded p-5 rounded">
+                        <h2 class="section-heading mb-0"><span class="section-heading-upper">Проста</span><span class="section-heading-lower">СХЕМА ПІДКЛЮЧЕННЯ<br></span></h2>
+                    </div>
+                </div><img class="img-fluid d-flex mx-auto product-item-img mb-3 mb-lg-0 rounded" src="assets/img/Scheme.png">
+                <div class="bg-faded p-5 rounded">
+                    <p class="mb-0">Підключення займає 5 хвилин:</p>
+                    <ul>
+                        <li>Arduino включити в USB</li>
+                        <li>Модуль реле підключити в USB (витягши з нього джампер)</li>
+                        <li>Подати 5V з Ардуіно на плюсову шину</li>
+                        <li>Подати GND з Ардуіно на мінусову шину</li>
+                        <li>Приєднати піни Ардуіно (з 3 по 10) на модулі Input в реле (порядок неважливий, налаштування яке реле за що відповідає будуть в інтерфейсі).</li>
+                        <li>Приєднати 5V з шини в VCC на реле&nbsp;модулі.</li>
+                        <li>Приєднати GND з шини в GND&nbsp;на реле модулі.</li>
+                    </ul>
+                    <p class="mb-0">Підключення термодатчика (на прикладі 3-дротового PT100, який вже є в більшості пічок):</p>
+                    <ul>
+                        <li>GND термодатчика в GND шину</li>
+                        <li>Перший сигнальний дріт (будь який з двох які лишились)&nbsp;в аналоговий порт Ардуіно (будь який: А0-А5 - канал буде вибиратись в Інтерфейсі)</li>
+                        <li>Другий сигнальний дріт через резистор підключити до 5V шини.&nbsp;</li>
+                    </ul>
+                    <p class="mb-0">Після цього лишається втикнути через вибране в Інтерфейсі реле нагрівач, і все.</p>
+                    <p class="mb-0">Термодатчик подаватиме температуру в інтерфейс, а інтерфейс буде підтримувати цим нагрівачем потрібну температуру.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="page-section">
+        <div class="container">
+            <div class="product-item">
+                <div class="d-flex product-item-title">
+                    <div class="d-flex mx-auto bg-faded p-5 rounded">
+                        <h2 class="section-heading mb-0"><span class="section-heading-upper">Простий і Потужний</span><span class="section-heading-lower">Інтерфейс</span></h2>
+                    </div>
+                </div><img class="img-fluid d-flex mx-auto product-item-img mb-3 mb-lg-0 rounded" src="assets/img/oven%20demo2.png">
+                <div class="bg-faded p-5 rounded">
+                    <p class="mb-0">Інтерфейс має в собі такі функції:</p>
+                    <ul>
+                        <li>Створення необмеженої кількості Режимів роботи пічки</li>
+                        <li>Кожен режим може мати необмежену кількісто точок температури (на вибраній хвилині поставити потрібну температуру).</li>
+                        <li>Всі точки температури зводяться в один графік.</li>
+                        <li>Можливість запустити / зупинити чи поставити на паузу / продовжити вибраний режим (під час роботи якого комп'ютер буде замикати реле нагрівача щоб досягти на показнику термодатчика потрібної температури, коли температура досягнута реле розімкнеться і програма буде підтримувати вказану на графіку в цей момент температуру)..</li>
+                        <li>Прогрес програми вказується в зрозумілому вигляді "скільки відсотків завершено і скільки хвилин залишилось до кінця".</li>
+                        <li>Є можливість калібрування інтерфейсу під конкретно ваш термодатчик і конкретно ваш вид пічки</li>
+                        <li>Є можливість вибрати який пін за що відповідає (до якого підключений термодатчик, до якого реле нагрівача і т.д.).</li>
+                        <li>Функції тестування з'єднання з Arduino</li>
+                        <li>Та багато іншого.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mx-auto w-25 download-button"><a class="btn btn-primary d-inline-block d-flex mx-auto justify-content-center align-items-center btn-xl" href="download.html">Скачати!</a></div>
+        </div>
+    </section>
+    <footer class="text-center footer text-faded py-5">
+        <div class="container">
+            <p class="m-0 small">Copyright&nbsp;©&nbsp;Інтерфейс "Розумна Пічка" 2021</p>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/current-day.js"></script>
+</body>
+
+</html>

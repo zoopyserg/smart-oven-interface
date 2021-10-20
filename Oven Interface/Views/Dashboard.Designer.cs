@@ -244,9 +244,9 @@ namespace Oven_Interface
             this.projectNameLabel.Location = new System.Drawing.Point(663, 9);
             this.projectNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.projectNameLabel.Name = "projectNameLabel";
-            this.projectNameLabel.Size = new System.Drawing.Size(358, 37);
+            this.projectNameLabel.Size = new System.Drawing.Size(241, 37);
             this.projectNameLabel.TabIndex = 26;
-            this.projectNameLabel.Text = "Терморегулятор Пічки";
+            this.projectNameLabel.Text = "Розумна Пічка";
             // 
             // breadBindingSource
             // 
