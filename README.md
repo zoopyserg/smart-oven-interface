@@ -1,6 +1,11 @@
 # Smart Oven Interface
 Interface to turn a simple heating element into a smart oven (with temperature curves etc).
 
+# Download
+
+https://github.com/zoopyserg/smart-oven-interface/raw/master/Oven%20Thermoregulator.zip
+
+
 # Required Hardware
 
 - Windows computer (any)
