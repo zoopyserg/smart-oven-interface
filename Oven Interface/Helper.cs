@@ -15,11 +15,11 @@ namespace Oven_Interface
     {
         public static string GetConnectionString(string name = "OvenDataDB2")
         {
-            //string commonData = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData);
-            //string pathToDBFile = Path.Combine(commonData, "Oven Interface", "OvenDatabase.mdf");
-            //string connectionString = $"Data Source=(localdb)\\MSSQLLocalDB;AttachDbFilename={pathToDBFile};Trusted_Connection=true";
-            //return connectionString;
-            return ConfigurationManager.ConnectionStrings[name].ConnectionString;
+            string commonData = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData);
+            string pathToDBFile = Path.Combine(commonData, "Oven Interface", "OvenDatabase.mdf");
+            string connectionString = $"Data Source=(localdb)\\MSSQLLocalDB;AttachDbFilename={pathToDBFile};Trusted_Connection=true";
+            return connectionString;
+            // return ConfigurationManager.ConnectionStrings[name].ConnectionString;
         }
     }
 }

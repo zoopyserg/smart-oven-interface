@@ -33,6 +33,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_31C3EA1377AC4C4DB36F9BF62D955932"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_5D1A99C540845D49987E4D6ADD194A56"
         "OwnerKey" = "8:_8B0E9F6555554B9182D132B7376DA1ED"
         "MsmSig" = "8:_UNDEFINED"
@@ -154,6 +160,21 @@
                     "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
                     "ProductCode" = "8:.NETFramework,Version=v4.7.2"
                     }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.SqlServer.SqlLocalDB.11.1"
+                    {
+                    "Name" = "8:SQL Server 2012 Express LocalDB"
+                    "ProductCode" = "8:Microsoft.SqlServer.SqlLocalDB.11.1"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.SqlServer.SqlLocalDB.13.2"
+                    {
+                    "Name" = "8:SQL Server 2016 Express LocalDB"
+                    "ProductCode" = "8:Microsoft.SqlServer.SqlLocalDB.13.2"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.SqlServer.SqlLocalDB.14.0"
+                    {
+                    "Name" = "8:SQL Server 2017 Express LocalDB"
+                    "ProductCode" = "8:Microsoft.SqlServer.SqlLocalDB.14.0"
+                    }
                     "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.SqlServer.SqlLocalDB.15.0"
                     {
                     "Name" = "8:SQL Server 2019 Express LocalDB"
@@ -257,6 +278,26 @@
             "TargetName" = "8:OvenDatabase.mdf"
             "Tag" = "8:"
             "Folder" = "8:_AE0D67BFC2AA491F95E1C57A01B18380"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_31C3EA1377AC4C4DB36F9BF62D955932"
+            {
+            "SourcePath" = "8:..\\Oven Interface\\README (HOW TO INSTALL).txt"
+            "TargetName" = "8:README (HOW TO INSTALL).txt"
+            "Tag" = "8:"
+            "Folder" = "8:_9FFB037E6F854A96BE83E0B73FC85864"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -453,7 +494,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Oven Thermoregulator"
         "ProductCode" = "8:{2C1FD43C-41AD-41C5-BC75-3433207DC8B2}"
-        "PackageCode" = "8:{4F5A557A-F2ED-4BC8-884B-219C5427E830}"
+        "PackageCode" = "8:{770922B8-8B47-4523-BF24-920D0473D092}"
         "UpgradeCode" = "8:{11A5A588-DB17-40C6-804D-FD8BC9F180BF}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -1002,7 +1043,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_8B0E9F6555554B9182D132B7376DA1ED"
             {
-            "SourcePath" = "8:..\\Oven Interface\\obj\\x64\\Debug\\Oven Interface.exe"
+            "SourcePath" = "8:..\\Oven Interface\\obj\\x64\\Release\\Oven Interface.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_9FFB037E6F854A96BE83E0B73FC85864"
