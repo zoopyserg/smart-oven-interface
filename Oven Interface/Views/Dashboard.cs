@@ -43,6 +43,7 @@ namespace Oven_Interface
             EnableDisableStartButton();
             EnableDisablePauseButton();
             EnableDisableStopButton();
+            EnableDisableConnectButton();
 
             UpdateBinding();
         }
@@ -94,24 +95,29 @@ namespace Oven_Interface
             }
         }
 
+        public void EnableDisableConnectButton()
+        {
+            connectButton.Enabled = ArduinoConnection.connection == null;
+        }
+
         public void EnableDisableContinueButton()
         {
-            continueProgramButton.Enabled = (Properties.Settings.Default.ActiveProgramId >= 0 && !programProcessor.IsRunning);
+            continueProgramButton.Enabled = (Properties.Settings.Default.ActiveProgramId >= 0 && !programProcessor.IsRunning && ArduinoConnection.connection != null);
         }
 
         public void EnableDisableStartButton()
         {
-            startProgramButton.Enabled = (!programProcessor.IsRunning);
+            startProgramButton.Enabled = (!programProcessor.IsRunning && ArduinoConnection.connection != null);
         }
 
         public void EnableDisablePauseButton()
         {
-            pauseProgramButton.Enabled = programProcessor.IsRunning;
+            pauseProgramButton.Enabled = (programProcessor.IsRunning && ArduinoConnection.connection != null);
         }
 
         public void EnableDisableStopButton()
         {
-            stopProgramButton.Enabled = programProcessor.IsRunning;
+            stopProgramButton.Enabled = (programProcessor.IsRunning && ArduinoConnection.connection != null);
         }
 
         private void UpdateProgramsListBox()

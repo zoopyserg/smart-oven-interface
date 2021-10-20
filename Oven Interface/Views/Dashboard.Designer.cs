@@ -71,7 +71,7 @@ namespace Oven_Interface
             this.роліПінівToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button7 = new System.Windows.Forms.Button();
+            this.connectButton = new System.Windows.Forms.Button();
             this.valvePointFormGroupBox = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -424,15 +424,15 @@ namespace Oven_Interface
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Температура";
             // 
-            // button7
+            // connectButton
             // 
-            this.button7.Location = new System.Drawing.Point(1129, 144);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(174, 82);
-            this.button7.TabIndex = 46;
-            this.button7.Text = "З\'єднати";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click_1);
+            this.connectButton.Location = new System.Drawing.Point(1129, 144);
+            this.connectButton.Name = "connectButton";
+            this.connectButton.Size = new System.Drawing.Size(174, 82);
+            this.connectButton.TabIndex = 46;
+            this.connectButton.Text = "З\'єднати";
+            this.connectButton.UseVisualStyleBackColor = true;
+            this.connectButton.Click += new System.EventHandler(this.button7_Click_1);
             // 
             // valvePointFormGroupBox
             // 
@@ -1428,7 +1428,7 @@ namespace Oven_Interface
             this.Controls.Add(this.temperaturePointFormGroupBox);
             this.Controls.Add(this.programsIndexGroupBox);
             this.Controls.Add(this.programFormGroupBox);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.connectButton);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.projectNameLabel);
@@ -1523,7 +1523,7 @@ namespace Oven_Interface
         private System.Windows.Forms.ToolStripMenuItem налаштуванняToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem калібруванняТермодатчикаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem роліПінівToolStripMenuItem;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button connectButton;
         private System.Windows.Forms.GroupBox valvePointFormGroupBox;
         private System.Windows.Forms.NumericUpDown newValvePointValueTextBox;
         private System.Windows.Forms.NumericUpDown newValvePointHoursNumber;

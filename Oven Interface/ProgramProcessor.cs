@@ -154,6 +154,7 @@ namespace Oven_Interface
                     Properties.Settings.Default.ActiveProgramId = -1;
                     Properties.Settings.Default.Save();
                     IsRunning = false;
+                    form.EnableDisableConnectButton();
                     form.EnableDisableContinueButton();
                     form.EnableDisableStartButton();
                     form.EnableDisablePauseButton();

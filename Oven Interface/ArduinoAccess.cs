@@ -39,6 +39,12 @@ namespace Oven_Interface
                     ReportCapabilities();
                     PerformInitialization();
                     ListenTemperature();
+
+                    form.EnableDisableContinueButton();
+                    form.EnableDisableStartButton();
+                    form.EnableDisablePauseButton();
+                    form.EnableDisableStopButton();
+                    form.EnableDisableConnectButton();
                 }
                 else
                 {
