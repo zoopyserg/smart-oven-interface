@@ -1,0 +1,515 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="startProgramButton.Text" xml:space="preserve">
+    <value>START</value>
+  </data>
+  <data name="stopProgramButton.Text" xml:space="preserve">
+    <value>STOP</value>
+  </data>
+  <data name="continueProgramButton.Text" xml:space="preserve">
+    <value>CONTINUE</value>
+  </data>
+  <data name="pauseProgramButton.Text" xml:space="preserve">
+    <value>PAUSE</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="projectNameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 37</value>
+  </data>
+  <data name="projectNameLabel.Text" xml:space="preserve">
+    <value>Smart Oven</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 15</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Expected:</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 15</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Current:</value>
+  </data>
+  <data name="actionGroupBox.Text" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="вихідToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 22</value>
+  </data>
+  <data name="вихідToolStripMenuItem.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="програмаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 20</value>
+  </data>
+  <data name="програмаToolStripMenuItem.Text" xml:space="preserve">
+    <value>Program</value>
+  </data>
+  <data name="перевіркаПінівToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 22</value>
+  </data>
+  <data name="перевіркаПінівToolStripMenuItem.Text" xml:space="preserve">
+    <value>Pin Testing</value>
+  </data>
+  <data name="оновитиІнформаціюПроДоступніПіниToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 22</value>
+  </data>
+  <data name="оновитиІнформаціюПроДоступніПіниToolStripMenuItem.Text" xml:space="preserve">
+    <value>Information About Pins</value>
+  </data>
+  <data name="діагностикаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 20</value>
+  </data>
+  <data name="діагностикаToolStripMenuItem.Text" xml:space="preserve">
+    <value>Pins</value>
+  </data>
+  <data name="оновитиІнформаціюПроДоступніРежимиToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 22</value>
+  </data>
+  <data name="оновитиІнформаціюПроДоступніРежимиToolStripMenuItem.Text" xml:space="preserve">
+    <value>Update Available Programs</value>
+  </data>
+  <data name="режимиToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 20</value>
+  </data>
+  <data name="режимиToolStripMenuItem.Text" xml:space="preserve">
+    <value>Programs</value>
+  </data>
+  <data name="калібруванняТермодатчикаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>239, 22</value>
+  </data>
+  <data name="калібруванняТермодатчикаToolStripMenuItem.Text" xml:space="preserve">
+    <value>Temperature Sensor Calibration</value>
+  </data>
+  <data name="роліПінівToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>239, 22</value>
+  </data>
+  <data name="роліПінівToolStripMenuItem.Text" xml:space="preserve">
+    <value>Pin Roles</value>
+  </data>
+  <data name="налаштуванняToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 20</value>
+  </data>
+  <data name="налаштуванняToolStripMenuItem.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="englishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="englishToolStripMenuItem.Text" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="українськаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="українськаToolStripMenuItem.Text" xml:space="preserve">
+    <value>Українська</value>
+  </data>
+  <data name="русскийToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="русскийToolStripMenuItem.Text" xml:space="preserve">
+    <value>Русский</value>
+  </data>
+  <data name="languageToolStripMenuItem2.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Active Program</value>
+  </data>
+  <data name="groupBox3.Text" xml:space="preserve">
+    <value>Temperature</value>
+  </data>
+  <data name="connectButton.Text" xml:space="preserve">
+    <value>Connect</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>sec</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 15</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 15</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>hr</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 15</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Value:</value>
+  </data>
+  <data name="createValvePointButton.Text" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 15</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Time:</value>
+  </data>
+  <data name="valvePointFormGroupBox.Text" xml:space="preserve">
+    <value>Steam Point</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>sec</value>
+  </data>
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 15</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 15</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Value:</value>
+  </data>
+  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 15</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>hr</value>
+  </data>
+  <data name="createPressurePointButton.Text" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 15</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>Time:</value>
+  </data>
+  <data name="pressurePointFormGroupBox.Text" xml:space="preserve">
+    <value>Pressure Point</value>
+  </data>
+  <data name="minutesLeftInfoLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 15</value>
+  </data>
+  <data name="minutesLeftInfoLabel.Text" xml:space="preserve">
+    <value>minutes left</value>
+  </data>
+  <data name="progressGroupBox.Text" xml:space="preserve">
+    <value>Progress</value>
+  </data>
+  <data name="temperatureChartTabPage.Text" xml:space="preserve">
+    <value>Temperatures Chart</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>&lt; Previous</value>
+  </data>
+  <data name="deleteTemperaturePointButton.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="button2.Text" xml:space="preserve">
+    <value>Next &gt;</value>
+  </data>
+  <data name="temperatureTableTabPage.Text" xml:space="preserve">
+    <value>Temperatures Table</value>
+  </data>
+  <data name="temperaturesPage.Text" xml:space="preserve">
+    <value>Temperatures</value>
+  </data>
+  <data name="pressureChartTabPage.Text" xml:space="preserve">
+    <value>Water Pressures Chart</value>
+  </data>
+  <data name="button3.Text" xml:space="preserve">
+    <value>&lt; Previous</value>
+  </data>
+  <data name="deletePressurePointButton.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="button4.Text" xml:space="preserve">
+    <value>Next &gt;</value>
+  </data>
+  <data name="pressureTableTabPage.Text" xml:space="preserve">
+    <value>Water Pressures Table</value>
+  </data>
+  <data name="pressuresPage.Text" xml:space="preserve">
+    <value>Water Pressure</value>
+  </data>
+  <data name="valveChartTabPage.Text" xml:space="preserve">
+    <value>Steam Level Chart</value>
+  </data>
+  <data name="button5.Text" xml:space="preserve">
+    <value>&lt; Previous</value>
+  </data>
+  <data name="button6.Text" xml:space="preserve">
+    <value>Next &gt;</value>
+  </data>
+  <data name="deleteSteamPointButton.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="valveTableTabPage.Text" xml:space="preserve">
+    <value>Steam Level Table</value>
+  </data>
+  <data name="valvesPage.Text" xml:space="preserve">
+    <value>Steam Valve</value>
+  </data>
+  <data name="historyPage.Text" xml:space="preserve">
+    <value>Launch History</value>
+  </data>
+  <data name="statusPage.Text" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>sec</value>
+  </data>
+  <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 15</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 15</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>hr</value>
+  </data>
+  <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 15</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>Time:</value>
+  </data>
+  <data name="temperaturePointValueLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 15</value>
+  </data>
+  <data name="temperaturePointValueLabel.Text" xml:space="preserve">
+    <value>Value:</value>
+  </data>
+  <data name="createTemperaturePointButton.Text" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="temperaturePointFormGroupBox.Text" xml:space="preserve">
+    <value>Temperature Point</value>
+  </data>
+  <data name="buttonDeleteProgram.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="buttonPreviousProgram.Text" xml:space="preserve">
+    <value>&lt; Previous</value>
+  </data>
+  <data name="buttonNextProgram.Text" xml:space="preserve">
+    <value>Next &gt;</value>
+  </data>
+  <data name="programsIndexGroupBox.Text" xml:space="preserve">
+    <value>Programs List</value>
+  </data>
+  <data name="createProgramButton.Text" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="programNameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 15</value>
+  </data>
+  <data name="programNameLabel.Text" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="programFormGroupBox.Text" xml:space="preserve">
+    <value>Create Program</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAACMuAAAjLgAAAAAAAAAA
+        AAD/////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////39/f/19PP/+Pj3////
+        ////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////j49//19PP//f39////////////39rY/56O
+        i/+2qab/+ff2//38+//9/Pv//fz7//38+//9/Pv//fz7//38+//9/Pv//fz7//38+//9/Pv//fz7//38
+        +//9/Pv//fz7//38+//9/Pv//fz7//38+//9/Pv//fz7//38+//59/b/tqmm/56Oi//f2tj//////+7k
+        4P/UwLj/vqee/8Stpf/Zxr7/28jA/9vIwP/byMD/28jA/9vIwP/byMD/28jA/9vIwP/byMD/28jA/9vI
+        wP/byMD/28jA/9vIwP/byMD/28jA/9vIwP/byMD/28jA/9vIwP/dycH/3MnB/9rHv//Fr6b/v6ee/9O/
+        uP/u5OD/1Lyz/7Sdlv+fioT/n4mD/56Hgf+eh4H/noeB/56Hgf+eh4H/noeB/56Hgf+eh4H/noeB/56H
+        gf+eh4H/noeB/56Hgf+eh4H/noeB/56Hgf+eh4H/nYiC/52Igv+diIL/nYiC/7KblP/Qt63/0biu/9K5
+        r//Tua//0riu/9S9s//MtKr/loF8/4R1cv+BgYT/gIOG/4CDhv+Ag4b/gIOG/4CDhv+Ag4b/gIOG/4CD
+        hv+Ag4b/gIOG/4CDhv+Ag4b/gIOG/4CDhv+Ag4b/gIOG/4CDhv+EeXf/hnNv/4x5dP+HdHD/k396/8yz
+        qv/VvbP/49HI/+LPx//UvLL/0rmv/8yzqv+WgHr/foqQ/2jK7v9nzvP/Z87z/2fO8/9nzvP/Z87z/2fO
+        8/9nzvP/Z87z/2fO8/9nzvP/Z87z/2fO8/9nzvP/Z87z/2nQ8/9oz/P/Z8/0/3efrv+KdXD/t6GZ/5qG
+        gP+Sfnn/y7Kp/9/Lwv/26uT/9urj/93Iv//RuK7/zLOq/5Z/ev98j5f/Zdb7/2TY//9k2P//ZNj//2TY
+        //9k2P//ZNj//2TY//9k2P//ZNj//2TY//9k2P//ZNj//2TX//9o2///c+P//2jb//9j2f//dae6/4t2
+        cf/AqKD/n4qE/5J+ef/Lsqn/28W7//Hj3P/w4tv/2cK5/9K4rv/Ms6r/ln96/3yPl/9l1fv/ZNf//2TX
+        //9k1///ZNf//2TX//9k1///ZNf//2TX//9k1///ZNf//2TX//9k1///aNr//3Tj//9u3///Zdf//2PY
+        //91p7r/i3Zx/8CooP+eiYT/kn55/8yzqv/Sua//18C2/9a/tv/Sua//0rmv/8yzqv+Wf3r/fI+X/2XV
+        +/9k1///ZNf//2TX//9k1///ZNf//2TX//9k1///ZNf//2TX//9k1///ZNf//2ja//904///bt///2XX
+        //9k1///Y9j//3Wnuv+LdnH/wKig/56JhP+Sfnn/y7Op/9a/tf/n1s7/5tTN/9W9s//Sua//zLOq/5Z/
+        ev98j5f/ZdX7/2TX//9k1///ZNf//2TX//9k1///ZNf//2TX//9n2f//Zdj//2TX//9p2v//dOP//27f
+        //9l1///ZNf//2TX//9j2P//dae6/4t2cf/AqKD/nomE/5J+ef/Lsqn/4MzD//fr5f/26uT/3cjA/9G4
+        rv/Ms6r/ln96/3yPl/9l1fv/ZNf//2TX//9k1///ZNf//2TX//9k1///a9z//3Tj//9n2v//Y9f//2/f
+        //9u3///Zdf//2TX//9k1///ZNf//2PY//91p7r/i3Zx/8CooP+eiYT/kn55/8uzqf/Zwrn/7t/Y/+3e
+        1//XwLf/0rmu/8yzqv+Wf3r/fI+X/2XV+/9k1///ZNf//2TX//9k1///ZNf//2vc//915P//bN3//2zc
+        //9u3f//Zdj//2TX//9k1///ZNf//2TX//9k1///Y9j//3Wnuv+LdnH/wKig/56JhP+Sfnn/zLOq/9K5
+        r//UvLP/1Lyy/9K5r//Sua//zLOq/5Z/ev98j5f/ZdX7/2TX//9k1///ZNf//2TX//9r3P//deT//2zd
+        //9t3f//hev//3bi//9k1///ZNf//2TX//9k1///ZNf//2TX//9j2P//dae6/4t2cf/AqKD/nomE/5J+
+        ef/Ms6r/0rmv/9G4rv/RuK7/0rmv/9K5r//Ms6r/ln96/3yPl/9l1fv/ZNf//2TX//9k1///a9z//3Xk
+        //9s3f//ZNf//3bi//945P//Zdj//2TX//9k1///ZNf//2TX//9k1///ZNf//2PY//91p7r/i3Zx/8Co
+        oP+eiYT/kn55/8yzqv/Lsqn/u6Sc/7ylnf/Ls6r/0rmv/8yzqv+Wf3r/fI+X/2XV+/9k1///ZNf//2vc
+        //915P//bN3//2TX//9k1///Zdj//2TX//9k1///ZNf//2TX//9k1///ZNf//2TX//9k1///Y9j//3Wn
+        uv+LdnH/wKig/56JhP+Sfnn/zLOq/8+2rf/Hr6b/yK+m/8+2rf/Sua//zLOq/5Z/ev98j5f/ZdX7/2TX
+        //9m2P//c+L//2zd//9k1///ZNf//2TX//9k1///ZNf//2TX//9k1///ZNf//2TX//9k1///ZNf//2TX
+        //9j2P//dae6/4t2cf/AqKD/nomE/5J+ef/Ms6r/zLSq/8CooP/BqaH/zbSr/9K5r//Ms6r/ln96/3yO
+        l/9k0vz/Y9X//2PV//9l1///Y9X//2PV//9j1f//Y9X//2PV//9j1f//Y9X//2PV//9j1f//Y9X//2PV
+        //9j1f//Y9X//2LW//90pbr/i3Zx/8CooP+eioT/kn55/8yzqv/NtKv/wqqi/8Orov/Otav/0rmv/8yz
+        qv+WgHr/e4aT/1+89P9ev/n/Xr/5/12/+f9ev/n/Xr/5/16/+f9ev/n/Xr/5/16/+f9ev/n/Xr/5/16/
+        +f9ev/n/Xr/5/16/+f9ev/n/XcD6/3KYs/+KdnH/uqOb/5yHgf+Sfnn/zLOq/8+2rP/GraX/xq6l/8+2
+        rP/Sua//zLSq/5WBe/+DdXT/fIKN/3uEkP97hJD/e4SQ/3uEkP97hJD/e4SQ/3uEkP97hJD/e4SQ/3uE
+        kP97hJD/e4SQ/3uEkP97hJD/e4SQ/3uEkP97hJD/gnl7/4Zzb/+QfHf/iXZx/5N/ev/MtKr/y7Op/7yl
+        nf+9pp7/zLOq/9K5r//SurH/r5iR/5iDff+Ygnz/mIJ8/5iCfP+Ygnz/mIJ8/5iCfP+Ygnz/mIJ8/5iC
+        fP+Ygnz/mIJ8/5iCfP+Ygnz/mIJ8/5iCfP+Ygnz/mIJ8/5iCfP+Yg33/mIN+/5eCff+Xg33/rZeQ/9G3
+        rf/SuK7/0biu/9G4rv/RuK7/07uy/+re2f/axr7/1sG5/9bBuf/Wwbn/1sG5/9bBuf/Wwbn/1sG5/9bB
+        uf/Wwbn/1sG5/9bBuf/Wwbn/1sG5/9bBuf/Wwbn/1sG5/9bBuf/Wwbn/1sG5/9bBuf/Wwbn/1sG5/9bB
+        uf/ZxLv/2cS8/9nEvP/ZxLz/2cS8/9rGvv/q3tn///7+//z6+f/7+fj/+/n4//v5+P/7+fj/+/n4//v5
+        +P/7+fj/+/n4//v5+P/7+fj/+/n4//v5+P/7+fj/+/n4//v5+P/7+fj/+/n4//v5+P/7+fj/+/n4//v5
+        +P/7+fj/+/n4//v5+P/7+fj/+/n4//v5+P/7+fj//Pr5///+/v//////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Smart Oven Interface</value>
+  </data>
+</root>

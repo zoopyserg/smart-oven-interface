@@ -105,5 +105,17 @@ namespace Oven_Interface.Properties {
                 return ((string)(this["OvenDatabaseConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("en-US")]
+        public string language {
+            get {
+                return ((string)(this["language"]));
+            }
+            set {
+                this["language"] = value;
+            }
+        }
     }
 }

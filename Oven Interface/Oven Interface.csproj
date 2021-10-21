@@ -39,7 +39,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>x64</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -156,6 +156,9 @@
     <Compile Include="Views\TemperatureCalibration.Designer.cs">
       <DependentUpon>TemperatureCalibration.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\Dashboard.en-US.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,13 +171,40 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\Dashboard.ru.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Dashboard.uk.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PinSettings.en-US.resx">
+      <DependentUpon>PinSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\PinSettings.resx">
       <DependentUpon>PinSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PinSettings.ru.resx">
+      <DependentUpon>PinSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PinTesting.en-US.resx">
+      <DependentUpon>PinTesting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\PinTesting.resx">
       <DependentUpon>PinTesting.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\PinTesting.ru.resx">
+      <DependentUpon>PinTesting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TemperatureCalibration.en-US.resx">
+      <DependentUpon>TemperatureCalibration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\TemperatureCalibration.resx">
+      <DependentUpon>TemperatureCalibration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TemperatureCalibration.ru.resx">
+      <DependentUpon>TemperatureCalibration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TemperatureCalibration.uk.resx">
       <DependentUpon>TemperatureCalibration.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="GrantAccessToFiles.bat" />

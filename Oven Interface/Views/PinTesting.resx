@@ -117,4 +117,2602 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="turnOnPin14Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 209</value>
+  </data>
+  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="turnOffPin2Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="turnOffPin23Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="testPin4InfoLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="turnOnPin18Button.Text" xml:space="preserve">
+    <value>ВКЛ</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin19Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOnPin11Button.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="turnOnAllPinsButton.Text" xml:space="preserve">
+    <value>ВКЛ</value>
+  </data>
+  <data name="turnOnPin11Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 113</value>
+  </data>
+  <data name="testPin13InfoLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 13</value>
+  </data>
+  <data name="turnOffPin13Button.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin19Button.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+    <value>45</value>
+  </data>
+  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 13</value>
+  </data>
+  <data name="turnOffPin25Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin3Button.Name" xml:space="preserve">
+    <value>turnOnPin3Button</value>
+  </data>
+  <data name="turnOffPin11Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>441, 113</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin4Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;turnOffAllPinsButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin15Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin10Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOffPin15Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>441, 241</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin14Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin15Button.ZOrder" xml:space="preserve">
+    <value>40</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin5Button.Name" xml:space="preserve">
+    <value>turnOffPin5Button</value>
+  </data>
+  <data name="label20.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>15й пін:</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 13</value>
+  </data>
+  <data name="turnOnPin2Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 11</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin14Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOffPin26Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="turnOffPin23Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>10й пін:</value>
+  </data>
+  <data name="label19.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 13</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin11Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="turnOnPin25Button.TabIndex" type="System.Int32, mscorlib">
+    <value>101</value>
+  </data>
+  <data name="turnOnPin4Button.Text" xml:space="preserve">
+    <value>ВКЛ</value>
+  </data>
+  <data name="&gt;&gt;label24.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin21Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin1Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="turnOffPin24Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="label19.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="turnOffAllPinsButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>141, 18</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin1Button.ZOrder" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="&gt;&gt;label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>9й пін:</value>
+  </data>
+  <data name="turnOffPin4Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="label22.Text" xml:space="preserve">
+    <value>19й пін:</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="turnOffPin17Button.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="turnOffPin19Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin16Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin7Button.Name" xml:space="preserve">
+    <value>turnOnPin7Button</value>
+  </data>
+  <data name="turnOnPin12Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="turnOnPin10Button.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="&gt;&gt;testPin13InfoLabel.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin27Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;label13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="testPin13InfoLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label22.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="button55.Text" xml:space="preserve">
+    <value>Закрити</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin9Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin26Button.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="turnOffPin18Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="turnOffPin18Button.Text" xml:space="preserve">
+    <value>ВИКЛ</value>
+  </data>
+  <data name="turnOffPin25Button.Text" xml:space="preserve">
+    <value>ВИКЛ</value>
+  </data>
+  <data name="turnOnPin21Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>654, 144</value>
+  </data>
+  <data name="turnOnPin23Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;label22.Name" xml:space="preserve">
+    <value>label22</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 13</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin10Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;label23.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="turnOnPin1Button.TabIndex" type="System.Int32, mscorlib">
+    <value>74</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin11Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOnPin25Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;label18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 87</value>
+  </data>
+  <data name="label24.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
+  </data>
+  <data name="testPin13InfoLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>309, 312</value>
+  </data>
+  <data name="turnOffPin14Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>12й пін:</value>
+  </data>
+  <data name="turnOnPin9Button.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="turnOffPin5Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>141, 209</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin2Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;label23.Name" xml:space="preserve">
+    <value>label23</value>
+  </data>
+  <data name="&gt;&gt;testPin4InfoLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOffPin12Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>441, 145</value>
+  </data>
+  <data name="&gt;&gt;label19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>6й пін:</value>
+  </data>
+  <data name="turnOffPin9Button.Text" xml:space="preserve">
+    <value>ВИКЛ</value>
+  </data>
+  <data name="turnOnPin17Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="&gt;&gt;label18.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;label20.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label21.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="turnOffPin17Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 247</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin20Button.Name" xml:space="preserve">
+    <value>turnOnPin20Button</value>
+  </data>
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 13</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 279</value>
+  </data>
+  <data name="label9.TabIndex" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
+  <data name="turnOnPin11Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="turnOnPin27Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="turnOnPin13Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 177</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>309, 151</value>
+  </data>
+  <data name="turnOnAllPinsButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 18</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>63</value>
+  </data>
+  <data name="&gt;&gt;label21.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin26Button.Name" xml:space="preserve">
+    <value>turnOffPin26Button</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin9Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="turnOffPin22Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="label22.TabIndex" type="System.Int32, mscorlib">
+    <value>85</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin26Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin27Button.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="turnOffPin8Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="turnOnPin4Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="testPin3InfoLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="turnOffPin18Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="turnOffPin12Button.Text" xml:space="preserve">
+    <value>ВИКЛ</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>5й пін:</value>
+  </data>
+  <data name="turnOnPin8Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 305</value>
+  </data>
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>PinTesting</value>
+  </data>
+  <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin17Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;label14.Name" xml:space="preserve">
+    <value>label14</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin9Button.Name" xml:space="preserve">
+    <value>turnOffPin9Button</value>
+  </data>
+  <data name="turnOffPin3Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin8Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin5Button.ZOrder" xml:space="preserve">
+    <value>73</value>
+  </data>
+  <data name="turnOnPin10Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 82</value>
+  </data>
+  <data name="turnOnPin9Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="turnOnPin2Button.Text" xml:space="preserve">
+    <value>ВКЛ</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin22Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="turnOffPin24Button.Text" xml:space="preserve">
+    <value>ВИКЛ</value>
+  </data>
+  <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 13</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin12Button.Name" xml:space="preserve">
+    <value>turnOffPin12Button</value>
+  </data>
+  <data name="turnOnPin18Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="&gt;&gt;label15.Name" xml:space="preserve">
+    <value>label15</value>
+  </data>
+  <data name="turnOffPin14Button.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
+  </data>
+  <data name="label10.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin14Button.Name" xml:space="preserve">
+    <value>turnOnPin14Button</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin15Button.Name" xml:space="preserve">
+    <value>turnOffPin15Button</value>
+  </data>
+  <data name="&gt;&gt;turnOnAllPinsButton.Name" xml:space="preserve">
+    <value>turnOnAllPinsButton</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin12Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOffPin5Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="groupBox4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="label12.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>1й пін:</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin20Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;label14.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin18Button.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="button55.Location" type="System.Drawing.Point, System.Drawing">
+    <value>665, 398</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin6Button.Name" xml:space="preserve">
+    <value>turnOffPin6Button</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin23Button.Name" xml:space="preserve">
+    <value>turnOffPin23Button</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="turnOnPin10Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="turnOffPin24Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin8Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin21Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="turnOnPin25Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="turnOnPin19Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin7Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
+    <value>42</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="turnOnPin21Button.Text" xml:space="preserve">
+    <value>ВКЛ</value>
+  </data>
+  <data name="turnOffPin1Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin19Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="testPin4InfoLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 13</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin1Button.Name" xml:space="preserve">
+    <value>turnOnPin1Button</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin1Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="turnOnPin22Button.Text" xml:space="preserve">
+    <value>ВКЛ</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin7Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin1Button.ZOrder" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="turnOffPin20Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="&gt;&gt;label10.Name" xml:space="preserve">
+    <value>label10</value>
+  </data>
+  <data name="&gt;&gt;label22.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOffPin21Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin13Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin3Button.ZOrder" xml:space="preserve">
+    <value>80</value>
+  </data>
+  <data name="turnOffPin12Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="turnOnPin12Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin11Button.Name" xml:space="preserve">
+    <value>turnOnPin11Button</value>
+  </data>
+  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>309, 215</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="&gt;&gt;label23.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label11.Name" xml:space="preserve">
+    <value>label11</value>
+  </data>
+  <data name="turnOffPin17Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>441, 306</value>
+  </data>
+  <data name="label11.TabIndex" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="turnOnPin11Button.Text" xml:space="preserve">
+    <value>ВКЛ</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin22Button.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin25Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="label23.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="turnOffPin17Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="turnOffPin8Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>141, 305</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin26Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOffPin20Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>717, 112</value>
+  </data>
+  <data name="label13.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin12Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="turnOnPin17Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 306</value>
+  </data>
+  <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;label16.Name" xml:space="preserve">
+    <value>label16</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin21Button.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin4Button.Name" xml:space="preserve">
+    <value>turnOffPin4Button</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="&gt;&gt;label15.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>66</value>
+  </data>
+  <data name="turnOnPin19Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="label20.TabIndex" type="System.Int32, mscorlib">
+    <value>91</value>
+  </data>
+  <data name="label23.Location" type="System.Drawing.Point, System.Drawing">
+    <value>585, 311</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin22Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOnPin7Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="turnOnPin10Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="turnOffPin13Button.Text" xml:space="preserve">
+    <value>ВИКЛ</value>
+  </data>
+  <data name="turnOffPin21Button.Text" xml:space="preserve">
+    <value>ВИКЛ</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin10Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;label17.Name" xml:space="preserve">
+    <value>label17</value>
+  </data>
+  <data name="&gt;&gt;testPin3InfoLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin21Button.Name" xml:space="preserve">
+    <value>turnOnPin21Button</value>
+  </data>
+  <data name="turnOnAllPinsButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="turnOnPin1Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="turnOffPin16Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin10Button.ZOrder" xml:space="preserve">
+    <value>56</value>
+  </data>
+  <data name="label9.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label14.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin26Button.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="turnOnPin24Button.Text" xml:space="preserve">
+    <value>ВКЛ</value>
+  </data>
+  <data name="turnOffPin9Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin14Button.Name" xml:space="preserve">
+    <value>turnOffPin14Button</value>
+  </data>
+  <data name="&gt;&gt;label24.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin20Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="testPin2InfoLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>11й пін:</value>
+  </data>
+  <data name="turnOffPin22Button.TabIndex" type="System.Int32, mscorlib">
+    <value>93</value>
+  </data>
+  <data name="turnOnPin24Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin13Button.ZOrder" xml:space="preserve">
+    <value>46</value>
+  </data>
+  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
+    <value>39</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin19Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>309, 279</value>
+  </data>
+  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
+    <value>36</value>
+  </data>
+  <data name="turnOnPin1Button.Text" xml:space="preserve">
+    <value>ВКЛ</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin19Button.Name" xml:space="preserve">
+    <value>turnOnPin19Button</value>
+  </data>
+  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="turnOffPin2Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="turnOffPin7Button.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin16Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin19Button.Name" xml:space="preserve">
+    <value>turnOffPin19Button</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="turnOffPin3Button.Text" xml:space="preserve">
+    <value>ВИКЛ</value>
+  </data>
+  <data name="label12.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 13</value>
+  </data>
+  <data name="&gt;&gt;label12.Name" xml:space="preserve">
+    <value>label12</value>
+  </data>
+  <data name="testPin13InfoLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin14Button.ZOrder" xml:space="preserve">
+    <value>44</value>
+  </data>
+  <data name="turnOffPin15Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="turnOnPin12Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 145</value>
+  </data>
+  <data name="turnOnPin7Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin8Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin15Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin15Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin15Button.ZOrder" xml:space="preserve">
+    <value>41</value>
+  </data>
+  <data name="turnOffPin21Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>717, 144</value>
+  </data>
+  <data name="&gt;&gt;testPin3InfoLabel.ZOrder" xml:space="preserve">
+    <value>78</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="label21.Location" type="System.Drawing.Point, System.Drawing">
+    <value>585, 118</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin15Button.Name" xml:space="preserve">
+    <value>turnOnPin15Button</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin1Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOnPin18Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;label13.Name" xml:space="preserve">
+    <value>label13</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin2Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="turnOffPin4Button.Text" xml:space="preserve">
+    <value>ВИКЛ</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin17Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label18.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;label16.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="turnOnPin5Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin18Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin22Button.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin10Button.Name" xml:space="preserve">
+    <value>turnOffPin10Button</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin17Button.Name" xml:space="preserve">
+    <value>turnOffPin17Button</value>
+  </data>
+  <data name="turnOnPin15Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="turnOffPin20Button.Text" xml:space="preserve">
+    <value>ВИКЛ</value>
+  </data>
+  <data name="turnOnPin26Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="&gt;&gt;label17.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;label19.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>7й пін:</value>
+  </data>
+  <data name="groupBox4.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="turnOffPin22Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin6Button.ZOrder" xml:space="preserve">
+    <value>70</value>
+  </data>
+  <data name="turnOffPin22Button.Text" xml:space="preserve">
+    <value>ВИКЛ</value>
+  </data>
+  <data name="turnOffPin15Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="turnOffPin12Button.TabIndex" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="&gt;&gt;label19.Name" xml:space="preserve">
+    <value>label19</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>18й пін:</value>
+  </data>
+  <data name="turnOnPin1Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin21Button.Name" xml:space="preserve">
+    <value>turnOffPin21Button</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin10Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin25Button.Name" xml:space="preserve">
+    <value>turnOnPin25Button</value>
+  </data>
+  <data name="&gt;&gt;label21.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="turnOffPin6Button.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="turnOffPin13Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 13</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin24Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin7Button.ZOrder" xml:space="preserve">
+    <value>67</value>
+  </data>
+  <data name="turnOnPin14Button.Text" xml:space="preserve">
+    <value>ВКЛ</value>
+  </data>
+  <data name="label21.Text" xml:space="preserve">
+    <value>20й пін:</value>
+  </data>
+  <data name="turnOnPin22Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>654, 176</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin7Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>309, 344</value>
+  </data>
+  <data name="turnOffPin25Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin3Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOffPin25Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="turnOnPin17Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="turnOffAllPinsButton.TabIndex" type="System.Int32, mscorlib">
+    <value>108</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin8Button.Name" xml:space="preserve">
+    <value>turnOnPin8Button</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>48</value>
+  </data>
+  <data name="turnOffPin6Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>141, 241</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin4Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="turnOffPin11Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="turnOnPin8Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="turnOffPin20Button.TabIndex" type="System.Int32, mscorlib">
+    <value>87</value>
+  </data>
+  <data name="turnOffPin7Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="turnOnPin23Button.Text" xml:space="preserve">
+    <value>ВКЛ</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin2Button.Name" xml:space="preserve">
+    <value>turnOffPin2Button</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="label19.Text" xml:space="preserve">
+    <value>22й пін:</value>
+  </data>
+  <data name="turnOnPin15Button.TabIndex" type="System.Int32, mscorlib">
+    <value>68</value>
+  </data>
+  <data name="label9.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin24Button.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="turnOffPin26Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>717, 305</value>
+  </data>
+  <data name="turnOnPin15Button.Text" xml:space="preserve">
+    <value>ВКЛ</value>
+  </data>
+  <data name="turnOffPin10Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="label24.TabIndex" type="System.Int32, mscorlib">
+    <value>109</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>800, 450</value>
+  </data>
+  <data name="turnOffPin25Button.TabIndex" type="System.Int32, mscorlib">
+    <value>102</value>
+  </data>
+  <data name="&gt;&gt;testPin3InfoLabel.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>309, 88</value>
+  </data>
+  <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 13</value>
+  </data>
+  <data name="turnOnPin23Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin11Button.ZOrder" xml:space="preserve">
+    <value>53</value>
+  </data>
+  <data name="turnOnPin21Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="turnOnPin20Button.Text" xml:space="preserve">
+    <value>ВКЛ</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>309, 119</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin27Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;label13.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin9Button.Name" xml:space="preserve">
+    <value>turnOnPin9Button</value>
+  </data>
+  <data name="label19.Location" type="System.Drawing.Point, System.Drawing">
+    <value>585, 182</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
+  </data>
+  <data name="turnOffPin6Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="turnOnPin3Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin18Button.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="label21.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label14.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="turnOnPin2Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="turnOffAllPinsButton.Text" xml:space="preserve">
+    <value>ВИКЛ</value>
+  </data>
+  <data name="turnOffPin23Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>717, 208</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin1Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>778, 368</value>
+  </data>
+  <data name="turnOffPin10Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>441, 82</value>
+  </data>
+  <data name="turnOffPin8Button.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin21Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOffPin21Button.TabIndex" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="turnOnAllPinsButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin12Button.Name" xml:space="preserve">
+    <value>turnOnPin12Button</value>
+  </data>
+  <data name="label22.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 13</value>
+  </data>
+  <data name="turnOffPin19Button.TabIndex" type="System.Int32, mscorlib">
+    <value>84</value>
+  </data>
+  <data name="label13.TabIndex" type="System.Int32, mscorlib">
+    <value>76</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Name" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>585, 278</value>
+  </data>
+  <data name="&gt;&gt;label22.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="turnOnPin15Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="label19.TabIndex" type="System.Int32, mscorlib">
+    <value>94</value>
+  </data>
+  <data name="&gt;&gt;label19.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="label19.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin5Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin14Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 13</value>
+  </data>
+  <data name="turnOnPin17Button.Text" xml:space="preserve">
+    <value>ВКЛ</value>
+  </data>
+  <data name="turnOffPin10Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="turnOffPin8Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="&gt;&gt;label23.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="turnOffPin14Button.Text" xml:space="preserve">
+    <value>ВИКЛ</value>
+  </data>
+  <data name="turnOffPin16Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="turnOffAllPinsButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin15Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin26Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOffPin5Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin24Button.Name" xml:space="preserve">
+    <value>turnOffPin24Button</value>
+  </data>
+  <data name="turnOnPin23Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin17Button.ZOrder" xml:space="preserve">
+    <value>60</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>72</value>
+  </data>
+  <data name="label17.TabIndex" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="turnOffPin5Button.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin24Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="label18.TabIndex" type="System.Int32, mscorlib">
+    <value>97</value>
+  </data>
+  <data name="turnOnPin7Button.Text" xml:space="preserve">
+    <value>ВКЛ</value>
+  </data>
+  <data name="turnOffPin2Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin23Button.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="turnOnPin9Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="turnOffPin18Button.TabIndex" type="System.Int32, mscorlib">
+    <value>78</value>
+  </data>
+  <data name="turnOnPin20Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="turnOffPin11Button.Text" xml:space="preserve">
+    <value>ВИКЛ</value>
+  </data>
+  <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 13</value>
+  </data>
+  <data name="turnOnPin19Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="turnOnPin11Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label21.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 13</value>
+  </data>
+  <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 13</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin21Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="turnOffPin21Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="turnOffPin23Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="turnOffPin7Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="turnOnPin27Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;turnOnAllPinsButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="turnOffPin15Button.Text" xml:space="preserve">
+    <value>ВИКЛ</value>
+  </data>
+  <data name="label23.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 13</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOffPin19Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="&gt;&gt;turnOffAllPinsButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOnPin9Button.Text" xml:space="preserve">
+    <value>ВКЛ</value>
+  </data>
+  <data name="turnOffPin18Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>441, 338</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin13Button.ZOrder" xml:space="preserve">
+    <value>47</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>51</value>
+  </data>
+  <data name="testPin13InfoLabel.Text" xml:space="preserve">
+    <value>17й пін:</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin6Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOffPin12Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;button55.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin11Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOffPin19Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="turnOnPin25Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>654, 272</value>
+  </data>
+  <data name="label23.Text" xml:space="preserve">
+    <value>26й пін:</value>
+  </data>
+  <data name="turnOnPin26Button.Text" xml:space="preserve">
+    <value>ВКЛ</value>
+  </data>
+  <data name="turnOnPin24Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin25Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOffPin16Button.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="turnOffPin27Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin4Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin3Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="turnOffPin17Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="label10.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin13Button.Name" xml:space="preserve">
+    <value>turnOnPin13Button</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin6Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="label23.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="turnOffPin8Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="turnOffPin9Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>141, 337</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin18Button.Name" xml:space="preserve">
+    <value>turnOffPin18Button</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin4Button.ZOrder" xml:space="preserve">
+    <value>83</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin16Button.Name" xml:space="preserve">
+    <value>turnOffPin16Button</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOnAllPinsButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="turnOffPin18Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin9Button.ZOrder" xml:space="preserve">
+    <value>59</value>
+  </data>
+  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>8й пін:</value>
+  </data>
+  <data name="turnOnPin17Button.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="turnOnPin6Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;testPin13InfoLabel.Name" xml:space="preserve">
+    <value>testPin13InfoLabel</value>
+  </data>
+  <data name="turnOnPin11Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="turnOnPin14Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="turnOffPin8Button.Text" xml:space="preserve">
+    <value>ВИКЛ</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin25Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOnPin7Button.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="turnOnPin20Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="turnOffPin2Button.Text" xml:space="preserve">
+    <value>ВИКЛ</value>
+  </data>
+  <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 13</value>
+  </data>
+  <data name="turnOffPin6Button.Text" xml:space="preserve">
+    <value>ВИКЛ</value>
+  </data>
+  <data name="turnOnPin22Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin7Button.ZOrder" xml:space="preserve">
+    <value>68</value>
+  </data>
+  <data name="turnOffPin4Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin7Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin27Button.Name" xml:space="preserve">
+    <value>turnOffPin27Button</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin20Button.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="turnOnPin6Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 241</value>
+  </data>
+  <data name="&gt;&gt;button55.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin2Button.Name" xml:space="preserve">
+    <value>turnOnPin2Button</value>
+  </data>
+  <data name="turnOnPin19Button.TabIndex" type="System.Int32, mscorlib">
+    <value>83</value>
+  </data>
+  <data name="turnOnPin15Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 241</value>
+  </data>
+  <data name="&gt;&gt;label20.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="testPin3InfoLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="turnOnPin26Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;testPin4InfoLabel.ZOrder" xml:space="preserve">
+    <value>81</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 13</value>
+  </data>
+  <data name="turnOffPin15Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="turnOnPin3Button.Text" xml:space="preserve">
+    <value>ВКЛ</value>
+  </data>
+  <data name="turnOnPin5Button.Text" xml:space="preserve">
+    <value>ВКЛ</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin9Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin5Button.ZOrder" xml:space="preserve">
+    <value>74</value>
+  </data>
+  <data name="label18.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="turnOnPin3Button.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="turnOffPin21Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;testPin13InfoLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;testPin13InfoLabel.ZOrder" xml:space="preserve">
+    <value>58</value>
+  </data>
+  <data name="label5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="turnOffPin7Button.Text" xml:space="preserve">
+    <value>ВИКЛ</value>
+  </data>
+  <data name="&gt;&gt;turnOnAllPinsButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOffPin1Button.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="turnOffPin27Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin10Button.ZOrder" xml:space="preserve">
+    <value>55</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin25Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin20Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOnPin4Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="turnOnPin24Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin13Button.Name" xml:space="preserve">
+    <value>turnOffPin13Button</value>
+  </data>
+  <data name="turnOffPin24Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;testPin2InfoLabel.ZOrder" xml:space="preserve">
+    <value>75</value>
+  </data>
+  <data name="turnOffPin24Button.TabIndex" type="System.Int32, mscorlib">
+    <value>99</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin16Button.ZOrder" xml:space="preserve">
+    <value>37</value>
+  </data>
+  <data name="turnOffPin16Button.Text" xml:space="preserve">
+    <value>ВИКЛ</value>
+  </data>
+  <data name="turnOffPin6Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="label4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin19Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin11Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="turnOffPin13Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="testPin3InfoLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin5Button.Name" xml:space="preserve">
+    <value>turnOnPin5Button</value>
+  </data>
+  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>14й пін:</value>
+  </data>
+  <data name="turnOffPin4Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin6Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label11.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="testPin2InfoLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin24Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label20.Name" xml:space="preserve">
+    <value>label20</value>
+  </data>
+  <data name="turnOffPin13Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>441, 177</value>
+  </data>
+  <data name="&gt;&gt;testPin2InfoLabel.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="label7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Перевірка Пінів</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="testPin2InfoLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 13</value>
+  </data>
+  <data name="turnOffPin11Button.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin17Button.Name" xml:space="preserve">
+    <value>turnOnPin17Button</value>
+  </data>
+  <data name="turnOnPin26Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="turnOnPin12Button.Text" xml:space="preserve">
+    <value>ВКЛ</value>
+  </data>
+  <data name="turnOnPin21Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin18Button.Name" xml:space="preserve">
+    <value>turnOnPin18Button</value>
+  </data>
+  <data name="testPin4InfoLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOnPin9Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;testPin4InfoLabel.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="turnOffPin6Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin11Button.ZOrder" xml:space="preserve">
+    <value>52</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin23Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="turnOnPin15Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="testPin2InfoLabel.Text" xml:space="preserve">
+    <value>2й пін:</value>
+  </data>
+  <data name="button55.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 40</value>
+  </data>
+  <data name="turnOffPin10Button.Text" xml:space="preserve">
+    <value>ВИКЛ</value>
+  </data>
+  <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
+    <value>585, 246</value>
+  </data>
+  <data name="turnOnPin25Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 13</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin23Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin14Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="label22.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="label13.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="turnOnPin8Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 13</value>
+  </data>
+  <data name="turnOnPin10Button.Text" xml:space="preserve">
+    <value>ВКЛ</value>
+  </data>
+  <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="turnOnPin1Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin18Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="testPin4InfoLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="turnOffPin9Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="turnOnPin21Button.TabIndex" type="System.Int32, mscorlib">
+    <value>89</value>
+  </data>
+  <data name="turnOnPin20Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>654, 112</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin27Button.Name" xml:space="preserve">
+    <value>turnOnPin27Button</value>
+  </data>
+  <data name="turnOffPin17Button.Text" xml:space="preserve">
+    <value>ВИКЛ</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin20Button.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="turnOnPin7Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="turnOnPin3Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin2Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOffPin26Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="turnOffPin19Button.Text" xml:space="preserve">
+    <value>ВИКЛ</value>
+  </data>
+  <data name="&gt;&gt;turnOnAllPinsButton.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="turnOffPin14Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>441, 209</value>
+  </data>
+  <data name="turnOnPin23Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>654, 208</value>
+  </data>
+  <data name="turnOnPin20Button.TabIndex" type="System.Int32, mscorlib">
+    <value>86</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin2Button.ZOrder" xml:space="preserve">
+    <value>76</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin2Button.ZOrder" xml:space="preserve">
+    <value>77</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin8Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label24.Text" xml:space="preserve">
+    <value>Всі піни:</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin22Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="testPin3InfoLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 13</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin7Button.Name" xml:space="preserve">
+    <value>turnOffPin7Button</value>
+  </data>
+  <data name="&gt;&gt;button55.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin6Button.Name" xml:space="preserve">
+    <value>turnOnPin6Button</value>
+  </data>
+  <data name="label17.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin8Button.ZOrder" xml:space="preserve">
+    <value>65</value>
+  </data>
+  <data name="label21.TabIndex" type="System.Int32, mscorlib">
+    <value>88</value>
+  </data>
+  <data name="turnOnPin19Button.Text" xml:space="preserve">
+    <value>ВКЛ</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin24Button.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin22Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin17Button.ZOrder" xml:space="preserve">
+    <value>62</value>
+  </data>
+  <data name="turnOnPin9Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 337</value>
+  </data>
+  <data name="turnOffPin7Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>141, 273</value>
+  </data>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>309, 183</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin25Button.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="turnOnPin5Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="turnOnPin16Button.TabIndex" type="System.Int32, mscorlib">
+    <value>71</value>
+  </data>
+  <data name="turnOffPin26Button.Text" xml:space="preserve">
+    <value>ВИКЛ</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin25Button.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>309, 247</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin5Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label20.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin14Button.ZOrder" xml:space="preserve">
+    <value>43</value>
+  </data>
+  <data name="turnOnPin13Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="turnOffPin9Button.TabIndex" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="turnOffPin14Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin22Button.Name" xml:space="preserve">
+    <value>turnOffPin22Button</value>
+  </data>
+  <data name="turnOnPin12Button.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="turnOffPin24Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>717, 240</value>
+  </data>
+  <data name="turnOnPin3Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>57</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin16Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin13Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="turnOnPin21Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin8Button.Name" xml:space="preserve">
+    <value>turnOffPin8Button</value>
+  </data>
+  <data name="turnOnPin5Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="turnOnPin8Button.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin25Button.Name" xml:space="preserve">
+    <value>turnOffPin25Button</value>
+  </data>
+  <data name="turnOnPin10Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin23Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin16Button.Name" xml:space="preserve">
+    <value>turnOnPin16Button</value>
+  </data>
+  <data name="turnOnPin1Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 81</value>
+  </data>
+  <data name="turnOffAllPinsButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="&gt;&gt;testPin2InfoLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label18.Name" xml:space="preserve">
+    <value>label18</value>
+  </data>
+  <data name="turnOnAllPinsButton.TabIndex" type="System.Int32, mscorlib">
+    <value>107</value>
+  </data>
+  <data name="turnOffPin11Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="turnOffPin3Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>141, 145</value>
+  </data>
+  <data name="label10.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="turnOnPin16Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 273</value>
+  </data>
+  <data name="label24.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="turnOnPin18Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin12Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin4Button.ZOrder" xml:space="preserve">
+    <value>82</value>
+  </data>
+  <data name="testPin4InfoLabel.Text" xml:space="preserve">
+    <value>4й пін:</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label15.TabIndex" type="System.Int32, mscorlib">
+    <value>106</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="turnOnPin5Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 209</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin11Button.Name" xml:space="preserve">
+    <value>turnOffPin11Button</value>
+  </data>
+  <data name="&gt;&gt;label9.Name" xml:space="preserve">
+    <value>label9</value>
+  </data>
+  <data name="turnOnPin27Button.TabIndex" type="System.Int32, mscorlib">
+    <value>104</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;testPin2InfoLabel.Name" xml:space="preserve">
+    <value>testPin2InfoLabel</value>
+  </data>
+  <data name="turnOnPin6Button.Text" xml:space="preserve">
+    <value>ВКЛ</value>
+  </data>
+  <data name="turnOffPin11Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="turnOnPin7Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 273</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin23Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOffPin27Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="turnOnPin22Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="turnOffPin14Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="turnOnPin6Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="turnOnPin20Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;testPin4InfoLabel.Name" xml:space="preserve">
+    <value>testPin4InfoLabel</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin26Button.Name" xml:space="preserve">
+    <value>turnOnPin26Button</value>
+  </data>
+  <data name="turnOnPin4Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 177</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin6Button.ZOrder" xml:space="preserve">
+    <value>71</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin3Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin4Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOnPin2Button.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="turnOffPin22Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label12.TabIndex" type="System.Int32, mscorlib">
+    <value>73</value>
+  </data>
+  <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 215</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>27й пін:</value>
+  </data>
+  <data name="turnOnPin27Button.Text" xml:space="preserve">
+    <value>ВКЛ</value>
+  </data>
+  <data name="label20.Location" type="System.Drawing.Point, System.Drawing">
+    <value>585, 150</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin24Button.Name" xml:space="preserve">
+    <value>turnOnPin24Button</value>
+  </data>
+  <data name="turnOnPin14Button.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="turnOffPin26Button.TabIndex" type="System.Int32, mscorlib">
+    <value>81</value>
+  </data>
+  <data name="label3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="label16.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="turnOffPin1Button.Text" xml:space="preserve">
+    <value>ВИКЛ</value>
+  </data>
+  <data name="turnOnPin4Button.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin23Button.Name" xml:space="preserve">
+    <value>turnOnPin23Button</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 343</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin2Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin12Button.ZOrder" xml:space="preserve">
+    <value>50</value>
+  </data>
+  <data name="turnOnPin12Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin21Button.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="turnOnPin13Button.Text" xml:space="preserve">
+    <value>ВКЛ</value>
+  </data>
+  <data name="turnOnPin22Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="turnOnPin26Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>654, 305</value>
+  </data>
+  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin17Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>585, 214</value>
+  </data>
+  <data name="turnOffPin25Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>717, 272</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin13Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOnPin18Button.TabIndex" type="System.Int32, mscorlib">
+    <value>77</value>
+  </data>
+  <data name="turnOffPin27Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>717, 337</value>
+  </data>
+  <data name="groupBox4.Text" xml:space="preserve">
+    <value>Перевірка З'єднання</value>
+  </data>
+  <data name="turnOnPin27Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin3Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin27Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOnPin4Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="testPin2InfoLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 119</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>69</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin9Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOffPin16Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>441, 273</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 13</value>
+  </data>
+  <data name="turnOffPin16Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin6Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="label18.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="turnOffPin15Button.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="label11.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="turnOffPin20Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOnPin24Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>654, 240</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>25й пін:</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin4Button.Name" xml:space="preserve">
+    <value>turnOnPin4Button</value>
+  </data>
+  <data name="turnOnPin14Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="label17.Text" xml:space="preserve">
+    <value>24й пін:</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin1Button.Name" xml:space="preserve">
+    <value>turnOffPin1Button</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin16Button.ZOrder" xml:space="preserve">
+    <value>38</value>
+  </data>
+  <data name="turnOnPin6Button.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="turnOnPin18Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 338</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>54</value>
+  </data>
+  <data name="button55.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="testPin2InfoLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="turnOnPin16Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="label22.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="turnOnPin19Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>654, 81</value>
+  </data>
+  <data name="turnOffPin2Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>141, 113</value>
+  </data>
+  <data name="&gt;&gt;label14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOffPin5Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="testPin3InfoLabel.Text" xml:space="preserve">
+    <value>3й пін:</value>
+  </data>
+  <data name="turnOffPin12Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin12Button.ZOrder" xml:space="preserve">
+    <value>49</value>
+  </data>
+  <data name="turnOffPin20Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>585, 343</value>
+  </data>
+  <data name="label22.Location" type="System.Drawing.Point, System.Drawing">
+    <value>585, 87</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin16Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin10Button.Name" xml:space="preserve">
+    <value>turnOnPin10Button</value>
+  </data>
+  <data name="label8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="turnOnPin13Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="turnOnPin13Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="turnOnPin24Button.TabIndex" type="System.Int32, mscorlib">
+    <value>98</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin27Button.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label24.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="turnOffPin22Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>717, 176</value>
+  </data>
+  <data name="turnOnPin2Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin12Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="turnOnPin17Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="turnOnPin16Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="turnOffPin4Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>141, 177</value>
+  </data>
+  <data name="turnOnPin3Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 145</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin8Button.ZOrder" xml:space="preserve">
+    <value>64</value>
+  </data>
+  <data name="turnOffPin10Button.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin20Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin5Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="turnOffPin2Button.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin3Button.ZOrder" xml:space="preserve">
+    <value>79</value>
+  </data>
+  <data name="turnOnPin8Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin18Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin27Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label16.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="&gt;&gt;label24.Name" xml:space="preserve">
+    <value>label24</value>
+  </data>
+  <data name="turnOffAllPinsButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="turnOnPin5Button.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="turnOnPin14Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label14.TabIndex" type="System.Int32, mscorlib">
+    <value>79</value>
+  </data>
+  <data name="turnOffPin10Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="testPin4InfoLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 183</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 311</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin22Button.Name" xml:space="preserve">
+    <value>turnOnPin22Button</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin20Button.Name" xml:space="preserve">
+    <value>turnOffPin20Button</value>
+  </data>
+  <data name="turnOnPin6Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin3Button.Name" xml:space="preserve">
+    <value>turnOffPin3Button</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin24Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin17Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOffPin3Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;turnOffAllPinsButton.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 13</value>
+  </data>
+  <data name="turnOffPin27Button.TabIndex" type="System.Int32, mscorlib">
+    <value>105</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin5Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 13</value>
+  </data>
+  <data name="turnOffPin19Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>717, 81</value>
+  </data>
+  <data name="label23.TabIndex" type="System.Int32, mscorlib">
+    <value>82</value>
+  </data>
+  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;label10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOffPin13Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="turnOffPin1Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="turnOffPin23Button.Text" xml:space="preserve">
+    <value>ВИКЛ</value>
+  </data>
+  <data name="turnOffPin1Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>141, 81</value>
+  </data>
+  <data name="label15.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label20.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 13</value>
+  </data>
+  <data name="turnOffPin3Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 26</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin18Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="turnOffPin9Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="turnOnPin2Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 113</value>
+  </data>
+  <data name="testPin3InfoLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 151</value>
+  </data>
+  <data name="turnOnPin16Button.Text" xml:space="preserve">
+    <value>ВКЛ</value>
+  </data>
+  <data name="turnOnPin8Button.Text" xml:space="preserve">
+    <value>ВКЛ</value>
+  </data>
+  <data name="turnOnPin23Button.TabIndex" type="System.Int32, mscorlib">
+    <value>95</value>
+  </data>
+  <data name="turnOffPin5Button.Text" xml:space="preserve">
+    <value>ВИКЛ</value>
+  </data>
+  <data name="&gt;&gt;label11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label20.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin13Button.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="label16.TabIndex" type="System.Int32, mscorlib">
+    <value>103</value>
+  </data>
+  <data name="&gt;&gt;turnOffAllPinsButton.Name" xml:space="preserve">
+    <value>turnOffAllPinsButton</value>
+  </data>
+  <data name="label20.Text" xml:space="preserve">
+    <value>21й пін:</value>
+  </data>
+  <data name="label15.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="&gt;&gt;testPin3InfoLabel.Name" xml:space="preserve">
+    <value>testPin3InfoLabel</value>
+  </data>
+  <data name="turnOnPin16Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="turnOnPin26Button.TabIndex" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="label24.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 24</value>
+  </data>
+  <data name="turnOffPin7Button.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin26Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="testPin13InfoLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>16й пін:</value>
+  </data>
+  <data name="turnOnPin25Button.Text" xml:space="preserve">
+    <value>ВКЛ</value>
+  </data>
+  <data name="&gt;&gt;label16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label17.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="&gt;&gt;label21.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="turnOnPin22Button.TabIndex" type="System.Int32, mscorlib">
+    <value>92</value>
+  </data>
+  <data name="turnOffPin1Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>13й пін:</value>
+  </data>
+  <data name="turnOffPin26Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="turnOffPin4Button.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="turnOffPin3Button.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="turnOffPin23Button.TabIndex" type="System.Int32, mscorlib">
+    <value>96</value>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>23й пін:</value>
+  </data>
+  <data name="turnOffPin27Button.Text" xml:space="preserve">
+    <value>ВИКЛ</value>
+  </data>
+  <data name="turnOnPin13Button.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin23Button.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;label17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;turnOffPin9Button.ZOrder" xml:space="preserve">
+    <value>61</value>
+  </data>
+  <data name="&gt;&gt;label21.Name" xml:space="preserve">
+    <value>label21</value>
+  </data>
+  <data name="label24.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;button55.Name" xml:space="preserve">
+    <value>button55</value>
+  </data>
+  <data name="&gt;&gt;turnOnPin19Button.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="turnOnPin27Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>654, 337</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>ru</value>
+  </metadata>
 </root>

@@ -522,5 +522,26 @@ namespace Oven_Interface
         {
             ArduinoConnection.Reconnect();
         }
+
+        private void englishToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.language = "en-US";
+            Properties.Settings.Default.Save();
+            Application.Restart();
+        }
+
+        private void українськаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.language = "uk";
+            Properties.Settings.Default.Save();
+            Application.Restart();
+        }
+
+        private void русскийToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.language = "ru";
+            Properties.Settings.Default.Save();
+            Application.Restart();
+        }
     }
 }
