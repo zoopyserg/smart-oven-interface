@@ -3,13 +3,13 @@
   <Profiles />
   <Settings>
     <Setting Name="temperatureCoefficientA" Type="System.Decimal" Scope="User">
-      <Value Profile="(Default)">0</Value>
+      <Value Profile="(Default)">0.0023289618877854</Value>
     </Setting>
     <Setting Name="temperatureCoefficientB" Type="System.Decimal" Scope="User">
-      <Value Profile="(Default)">1</Value>
+      <Value Profile="(Default)">-0.8132904677022324</Value>
     </Setting>
     <Setting Name="temperatureCoefficientC" Type="System.Decimal" Scope="User">
-      <Value Profile="(Default)">-409</Value>
+      <Value Profile="(Default)">-60.54023427552839</Value>
     </Setting>
     <Setting Name="channelTemperatureSensor" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">5</Value>

@@ -263,6 +263,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="README %28HOW TO INSTALL%29.txt" />
+    <Content Include="README and TODO.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
