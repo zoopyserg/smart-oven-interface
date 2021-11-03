@@ -73,18 +73,6 @@ namespace Oven_Interface.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("3")]
-        public int pinTemperatureRelay {
-            get {
-                return ((int)(this["pinTemperatureRelay"]));
-            }
-            set {
-                this["pinTemperatureRelay"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("-1")]
         public int ActiveProgramId {
             get {
@@ -115,6 +103,126 @@ namespace Oven_Interface.Properties {
             }
             set {
                 this["language"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        public int powerplantPin {
+            get {
+                return ((int)(this["powerplantPin"]));
+            }
+            set {
+                this["powerplantPin"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5")]
+        public int temperatureUpPin {
+            get {
+                return ((int)(this["temperatureUpPin"]));
+            }
+            set {
+                this["temperatureUpPin"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("6")]
+        public int temperatureDownPin {
+            get {
+                return ((int)(this["temperatureDownPin"]));
+            }
+            set {
+                this["temperatureDownPin"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("4")]
+        public int lightsPin {
+            get {
+                return ((int)(this["lightsPin"]));
+            }
+            set {
+                this["lightsPin"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("3")]
+        public int waterSolenoidPin {
+            get {
+                return ((int)(this["waterSolenoidPin"]));
+            }
+            set {
+                this["waterSolenoidPin"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("7")]
+        public int openVentilationPin {
+            get {
+                return ((int)(this["openVentilationPin"]));
+            }
+            set {
+                this["openVentilationPin"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("8")]
+        public int closeVentilationPin {
+            get {
+                return ((int)(this["closeVentilationPin"]));
+            }
+            set {
+                this["closeVentilationPin"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("12")]
+        public int waterCounterPin {
+            get {
+                return ((int)(this["waterCounterPin"]));
+            }
+            set {
+                this["waterCounterPin"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2000")]
+        public int canChangeTempsAgainAfter {
+            get {
+                return ((int)(this["canChangeTempsAgainAfter"]));
+            }
+            set {
+                this["canChangeTempsAgainAfter"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1000")]
+        public int turnOffTempOperationsAfter {
+            get {
+                return ((int)(this["turnOffTempOperationsAfter"]));
+            }
+            set {
+                this["turnOffTempOperationsAfter"] = value;
             }
         }
     }

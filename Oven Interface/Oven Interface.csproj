@@ -138,6 +138,12 @@
     <Compile Include="Models\TemperaturePoint.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Histeresis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Histeresis.Designer.cs">
+      <DependentUpon>Histeresis.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\PinSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     <EmbeddedResource Include="Views\Dashboard.en-US.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Dashboard.en.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Dashboard.uk.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Histeresis.resx">
+      <DependentUpon>Histeresis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\PinSettings.en-US.resx">
       <DependentUpon>PinSettings.cs</DependentUpon>

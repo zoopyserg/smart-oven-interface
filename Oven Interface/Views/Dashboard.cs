@@ -543,5 +543,31 @@ namespace Oven_Interface
             Properties.Settings.Default.Save();
             Application.Restart();
         }
+
+        private void button7_Click_2(object sender, EventArgs e)
+        {
+            this.ArduinoConnection.TurnOnPin(Properties.Settings.Default.lightsPin);
+        }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            this.ArduinoConnection.TurnOffPin(Properties.Settings.Default.lightsPin);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            this.ArduinoConnection.TurnOnPin(Properties.Settings.Default.powerplantPin);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            this.ArduinoConnection.TurnOffPin(Properties.Settings.Default.powerplantPin);
+        }
+
+        private void хістерезисToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form histeresisSettings = new Histeresis();
+            histeresisSettings.Show();
+        }
     }
 }

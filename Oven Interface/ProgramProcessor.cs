@@ -11,10 +11,13 @@ namespace Oven_Interface
     public class ProgramProcessor
     {
         public System.Timers.Timer timer { get; set; }
+        public System.Timers.Timer turnOffHeatingOperationsTimer { get; set; }
+        public System.Timers.Timer canChangeTempTimer { get; set; }
         public int minutesPassed { get; set; }
         public Bread runningProgram { get; set; }
         public Dashboard form { get; set; }
         public bool IsRunning { get; set; }
+        public bool canChangeTemp { get; set; }
 
         public long ExpectedTemperature { get; set; }
 
@@ -26,8 +29,18 @@ namespace Oven_Interface
             minutesPassed = 0;
             timer.Elapsed += OnTimeEvent;
             this.IsRunning = false;
+
+            turnOffHeatingOperationsTimer = new System.Timers.Timer();
+            turnOffHeatingOperationsTimer.Interval = 400; // todo: set duration in settings
+            turnOffHeatingOperationsTimer.Elapsed += TurnOffAllHeatingOperations;
+            
+            canChangeTempTimer = new System.Timers.Timer();
+            canChangeTempTimer.Interval = 2000; // todo: set duration in settings
+            canChangeTempTimer.Elapsed += SayTempsCanBeChangedAgain;
+
+            canChangeTemp = true;
         }
-        
+
         public void Start(int activeProgramId)
         {
             minutesPassed = 0;
@@ -67,7 +80,6 @@ namespace Oven_Interface
             form.EnableDisableStartButton();
             form.EnableDisablePauseButton();
             form.EnableDisableStopButton();
-            DoSameThingOnZerothSecond();
             timer.Start();
         }
 
@@ -75,6 +87,7 @@ namespace Oven_Interface
         {
             if (runningProgram != null)
             {
+                this.canChangeTempTimer.Start();
                 form.Invoke(new Action(() =>
                 {
                     if (minutesPassed >= runningProgram.Duration)
@@ -87,13 +100,20 @@ namespace Oven_Interface
                         ExpectedTemperature = runningProgram.CurrentExpectedTemperature(minutesPassed);
                         form.UpdateExpectedTemperatureAsync(form, $"{ ExpectedTemperature.ToString() } C");
 
-                        if (form.CurrentTemperature < ExpectedTemperature)
+                        if (canChangeTemp)
                         {
-                            form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.pinTemperatureRelay);
-                        }
-                        else
-                        {
-                            form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.pinTemperatureRelay);
+                            if (form.CurrentTemperature < ExpectedTemperature)
+                            {
+                                form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.temperatureUpPin);
+                                form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.temperatureDownPin);
+                                this.turnOffHeatingOperationsTimer.Start();
+                            }
+                            else
+                            {
+                                form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.temperatureUpPin);
+                                form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.temperatureDownPin);
+                                this.turnOffHeatingOperationsTimer.Start();
+                            }
                         }
 
                         BreadsController.Update(runningProgram.Id, minutesPassed);
@@ -101,39 +121,30 @@ namespace Oven_Interface
                         form.UpdateTimeLeftAsync(form, ((runningProgram.Duration - minutesPassed)/60).ToString());
                     }
                 }));
+
+                this.canChangeTemp = false;
             }
         }
 
-        private void DoSameThingOnZerothSecond()
+        private void TurnOffAllHeatingOperations(object sender, ElapsedEventArgs e)
         {
             if (runningProgram != null)
             {
                 form.Invoke(new Action(() =>
                 {
-                    if (minutesPassed >= runningProgram.Duration)
-                    {
-                        CommitProgramFinilization();
-                    }
-                    else
-                    {
-                        minutesPassed += 1;
-                        ExpectedTemperature = runningProgram.CurrentExpectedTemperature(minutesPassed);
-                        form.UpdateExpectedTemperatureAsync(form, $"{ ExpectedTemperature.ToString() } C");
-
-                        if (form.CurrentTemperature < ExpectedTemperature)
-                        {
-                            form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.pinTemperatureRelay);
-                        }
-                        else
-                        {
-                            form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.pinTemperatureRelay);
-                        }
-
-                        BreadsController.Update(runningProgram.Id, minutesPassed);
-                        form.UpdateProgressBarAsync(form, 0, minutesPassed, runningProgram.Duration);
-                        form.UpdateTimeLeftAsync(form, ((runningProgram.Duration - minutesPassed) / 60).ToString());
-                    }
+                    form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.temperatureDownPin);
+                    form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.temperatureUpPin);
                 }));
+            }
+            this.turnOffHeatingOperationsTimer.Stop();
+        }
+
+        private void SayTempsCanBeChangedAgain(object sender, ElapsedEventArgs e)
+        {
+            if (runningProgram != null)
+            {
+                this.canChangeTemp = true;
+                this.canChangeTempTimer.Stop();
             }
         }
 
@@ -167,6 +178,8 @@ namespace Oven_Interface
         public void CommitProgramPausing()
         {
             timer.Stop();
+            turnOffHeatingOperationsTimer.Stop();
+            canChangeTempTimer.Stop();
             if (runningProgram != null)
             {
                 form.UpdateStatusListBox($"Програму {runningProgram.Name} поставлено на паузу");

@@ -51,7 +51,6 @@ namespace Oven_Interface
             this.continueProgramButton = new System.Windows.Forms.Button();
             this.pauseProgramButton = new System.Windows.Forms.Button();
             this.projectNameLabel = new System.Windows.Forms.Label();
-            this.breadBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.expectedTemperatureLabel = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -154,7 +153,14 @@ namespace Oven_Interface
             this.createProgramButton = new System.Windows.Forms.Button();
             this.programNameLabel = new System.Windows.Forms.Label();
             this.newProgramNameTextBox = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.breadBindingSource)).BeginInit();
+            this.label17 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.breadBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.хістерезисToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actionGroupBox.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -195,6 +201,7 @@ namespace Oven_Interface
             ((System.ComponentModel.ISupportInitialize)(this.newTemperaturePointValueTextBox)).BeginInit();
             this.programsIndexGroupBox.SuspendLayout();
             this.programFormGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.breadBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // startProgramButton
@@ -229,10 +236,6 @@ namespace Oven_Interface
             // 
             resources.ApplyResources(this.projectNameLabel, "projectNameLabel");
             this.projectNameLabel.Name = "projectNameLabel";
-            // 
-            // breadBindingSource
-            // 
-            this.breadBindingSource.DataSource = typeof(Oven_Interface.Bread);
             // 
             // expectedTemperatureLabel
             // 
@@ -331,7 +334,8 @@ namespace Oven_Interface
             resources.ApplyResources(this.налаштуванняToolStripMenuItem, "налаштуванняToolStripMenuItem");
             this.налаштуванняToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.калібруванняТермодатчикаToolStripMenuItem,
-            this.роліПінівToolStripMenuItem});
+            this.роліПінівToolStripMenuItem,
+            this.хістерезисToolStripMenuItem});
             this.налаштуванняToolStripMenuItem.Name = "налаштуванняToolStripMenuItem";
             // 
             // калібруванняТермодатчикаToolStripMenuItem
@@ -1019,7 +1023,6 @@ namespace Oven_Interface
             // programsListBox
             // 
             resources.ApplyResources(this.programsListBox, "programsListBox");
-            this.programsListBox.DataSource = this.breadBindingSource;
             this.programsListBox.FormattingEnabled = true;
             this.programsListBox.Name = "programsListBox";
             this.programsListBox.SelectedIndexChanged += new System.EventHandler(this.programsListBox_SelectedIndexChanged);
@@ -1064,13 +1067,58 @@ namespace Oven_Interface
             resources.ApplyResources(this.newProgramNameTextBox, "newProgramNameTextBox");
             this.newProgramNameTextBox.Name = "newProgramNameTextBox";
             // 
+            // label17
+            // 
+            resources.ApplyResources(this.label17, "label17");
+            this.label17.Name = "label17";
+            // 
+            // button7
+            // 
+            resources.ApplyResources(this.button7, "button7");
+            this.button7.Name = "button7";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click_2);
+            // 
+            // button8
+            // 
+            resources.ApplyResources(this.button8, "button8");
+            this.button8.Name = "button8";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click_1);
+            // 
+            // button9
+            // 
+            resources.ApplyResources(this.button9, "button9");
+            this.button9.Name = "button9";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button10
+            // 
+            resources.ApplyResources(this.button10, "button10");
+            this.button10.Name = "button10";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // label18
+            // 
+            resources.ApplyResources(this.label18, "label18");
+            this.label18.Name = "label18";
+            // 
+            // breadBindingSource
+            // 
+            this.breadBindingSource.DataSource = typeof(Oven_Interface.Bread);
+            // 
+            // хістерезисToolStripMenuItem
+            // 
+            resources.ApplyResources(this.хістерезисToolStripMenuItem, "хістерезисToolStripMenuItem");
+            this.хістерезисToolStripMenuItem.Name = "хістерезисToolStripMenuItem";
+            this.хістерезисToolStripMenuItem.Click += new System.EventHandler(this.хістерезисToolStripMenuItem_Click);
+            // 
             // Dashboard
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.valvePointFormGroupBox);
-            this.Controls.Add(this.pressurePointFormGroupBox);
-            this.Controls.Add(this.progressGroupBox);
             this.Controls.Add(this.allActionsTabControl);
             this.Controls.Add(this.temperaturePointFormGroupBox);
             this.Controls.Add(this.programsIndexGroupBox);
@@ -1086,7 +1134,6 @@ namespace Oven_Interface
             this.Name = "Dashboard";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Dashboard_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.breadBindingSource)).EndInit();
             this.actionGroupBox.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -1135,6 +1182,7 @@ namespace Oven_Interface
             this.programsIndexGroupBox.ResumeLayout(false);
             this.programFormGroupBox.ResumeLayout(false);
             this.programFormGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.breadBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1148,7 +1196,6 @@ namespace Oven_Interface
         private System.Windows.Forms.Button pauseProgramButton;
         private System.Windows.Forms.Label projectNameLabel;
         private System.Windows.Forms.GroupBox actionGroupBox;
-        private System.Windows.Forms.BindingSource breadBindingSource;
         private System.Windows.Forms.Label temperatureLabel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label expectedTemperatureLabel;
@@ -1250,6 +1297,14 @@ namespace Oven_Interface
         private System.Windows.Forms.ToolStripMenuItem englishToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem українськаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem русскийToolStripMenuItem;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ToolStripMenuItem хістерезисToolStripMenuItem;
+        private System.Windows.Forms.BindingSource breadBindingSource;
     }
 }
 

@@ -202,14 +202,26 @@
   <data name="роліПінівToolStripMenuItem.Text" xml:space="preserve">
     <value>Роли Пинов</value>
   </data>
+  <data name="languageToolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 20</value>
+  </data>
   <data name="languageToolStripMenuItem2.Text" xml:space="preserve">
     <value>Language</value>
+  </data>
+  <data name="englishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 22</value>
   </data>
   <data name="englishToolStripMenuItem.Text" xml:space="preserve">
     <value>English</value>
   </data>
+  <data name="українськаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 22</value>
+  </data>
   <data name="українськаToolStripMenuItem.Text" xml:space="preserve">
     <value>Українська</value>
+  </data>
+  <data name="русскийToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 22</value>
   </data>
   <data name="русскийToolStripMenuItem.Text" xml:space="preserve">
     <value>Русский</value>
@@ -381,6 +393,24 @@
   </data>
   <data name="programNameLabel.Text" xml:space="preserve">
     <value>Название:</value>
+  </data>
+  <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 15</value>
+  </data>
+  <data name="label17.Text" xml:space="preserve">
+    <value>Подсветка</value>
+  </data>
+  <data name="button8.Text" xml:space="preserve">
+    <value>Выкл</value>
+  </data>
+  <data name="button9.Text" xml:space="preserve">
+    <value>Выкл</value>
+  </data>
+  <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 15</value>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>Энергостанция</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
