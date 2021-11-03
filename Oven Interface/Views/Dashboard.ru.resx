@@ -202,6 +202,12 @@
   <data name="роліПінівToolStripMenuItem.Text" xml:space="preserve">
     <value>Роли Пинов</value>
   </data>
+  <data name="хістерезисToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>221, 22</value>
+  </data>
+  <data name="хістерезисToolStripMenuItem.Text" xml:space="preserve">
+    <value>Настройки Гистерезиса</value>
+  </data>
   <data name="languageToolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 20</value>
   </data>
@@ -403,14 +409,26 @@
   <data name="button8.Text" xml:space="preserve">
     <value>Выкл</value>
   </data>
-  <data name="button9.Text" xml:space="preserve">
-    <value>Выкл</value>
-  </data>
   <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
     <value>109, 15</value>
   </data>
   <data name="label18.Text" xml:space="preserve">
     <value>Энергостанция</value>
+  </data>
+  <data name="label19.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 15</value>
+  </data>
+  <data name="label19.Text" xml:space="preserve">
+    <value>Подсветка</value>
+  </data>
+  <data name="label20.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 15</value>
+  </data>
+  <data name="label20.Text" xml:space="preserve">
+    <value>Энергостанция</value>
+  </data>
+  <data name="button9.Text" xml:space="preserve">
+    <value>Выкл</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -487,5 +505,9 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
 </value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
   </data>
 </root>
