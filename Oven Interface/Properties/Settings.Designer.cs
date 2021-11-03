@@ -225,5 +225,17 @@ namespace Oven_Interface.Properties {
                 this["turnOffTempOperationsAfter"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5000")]
+        public int timeToFullyOpenVentilationValve {
+            get {
+                return ((int)(this["timeToFullyOpenVentilationValve"]));
+            }
+            set {
+                this["timeToFullyOpenVentilationValve"] = value;
+            }
+        }
     }
 }
