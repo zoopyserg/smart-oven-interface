@@ -146,8 +146,11 @@
   <data name="роліПінівToolStripMenuItem.Text" xml:space="preserve">
     <value>Ролі Пінів</value>
   </data>
-  <data name="temperaturePointFormGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 82</value>
+  <data name="&gt;&gt;historyPage.Parent" xml:space="preserve">
+    <value>allActionsTabControl</value>
+  </data>
+  <data name="allActionsTabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>843, 285</value>
   </data>
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -171,8 +174,8 @@
   <data name="valveTableTabPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
-  <data name="&gt;&gt;newTemperaturePointValueTextBox.Name" xml:space="preserve">
-    <value>newTemperaturePointValueTextBox</value>
+  <data name="temperaturePointValueLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 55</value>
   </data>
   <data name="newProgramNameTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -182,6 +185,9 @@
   </data>
   <data name="&gt;&gt;pressurePointsTabControl.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 28</value>
   </data>
   <data name="valveChartTabPage.Size" type="System.Drawing.Size, System.Drawing">
     <value>819, 224</value>
@@ -234,6 +240,9 @@
   <data name="&gt;&gt;languageToolStripMenuItem2.Name" xml:space="preserve">
     <value>languageToolStripMenuItem2</value>
   </data>
+  <data name="&gt;&gt;newTemperaturePointValueTextBox.Parent" xml:space="preserve">
+    <value>temperaturePointFormGroupBox</value>
+  </data>
   <data name="налаштуванняToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>101, 20</value>
   </data>
@@ -249,6 +258,9 @@
   <data name="&gt;&gt;valvePointsListBox.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="pauseProgramButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="&gt;&gt;button10.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -258,20 +270,17 @@
   <data name="&gt;&gt;statusListBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="buttonDeleteProgram.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
-  </data>
   <data name="button2.Text" xml:space="preserve">
     <value>Наступний &gt;</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
     <value>Поточна:</value>
   </data>
+  <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1129, 179</value>
+  </data>
   <data name="&gt;&gt;createValvePointButton.Name" xml:space="preserve">
     <value>createValvePointButton</value>
-  </data>
-  <data name="&gt;&gt;button3.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="&gt;&gt;label4.Parent" xml:space="preserve">
     <value>valvePointFormGroupBox</value>
@@ -282,8 +291,8 @@
   <data name="&gt;&gt;programsIndexGroupBox.Name" xml:space="preserve">
     <value>programsIndexGroupBox</value>
   </data>
-  <data name="newValvePointHoursNumber.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 26</value>
+  <data name="projectNameLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>663, 9</value>
   </data>
   <data name="&gt;&gt;button8.Parent" xml:space="preserve">
     <value>$this</value>
@@ -297,14 +306,14 @@
   <data name="&gt;&gt;newTemperaturePointSecondsNumber.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;newTemperaturePointSecondsNumber.Parent" xml:space="preserve">
-    <value>temperaturePointFormGroupBox</value>
+  <data name="&gt;&gt;label13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="pressureTableTabPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
-  <data name="калібруванняТермодатчикаToolStripMenuItem.Text" xml:space="preserve">
-    <value>Калібрування Термодатчика</value>
+  <data name="temperaturesPage.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="newTemperaturePointValueTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
@@ -327,9 +336,6 @@
   <data name="pressurePointsListBox.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
   </data>
-  <data name="stopProgramButton.Text" xml:space="preserve">
-    <value>СТОП</value>
-  </data>
   <data name="&gt;&gt;button8.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
@@ -341,6 +347,9 @@
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>53</value>
+  </data>
+  <data name="&gt;&gt;button8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;createPressurePointButton.Parent" xml:space="preserve">
     <value>pressurePointFormGroupBox</value>
@@ -354,9 +363,6 @@
   <data name="вихідToolStripMenuItem.Text" xml:space="preserve">
     <value>Вихід</value>
   </data>
-  <data name="&gt;&gt;valvePointsTabControl.Name" xml:space="preserve">
-    <value>valvePointsTabControl</value>
-  </data>
   <data name="&gt;&gt;label18.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -366,14 +372,8 @@
   <data name="&gt;&gt;temperaturePointFormGroupBox.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="&gt;&gt;deletePressurePointButton.Parent" xml:space="preserve">
-    <value>pressureTableTabPage</value>
-  </data>
-  <data name="deleteSteamPointButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="continueProgramButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>497, 185</value>
   </data>
   <data name="&gt;&gt;valvesPage.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -381,20 +381,17 @@
   <data name="&gt;&gt;newPressurePointValueTextBox.Name" xml:space="preserve">
     <value>newPressurePointValueTextBox</value>
   </data>
+  <data name="label20.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1143, 117</value>
+  </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt, style=Bold</value>
-  </data>
-  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="&gt;&gt;valveChart.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
   </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;newPressurePointValueTextBox.Parent" xml:space="preserve">
-    <value>pressurePointFormGroupBox</value>
+  <data name="label14.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
   </data>
   <data name="chartTemperatures.Size" type="System.Drawing.Size, System.Drawing">
     <value>815, 217</value>
@@ -417,9 +414,6 @@
   <data name="&gt;&gt;режимиToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pressureTableTabPage.Parent" xml:space="preserve">
-    <value>pressurePointsTabControl</value>
-  </data>
   <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
     <value>105, 29</value>
   </data>
@@ -432,14 +426,17 @@
   <data name="valvePointFormGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
+  <data name="&gt;&gt;buttonNextProgram.Name" xml:space="preserve">
+    <value>buttonNextProgram</value>
+  </data>
   <data name="progressBar1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;createValvePointButton.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
   <data name="&gt;&gt;newValvePointMinutesNumber.Name" xml:space="preserve">
     <value>newValvePointMinutesNumber</value>
+  </data>
+  <data name="&gt;&gt;роліПінівToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;newPressurePointMinutesNumber.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -452,6 +449,9 @@
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 28</value>
+  </data>
+  <data name="label20.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 15</value>
   </data>
   <data name="historyListBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 4</value>
@@ -477,17 +477,11 @@
   <data name="connectButton.TabIndex" type="System.Int32, mscorlib">
     <value>46</value>
   </data>
-  <data name="&gt;&gt;chartTemperatures.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="pressureTableTabPage.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 24</value>
   </data>
   <data name="programsIndexGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>48</value>
-  </data>
-  <data name="&gt;&gt;programNameLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
     <value>162, 28</value>
@@ -507,20 +501,11 @@
   <data name="&gt;&gt;newProgramNameTextBox.Parent" xml:space="preserve">
     <value>programFormGroupBox</value>
   </data>
-  <data name="statusListBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
   <data name="temperaturePointValueLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="pressurePointFormGroupBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>856, 313</value>
-  </data>
-  <data name="&gt;&gt;expectedTemperatureLabel.Name" xml:space="preserve">
-    <value>expectedTemperatureLabel</value>
-  </data>
-  <data name="pauseProgramButton.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
   </data>
   <data name="&gt;&gt;programNameLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -539,9 +524,6 @@
   </data>
   <data name="valveChart.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
-  </data>
-  <data name="createValvePointButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 53</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Значення:</value>
@@ -567,8 +549,8 @@
   <data name="&gt;&gt;chartTemperatures.Parent" xml:space="preserve">
     <value>temperatureChartTabPage</value>
   </data>
-  <data name="minutesLeftLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;createPressurePointButton.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="&gt;&gt;label14.Name" xml:space="preserve">
     <value>label14</value>
@@ -576,11 +558,14 @@
   <data name="projectNameLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 24pt, style=Bold</value>
   </data>
+  <data name="&gt;&gt;programsListBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;temperatureTableTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;deleteTemperaturePointButton.Name" xml:space="preserve">
     <value>deleteTemperaturePointButton</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="&gt;&gt;allActionsTabControl.ZOrder" xml:space="preserve">
     <value>9</value>
@@ -594,11 +579,11 @@
   <data name="label4.Text" xml:space="preserve">
     <value>Час:</value>
   </data>
-  <data name="historyListBox.ItemHeight" type="System.Int32, mscorlib">
-    <value>15</value>
+  <data name="label11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="pressureChartTabPage.Text" xml:space="preserve">
-    <value>Графік Тиску Води</value>
+  <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 15</value>
   </data>
   <data name="newValvePointMinutesNumber.Location" type="System.Drawing.Point, System.Drawing">
     <value>116, 26</value>
@@ -639,6 +624,9 @@
   <data name="temperaturePointsListBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
+  <data name="minutesLeftLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
   <data name="&gt;&gt;temperaturesPage.Parent" xml:space="preserve">
     <value>allActionsTabControl</value>
   </data>
@@ -647,9 +635,6 @@
   </data>
   <data name="label13.Text" xml:space="preserve">
     <value>сек</value>
-  </data>
-  <data name="actionGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1132, 249</value>
   </data>
   <data name="&gt;&gt;progressBar1.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -668,6 +653,9 @@
   </data>
   <data name="&gt;&gt;pauseProgramButton.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="valvePointsListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
   </data>
   <data name="&gt;&gt;калібруванняТермодатчикаToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -695,6 +683,9 @@
   </data>
   <data name="createTemperaturePointButton.Text" xml:space="preserve">
     <value>Створити</value>
+  </data>
+  <data name="label20.Text" xml:space="preserve">
+    <value>Енергостанція</value>
   </data>
   <data name="valveChartTabPage.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 24</value>
@@ -729,14 +720,23 @@
   <data name="&gt;&gt;createTemperaturePointButton.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="&gt;&gt;newValvePointSecondsNumber.Name" xml:space="preserve">
-    <value>newValvePointSecondsNumber</value>
+  <data name="deletePressurePointButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;statusPage.Parent" xml:space="preserve">
+    <value>allActionsTabControl</value>
   </data>
   <data name="chartTemperatures.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 3, 4, 3</value>
   </data>
+  <data name="українськаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 22</value>
+  </data>
   <data name="&gt;&gt;temperatureTableTabPage.Name" xml:space="preserve">
     <value>temperatureTableTabPage</value>
+  </data>
+  <data name="&gt;&gt;temperaturePointValueLabel.Parent" xml:space="preserve">
+    <value>temperaturePointFormGroupBox</value>
   </data>
   <data name="valvePointFormGroupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -768,14 +768,14 @@
   <data name="&gt;&gt;label10.Name" xml:space="preserve">
     <value>label10</value>
   </data>
-  <data name="temperaturePointsListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 0</value>
+  <data name="&gt;&gt;programFormGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 24</value>
+  <data name="label11.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="programFormGroupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -788,12 +788,6 @@
   </data>
   <data name="&gt;&gt;LaunchedProgramLabel.Name" xml:space="preserve">
     <value>LaunchedProgramLabel</value>
-  </data>
-  <data name="button4.Text" xml:space="preserve">
-    <value>Наступний &gt;</value>
-  </data>
-  <data name="&gt;&gt;pressuresChart.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
   </data>
   <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
     <value>162, 25</value>
@@ -813,8 +807,8 @@
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="createPressurePointButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 55</value>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>valvePointFormGroupBox</value>
   </data>
   <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -824,9 +818,6 @@
   </data>
   <data name="programsIndexGroupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
-  </data>
-  <data name="&gt;&gt;pressureChartTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -849,11 +840,20 @@
   <data name="buttonNextProgram.Text" xml:space="preserve">
     <value>Наступний &gt;</value>
   </data>
+  <data name="statusPage.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="createProgramButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>152, 101</value>
+  </data>
   <data name="режимиToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 20</value>
   </data>
   <data name="&gt;&gt;temperaturePointsListBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 15</value>
@@ -861,20 +861,17 @@
   <data name="button5.Location" type="System.Drawing.Point, System.Drawing">
     <value>498, 189</value>
   </data>
-  <data name="temperaturePointValueLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 55</value>
-  </data>
   <data name="&gt;&gt;label16.Name" xml:space="preserve">
     <value>label16</value>
   </data>
-  <data name="allActionsTabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>843, 285</value>
+  <data name="createValvePointButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>165, 53</value>
   </data>
   <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;label13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 55</value>
   </data>
   <data name="&gt;&gt;оновитиІнформаціюПроДоступніПіниToolStripMenuItem.Name" xml:space="preserve">
     <value>оновитиІнформаціюПроДоступніПіниToolStripMenuItem</value>
@@ -903,6 +900,9 @@
   <data name="&gt;&gt;connectButton.Name" xml:space="preserve">
     <value>connectButton</value>
   </data>
+  <data name="valveChart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>811, 214</value>
+  </data>
   <data name="createPressurePointButton.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
   </data>
@@ -915,8 +915,14 @@
   <data name="&gt;&gt;temperaturePointValueLabel.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="temperaturePointFormGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>268, 82</value>
+  </data>
   <data name="temperaturePointsTabControl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
+  </data>
+  <data name="&gt;&gt;allActionsTabControl.Name" xml:space="preserve">
+    <value>allActionsTabControl</value>
   </data>
   <data name="&gt;&gt;label17.Name" xml:space="preserve">
     <value>label17</value>
@@ -924,14 +930,14 @@
   <data name="&gt;&gt;createTemperaturePointButton.Name" xml:space="preserve">
     <value>createTemperaturePointButton</value>
   </data>
-  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 28</value>
-  </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="вихідToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 22</value>
+  </data>
+  <data name="&gt;&gt;режимиToolStripMenuItem.Name" xml:space="preserve">
+    <value>режимиToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;newTemperaturePointHoursNumber.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -942,14 +948,14 @@
   <data name="buttonNextProgram.Size" type="System.Drawing.Size, System.Drawing">
     <value>105, 30</value>
   </data>
-  <data name="valvePointsTabControl.TabIndex" type="System.Int32, mscorlib">
-    <value>42</value>
-  </data>
   <data name="&gt;&gt;налаштуванняToolStripMenuItem.Name" xml:space="preserve">
     <value>налаштуванняToolStripMenuItem</value>
   </data>
   <data name="label14.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
+  </data>
+  <data name="&gt;&gt;temperaturePointFormGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
     <value>menuStrip1</value>
@@ -1005,11 +1011,8 @@
   <data name="buttonDeleteProgram.Location" type="System.Drawing.Point, System.Drawing">
     <value>632, 101</value>
   </data>
-  <data name="&gt;&gt;allActionsTabControl.Name" xml:space="preserve">
-    <value>allActionsTabControl</value>
-  </data>
-  <data name="pressuresChart.Size" type="System.Drawing.Size, System.Drawing">
-    <value>813, 217</value>
+  <data name="pressurePointFormGroupBox.Text" xml:space="preserve">
+    <value>Точка Тиску Води</value>
   </data>
   <data name="chartTemperatures.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1032,9 +1035,6 @@
   <data name="temperaturePointValueLabel.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
   </data>
-  <data name="buttonDeleteProgram.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
   <data name="&gt;&gt;label10.Parent" xml:space="preserve">
     <value>pressurePointFormGroupBox</value>
   </data>
@@ -1046,9 +1046,6 @@
   </data>
   <data name="LaunchedProgramLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 27</value>
-  </data>
-  <data name="label13.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="progressGroupBox.Text" xml:space="preserve">
     <value>Прогрес</value>
@@ -1065,13 +1062,7 @@
   <data name="перевіркаПінівToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>193, 22</value>
   </data>
-  <data name="minutesLeftLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
   <data name="&gt;&gt;createValvePointButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;deletePressurePointButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;button4.Name" xml:space="preserve">
@@ -1146,9 +1137,6 @@
   <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
     <value>501, 191</value>
   </data>
-  <data name="label19.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="pressuresChart.Text" xml:space="preserve">
     <value>chart1</value>
   </data>
@@ -1166,6 +1154,9 @@
   </data>
   <data name="pressureChartTabPage.Size" type="System.Drawing.Size, System.Drawing">
     <value>823, 224</value>
+  </data>
+  <data name="&gt;&gt;button6.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="createPressurePointButton.Text" xml:space="preserve">
     <value>Створити</value>
@@ -1187,9 +1178,6 @@
   </data>
   <data name="&gt;&gt;valveChart.Name" xml:space="preserve">
     <value>valveChart</value>
-  </data>
-  <data name="newValvePointHoursNumber.TabIndex" type="System.Int32, mscorlib">
-    <value>40</value>
   </data>
   <data name="&gt;&gt;label19.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -1215,6 +1203,9 @@
   <data name="&gt;&gt;deletePressurePointButton.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>&lt; Попередній</value>
+  </data>
   <data name="label6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
@@ -1226,6 +1217,9 @@
   </data>
   <data name="LaunchedProgramLabel.Text" xml:space="preserve">
     <value>-</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>Час:</value>
   </data>
   <data name="newValvePointValueTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 21</value>
@@ -1272,6 +1266,9 @@
   <data name="newTemperaturePointMinutesNumber.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 21</value>
   </data>
+  <data name="valveChartTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
   <data name="newPressurePointMinutesNumber.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 21</value>
   </data>
@@ -1289,6 +1286,12 @@
   </data>
   <data name="&gt;&gt;label2.Parent" xml:space="preserve">
     <value>pressurePointFormGroupBox</value>
+  </data>
+  <data name="pressureTableTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="createValvePointButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -1308,8 +1311,8 @@
   <data name="deleteTemperaturePointButton.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
   </data>
-  <data name="button10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 23</value>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 15</value>
   </data>
   <data name="programFormGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -1317,20 +1320,20 @@
   <data name="label6.TabIndex" type="System.Int32, mscorlib">
     <value>44</value>
   </data>
-  <data name="&gt;&gt;label10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="valvePointsTabControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 2</value>
-  </data>
   <data name="label19.Text" xml:space="preserve">
     <value>Підсвітка</value>
+  </data>
+  <data name="&gt;&gt;label11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label9.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="createProgramButton.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
+  </data>
+  <data name="temperaturePointsListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 0</value>
   </data>
   <data name="&gt;&gt;valveTableTabPage.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -1383,17 +1386,14 @@
   <data name="&gt;&gt;deletePressurePointButton.Name" xml:space="preserve">
     <value>deletePressurePointButton</value>
   </data>
-  <data name="&gt;&gt;connectButton.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;label15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="deleteSteamPointButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>721, 189</value>
   </data>
   <data name="label14.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="pressurePointsTabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>831, 252</value>
   </data>
   <data name="&gt;&gt;createPressurePointButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1410,26 +1410,17 @@
   <data name="button2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="deletePressurePointButton.Text" xml:space="preserve">
-    <value>Видалити</value>
-  </data>
   <data name="startProgramButton.Text" xml:space="preserve">
     <value>СТАРТ</value>
   </data>
   <data name="&gt;&gt;newValvePointHoursNumber.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="temperaturePointsTabControl.TabIndex" type="System.Int32, mscorlib">
-    <value>42</value>
-  </data>
-  <data name="temperatureLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>43</value>
+  <data name="&gt;&gt;buttonNextProgram.Parent" xml:space="preserve">
+    <value>programsIndexGroupBox</value>
   </data>
   <data name="button7.TabIndex" type="System.Int32, mscorlib">
     <value>55</value>
-  </data>
-  <data name="valveTableTabPage.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
   </data>
   <data name="&gt;&gt;programsIndexGroupBox.ZOrder" xml:space="preserve">
     <value>11</value>
@@ -1446,17 +1437,11 @@
   <data name="&gt;&gt;temperatureChartTabPage.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;temperatureLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="deleteSteamPointButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>92, 29</value>
   </data>
   <data name="programNameLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="&gt;&gt;newValvePointValueTextBox.Name" xml:space="preserve">
-    <value>newValvePointValueTextBox</value>
   </data>
   <data name="button3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1464,8 +1449,8 @@
   <data name="&gt;&gt;pressuresPage.Parent" xml:space="preserve">
     <value>allActionsTabControl</value>
   </data>
-  <data name="&gt;&gt;newTemperaturePointValueTextBox.Parent" xml:space="preserve">
-    <value>temperaturePointFormGroupBox</value>
+  <data name="&gt;&gt;deletePressurePointButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
     <value>14</value>
@@ -1473,17 +1458,20 @@
   <data name="programsListBox.ItemHeight" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
+  <data name="&gt;&gt;valvePointFormGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="label13.TabIndex" type="System.Int32, mscorlib">
     <value>53</value>
+  </data>
+  <data name="&gt;&gt;breadBindingSource.Name" xml:space="preserve">
+    <value>breadBindingSource</value>
   </data>
   <data name="temperatureChartTabPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 24</value>
-  </data>
-  <data name="&gt;&gt;progressBar1.Name" xml:space="preserve">
-    <value>progressBar1</value>
   </data>
   <data name="label19.TabIndex" type="System.Int32, mscorlib">
     <value>54</value>
@@ -1509,17 +1497,14 @@
   <data name="&gt;&gt;chartTemperatures.Name" xml:space="preserve">
     <value>chartTemperatures</value>
   </data>
-  <data name="newPressurePointHoursNumber.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 23</value>
-  </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 15</value>
   </data>
   <data name="minutesLeftInfoLabel.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="temperaturePointValueLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 15</value>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Очікувана:</value>
   </data>
   <data name="&gt;&gt;valvePointFormGroupBox.Name" xml:space="preserve">
     <value>valvePointFormGroupBox</value>
@@ -1527,8 +1512,14 @@
   <data name="&gt;&gt;newTemperaturePointMinutesNumber.Name" xml:space="preserve">
     <value>newTemperaturePointMinutesNumber</value>
   </data>
+  <data name="allActionsTabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
   <data name="label8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="&gt;&gt;buttonDeleteProgram.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1536,20 +1527,908 @@
   <data name="valvePointFormGroupBox.TabIndex" type="System.Int32, mscorlib">
     <value>53</value>
   </data>
+  <data name="temperatureChartTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="newValvePointSecondsNumber.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 21</value>
   </data>
-  <data name="buttonDeleteProgram.Text" xml:space="preserve">
-    <value>Видалити</value>
-  </data>
   <data name="temperaturePointFormGroupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="&gt;&gt;minutesLeftLabel.Parent" xml:space="preserve">
     <value>progressGroupBox</value>
+  </data>
+  <data name="label18.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="&gt;&gt;label12.Name" xml:space="preserve">
+    <value>label12</value>
+  </data>
+  <data name="&gt;&gt;continueProgramButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button7.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;pressurePointsTabControl.Parent" xml:space="preserve">
+    <value>pressuresPage</value>
+  </data>
+  <data name="button7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1146, 82</value>
+  </data>
+  <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 15</value>
+  </data>
+  <data name="&gt;&gt;pressurePointFormGroupBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;оновитиІнформаціюПроДоступніПіниToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="temperatureLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="createTemperaturePointButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>165, 48</value>
+  </data>
+  <data name="button5.Text" xml:space="preserve">
+    <value>&lt; Попередній</value>
+  </data>
+  <data name="valveTableTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>819, 224</value>
+  </data>
+  <data name="&gt;&gt;pressurePointFormGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="temperaturePointValueLabel.Text" xml:space="preserve">
+    <value>Значення:</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="button6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;startProgramButton.Name" xml:space="preserve">
+    <value>startProgramButton</value>
+  </data>
+  <data name="historyListBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>827, 244</value>
+  </data>
+  <data name="&gt;&gt;newValvePointSecondsNumber.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;valveTableTabPage.Name" xml:space="preserve">
+    <value>valveTableTabPage</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="button6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;button7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;programsListBox.Parent" xml:space="preserve">
+    <value>programsIndexGroupBox</value>
+  </data>
+  <data name="chartTemperatures.Text" xml:space="preserve">
+    <value>chart1</value>
+  </data>
+  <data name="&gt;&gt;pressureChartTabPage.Parent" xml:space="preserve">
+    <value>pressurePointsTabControl</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pressurePointFormGroupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="createPressurePointButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="&gt;&gt;valvePointsTabControl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;temperatureTableTabPage.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="newTemperaturePointHoursNumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>45, 22</value>
+  </data>
+  <data name="temperaturePointsTabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 4</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="newValvePointMinutesNumber.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 21</value>
+  </data>
+  <data name="&gt;&gt;newValvePointMinutesNumber.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;statusPage.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;button9.Name" xml:space="preserve">
+    <value>button9</value>
+  </data>
+  <data name="historyPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="historyListBox.ColumnWidth" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;programNameLabel.Name" xml:space="preserve">
+    <value>programNameLabel</value>
+  </data>
+  <data name="temperatureLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 28</value>
+  </data>
+  <data name="&gt;&gt;historyListBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button4.Parent" xml:space="preserve">
+    <value>pressureTableTabPage</value>
+  </data>
+  <data name="калібруванняТермодатчикаToolStripMenuItem.Text" xml:space="preserve">
+    <value>Калібрування Термодатчика</value>
+  </data>
+  <data name="label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label17.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="deleteTemperaturePointButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>721, 185</value>
+  </data>
+  <data name="&gt;&gt;button4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;newValvePointValueTextBox.Parent" xml:space="preserve">
+    <value>valvePointFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;connectButton.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="label10.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="button8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="newPressurePointSecondsNumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>187, 23</value>
+  </data>
+  <data name="&gt;&gt;newTemperaturePointSecondsNumber.Parent" xml:space="preserve">
+    <value>temperaturePointFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;buttonPreviousProgram.Parent" xml:space="preserve">
+    <value>programsIndexGroupBox</value>
+  </data>
+  <data name="label18.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;valveTableTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;newTemperaturePointValueTextBox.Name" xml:space="preserve">
+    <value>newTemperaturePointValueTextBox</value>
+  </data>
+  <data name="statusListBox.ColumnWidth" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="button8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 23</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="buttonPreviousProgram.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 30</value>
+  </data>
+  <data name="chartTemperatures.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="temperaturePointFormGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="&gt;&gt;button5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;newPressurePointHoursNumber.Name" xml:space="preserve">
+    <value>newPressurePointHoursNumber</value>
+  </data>
+  <data name="programNameLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="pressuresPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="&gt;&gt;pressuresChart.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;перевіркаПінівToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LaunchedProgramLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 15</value>
+  </data>
+  <data name="newValvePointSecondsNumber.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="temperatureLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 15</value>
+  </data>
+  <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 15</value>
+  </data>
+  <data name="&gt;&gt;valveChartTabPage.Parent" xml:space="preserve">
+    <value>valvePointsTabControl</value>
+  </data>
+  <data name="&gt;&gt;newValvePointMinutesNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonNextProgram.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="button2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;newPressurePointHoursNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="valvePointsListBox.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;button6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="createValvePointButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 22</value>
+  </data>
+  <data name="pressuresChart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 2</value>
+  </data>
+  <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="temperatureTableTabPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="&gt;&gt;deleteTemperaturePointButton.Parent" xml:space="preserve">
+    <value>temperatureTableTabPage</value>
+  </data>
+  <data name="&gt;&gt;діагностикаToolStripMenuItem.Name" xml:space="preserve">
+    <value>діагностикаToolStripMenuItem</value>
+  </data>
+  <data name="програмаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 20</value>
+  </data>
+  <data name="stopProgramButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 40</value>
+  </data>
+  <data name="&gt;&gt;label20.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="programFormGroupBox.Text" xml:space="preserve">
+    <value>Створити Режим</value>
+  </data>
+  <data name="&gt;&gt;deleteSteamPointButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LaunchedProgramLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;newTemperaturePointMinutesNumber.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="languageToolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 20</value>
+  </data>
+  <data name="&gt;&gt;buttonPreviousProgram.Name" xml:space="preserve">
+    <value>buttonPreviousProgram</value>
+  </data>
+  <data name="deleteTemperaturePointButton.Text" xml:space="preserve">
+    <value>Видалити</value>
+  </data>
+  <data name="&gt;&gt;вихідToolStripMenuItem.Name" xml:space="preserve">
+    <value>вихідToolStripMenuItem</value>
+  </data>
+  <data name="label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;valveChartTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;valvePointFormGroupBox.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;роліПінівToolStripMenuItem.Name" xml:space="preserve">
+    <value>роліПінівToolStripMenuItem</value>
+  </data>
+  <data name="pressureTableTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="&gt;&gt;оновитиІнформаціюПроДоступніРежимиToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="оновитиІнформаціюПроДоступніРежимиToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>319, 22</value>
+  </data>
+  <data name="LaunchedProgramLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="valvesPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="label9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="statusPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="&gt;&gt;newPressurePointSecondsNumber.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1419, 24</value>
+  </data>
+  <data name="temperaturesPage.Text" xml:space="preserve">
+    <value>Температури</value>
+  </data>
+  <data name="&gt;&gt;projectNameLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="button5.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="&gt;&gt;temperaturesPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;newTemperaturePointHoursNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="expectedTemperatureLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 15</value>
+  </data>
+  <data name="&gt;&gt;programsIndexGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LaunchedProgramLabel.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="label19.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 15</value>
+  </data>
+  <data name="&gt;&gt;перевіркаПінівToolStripMenuItem.Name" xml:space="preserve">
+    <value>перевіркаПінівToolStripMenuItem</value>
+  </data>
+  <data name="minutesLeftLabel.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 15</value>
+  </data>
+  <data name="&gt;&gt;valvePointsListBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;deletePressurePointButton.Parent" xml:space="preserve">
+    <value>pressureTableTabPage</value>
+  </data>
+  <data name="buttonDeleteProgram.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="createProgramButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 29</value>
+  </data>
+  <data name="&gt;&gt;valvesPage.Name" xml:space="preserve">
+    <value>valvesPage</value>
+  </data>
+  <data name="&gt;&gt;minutesLeftInfoLabel.Parent" xml:space="preserve">
+    <value>progressGroupBox</value>
+  </data>
+  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>хв</value>
+  </data>
+  <data name="&gt;&gt;chartTemperatures.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
+  </data>
+  <data name="&gt;&gt;createProgramButton.Parent" xml:space="preserve">
+    <value>programFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;button8.Name" xml:space="preserve">
+    <value>button8</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="налаштуванняToolStripMenuItem.Text" xml:space="preserve">
+    <value>Налаштування</value>
+  </data>
+  <data name="&gt;&gt;temperaturePointsListBox.Name" xml:space="preserve">
+    <value>temperaturePointsListBox</value>
+  </data>
+  <data name="label11.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="&gt;&gt;русскийToolStripMenuItem.Name" xml:space="preserve">
+    <value>русскийToolStripMenuItem</value>
+  </data>
+  <data name="valveChart.Text" xml:space="preserve">
+    <value>chart1</value>
+  </data>
+  <data name="button10.Text" xml:space="preserve">
+    <value>Вкл</value>
+  </data>
+  <data name="connectButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 40</value>
+  </data>
+  <data name="&gt;&gt;temperaturePointValueLabel.Name" xml:space="preserve">
+    <value>temperaturePointValueLabel</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="historyListBox.ItemHeight" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;temperatureChartTabPage.Parent" xml:space="preserve">
+    <value>temperaturePointsTabControl</value>
+  </data>
+  <data name="&gt;&gt;label15.Name" xml:space="preserve">
+    <value>label15</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="&gt;&gt;temperaturesPage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="historyListBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="historyListBox.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;buttonDeleteProgram.Parent" xml:space="preserve">
+    <value>programsIndexGroupBox</value>
+  </data>
+  <data name="&gt;&gt;button2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="continueProgramButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 40</value>
+  </data>
+  <data name="&gt;&gt;temperaturePointFormGroupBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 15</value>
+  </data>
+  <data name="&gt;&gt;програмаToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>233, 25</value>
+  </data>
+  <data name="deletePressurePointButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 27</value>
+  </data>
+  <data name="button7.Text" xml:space="preserve">
+    <value>Вкл</value>
+  </data>
+  <data name="button3.Text" xml:space="preserve">
+    <value>&lt; Попередній</value>
+  </data>
+  <data name="button8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1223, 82</value>
+  </data>
+  <data name="&gt;&gt;temperatureChartTabPage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;deleteTemperaturePointButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;newProgramNameTextBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="createTemperaturePointButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;actionGroupBox.Name" xml:space="preserve">
+    <value>actionGroupBox</value>
+  </data>
+  <data name="button2.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="&gt;&gt;valveChart.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="startProgramButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;expectedTemperatureLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;button3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="progressGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>841, 60</value>
+  </data>
+  <data name="actionGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>valvePointFormGroupBox</value>
+  </data>
+  <data name="newPressurePointSecondsNumber.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="&gt;&gt;налаштуванняToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;діагностикаToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="newTemperaturePointSecondsNumber.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 21</value>
+  </data>
+  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>991, 62</value>
+  </data>
+  <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1129, 149</value>
+  </data>
+  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 15</value>
+  </data>
+  <data name="&gt;&gt;newPressurePointMinutesNumber.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="valvesPage.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="pauseProgramButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 40</value>
+  </data>
+  <data name="pauseProgramButton.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="valveTableTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="&gt;&gt;newValvePointMinutesNumber.Parent" xml:space="preserve">
+    <value>valvePointFormGroupBox</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="createProgramButton.Text" xml:space="preserve">
+    <value>Створити</value>
+  </data>
+  <data name="temperaturePointValueLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;minutesLeftLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pressuresChart.Name" xml:space="preserve">
+    <value>pressuresChart</value>
+  </data>
+  <data name="createValvePointButton.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="valvesPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>835, 257</value>
+  </data>
+  <data name="&gt;&gt;chartTemperatures.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="actionGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1132, 249</value>
+  </data>
+  <data name="pressurePointsListBox.ColumnWidth" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;projectNameLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;startProgramButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusPage.Name" xml:space="preserve">
+    <value>statusPage</value>
+  </data>
+  <data name="&gt;&gt;actionGroupBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;temperatureTableTabPage.Parent" xml:space="preserve">
+    <value>temperaturePointsTabControl</value>
+  </data>
+  <data name="programsIndexGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 58</value>
+  </data>
+  <data name="&gt;&gt;pressuresChart.Parent" xml:space="preserve">
+    <value>pressureChartTabPage</value>
+  </data>
+  <data name="&gt;&gt;pressureTableTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="valvePointsListBox.ColumnWidth" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="pressurePointsListBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>817, 214</value>
+  </data>
+  <data name="&gt;&gt;continueProgramButton.Parent" xml:space="preserve">
+    <value>actionGroupBox</value>
+  </data>
+  <data name="buttonNextProgram.Location" type="System.Drawing.Point, System.Drawing">
+    <value>121, 101</value>
+  </data>
+  <data name="&gt;&gt;button5.Parent" xml:space="preserve">
+    <value>valveTableTabPage</value>
+  </data>
+  <data name="label19.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 15</value>
+  </data>
+  <data name="newProgramNameTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 21</value>
+  </data>
+  <data name="button10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1146, 135</value>
+  </data>
+  <data name="label15.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="newPressurePointMinutesNumber.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="pressurePointsTabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>831, 252</value>
+  </data>
+  <data name="pressurePointsListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 4</value>
+  </data>
+  <data name="&gt;&gt;temperaturePointFormGroupBox.Name" xml:space="preserve">
+    <value>temperaturePointFormGroupBox</value>
+  </data>
+  <data name="valvePointsTabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 2</value>
+  </data>
+  <data name="&gt;&gt;allActionsTabControl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;programNameLabel.Parent" xml:space="preserve">
+    <value>programFormGroupBox</value>
+  </data>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="&gt;&gt;button6.Parent" xml:space="preserve">
+    <value>valveTableTabPage</value>
+  </data>
+  <data name="&gt;&gt;valveChartTabPage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pressurePointsListBox.Parent" xml:space="preserve">
+    <value>pressureTableTabPage</value>
+  </data>
+  <data name="newPressurePointHoursNumber.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="newTemperaturePointSecondsNumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>187, 22</value>
+  </data>
+  <data name="&gt;&gt;breadBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;historyListBox.Name" xml:space="preserve">
+    <value>historyListBox</value>
+  </data>
+  <data name="minutesLeftLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label17.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;button10.Name" xml:space="preserve">
+    <value>button10</value>
+  </data>
+  <data name="pressurePointFormGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="temperaturePointFormGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="&gt;&gt;вихідToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="&gt;&gt;statusPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button7.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="continueProgramButton.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>233, 28</value>
+  </data>
+  <data name="&gt;&gt;калібруванняТермодатчикаToolStripMenuItem.Name" xml:space="preserve">
+    <value>калібруванняТермодатчикаToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;programNameLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="valvePointsTabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="createValvePointButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 27</value>
+  </data>
+  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>84, 25</value>
+  </data>
+  <data name="&gt;&gt;pressuresChart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>хв</value>
+  </data>
+  <data name="progressBar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>531, 26</value>
+  </data>
+  <data name="label20.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="createProgramButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;temperaturePointsTabControl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="createProgramButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;temperaturePointValueLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;valveTableTabPage.Parent" xml:space="preserve">
+    <value>valvePointsTabControl</value>
+  </data>
+  <data name="&gt;&gt;languageToolStripMenuItem2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="deleteSteamPointButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;buttonPreviousProgram.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;valvePointsTabControl.Name" xml:space="preserve">
+    <value>valvePointsTabControl</value>
+  </data>
+  <data name="&gt;&gt;createValvePointButton.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;stopProgramButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="minutesLeftInfoLabel.Text" xml:space="preserve">
+    <value>хв до закінчення</value>
+  </data>
+  <data name="&gt;&gt;expectedTemperatureLabel.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;button9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>temperatureTableTabPage</value>
+  </data>
+  <data name="&gt;&gt;connectButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label9.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="valveChartTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;temperatureChartTabPage.Name" xml:space="preserve">
+    <value>temperatureChartTabPage</value>
+  </data>
+  <data name="deleteSteamPointButton.Text" xml:space="preserve">
+    <value>Видалити</value>
+  </data>
+  <data name="temperaturePointFormGroupBox.Text" xml:space="preserve">
+    <value>Точка Температури</value>
+  </data>
+  <data name="&gt;&gt;label10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button5.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="programsListBox.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1627,884 +2506,17 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
 </value>
   </data>
-  <data name="label18.TabIndex" type="System.Int32, mscorlib">
-    <value>57</value>
-  </data>
-  <data name="&gt;&gt;label12.Name" xml:space="preserve">
-    <value>label12</value>
-  </data>
-  <data name="&gt;&gt;pressureTableTabPage.Name" xml:space="preserve">
-    <value>pressureTableTabPage</value>
-  </data>
-  <data name="&gt;&gt;continueProgramButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pressurePointsTabControl.Parent" xml:space="preserve">
-    <value>pressuresPage</value>
-  </data>
-  <data name="button7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1146, 82</value>
-  </data>
-  <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 15</value>
-  </data>
-  <data name="&gt;&gt;режимиToolStripMenuItem.Name" xml:space="preserve">
-    <value>режимиToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;temperatureLabel.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;оновитиІнформаціюПроДоступніПіниToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="temperatureLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="createTemperaturePointButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 48</value>
-  </data>
-  <data name="&gt;&gt;label7.Name" xml:space="preserve">
-    <value>label7</value>
-  </data>
-  <data name="button5.Text" xml:space="preserve">
-    <value>&lt; Попередній</value>
-  </data>
-  <data name="&gt;&gt;continueProgramButton.Name" xml:space="preserve">
-    <value>continueProgramButton</value>
-  </data>
-  <data name="valveTableTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>819, 224</value>
-  </data>
-  <data name="&gt;&gt;pressurePointFormGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="temperaturePointValueLabel.Text" xml:space="preserve">
-    <value>Значення:</value>
-  </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="valveTableTabPage.Text" xml:space="preserve">
-    <value>Таблиця Рівня Пари</value>
-  </data>
-  <data name="button6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;startProgramButton.Name" xml:space="preserve">
-    <value>startProgramButton</value>
-  </data>
-  <data name="historyListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>827, 244</value>
-  </data>
-  <data name="&gt;&gt;newValvePointSecondsNumber.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;valveTableTabPage.Name" xml:space="preserve">
-    <value>valveTableTabPage</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="button6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="&gt;&gt;programsListBox.Parent" xml:space="preserve">
-    <value>programsIndexGroupBox</value>
-  </data>
-  <data name="chartTemperatures.Text" xml:space="preserve">
-    <value>chart1</value>
-  </data>
-  <data name="&gt;&gt;pressureChartTabPage.Parent" xml:space="preserve">
-    <value>pressurePointsTabControl</value>
-  </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="pressurePointFormGroupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="&gt;&gt;valvePointsTabControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;programFormGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;temperatureTableTabPage.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="newTemperaturePointHoursNumber.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 22</value>
-  </data>
-  <data name="temperaturePointsTabControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 4</value>
-  </data>
-  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;newValvePointMinutesNumber.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;statusPage.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;button9.Name" xml:space="preserve">
-    <value>button9</value>
-  </data>
-  <data name="historyPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="temperatureLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>99, 28</value>
-  </data>
-  <data name="&gt;&gt;historyListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;оновитиІнформаціюПроДоступніРежимиToolStripMenuItem.Name" xml:space="preserve">
-    <value>оновитиІнформаціюПроДоступніРежимиToolStripMenuItem</value>
+  <data name="newTemperaturePointMinutesNumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>116, 22</value>
   </data>
   <data name="&gt;&gt;deleteTemperaturePointButton.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="deleteTemperaturePointButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>721, 185</value>
-  </data>
-  <data name="&gt;&gt;button4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;newValvePointValueTextBox.Parent" xml:space="preserve">
-    <value>valvePointFormGroupBox</value>
-  </data>
-  <data name="&gt;&gt;connectButton.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="label10.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="button8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="valveTableTabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 24</value>
-  </data>
-  <data name="newPressurePointSecondsNumber.Location" type="System.Drawing.Point, System.Drawing">
-    <value>187, 23</value>
-  </data>
-  <data name="&gt;&gt;buttonPreviousProgram.Parent" xml:space="preserve">
-    <value>programsIndexGroupBox</value>
-  </data>
-  <data name="&gt;&gt;valveTableTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="statusListBox.ColumnWidth" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="button8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 23</value>
-  </data>
-  <data name="&gt;&gt;label7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="buttonPreviousProgram.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 30</value>
-  </data>
-  <data name="chartTemperatures.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="temperaturePointFormGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>50</value>
-  </data>
-  <data name="&gt;&gt;button5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;newPressurePointHoursNumber.Name" xml:space="preserve">
-    <value>newPressurePointHoursNumber</value>
-  </data>
-  <data name="programNameLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="pressuresPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 24</value>
-  </data>
-  <data name="&gt;&gt;перевіркаПінівToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LaunchedProgramLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12, 15</value>
-  </data>
-  <data name="temperatureLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 15</value>
-  </data>
-  <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 15</value>
-  </data>
-  <data name="&gt;&gt;valveChartTabPage.Parent" xml:space="preserve">
-    <value>valvePointsTabControl</value>
-  </data>
-  <data name="&gt;&gt;newValvePointMinutesNumber.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="button2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="valvePointsListBox.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="&gt;&gt;button6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="createValvePointButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 22</value>
-  </data>
-  <data name="pressuresChart.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 2</value>
-  </data>
-  <data name="діагностикаToolStripMenuItem.Text" xml:space="preserve">
-    <value>Піни</value>
-  </data>
-  <data name="temperatureTableTabPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="&gt;&gt;deleteTemperaturePointButton.Parent" xml:space="preserve">
-    <value>temperatureTableTabPage</value>
-  </data>
-  <data name="&gt;&gt;діагностикаToolStripMenuItem.Name" xml:space="preserve">
-    <value>діагностикаToolStripMenuItem</value>
-  </data>
-  <data name="програмаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 20</value>
-  </data>
-  <data name="stopProgramButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 40</value>
-  </data>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
-  </data>
-  <data name="&gt;&gt;label20.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="programFormGroupBox.Text" xml:space="preserve">
-    <value>Створити Режим</value>
-  </data>
-  <data name="&gt;&gt;pressurePointFormGroupBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;deleteSteamPointButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="LaunchedProgramLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 15</value>
-  </data>
-  <data name="languageToolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12, 20</value>
-  </data>
-  <data name="&gt;&gt;buttonPreviousProgram.Name" xml:space="preserve">
-    <value>buttonPreviousProgram</value>
-  </data>
-  <data name="deleteTemperaturePointButton.Text" xml:space="preserve">
-    <value>Видалити</value>
-  </data>
-  <data name="&gt;&gt;вихідToolStripMenuItem.Name" xml:space="preserve">
-    <value>вихідToolStripMenuItem</value>
-  </data>
-  <data name="label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;valveChartTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;valvePointFormGroupBox.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;роліПінівToolStripMenuItem.Name" xml:space="preserve">
-    <value>роліПінівToolStripMenuItem</value>
-  </data>
-  <data name="pressureTableTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="&gt;&gt;оновитиІнформаціюПроДоступніРежимиToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="оновитиІнформаціюПроДоступніРежимиToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>319, 22</value>
-  </data>
-  <data name="LaunchedProgramLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="valvesPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 24</value>
-  </data>
-  <data name="label9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="statusPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="&gt;&gt;newPressurePointSecondsNumber.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1419, 24</value>
-  </data>
-  <data name="button5.TabIndex" type="System.Int32, mscorlib">
-    <value>47</value>
-  </data>
-  <data name="&gt;&gt;temperaturesPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;newTemperaturePointHoursNumber.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="expectedTemperatureLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12, 15</value>
-  </data>
-  <data name="&gt;&gt;programsIndexGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LaunchedProgramLabel.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="label19.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 15</value>
-  </data>
-  <data name="&gt;&gt;перевіркаПінівToolStripMenuItem.Name" xml:space="preserve">
-    <value>перевіркаПінівToolStripMenuItem</value>
-  </data>
-  <data name="minutesLeftLabel.Text" xml:space="preserve">
-    <value>-</value>
-  </data>
-  <data name="button3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>&lt; Попередній</value>
-  </data>
-  <data name="buttonDeleteProgram.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="createProgramButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 29</value>
-  </data>
-  <data name="&gt;&gt;minutesLeftInfoLabel.Parent" xml:space="preserve">
-    <value>progressGroupBox</value>
-  </data>
-  <data name="&gt;&gt;connectButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label10.Text" xml:space="preserve">
-    <value>хв</value>
-  </data>
-  <data name="&gt;&gt;chartTemperatures.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
-  </data>
-  <data name="&gt;&gt;createProgramButton.Parent" xml:space="preserve">
-    <value>programFormGroupBox</value>
-  </data>
-  <data name="&gt;&gt;button8.Name" xml:space="preserve">
-    <value>button8</value>
-  </data>
-  <data name="pressuresPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>835, 257</value>
-  </data>
-  <data name="&gt;&gt;button1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="налаштуванняToolStripMenuItem.Text" xml:space="preserve">
-    <value>Налаштування</value>
-  </data>
-  <data name="&gt;&gt;temperaturePointsListBox.Name" xml:space="preserve">
-    <value>temperaturePointsListBox</value>
-  </data>
-  <data name="label11.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="&gt;&gt;русскийToolStripMenuItem.Name" xml:space="preserve">
-    <value>русскийToolStripMenuItem</value>
-  </data>
-  <data name="valveChart.Text" xml:space="preserve">
-    <value>chart1</value>
-  </data>
-  <data name="button10.Text" xml:space="preserve">
-    <value>Вкл</value>
-  </data>
-  <data name="connectButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 40</value>
-  </data>
-  <data name="label9.Text" xml:space="preserve">
-    <value>сек</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="newValvePointSecondsNumber.TabIndex" type="System.Int32, mscorlib">
-    <value>43</value>
-  </data>
-  <data name="&gt;&gt;temperatureChartTabPage.Parent" xml:space="preserve">
-    <value>temperaturePointsTabControl</value>
-  </data>
-  <data name="&gt;&gt;label15.Name" xml:space="preserve">
-    <value>label15</value>
-  </data>
-  <data name="&gt;&gt;label8.Name" xml:space="preserve">
-    <value>label8</value>
-  </data>
-  <data name="&gt;&gt;temperaturesPage.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="historyListBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="button10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1146, 135</value>
-  </data>
-  <data name="historyListBox.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="&gt;&gt;buttonDeleteProgram.Parent" xml:space="preserve">
-    <value>programsIndexGroupBox</value>
-  </data>
-  <data name="&gt;&gt;button2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="continueProgramButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 40</value>
-  </data>
-  <data name="&gt;&gt;temperaturePointFormGroupBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;програмаToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 25</value>
-  </data>
-  <data name="deletePressurePointButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 27</value>
-  </data>
-  <data name="temperaturesPage.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="button3.Text" xml:space="preserve">
-    <value>&lt; Попередній</value>
-  </data>
-  <data name="button8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1223, 82</value>
-  </data>
-  <data name="&gt;&gt;temperatureChartTabPage.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;deleteTemperaturePointButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;newProgramNameTextBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;label8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="createTemperaturePointButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
-  </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>497, 185</value>
-  </data>
-  <data name="&gt;&gt;actionGroupBox.Name" xml:space="preserve">
-    <value>actionGroupBox</value>
-  </data>
-  <data name="button2.TabIndex" type="System.Int32, mscorlib">
-    <value>44</value>
-  </data>
-  <data name="&gt;&gt;valveChart.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="startProgramButton.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;expectedTemperatureLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;button3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="progressGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>841, 60</value>
-  </data>
-  <data name="actionGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="pressurePointFormGroupBox.Text" xml:space="preserve">
-    <value>Точка Тиску Води</value>
-  </data>
-  <data name="newPressurePointSecondsNumber.TabIndex" type="System.Int32, mscorlib">
-    <value>50</value>
-  </data>
-  <data name="&gt;&gt;налаштуванняToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;діагностикаToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="newTemperaturePointSecondsNumber.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 21</value>
-  </data>
-  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>991, 62</value>
-  </data>
-  <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1129, 149</value>
-  </data>
-  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 15</value>
-  </data>
-  <data name="&gt;&gt;newPressurePointMinutesNumber.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="valvesPage.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;temperaturePointValueLabel.Name" xml:space="preserve">
-    <value>temperaturePointValueLabel</value>
-  </data>
-  <data name="pressurePointsTabControl.TabIndex" type="System.Int32, mscorlib">
-    <value>42</value>
-  </data>
-  <data name="&gt;&gt;buttonNextProgram.Name" xml:space="preserve">
-    <value>buttonNextProgram</value>
-  </data>
-  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;newValvePointMinutesNumber.Parent" xml:space="preserve">
-    <value>valvePointFormGroupBox</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 15</value>
-  </data>
-  <data name="createProgramButton.Text" xml:space="preserve">
-    <value>Створити</value>
-  </data>
-  <data name="temperaturePointValueLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;minutesLeftLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;pressuresChart.Name" xml:space="preserve">
-    <value>pressuresChart</value>
-  </data>
-  <data name="&gt;&gt;deleteSteamPointButton.Name" xml:space="preserve">
-    <value>deleteSteamPointButton</value>
-  </data>
-  <data name="createValvePointButton.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
-  </data>
-  <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 15</value>
-  </data>
-  <data name="&gt;&gt;button4.Parent" xml:space="preserve">
-    <value>pressureTableTabPage</value>
-  </data>
-  <data name="pressurePointsListBox.ColumnWidth" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;startProgramButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;statusPage.Name" xml:space="preserve">
-    <value>statusPage</value>
-  </data>
-  <data name="&gt;&gt;actionGroupBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;temperatureTableTabPage.Parent" xml:space="preserve">
-    <value>temperaturePointsTabControl</value>
-  </data>
-  <data name="programsIndexGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 58</value>
-  </data>
-  <data name="&gt;&gt;pressuresChart.Parent" xml:space="preserve">
-    <value>pressureChartTabPage</value>
-  </data>
-  <data name="&gt;&gt;pressureTableTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="valvePointsListBox.ColumnWidth" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;valveChartTabPage.Name" xml:space="preserve">
-    <value>valveChartTabPage</value>
-  </data>
-  <data name="pressurePointsListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>817, 214</value>
-  </data>
-  <data name="&gt;&gt;continueProgramButton.Parent" xml:space="preserve">
-    <value>actionGroupBox</value>
-  </data>
-  <data name="buttonNextProgram.Location" type="System.Drawing.Point, System.Drawing">
-    <value>121, 101</value>
-  </data>
-  <data name="&gt;&gt;button5.Parent" xml:space="preserve">
-    <value>valveTableTabPage</value>
-  </data>
-  <data name="label19.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 15</value>
-  </data>
-  <data name="&gt;&gt;breadBindingSource.Name" xml:space="preserve">
-    <value>breadBindingSource</value>
-  </data>
-  <data name="newPressurePointMinutesNumber.TabIndex" type="System.Int32, mscorlib">
-    <value>49</value>
-  </data>
-  <data name="&gt;&gt;projectNameLabel.Name" xml:space="preserve">
-    <value>projectNameLabel</value>
-  </data>
-  <data name="&gt;&gt;temperaturePointFormGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="pressurePointsListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 4</value>
-  </data>
-  <data name="statusPage.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;allActionsTabControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;programNameLabel.Parent" xml:space="preserve">
-    <value>programFormGroupBox</value>
-  </data>
-  <data name="button1.TabIndex" type="System.Int32, mscorlib">
-    <value>45</value>
-  </data>
-  <data name="&gt;&gt;button6.Parent" xml:space="preserve">
-    <value>valveTableTabPage</value>
-  </data>
-  <data name="&gt;&gt;valveChartTabPage.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;pressurePointsListBox.Parent" xml:space="preserve">
-    <value>pressureTableTabPage</value>
-  </data>
-  <data name="newPressurePointHoursNumber.TabIndex" type="System.Int32, mscorlib">
-    <value>48</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;breadBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;historyListBox.Name" xml:space="preserve">
-    <value>historyListBox</value>
-  </data>
-  <data name="label17.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="button9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label17.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;button10.Name" xml:space="preserve">
-    <value>button10</value>
-  </data>
-  <data name="pressurePointFormGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="temperaturePointFormGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;вихідToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="&gt;&gt;statusPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button7.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="continueProgramButton.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;createPressurePointButton.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;калібруванняТермодатчикаToolStripMenuItem.Name" xml:space="preserve">
-    <value>калібруванняТермодатчикаToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;temperaturePointFormGroupBox.Name" xml:space="preserve">
-    <value>temperaturePointFormGroupBox</value>
-  </data>
-  <data name="&gt;&gt;projectNameLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="createValvePointButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 27</value>
-  </data>
-  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>84, 25</value>
-  </data>
-  <data name="pressureTableTabPage.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label14.Text" xml:space="preserve">
-    <value>хв</value>
-  </data>
-  <data name="progressBar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>531, 26</value>
-  </data>
-  <data name="label20.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="newPressurePointValueTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>39</value>
-  </data>
-  <data name="createProgramButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;temperaturePointsTabControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="createProgramButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>152, 101</value>
-  </data>
-  <data name="createProgramButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;temperaturePointValueLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="temperaturesPage.Text" xml:space="preserve">
-    <value>Температури</value>
-  </data>
-  <data name="&gt;&gt;buttonPreviousProgram.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="valvePointsListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 4</value>
-  </data>
-  <data name="&gt;&gt;stopProgramButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="minutesLeftInfoLabel.Text" xml:space="preserve">
-    <value>хв до закінчення</value>
-  </data>
-  <data name="&gt;&gt;expectedTemperatureLabel.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;button9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
-    <value>temperatureTableTabPage</value>
-  </data>
-  <data name="newPressurePointMinutesNumber.Location" type="System.Drawing.Point, System.Drawing">
-    <value>116, 23</value>
-  </data>
-  <data name="&gt;&gt;newTemperaturePointMinutesNumber.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="valveChartTabPage.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;temperatureChartTabPage.Name" xml:space="preserve">
-    <value>temperatureChartTabPage</value>
-  </data>
-  <data name="deleteSteamPointButton.Text" xml:space="preserve">
-    <value>Видалити</value>
-  </data>
-  <data name="temperaturePointFormGroupBox.Text" xml:space="preserve">
-    <value>Точка Температури</value>
-  </data>
-  <data name="&gt;&gt;valvesPage.Name" xml:space="preserve">
-    <value>valvesPage</value>
-  </data>
-  <data name="&gt;&gt;button5.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="programsListBox.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="projectNameLabel.Text" xml:space="preserve">
-    <value>Розумна Пічка</value>
-  </data>
-  <data name="&gt;&gt;роліПінівToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="&gt;&gt;englishToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="allActionsTabControl.TabIndex" type="System.Int32, mscorlib">
-    <value>51</value>
+  <data name="projectNameLabel.Text" xml:space="preserve">
+    <value>Розумна Пічка</value>
   </data>
   <data name="label15.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2539,8 +2551,8 @@
   <data name="startProgramButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;button6.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="continueProgramButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="&gt;&gt;pauseProgramButton.Name" xml:space="preserve">
     <value>pauseProgramButton</value>
@@ -2560,20 +2572,23 @@
   <data name="label13.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="&gt;&gt;label14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="programNameLabel.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
   </data>
   <data name="button6.Text" xml:space="preserve">
     <value>Наступний &gt;</value>
   </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>valvePointFormGroupBox</value>
-  </data>
   <data name="&gt;&gt;button3.Parent" xml:space="preserve">
     <value>pressureTableTabPage</value>
   </data>
   <data name="button4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 3, 4, 3</value>
+  </data>
+  <data name="temperatureChartTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="pauseProgramButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 30</value>
@@ -2584,17 +2599,14 @@
   <data name="&gt;&gt;newTemperaturePointHoursNumber.Parent" xml:space="preserve">
     <value>temperaturePointFormGroupBox</value>
   </data>
-  <data name="&gt;&gt;button7.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="button10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 23</value>
   </data>
-  <data name="allActionsTabControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 203</value>
+  <data name="valveTableTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="valveChart.Size" type="System.Drawing.Size, System.Drawing">
-    <value>811, 214</value>
-  </data>
-  <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="buttonDeleteProgram.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="&gt;&gt;buttonNextProgram.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -2623,11 +2635,8 @@
   <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
     <value>610, 185</value>
   </data>
-  <data name="&gt;&gt;minutesLeftInfoLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 55</value>
+  <data name="pressureChartTabPage.Text" xml:space="preserve">
+    <value>Графік Тиску Води</value>
   </data>
   <data name="label15.Text" xml:space="preserve">
     <value>год</value>
@@ -2638,14 +2647,14 @@
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>445, 60</value>
   </data>
-  <data name="temperatureChartTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+  <data name="&gt;&gt;valveChartTabPage.Name" xml:space="preserve">
+    <value>valveChartTabPage</value>
   </data>
   <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
   </data>
-  <data name="label20.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1143, 117</value>
+  <data name="deletePressurePointButton.Text" xml:space="preserve">
+    <value>Видалити</value>
   </data>
   <data name="&gt;&gt;valveChart.Parent" xml:space="preserve">
     <value>valveChartTabPage</value>
@@ -2662,8 +2671,8 @@
   <data name="historyPage.Text" xml:space="preserve">
     <value>Історія Запусків</value>
   </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 28</value>
+  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>233, 24</value>
   </data>
   <data name="actionGroupBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>174, 257</value>
@@ -2677,11 +2686,14 @@
   <data name="progressBar1.Location" type="System.Drawing.Point, System.Drawing">
     <value>112, 20</value>
   </data>
-  <data name="projectNameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>663, 9</value>
+  <data name="pressuresChart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>813, 217</value>
   </data>
   <data name="stopProgramButton.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
+  </data>
+  <data name="createTemperaturePointButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;newTemperaturePointMinutesNumber.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2698,17 +2710,14 @@
   <data name="&gt;&gt;historyPage.Name" xml:space="preserve">
     <value>historyPage</value>
   </data>
-  <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1129, 179</value>
+  <data name="statusListBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="&gt;&gt;createProgramButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="label14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
-  </data>
-  <data name="expectedTemperatureLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>99, 53</value>
   </data>
   <data name="&gt;&gt;newTemperaturePointMinutesNumber.Parent" xml:space="preserve">
     <value>temperaturePointFormGroupBox</value>
@@ -2725,29 +2734,29 @@
   <data name="buttonDeleteProgram.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 30</value>
   </data>
-  <data name="newProgramNameTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>236, 21</value>
+  <data name="&gt;&gt;deleteSteamPointButton.Name" xml:space="preserve">
+    <value>deleteSteamPointButton</value>
   </data>
-  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;newPressurePointHoursNumber.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="valveTableTabPage.Text" xml:space="preserve">
+    <value>Таблиця Рівня Пари</value>
   </data>
   <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
     <value>146, 80</value>
   </data>
-  <data name="&gt;&gt;temperaturePointValueLabel.Parent" xml:space="preserve">
-    <value>temperaturePointFormGroupBox</value>
+  <data name="&gt;&gt;progressBar1.Name" xml:space="preserve">
+    <value>progressBar1</value>
   </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 15</value>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
   </data>
   <data name="&gt;&gt;newValvePointHoursNumber.Name" xml:space="preserve">
     <value>newValvePointHoursNumber</value>
   </data>
-  <data name="pauseProgramButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;expectedTemperatureLabel.Name" xml:space="preserve">
+    <value>expectedTemperatureLabel</value>
   </data>
   <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
     <value>22, 15</value>
@@ -2755,23 +2764,20 @@
   <data name="temperatureChartTabPage.Size" type="System.Drawing.Size, System.Drawing">
     <value>819, 222</value>
   </data>
-  <data name="&gt;&gt;button8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
   </data>
-  <data name="label11.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="label13.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;pressureChartTabPage.Name" xml:space="preserve">
     <value>pressureChartTabPage</value>
   </data>
-  <data name="label18.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;оновитиІнформаціюПроДоступніРежимиToolStripMenuItem.Name" xml:space="preserve">
+    <value>оновитиІнформаціюПроДоступніРежимиToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
-    <value>valvePointFormGroupBox</value>
-  </data>
-  <data name="minutesLeftLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+  <data name="newValvePointHoursNumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>45, 26</value>
   </data>
   <data name="pauseProgramButton.Text" xml:space="preserve">
     <value>ПАУЗА</value>
@@ -2782,8 +2788,8 @@
   <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
-  <data name="label16.Text" xml:space="preserve">
-    <value>Час:</value>
+  <data name="label18.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="programFormGroupBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>250, 140</value>
@@ -2803,11 +2809,11 @@
   <data name="&gt;&gt;continueProgramButton.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;button7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label19.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;temperatureTableTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;button3.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="statusListBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>824, 244</value>
@@ -2815,8 +2821,8 @@
   <data name="&gt;&gt;newPressurePointMinutesNumber.Name" xml:space="preserve">
     <value>newPressurePointMinutesNumber</value>
   </data>
-  <data name="createTemperaturePointButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="temperaturePointsTabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
   </data>
   <data name="connectButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>1140, 204</value>
@@ -2824,23 +2830,23 @@
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;buttonDeleteProgram.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="temperaturePointValueLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 15</value>
   </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>Очікувана:</value>
+  <data name="temperatureLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
   </data>
   <data name="valvePointsListBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>811, 214</value>
   </data>
-  <data name="&gt;&gt;label14.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;pressureChartTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;statusListBox.Name" xml:space="preserve">
     <value>statusListBox</value>
   </data>
-  <data name="&gt;&gt;historyPage.Parent" xml:space="preserve">
-    <value>allActionsTabControl</value>
+  <data name="newPressurePointHoursNumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>45, 23</value>
   </data>
   <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2848,8 +2854,8 @@
   <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="newTemperaturePointSecondsNumber.Location" type="System.Drawing.Point, System.Drawing">
-    <value>187, 22</value>
+  <data name="expectedTemperatureLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 53</value>
   </data>
   <data name="&gt;&gt;valvePointsListBox.Name" xml:space="preserve">
     <value>valvePointsListBox</value>
@@ -2887,14 +2893,11 @@
   <data name="&gt;&gt;button9.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;label15.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="buttonDeleteProgram.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
   </data>
   <data name="pressuresChart.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 3, 4, 3</value>
-  </data>
-  <data name="pressureChartTabPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
   </data>
   <data name="progressBar1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -2911,11 +2914,11 @@
   <data name="minutesLeftLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;languageToolStripMenuItem2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="allActionsTabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 203</value>
   </data>
-  <data name="&gt;&gt;valveTableTabPage.Parent" xml:space="preserve">
-    <value>valvePointsTabControl</value>
+  <data name="&gt;&gt;continueProgramButton.Name" xml:space="preserve">
+    <value>continueProgramButton</value>
   </data>
   <data name="&gt;&gt;startProgramButton.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -2935,8 +2938,8 @@
   <data name="newTemperaturePointMinutesNumber.TabIndex" type="System.Int32, mscorlib">
     <value>49</value>
   </data>
-  <data name="historyListBox.ColumnWidth" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="&gt;&gt;temperatureLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="createTemperaturePointButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 22</value>
@@ -2956,17 +2959,17 @@
   <data name="programsIndexGroupBox.Text" xml:space="preserve">
     <value>Список Режимів</value>
   </data>
-  <data name="&gt;&gt;valvePointFormGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 15</value>
   </data>
   <data name="&gt;&gt;temperatureLabel.Name" xml:space="preserve">
     <value>temperatureLabel</value>
   </data>
-  <data name="label14.TabIndex" type="System.Int32, mscorlib">
-    <value>52</value>
+  <data name="&gt;&gt;newPressurePointValueTextBox.Parent" xml:space="preserve">
+    <value>pressurePointFormGroupBox</value>
   </data>
-  <data name="createValvePointButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  <data name="pressuresPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>835, 257</value>
   </data>
   <data name="statusPage.Size" type="System.Drawing.Size, System.Drawing">
     <value>835, 257</value>
@@ -2977,8 +2980,8 @@
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
   </data>
-  <data name="newValvePointMinutesNumber.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 21</value>
+  <data name="button3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
   </data>
   <data name="temperaturePointsTabControl.Size" type="System.Drawing.Size, System.Drawing">
     <value>827, 250</value>
@@ -3031,8 +3034,8 @@
   <data name="&gt;&gt;programsIndexGroupBox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;programNameLabel.Name" xml:space="preserve">
-    <value>programNameLabel</value>
+  <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;actionGroupBox.ZOrder" xml:space="preserve">
     <value>17</value>
@@ -3040,14 +3043,14 @@
   <data name="&gt;&gt;minutesLeftInfoLabel.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="label9.TabIndex" type="System.Int32, mscorlib">
-    <value>46</value>
+  <data name="&gt;&gt;connectButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;pressuresPage.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 15</value>
+  <data name="button4.Text" xml:space="preserve">
+    <value>Наступний &gt;</value>
   </data>
   <data name="роліПінівToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 22</value>
@@ -3061,23 +3064,23 @@
   <data name="&gt;&gt;newValvePointValueTextBox.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;pressuresChart.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="pressureChartTabPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="&gt;&gt;label9.Parent" xml:space="preserve">
     <value>valvePointFormGroupBox</value>
   </data>
-  <data name="&gt;&gt;programsListBox.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;newValvePointValueTextBox.Name" xml:space="preserve">
+    <value>newValvePointValueTextBox</value>
   </data>
   <data name="valveTableTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
-  <data name="&gt;&gt;projectNameLabel.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="newValvePointHoursNumber.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
   </data>
-  <data name="newTemperaturePointMinutesNumber.Location" type="System.Drawing.Point, System.Drawing">
-    <value>116, 22</value>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
   </data>
   <data name="createPressurePointButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -3085,14 +3088,14 @@
   <data name="pressureChartTabPage.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="valveChartTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+  <data name="&gt;&gt;projectNameLabel.Name" xml:space="preserve">
+    <value>projectNameLabel</value>
   </data>
   <data name="continueProgramButton.Text" xml:space="preserve">
     <value>ПРОДОВЖИТИ</value>
   </data>
-  <data name="label20.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 15</value>
+  <data name="&gt;&gt;temperatureLabel.Parent" xml:space="preserve">
+    <value>groupBox3</value>
   </data>
   <data name="programFormGroupBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>736, 58</value>
@@ -3103,14 +3106,11 @@
   <data name="&gt;&gt;pressurePointFormGroupBox.Name" xml:space="preserve">
     <value>pressurePointFormGroupBox</value>
   </data>
-  <data name="&gt;&gt;buttonNextProgram.Parent" xml:space="preserve">
-    <value>programsIndexGroupBox</value>
+  <data name="newPressurePointMinutesNumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>116, 23</value>
   </data>
   <data name="&gt;&gt;label19.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="&gt;&gt;createTemperaturePointButton.Parent" xml:space="preserve">
-    <value>temperaturePointFormGroupBox</value>
   </data>
   <data name="&gt;&gt;newTemperaturePointValueTextBox.ZOrder" xml:space="preserve">
     <value>7</value>
@@ -3124,8 +3124,8 @@
   <data name="label20.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;label11.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="minutesLeftLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
   </data>
   <data name="&gt;&gt;label20.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -3136,14 +3136,14 @@
   <data name="label16.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
   </data>
-  <data name="valvesPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>835, 257</value>
+  <data name="&gt;&gt;pressureTableTabPage.Parent" xml:space="preserve">
+    <value>pressurePointsTabControl</value>
   </data>
-  <data name="label20.Text" xml:space="preserve">
-    <value>Енергостанція</value>
+  <data name="&gt;&gt;minutesLeftInfoLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label15.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+  <data name="newPressurePointValueTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
   </data>
   <data name="deletePressurePointButton.TabIndex" type="System.Int32, mscorlib">
     <value>44</value>
@@ -3163,14 +3163,14 @@
   <data name="&gt;&gt;progressGroupBox.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="deletePressurePointButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;newValvePointSecondsNumber.Name" xml:space="preserve">
+    <value>newValvePointSecondsNumber</value>
   </data>
   <data name="label12.Text" xml:space="preserve">
     <value>Час:</value>
   </data>
-  <data name="&gt;&gt;buttonNextProgram.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="createPressurePointButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>165, 55</value>
   </data>
   <data name="&gt;&gt;label16.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -3190,8 +3190,8 @@
   <data name="&gt;&gt;newValvePointSecondsNumber.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;statusPage.Parent" xml:space="preserve">
-    <value>allActionsTabControl</value>
+  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="newPressurePointHoursNumber.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 21</value>
@@ -3199,8 +3199,8 @@
   <data name="button9.Text" xml:space="preserve">
     <value>Викл</value>
   </data>
-  <data name="pauseProgramButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 40</value>
+  <data name="label9.Text" xml:space="preserve">
+    <value>сек</value>
   </data>
   <data name="&gt;&gt;newTemperaturePointSecondsNumber.Name" xml:space="preserve">
     <value>newTemperaturePointSecondsNumber</value>
@@ -3211,17 +3211,17 @@
   <data name="оновитиІнформаціюПроДоступніРежимиToolStripMenuItem.Text" xml:space="preserve">
     <value>Оновити Інформацію Про Доступні Режими</value>
   </data>
-  <data name="українськаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 22</value>
+  <data name="buttonDeleteProgram.Text" xml:space="preserve">
+    <value>Видалити</value>
   </data>
   <data name="newProgramNameTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 46</value>
   </data>
-  <data name="button7.Text" xml:space="preserve">
-    <value>Вкл</value>
+  <data name="&gt;&gt;pressureTableTabPage.Name" xml:space="preserve">
+    <value>pressureTableTabPage</value>
   </data>
-  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="pressurePointsTabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
   </data>
   <data name="label18.Text" xml:space="preserve">
     <value>Маслонасос</value>
@@ -3238,14 +3238,14 @@
   <data name="&gt;&gt;label17.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;valvePointsListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="stopProgramButton.Text" xml:space="preserve">
+    <value>СТОП</value>
   </data>
   <data name="&gt;&gt;startProgramButton.Parent" xml:space="preserve">
     <value>actionGroupBox</value>
   </data>
-  <data name="label18.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;createTemperaturePointButton.Parent" xml:space="preserve">
+    <value>temperaturePointFormGroupBox</value>
   </data>
   <data name="&gt;&gt;buttonPreviousProgram.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -3256,11 +3256,11 @@
   <data name="startProgramButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>159, 77</value>
   </data>
-  <data name="temperatureChartTabPage.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="createPressurePointButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+  <data name="діагностикаToolStripMenuItem.Text" xml:space="preserve">
+    <value>Піни</value>
   </data>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>en-US</value>

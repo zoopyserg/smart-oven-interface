@@ -123,21 +123,63 @@
   <data name="groupBox2.Text" xml:space="preserve">
     <value>КАКОЙ ПИН ЗА ЧТО ОТВЕЧАЕТ</value>
   </data>
-  <data name="saveCoefficientsButton.Text" xml:space="preserve">
-    <value>Сохранить</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 13</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Импульсный водный счетчик: Цифровой Пин №</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>403, 13</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Реле Соленоида Подачи Воды (закрыть-открыть соленоид): Цифровой Пин №</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>459, 13</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Реле Закрывание Проветривание (закрывание заслонки вентиляции): Цифровой Пин №</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>458, 13</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Реле Открывание Проветривание (открывание заслонки вентиляции): Цифровой Пин №</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>589, 13</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Реле Уменьшение Температуры (извлечение нагревателя из воды, закрывание клапана и т.п.): Цифровой Пин №</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>515, 13</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Реле нагревательного элемента (маслонасос, подача газа, электричества и т.п.): Цифровой пин №</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 13</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Реле Подсветки: Цифровой Пин №</value>
+  </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 13</value>
+    <value>564, 13</value>
   </data>
   <data name="label8.Text" xml:space="preserve">
-    <value>Реле Нагревателя: Цифровой Пин №</value>
+    <value>Реле Увеличения Температуры (введение нагревателя в воду, закрывание клапана и т.п.): Цифровой Пин №</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>190, 13</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
     <value>Термодатчик: Аналоговый Канал №</value>
+  </data>
+  <data name="saveCoefficientsButton.Text" xml:space="preserve">
+    <value>Сохранить</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Настройки какой пин за что отвечает</value>

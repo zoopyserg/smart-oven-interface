@@ -117,71 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="button55.Text" xml:space="preserve">
-    <value>Close</value>
-  </data>
-  <data name="groupBox2.Text" xml:space="preserve">
-    <value>WHICH PIN IS RESPONSIBLE FOR WHAT</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 13</value>
-  </data>
-  <data name="label9.Text" xml:space="preserve">
-    <value>Pulse water meter: Digital Pin №</value>
-  </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>320, 13</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>Water Supply Solenoid Relay (Close-Open Solenoid): Digital Pin №</value>
-  </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>335, 13</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>Relay Closing Ventilation (closing the ventilation damper): Digital Pin #</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 13</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Ventilation Relay (Ventilation Valve Opening): Digital Pin #</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>499, 13</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Temperature Reduction Relay (removing the heater from the water, closing the valve, etc.): Digital Pin №</value>
-  </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>434, 13</value>
+    <value>544, 13</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Powerplant relay (oil pump, gas supply or electricity supply to the heater, etc.): Digital pin №</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 13</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Backlight Relay: Digital Pin №</value>
-  </data>
-  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>475, 13</value>
-  </data>
-  <data name="label8.Text" xml:space="preserve">
-    <value>Temperature Increase Relay (insert the heater into the water, opening the valve, etc.): Digital Pin №</value>
+    <value>Allow to change the temperature again after X milliseconds after the previous change in the intensity of the heaters</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 13</value>
+    <value>317, 13</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
-    <value>Thermal Sensor: Analog Channel #</value>
+    <value>Switch off the thermostatic relays X milliseconds after switching on</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Hysteresis settings</value>
   </data>
   <data name="saveCoefficientsButton.Text" xml:space="preserve">
     <value>Save</value>
   </data>
+  <data name="button55.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Settings which pin is responsible for what</value>
+    <value>Hysteresis settings</value>
   </data>
 </root>
