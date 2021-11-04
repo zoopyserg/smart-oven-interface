@@ -19,6 +19,7 @@ namespace Oven_Interface
         public IFirmataProtocol firmata { get; set; }
         public Dashboard form { get; set; }
         public long previousWaterSensorLockLevel { get; set; }
+        public long previousTemperatureLevel { get; set; }
 
         public List<int> AvailablePins { get; set; }
 
@@ -135,9 +136,13 @@ namespace Oven_Interface
         {
             if (eventArgs.Value.Channel == Properties.Settings.Default.channelTemperatureSensor)
             {
-                this.form.UpdateStatusListBoxAsync(form, eventArgs);
+                if (previousTemperatureLevel != eventArgs.Value.Level)
+                {
+                    this.form.UpdateStatusListBoxAsync(form, eventArgs);
+                    previousTemperatureLevel = eventArgs.Value.Level;
+                }
             }
-            else if (eventArgs.Value.Channel == 3)
+            else if (eventArgs.Value.Channel == Properties.Settings.Default.waterCounterPin)
             {
                 if (previousWaterSensorLockLevel <= 300 && eventArgs.Value.Level > 300)
                 {

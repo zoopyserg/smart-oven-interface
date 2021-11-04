@@ -50,7 +50,7 @@
       <Value Profile="(Default)">8</Value>
     </Setting>
     <Setting Name="waterCounterPin" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">12</Value>
+      <Value Profile="(Default)">3</Value>
     </Setting>
     <Setting Name="canChangeTempsAgainAfter" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">2000</Value>

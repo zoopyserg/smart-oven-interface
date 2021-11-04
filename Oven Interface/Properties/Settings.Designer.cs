@@ -192,7 +192,7 @@ namespace Oven_Interface.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("12")]
+        [global::System.Configuration.DefaultSettingValueAttribute("3")]
         public int waterCounterPin {
             get {
                 return ((int)(this["waterCounterPin"]));
