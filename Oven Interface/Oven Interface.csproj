@@ -162,6 +162,12 @@
     <Compile Include="Views\TemperatureCalibration.Designer.cs">
       <DependentUpon>TemperatureCalibration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\VentilationSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\VentilationSettings.Designer.cs">
+      <DependentUpon>VentilationSettings.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Views\Dashboard.en-US.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +230,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\TemperatureCalibration.uk.resx">
       <DependentUpon>TemperatureCalibration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\VentilationSettings.resx">
+      <DependentUpon>VentilationSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\VentilationSettings.ru.resx">
+      <DependentUpon>VentilationSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\VentilationSettings.uk.resx">
+      <DependentUpon>VentilationSettings.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="GrantAccessToFiles.bat" />
     <None Include="Oven Interface_TemporaryKey.pfx" />

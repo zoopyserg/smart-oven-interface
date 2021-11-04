@@ -208,6 +208,12 @@
   <data name="хістерезисToolStripMenuItem.Text" xml:space="preserve">
     <value>Настройки Гистерезиса</value>
   </data>
+  <data name="ventilationSettingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>221, 22</value>
+  </data>
+  <data name="ventilationSettingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Настройки Вентиляции</value>
+  </data>
   <data name="languageToolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 20</value>
   </data>
@@ -505,9 +511,5 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
 </value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Inherit</value>
   </data>
 </root>

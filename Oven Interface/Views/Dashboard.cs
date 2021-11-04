@@ -569,5 +569,11 @@ namespace Oven_Interface
             Form histeresisSettings = new Histeresis();
             histeresisSettings.Show();
         }
+
+        private void ventilationSettingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form ventilationSettings = new VentilationSettings();
+            ventilationSettings.Show();
+        }
     }
 }

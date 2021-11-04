@@ -69,6 +69,7 @@ namespace Oven_Interface
             this.калібруванняТермодатчикаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.роліПінівToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.хістерезисToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ventilationSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.languageToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.українськаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -337,7 +338,8 @@ namespace Oven_Interface
             this.налаштуванняToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.калібруванняТермодатчикаToolStripMenuItem,
             this.роліПінівToolStripMenuItem,
-            this.хістерезисToolStripMenuItem});
+            this.хістерезисToolStripMenuItem,
+            this.ventilationSettingsToolStripMenuItem});
             this.налаштуванняToolStripMenuItem.Name = "налаштуванняToolStripMenuItem";
             // 
             // калібруванняТермодатчикаToolStripMenuItem
@@ -357,6 +359,12 @@ namespace Oven_Interface
             resources.ApplyResources(this.хістерезисToolStripMenuItem, "хістерезисToolStripMenuItem");
             this.хістерезисToolStripMenuItem.Name = "хістерезисToolStripMenuItem";
             this.хістерезисToolStripMenuItem.Click += new System.EventHandler(this.хістерезисToolStripMenuItem_Click);
+            // 
+            // ventilationSettingsToolStripMenuItem
+            // 
+            resources.ApplyResources(this.ventilationSettingsToolStripMenuItem, "ventilationSettingsToolStripMenuItem");
+            this.ventilationSettingsToolStripMenuItem.Name = "ventilationSettingsToolStripMenuItem";
+            this.ventilationSettingsToolStripMenuItem.Click += new System.EventHandler(this.ventilationSettingsToolStripMenuItem_Click);
             // 
             // languageToolStripMenuItem2
             // 
@@ -1327,6 +1335,7 @@ namespace Oven_Interface
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.ToolStripMenuItem ventilationSettingsToolStripMenuItem;
     }
 }
 

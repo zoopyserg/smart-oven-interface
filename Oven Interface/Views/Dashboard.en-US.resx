@@ -151,17 +151,26 @@
   <data name="actionGroupBox.Text" xml:space="preserve">
     <value>Actions</value>
   </data>
-  <data name="вихідToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 22</value>
-  </data>
-  <data name="вихідToolStripMenuItem.Text" xml:space="preserve">
-    <value>Exit</value>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1320, 24</value>
   </data>
   <data name="програмаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 20</value>
   </data>
   <data name="програмаToolStripMenuItem.Text" xml:space="preserve">
     <value>Program</value>
+  </data>
+  <data name="вихідToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 22</value>
+  </data>
+  <data name="вихідToolStripMenuItem.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="діагностикаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 20</value>
+  </data>
+  <data name="діагностикаToolStripMenuItem.Text" xml:space="preserve">
+    <value>Pins</value>
   </data>
   <data name="перевіркаПінівToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>198, 22</value>
@@ -175,11 +184,11 @@
   <data name="оновитиІнформаціюПроДоступніПіниToolStripMenuItem.Text" xml:space="preserve">
     <value>Information About Pins</value>
   </data>
-  <data name="діагностикаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 20</value>
+  <data name="режимиToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 20</value>
   </data>
-  <data name="діагностикаToolStripMenuItem.Text" xml:space="preserve">
-    <value>Pins</value>
+  <data name="режимиToolStripMenuItem.Text" xml:space="preserve">
+    <value>Programs</value>
   </data>
   <data name="оновитиІнформаціюПроДоступніРежимиToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>217, 22</value>
@@ -187,11 +196,11 @@
   <data name="оновитиІнформаціюПроДоступніРежимиToolStripMenuItem.Text" xml:space="preserve">
     <value>Update Available Programs</value>
   </data>
-  <data name="режимиToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 20</value>
+  <data name="налаштуванняToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 20</value>
   </data>
-  <data name="режимиToolStripMenuItem.Text" xml:space="preserve">
-    <value>Programs</value>
+  <data name="налаштуванняToolStripMenuItem.Text" xml:space="preserve">
+    <value>Settings</value>
   </data>
   <data name="калібруванняТермодатчикаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>239, 22</value>
@@ -211,11 +220,11 @@
   <data name="хістерезисToolStripMenuItem.Text" xml:space="preserve">
     <value>Histeresys Settings</value>
   </data>
-  <data name="налаштуванняToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 20</value>
+  <data name="languageToolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 20</value>
   </data>
-  <data name="налаштуванняToolStripMenuItem.Text" xml:space="preserve">
-    <value>Settings</value>
+  <data name="languageToolStripMenuItem2.Text" xml:space="preserve">
+    <value>Language</value>
   </data>
   <data name="englishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>134, 22</value>
@@ -235,15 +244,6 @@
   <data name="русскийToolStripMenuItem.Text" xml:space="preserve">
     <value>Русский</value>
   </data>
-  <data name="languageToolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 20</value>
-  </data>
-  <data name="languageToolStripMenuItem2.Text" xml:space="preserve">
-    <value>Language</value>
-  </data>
-  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1320, 24</value>
-  </data>
   <data name="groupBox1.Text" xml:space="preserve">
     <value>Active Program</value>
   </data>
@@ -258,6 +258,9 @@
   </data>
   <data name="connectButton.Text" xml:space="preserve">
     <value>Connect</value>
+  </data>
+  <data name="valvePointFormGroupBox.Text" xml:space="preserve">
+    <value>Steam Point</value>
   </data>
   <data name="label9.Text" xml:space="preserve">
     <value>sec</value>
@@ -289,8 +292,8 @@
   <data name="label4.Text" xml:space="preserve">
     <value>Time:</value>
   </data>
-  <data name="valvePointFormGroupBox.Text" xml:space="preserve">
-    <value>Steam Point</value>
+  <data name="pressurePointFormGroupBox.Text" xml:space="preserve">
+    <value>Pressure Point</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>sec</value>
@@ -322,8 +325,8 @@
   <data name="label12.Text" xml:space="preserve">
     <value>Time:</value>
   </data>
-  <data name="pressurePointFormGroupBox.Text" xml:space="preserve">
-    <value>Pressure Point</value>
+  <data name="progressGroupBox.Text" xml:space="preserve">
+    <value>Progress</value>
   </data>
   <data name="minutesLeftInfoLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 15</value>
@@ -331,11 +334,14 @@
   <data name="minutesLeftInfoLabel.Text" xml:space="preserve">
     <value>minutes left</value>
   </data>
-  <data name="progressGroupBox.Text" xml:space="preserve">
-    <value>Progress</value>
+  <data name="temperaturesPage.Text" xml:space="preserve">
+    <value>Temperatures</value>
   </data>
   <data name="temperatureChartTabPage.Text" xml:space="preserve">
     <value>Temperatures Chart</value>
+  </data>
+  <data name="temperatureTableTabPage.Text" xml:space="preserve">
+    <value>Temperatures Table</value>
   </data>
   <data name="button1.Text" xml:space="preserve">
     <value>&lt; Previous</value>
@@ -346,14 +352,14 @@
   <data name="button2.Text" xml:space="preserve">
     <value>Next &gt;</value>
   </data>
-  <data name="temperatureTableTabPage.Text" xml:space="preserve">
-    <value>Temperatures Table</value>
-  </data>
-  <data name="temperaturesPage.Text" xml:space="preserve">
-    <value>Temperatures</value>
+  <data name="pressuresPage.Text" xml:space="preserve">
+    <value>Water Pressure</value>
   </data>
   <data name="pressureChartTabPage.Text" xml:space="preserve">
     <value>Water Pressures Chart</value>
+  </data>
+  <data name="pressureTableTabPage.Text" xml:space="preserve">
+    <value>Water Pressures Table</value>
   </data>
   <data name="button3.Text" xml:space="preserve">
     <value>&lt; Previous</value>
@@ -364,14 +370,14 @@
   <data name="button4.Text" xml:space="preserve">
     <value>Next &gt;</value>
   </data>
-  <data name="pressureTableTabPage.Text" xml:space="preserve">
-    <value>Water Pressures Table</value>
-  </data>
-  <data name="pressuresPage.Text" xml:space="preserve">
-    <value>Water Pressure</value>
+  <data name="valvesPage.Text" xml:space="preserve">
+    <value>Steam Valve</value>
   </data>
   <data name="valveChartTabPage.Text" xml:space="preserve">
     <value>Steam Level Chart</value>
+  </data>
+  <data name="valveTableTabPage.Text" xml:space="preserve">
+    <value>Steam Level Table</value>
   </data>
   <data name="button5.Text" xml:space="preserve">
     <value>&lt; Previous</value>
@@ -382,17 +388,14 @@
   <data name="deleteSteamPointButton.Text" xml:space="preserve">
     <value>Delete</value>
   </data>
-  <data name="valveTableTabPage.Text" xml:space="preserve">
-    <value>Steam Level Table</value>
-  </data>
-  <data name="valvesPage.Text" xml:space="preserve">
-    <value>Steam Valve</value>
-  </data>
   <data name="historyPage.Text" xml:space="preserve">
     <value>Launch History</value>
   </data>
   <data name="statusPage.Text" xml:space="preserve">
     <value>Status</value>
+  </data>
+  <data name="temperaturePointFormGroupBox.Text" xml:space="preserve">
+    <value>Temperature Point</value>
   </data>
   <data name="label13.Text" xml:space="preserve">
     <value>sec</value>
@@ -424,8 +427,8 @@
   <data name="createTemperaturePointButton.Text" xml:space="preserve">
     <value>Create</value>
   </data>
-  <data name="temperaturePointFormGroupBox.Text" xml:space="preserve">
-    <value>Temperature Point</value>
+  <data name="programsIndexGroupBox.Text" xml:space="preserve">
+    <value>Programs List</value>
   </data>
   <data name="buttonDeleteProgram.Text" xml:space="preserve">
     <value>Delete</value>
@@ -436,8 +439,8 @@
   <data name="buttonNextProgram.Text" xml:space="preserve">
     <value>Next &gt;</value>
   </data>
-  <data name="programsIndexGroupBox.Text" xml:space="preserve">
-    <value>Programs List</value>
+  <data name="programFormGroupBox.Text" xml:space="preserve">
+    <value>Create Program</value>
   </data>
   <data name="createProgramButton.Text" xml:space="preserve">
     <value>Create</value>
@@ -447,9 +450,6 @@
   </data>
   <data name="programNameLabel.Text" xml:space="preserve">
     <value>Name:</value>
-  </data>
-  <data name="programFormGroupBox.Text" xml:space="preserve">
-    <value>Create Program</value>
   </data>
   <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 15</value>
@@ -486,6 +486,9 @@
   </data>
   <data name="button9.Text" xml:space="preserve">
     <value>Off</value>
+  </data>
+  <data name="ventilationSettingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Ventilation Settings</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1320, 576</value>
@@ -565,10 +568,6 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
 </value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Inherit</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Smart Oven Interface</value>
