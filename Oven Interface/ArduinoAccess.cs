@@ -18,6 +18,7 @@ namespace Oven_Interface
         public ArduinoSession session { get; set; }
         public IFirmataProtocol firmata { get; set; }
         public Dashboard form { get; set; }
+        public long previousWaterSensorLockLevel { get; set; }
 
         public List<int> AvailablePins { get; set; }
 
@@ -136,9 +137,21 @@ namespace Oven_Interface
             {
                 this.form.UpdateStatusListBoxAsync(form, eventArgs);
             }
-            else if (eventArgs.Value.Channel == 3 && eventArgs.Value.Level < 300)
+            else if (eventArgs.Value.Channel == 3)
             {
-                form.UpdateClicksAsync(form, eventArgs);
+                if (previousWaterSensorLockLevel <= 300 && eventArgs.Value.Level > 300)
+                {
+                    previousWaterSensorLockLevel = eventArgs.Value.Level;
+                }
+                else if (previousWaterSensorLockLevel > 300 && eventArgs.Value.Level <= 300)
+                {
+                    previousWaterSensorLockLevel = eventArgs.Value.Level;
+                    form.UpdateClicksAsync(form, eventArgs);
+                }
+                else
+                {
+                    previousWaterSensorLockLevel = eventArgs.Value.Level;
+                }
             }
         }
 
