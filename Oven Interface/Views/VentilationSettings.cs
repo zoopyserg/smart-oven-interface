@@ -26,6 +26,7 @@ namespace Oven_Interface.Views
         private void button1_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.timeToFullyOpenVentilationValve = Decimal.ToInt32(ventilationTimeToOpen.Value);
+            Properties.Settings.Default.Save();
             this.Close();
         }
     }

@@ -30,6 +30,7 @@ namespace Oven_Interface
         public long CurrentSensorValue { get; set; }
         public long CurrentTemperature { get; set; }
         public long CurrentClicks { get; set; }
+        public long ExpectedClicks { get; set; }
 
         public Dashboard()
         {
@@ -192,8 +193,22 @@ namespace Oven_Interface
             }
 
             this.CurrentClicks += 1;
+            UpdateCurrentClicks(this.CurrentClicks.ToString());
 
-            clickCounterLabel.Text = $"{ this.CurrentClicks.ToString()}";
+            if (CurrentClicks >= ExpectedClicks)
+            {
+                this.ArduinoConnection.TurnOffPin(Properties.Settings.Default.waterSolenoidPin);
+                this.programProcessor.canChangeWater = true;
+                this.CurrentClicks = 0;
+                this.ExpectedClicks = 0;
+            }
+
+
+        }
+
+        public void UpdateCurrentClicks(string str)
+        {
+            clickCounterLabel.Text = str;
         }
 
         public void UpdateActiveProgramNameLabelAsync(object sender, string programName)

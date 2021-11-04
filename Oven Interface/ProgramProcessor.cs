@@ -22,10 +22,13 @@ namespace Oven_Interface
         public bool IsRunning { get; set; }
         public bool canChangeTemp { get; set; }
         public bool canChangeValve { get; set; }
+        public bool canChangeWater { get; set; }
 
         public long ExpectedTemperature { get; set; }
         public ValvePoint ExpectedValvePoint { get; set; }
-        public long lastProcessedMinute { get; set; }
+        public PressurePoint ExpectedWaterPoint { get; set; }
+        public long lastProcessedValveMinute { get; set; }
+        public long lastProcessedWaterMinute { get; set; }
 
         public ProgramProcessor(Dashboard form)
         {
@@ -53,12 +56,17 @@ namespace Oven_Interface
 
             canChangeTemp = true;
             canChangeValve = true;
-            lastProcessedMinute = -1;
+            canChangeWater = true;
+            lastProcessedValveMinute = -1;
+            lastProcessedWaterMinute = -1;
         }
 
         public void Start(int activeProgramId)
         {
             minutesPassed = 0;
+            form.CurrentClicks = 0;
+            form.ExpectedClicks = 0;
+            form.UpdateCurrentClicks("0"); 
             StartTimer(activeProgramId);
         }
 
@@ -95,6 +103,9 @@ namespace Oven_Interface
             form.EnableDisableStartButton();
             form.EnableDisablePauseButton();
             form.EnableDisableStopButton();
+            canChangeWater = true;
+            lastProcessedWaterMinute = -1;
+
             timer.Start();
         }
 
@@ -139,15 +150,29 @@ namespace Oven_Interface
 
                         ExpectedValvePoint = runningProgram.CurrentExpectedValve(minutesPassed);
 
-                        if (ExpectedValvePoint.Minute != -1 && canChangeValve && ((lastProcessedMinute == -1) || (lastProcessedMinute != -1 && lastProcessedMinute != ExpectedValvePoint.Minute)))
+                        if (ExpectedValvePoint.Minute != -1 && canChangeValve && ((lastProcessedValveMinute == -1) || (lastProcessedValveMinute != -1 && lastProcessedValveMinute != ExpectedValvePoint.Minute)))
                         {
-                            lastProcessedMinute = ExpectedValvePoint.Minute;
+                            lastProcessedValveMinute = ExpectedValvePoint.Minute;
                             form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.openVentilationPin);
                             form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.closeVentilationPin);
                             this.stopOpeningValveTimer.Interval = Properties.Settings.Default.timeToFullyOpenVentilationValve * ExpectedValvePoint.Value / 100;
                             this.stopOpeningValveTimer.Start();
 
                             this.canChangeValve = false;
+                        }
+
+                        // edit water
+
+                        ExpectedWaterPoint = runningProgram.CurrentExpectedWater(minutesPassed);
+
+                        if (ExpectedWaterPoint.Minute != -1 && canChangeWater && ((lastProcessedWaterMinute == -1) || (lastProcessedWaterMinute != -1 && lastProcessedWaterMinute != ExpectedWaterPoint.Minute)))
+                        {
+                            form.CurrentClicks = 0;
+                            form.ExpectedClicks = ExpectedWaterPoint.Value; // todo: convert liters to clicks, now I just store clicks
+                            lastProcessedWaterMinute = ExpectedWaterPoint.Minute;
+                            form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.waterSolenoidPin);
+
+                            this.canChangeWater = false;
                         }
 
                         BreadsController.Update(runningProgram.Id, minutesPassed);
@@ -214,7 +239,7 @@ namespace Oven_Interface
             if (IsRunning)
             {
                 timer.Stop();
-                lastProcessedMinute = -1;
+                lastProcessedValveMinute = -1;
                 if (runningProgram != null)
                 {
                     form.UpdateStatusListBox($"Програму {runningProgram.Name} завершено");
@@ -232,6 +257,11 @@ namespace Oven_Interface
                     form.EnableDisableStartButton();
                     form.EnableDisablePauseButton();
                     form.EnableDisableStopButton();
+
+                    form.CurrentClicks = 0;
+                    form.ExpectedClicks = 0;
+                    form.UpdateCurrentClicks("0");
+
                     form.ArduinoConnection.TurnOffAllPins();
                 }
             }
@@ -239,23 +269,29 @@ namespace Oven_Interface
 
         public void CommitProgramPausing()
         {
-            timer.Stop();
-            turnOffHeatingOperationsTimer.Stop();
-            canChangeTempTimer.Stop();
-            if (runningProgram != null)
+            try
             {
-                form.UpdateStatusListBox($"Програму {runningProgram.Name} поставлено на паузу");
-                BreadsController.Pause(runningProgram.Id);
-                //form.UpdateProgressBarAsync(form, 0, 0, runningProgram.Duration);
-                form.UpdateTimeLeftAsync(form, "-");
-                form.UpdateBinding();
-                form.UpdateExpectedTemperatureAsync(form, "-");
-                IsRunning = false;
-                form.EnableDisableContinueButton();
-                form.EnableDisableStartButton();
-                form.EnableDisablePauseButton();
-                form.EnableDisableStopButton();
-                form.ArduinoConnection.TurnOffAllPins();
+                timer.Stop();
+                turnOffHeatingOperationsTimer.Stop();
+                canChangeTempTimer.Stop();
+                if (runningProgram != null)
+                {
+                    form.UpdateStatusListBox($"Програму {runningProgram.Name} поставлено на паузу");
+                    BreadsController.Pause(runningProgram.Id);
+                    //form.UpdateProgressBarAsync(form, 0, 0, runningProgram.Duration);
+                    form.UpdateTimeLeftAsync(form, "-");
+                    form.UpdateBinding();
+                    form.UpdateExpectedTemperatureAsync(form, "-");
+                    IsRunning = false;
+                    form.EnableDisableContinueButton();
+                    form.EnableDisableStartButton();
+                    form.EnableDisablePauseButton();
+                    form.EnableDisableStopButton();
+                    form.ArduinoConnection.TurnOffAllPins();
+                }
+            } catch
+            {
+
             }
         }
     }

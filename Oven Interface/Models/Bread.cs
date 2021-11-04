@@ -69,6 +69,23 @@ namespace Oven_Interface
             return lastPoint;
         }
 
+        public PressurePoint CurrentExpectedWater(int minute)
+        {
+            PressurePoint lastPoint = new PressurePoint() { Minute = -1, Value = 0 };
+            List<PressurePoint> sortedPressurePoints = this.PressurePoints;
+            if (sortedPressurePoints.Count > 0)
+            {
+                sortedPressurePoints = sortedPressurePoints.Where(temperaturePoint => temperaturePoint.Minute <= minute).ToList();
+                if (sortedPressurePoints.Count > 0)
+                {
+                    sortedPressurePoints.Sort((a, b) => b.Minute.CompareTo(a.Minute));
+                    lastPoint = sortedPressurePoints.First();
+                }
+            }
+
+            return lastPoint;
+        }
+
 
     }
 }

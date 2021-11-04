@@ -24,6 +24,7 @@ namespace Oven_Interface.Views
         {
             Properties.Settings.Default.canChangeTempsAgainAfter = Decimal.ToInt32(allowChangeTempAfter.Value);
             Properties.Settings.Default.turnOffTempOperationsAfter = Decimal.ToInt32(turnOffRelaysAfter.Value);
+            Properties.Settings.Default.Save();
         }
 
         private void button55_Click(object sender, EventArgs e)

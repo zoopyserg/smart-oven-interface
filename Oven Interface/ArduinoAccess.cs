@@ -91,13 +91,11 @@ namespace Oven_Interface
 
         public void TurnOnPin(int pinNumber)
         {
-            //session.SetDigitalPinMode(pinNumber, PinMode.DigitalOutput);
             session.SetDigitalPin(pinNumber, false); //  посылаю true потому что купил плату которая при LOW включена... пофиксить новой платой.
         }
 
         public void TurnOffPin(int pinNumber)
         {
-            //session.SetDigitalPinMode(pinNumber, PinMode.DigitalOutput);
             session.SetDigitalPin(pinNumber, true); //  посылаю true потому что купил плату которая при LOW включена... пофиксить новой платой.
         }
 
@@ -125,11 +123,6 @@ namespace Oven_Interface
             }
 
             form.allActionsTabControl.SelectedTab = form.statusPage;
-        }
-
-        private void Session_OnDigitalStateReceived(object sender, FirmataEventArgs<DigitalPortState> eventArgs)
-        {
-            //form.UpdateClicksAsync();
         }
 
         private void Session_OnAnalogStateReceived(object sender, FirmataEventArgs<AnalogState> eventArgs)
@@ -171,10 +164,17 @@ namespace Oven_Interface
 
         public void Disconnect()
         {
-            if (connection != null)
+            try
             {
-                firmata.ResetBoard();
-                connection.Close();
+                if (connection != null)
+                {
+                    firmata.ResetBoard();
+                    connection.Close();
+                }
+            }
+            catch
+            {
+                // nothing
             }
         }
     }

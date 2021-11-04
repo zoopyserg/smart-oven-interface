@@ -147,7 +147,7 @@ namespace Oven_Interface.Views
             // coefficientC
             // 
             resources.ApplyResources(this.coefficientC, "coefficientC");
-            this.coefficientC.DecimalPlaces = 12;
+            this.coefficientC.DecimalPlaces = 18;
             this.coefficientC.Maximum = new decimal(new int[] {
             10000000,
             0,
@@ -175,7 +175,7 @@ namespace Oven_Interface.Views
             // coefficientB
             // 
             resources.ApplyResources(this.coefficientB, "coefficientB");
-            this.coefficientB.DecimalPlaces = 12;
+            this.coefficientB.DecimalPlaces = 18;
             this.coefficientB.Maximum = new decimal(new int[] {
             10000000,
             0,
@@ -191,7 +191,7 @@ namespace Oven_Interface.Views
             // coefficientA
             // 
             resources.ApplyResources(this.coefficientA, "coefficientA");
-            this.coefficientA.DecimalPlaces = 12;
+            this.coefficientA.DecimalPlaces = 18;
             this.coefficientA.Maximum = new decimal(new int[] {
             10000000,
             0,
