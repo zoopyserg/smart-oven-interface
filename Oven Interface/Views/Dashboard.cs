@@ -29,6 +29,7 @@ namespace Oven_Interface
         public ProgramProcessor programProcessor { get; set; }
         public long CurrentSensorValue { get; set; }
         public long CurrentTemperature { get; set; }
+        public long CurrentClicks { get; set; }
 
         public Dashboard()
         {
@@ -44,6 +45,8 @@ namespace Oven_Interface
             EnableDisablePauseButton();
             EnableDisableStopButton();
             EnableDisableConnectButton();
+
+            this.CurrentClicks = 0;
 
             UpdateBinding();
         }
@@ -178,6 +181,19 @@ namespace Oven_Interface
             this.CurrentTemperature = Decimal.ToInt32(Properties.Settings.Default.temperatureCoefficientA * this.CurrentSensorValue * this.CurrentSensorValue + Properties.Settings.Default.temperatureCoefficientB * this.CurrentSensorValue + Properties.Settings.Default.temperatureCoefficientC);
 
             temperatureLabel.Text = $"{ this.CurrentTemperature.ToString()} C";
+        }
+
+        public void UpdateClicksAsync(object sender, FirmataEventArgs<AnalogState> eventArgs)
+        {
+            if (InvokeRequired)
+            {
+                Invoke(new Action<object, FirmataEventArgs<AnalogState>>(UpdateClicksAsync), sender, eventArgs);
+                return;
+            }
+
+            this.CurrentClicks += 1;
+
+            clickCounterLabel.Text = $"{ this.CurrentClicks.ToString()}";
         }
 
         public void UpdateActiveProgramNameLabelAsync(object sender, string programName)

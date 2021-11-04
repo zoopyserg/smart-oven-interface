@@ -31,21 +31,21 @@ namespace Oven_Interface
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3600D, 100D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(7200D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint4 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3600D, 100D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(7200D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.startProgramButton = new System.Windows.Forms.Button();
             this.stopProgramButton = new System.Windows.Forms.Button();
             this.continueProgramButton = new System.Windows.Forms.Button();
@@ -164,6 +164,8 @@ namespace Oven_Interface
             this.label20 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
             this.breadBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label21 = new System.Windows.Forms.Label();
+            this.clickCounterLabel = new System.Windows.Forms.Label();
             this.actionGroupBox.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -262,11 +264,11 @@ namespace Oven_Interface
             // 
             // actionGroupBox
             // 
-            resources.ApplyResources(this.actionGroupBox, "actionGroupBox");
             this.actionGroupBox.Controls.Add(this.pauseProgramButton);
             this.actionGroupBox.Controls.Add(this.startProgramButton);
             this.actionGroupBox.Controls.Add(this.stopProgramButton);
             this.actionGroupBox.Controls.Add(this.continueProgramButton);
+            resources.ApplyResources(this.actionGroupBox, "actionGroupBox");
             this.actionGroupBox.Name = "actionGroupBox";
             this.actionGroupBox.TabStop = false;
             // 
@@ -277,136 +279,136 @@ namespace Oven_Interface
             // 
             // menuStrip1
             // 
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.програмаToolStripMenuItem,
             this.діагностикаToolStripMenuItem,
             this.режимиToolStripMenuItem,
             this.налаштуванняToolStripMenuItem,
             this.languageToolStripMenuItem2});
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             // 
             // програмаToolStripMenuItem
             // 
-            resources.ApplyResources(this.програмаToolStripMenuItem, "програмаToolStripMenuItem");
             this.програмаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.вихідToolStripMenuItem});
             this.програмаToolStripMenuItem.Name = "програмаToolStripMenuItem";
+            resources.ApplyResources(this.програмаToolStripMenuItem, "програмаToolStripMenuItem");
             // 
             // вихідToolStripMenuItem
             // 
-            resources.ApplyResources(this.вихідToolStripMenuItem, "вихідToolStripMenuItem");
             this.вихідToolStripMenuItem.Name = "вихідToolStripMenuItem";
+            resources.ApplyResources(this.вихідToolStripMenuItem, "вихідToolStripMenuItem");
             this.вихідToolStripMenuItem.Click += new System.EventHandler(this.вихідToolStripMenuItem_Click);
             // 
             // діагностикаToolStripMenuItem
             // 
-            resources.ApplyResources(this.діагностикаToolStripMenuItem, "діагностикаToolStripMenuItem");
             this.діагностикаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.перевіркаПінівToolStripMenuItem,
             this.оновитиІнформаціюПроДоступніПіниToolStripMenuItem});
             this.діагностикаToolStripMenuItem.Name = "діагностикаToolStripMenuItem";
+            resources.ApplyResources(this.діагностикаToolStripMenuItem, "діагностикаToolStripMenuItem");
             // 
             // перевіркаПінівToolStripMenuItem
             // 
-            resources.ApplyResources(this.перевіркаПінівToolStripMenuItem, "перевіркаПінівToolStripMenuItem");
             this.перевіркаПінівToolStripMenuItem.Name = "перевіркаПінівToolStripMenuItem";
+            resources.ApplyResources(this.перевіркаПінівToolStripMenuItem, "перевіркаПінівToolStripMenuItem");
             this.перевіркаПінівToolStripMenuItem.Click += new System.EventHandler(this.перевіркаПінівToolStripMenuItem_Click);
             // 
             // оновитиІнформаціюПроДоступніПіниToolStripMenuItem
             // 
-            resources.ApplyResources(this.оновитиІнформаціюПроДоступніПіниToolStripMenuItem, "оновитиІнформаціюПроДоступніПіниToolStripMenuItem");
             this.оновитиІнформаціюПроДоступніПіниToolStripMenuItem.Name = "оновитиІнформаціюПроДоступніПіниToolStripMenuItem";
+            resources.ApplyResources(this.оновитиІнформаціюПроДоступніПіниToolStripMenuItem, "оновитиІнформаціюПроДоступніПіниToolStripMenuItem");
             this.оновитиІнформаціюПроДоступніПіниToolStripMenuItem.Click += new System.EventHandler(this.оновитиІнформаціюПроДоступніПіниToolStripMenuItem_Click);
             // 
             // режимиToolStripMenuItem
             // 
-            resources.ApplyResources(this.режимиToolStripMenuItem, "режимиToolStripMenuItem");
             this.режимиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.оновитиІнформаціюПроДоступніРежимиToolStripMenuItem});
             this.режимиToolStripMenuItem.Name = "режимиToolStripMenuItem";
+            resources.ApplyResources(this.режимиToolStripMenuItem, "режимиToolStripMenuItem");
             // 
             // оновитиІнформаціюПроДоступніРежимиToolStripMenuItem
             // 
-            resources.ApplyResources(this.оновитиІнформаціюПроДоступніРежимиToolStripMenuItem, "оновитиІнформаціюПроДоступніРежимиToolStripMenuItem");
             this.оновитиІнформаціюПроДоступніРежимиToolStripMenuItem.Name = "оновитиІнформаціюПроДоступніРежимиToolStripMenuItem";
+            resources.ApplyResources(this.оновитиІнформаціюПроДоступніРежимиToolStripMenuItem, "оновитиІнформаціюПроДоступніРежимиToolStripMenuItem");
             this.оновитиІнформаціюПроДоступніРежимиToolStripMenuItem.Click += new System.EventHandler(this.оновитиІнформаціюПроДоступніРежимиToolStripMenuItem_Click);
             // 
             // налаштуванняToolStripMenuItem
             // 
-            resources.ApplyResources(this.налаштуванняToolStripMenuItem, "налаштуванняToolStripMenuItem");
             this.налаштуванняToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.калібруванняТермодатчикаToolStripMenuItem,
             this.роліПінівToolStripMenuItem,
             this.хістерезисToolStripMenuItem,
             this.ventilationSettingsToolStripMenuItem});
             this.налаштуванняToolStripMenuItem.Name = "налаштуванняToolStripMenuItem";
+            resources.ApplyResources(this.налаштуванняToolStripMenuItem, "налаштуванняToolStripMenuItem");
             // 
             // калібруванняТермодатчикаToolStripMenuItem
             // 
-            resources.ApplyResources(this.калібруванняТермодатчикаToolStripMenuItem, "калібруванняТермодатчикаToolStripMenuItem");
             this.калібруванняТермодатчикаToolStripMenuItem.Name = "калібруванняТермодатчикаToolStripMenuItem";
+            resources.ApplyResources(this.калібруванняТермодатчикаToolStripMenuItem, "калібруванняТермодатчикаToolStripMenuItem");
             this.калібруванняТермодатчикаToolStripMenuItem.Click += new System.EventHandler(this.калібруванняТермодатчикаToolStripMenuItem_Click);
             // 
             // роліПінівToolStripMenuItem
             // 
-            resources.ApplyResources(this.роліПінівToolStripMenuItem, "роліПінівToolStripMenuItem");
             this.роліПінівToolStripMenuItem.Name = "роліПінівToolStripMenuItem";
+            resources.ApplyResources(this.роліПінівToolStripMenuItem, "роліПінівToolStripMenuItem");
             this.роліПінівToolStripMenuItem.Click += new System.EventHandler(this.роліПінівToolStripMenuItem_Click);
             // 
             // хістерезисToolStripMenuItem
             // 
-            resources.ApplyResources(this.хістерезисToolStripMenuItem, "хістерезисToolStripMenuItem");
             this.хістерезисToolStripMenuItem.Name = "хістерезисToolStripMenuItem";
+            resources.ApplyResources(this.хістерезисToolStripMenuItem, "хістерезисToolStripMenuItem");
             this.хістерезисToolStripMenuItem.Click += new System.EventHandler(this.хістерезисToolStripMenuItem_Click);
             // 
             // ventilationSettingsToolStripMenuItem
             // 
-            resources.ApplyResources(this.ventilationSettingsToolStripMenuItem, "ventilationSettingsToolStripMenuItem");
             this.ventilationSettingsToolStripMenuItem.Name = "ventilationSettingsToolStripMenuItem";
+            resources.ApplyResources(this.ventilationSettingsToolStripMenuItem, "ventilationSettingsToolStripMenuItem");
             this.ventilationSettingsToolStripMenuItem.Click += new System.EventHandler(this.ventilationSettingsToolStripMenuItem_Click);
             // 
             // languageToolStripMenuItem2
             // 
-            resources.ApplyResources(this.languageToolStripMenuItem2, "languageToolStripMenuItem2");
             this.languageToolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.englishToolStripMenuItem,
             this.українськаToolStripMenuItem,
             this.русскийToolStripMenuItem});
             this.languageToolStripMenuItem2.Name = "languageToolStripMenuItem2";
+            resources.ApplyResources(this.languageToolStripMenuItem2, "languageToolStripMenuItem2");
             // 
             // englishToolStripMenuItem
             // 
-            resources.ApplyResources(this.englishToolStripMenuItem, "englishToolStripMenuItem");
             this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
+            resources.ApplyResources(this.englishToolStripMenuItem, "englishToolStripMenuItem");
             this.englishToolStripMenuItem.Click += new System.EventHandler(this.englishToolStripMenuItem_Click);
             // 
             // українськаToolStripMenuItem
             // 
-            resources.ApplyResources(this.українськаToolStripMenuItem, "українськаToolStripMenuItem");
             this.українськаToolStripMenuItem.Name = "українськаToolStripMenuItem";
+            resources.ApplyResources(this.українськаToolStripMenuItem, "українськаToolStripMenuItem");
             this.українськаToolStripMenuItem.Click += new System.EventHandler(this.українськаToolStripMenuItem_Click);
             // 
             // русскийToolStripMenuItem
             // 
-            resources.ApplyResources(this.русскийToolStripMenuItem, "русскийToolStripMenuItem");
             this.русскийToolStripMenuItem.Name = "русскийToolStripMenuItem";
+            resources.ApplyResources(this.русскийToolStripMenuItem, "русскийToolStripMenuItem");
             this.русскийToolStripMenuItem.Click += new System.EventHandler(this.русскийToolStripMenuItem_Click);
             // 
             // groupBox1
             // 
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.LaunchedProgramLabel);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
             // groupBox3
             // 
-            resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Controls.Add(this.expectedTemperatureLabel);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.temperatureLabel);
             this.groupBox3.Controls.Add(this.label5);
+            resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
             // 
@@ -419,7 +421,6 @@ namespace Oven_Interface
             // 
             // valvePointFormGroupBox
             // 
-            resources.ApplyResources(this.valvePointFormGroupBox, "valvePointFormGroupBox");
             this.valvePointFormGroupBox.Controls.Add(this.label9);
             this.valvePointFormGroupBox.Controls.Add(this.label8);
             this.valvePointFormGroupBox.Controls.Add(this.label6);
@@ -430,6 +431,7 @@ namespace Oven_Interface
             this.valvePointFormGroupBox.Controls.Add(this.label3);
             this.valvePointFormGroupBox.Controls.Add(this.createValvePointButton);
             this.valvePointFormGroupBox.Controls.Add(this.label4);
+            resources.ApplyResources(this.valvePointFormGroupBox, "valvePointFormGroupBox");
             this.valvePointFormGroupBox.Name = "valvePointFormGroupBox";
             this.valvePointFormGroupBox.TabStop = false;
             // 
@@ -512,7 +514,6 @@ namespace Oven_Interface
             // 
             // pressurePointFormGroupBox
             // 
-            resources.ApplyResources(this.pressurePointFormGroupBox, "pressurePointFormGroupBox");
             this.pressurePointFormGroupBox.Controls.Add(this.label2);
             this.pressurePointFormGroupBox.Controls.Add(this.newPressurePointValueTextBox);
             this.pressurePointFormGroupBox.Controls.Add(this.label10);
@@ -523,6 +524,7 @@ namespace Oven_Interface
             this.pressurePointFormGroupBox.Controls.Add(this.newPressurePointHoursNumber);
             this.pressurePointFormGroupBox.Controls.Add(this.newPressurePointMinutesNumber);
             this.pressurePointFormGroupBox.Controls.Add(this.label12);
+            resources.ApplyResources(this.pressurePointFormGroupBox, "pressurePointFormGroupBox");
             this.pressurePointFormGroupBox.Name = "pressurePointFormGroupBox";
             this.pressurePointFormGroupBox.TabStop = false;
             // 
@@ -605,10 +607,10 @@ namespace Oven_Interface
             // 
             // progressGroupBox
             // 
-            resources.ApplyResources(this.progressGroupBox, "progressGroupBox");
             this.progressGroupBox.Controls.Add(this.progressBar1);
             this.progressGroupBox.Controls.Add(this.minutesLeftLabel);
             this.progressGroupBox.Controls.Add(this.minutesLeftInfoLabel);
+            resources.ApplyResources(this.progressGroupBox, "progressGroupBox");
             this.progressGroupBox.Name = "progressGroupBox";
             this.progressGroupBox.TabStop = false;
             // 
@@ -629,75 +631,75 @@ namespace Oven_Interface
             // 
             // allActionsTabControl
             // 
-            resources.ApplyResources(this.allActionsTabControl, "allActionsTabControl");
             this.allActionsTabControl.Controls.Add(this.temperaturesPage);
             this.allActionsTabControl.Controls.Add(this.pressuresPage);
             this.allActionsTabControl.Controls.Add(this.valvesPage);
             this.allActionsTabControl.Controls.Add(this.historyPage);
             this.allActionsTabControl.Controls.Add(this.statusPage);
+            resources.ApplyResources(this.allActionsTabControl, "allActionsTabControl");
             this.allActionsTabControl.Name = "allActionsTabControl";
             this.allActionsTabControl.SelectedIndex = 0;
             // 
             // temperaturesPage
             // 
-            resources.ApplyResources(this.temperaturesPage, "temperaturesPage");
             this.temperaturesPage.Controls.Add(this.temperaturePointsTabControl);
+            resources.ApplyResources(this.temperaturesPage, "temperaturesPage");
             this.temperaturesPage.Name = "temperaturesPage";
             this.temperaturesPage.UseVisualStyleBackColor = true;
             // 
             // temperaturePointsTabControl
             // 
-            resources.ApplyResources(this.temperaturePointsTabControl, "temperaturePointsTabControl");
             this.temperaturePointsTabControl.Controls.Add(this.temperatureChartTabPage);
             this.temperaturePointsTabControl.Controls.Add(this.temperatureTableTabPage);
+            resources.ApplyResources(this.temperaturePointsTabControl, "temperaturePointsTabControl");
             this.temperaturePointsTabControl.Name = "temperaturePointsTabControl";
             this.temperaturePointsTabControl.SelectedIndex = 0;
             // 
             // temperatureChartTabPage
             // 
-            resources.ApplyResources(this.temperatureChartTabPage, "temperatureChartTabPage");
             this.temperatureChartTabPage.Controls.Add(this.chartTemperatures);
+            resources.ApplyResources(this.temperatureChartTabPage, "temperatureChartTabPage");
             this.temperatureChartTabPage.Name = "temperatureChartTabPage";
             this.temperatureChartTabPage.UseVisualStyleBackColor = true;
             // 
             // chartTemperatures
             // 
+            chartArea4.Area3DStyle.PointDepth = 5;
+            chartArea4.Area3DStyle.Rotation = 20;
+            chartArea4.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea4.AxisX.Minimum = 0D;
+            chartArea4.AxisX.ScaleBreakStyle.Enabled = true;
+            chartArea4.AxisX.Title = "TIme (min)";
+            chartArea4.AxisY.Title = "Temperature (С)";
+            chartArea4.Name = "ChartArea1";
+            this.chartTemperatures.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartTemperatures.Legends.Add(legend4);
             resources.ApplyResources(this.chartTemperatures, "chartTemperatures");
-            chartArea1.Area3DStyle.PointDepth = 5;
-            chartArea1.Area3DStyle.Rotation = 20;
-            chartArea1.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea1.AxisX.Minimum = 0D;
-            chartArea1.AxisX.ScaleBreakStyle.Enabled = true;
-            chartArea1.AxisX.Title = "TIme (min)";
-            chartArea1.AxisY.Title = "Temperature (С)";
-            chartArea1.Name = "ChartArea1";
-            this.chartTemperatures.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartTemperatures.Legends.Add(legend1);
             this.chartTemperatures.Name = "chartTemperatures";
-            series1.BorderWidth = 4;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
-            series1.IsValueShownAsLabel = true;
-            series1.LabelForeColor = System.Drawing.Color.DimGray;
-            series1.Legend = "Legend1";
-            series1.Name = "Temperature";
-            series1.Points.Add(dataPoint1);
-            series1.Points.Add(dataPoint2);
-            series1.Points.Add(dataPoint3);
-            series1.XValueMember = "Minute";
-            series1.YValueMembers = "Value";
-            this.chartTemperatures.Series.Add(series1);
-            title1.Name = "Text";
-            this.chartTemperatures.Titles.Add(title1);
+            series4.BorderWidth = 4;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
+            series4.IsValueShownAsLabel = true;
+            series4.LabelForeColor = System.Drawing.Color.DimGray;
+            series4.Legend = "Legend1";
+            series4.Name = "Temperature";
+            series4.Points.Add(dataPoint4);
+            series4.Points.Add(dataPoint5);
+            series4.Points.Add(dataPoint6);
+            series4.XValueMember = "Minute";
+            series4.YValueMembers = "Value";
+            this.chartTemperatures.Series.Add(series4);
+            title4.Name = "Text";
+            this.chartTemperatures.Titles.Add(title4);
             // 
             // temperatureTableTabPage
             // 
-            resources.ApplyResources(this.temperatureTableTabPage, "temperatureTableTabPage");
             this.temperatureTableTabPage.Controls.Add(this.button1);
             this.temperatureTableTabPage.Controls.Add(this.deleteTemperaturePointButton);
             this.temperatureTableTabPage.Controls.Add(this.button2);
             this.temperatureTableTabPage.Controls.Add(this.temperaturePointsListBox);
+            resources.ApplyResources(this.temperatureTableTabPage, "temperatureTableTabPage");
             this.temperatureTableTabPage.Name = "temperatureTableTabPage";
             this.temperatureTableTabPage.UseVisualStyleBackColor = true;
             // 
@@ -730,60 +732,60 @@ namespace Oven_Interface
             // 
             // pressuresPage
             // 
-            resources.ApplyResources(this.pressuresPage, "pressuresPage");
             this.pressuresPage.Controls.Add(this.pressurePointsTabControl);
+            resources.ApplyResources(this.pressuresPage, "pressuresPage");
             this.pressuresPage.Name = "pressuresPage";
             this.pressuresPage.UseVisualStyleBackColor = true;
             // 
             // pressurePointsTabControl
             // 
-            resources.ApplyResources(this.pressurePointsTabControl, "pressurePointsTabControl");
             this.pressurePointsTabControl.Controls.Add(this.pressureChartTabPage);
             this.pressurePointsTabControl.Controls.Add(this.pressureTableTabPage);
+            resources.ApplyResources(this.pressurePointsTabControl, "pressurePointsTabControl");
             this.pressurePointsTabControl.Name = "pressurePointsTabControl";
             this.pressurePointsTabControl.SelectedIndex = 0;
             // 
             // pressureChartTabPage
             // 
-            resources.ApplyResources(this.pressureChartTabPage, "pressureChartTabPage");
             this.pressureChartTabPage.Controls.Add(this.pressuresChart);
+            resources.ApplyResources(this.pressureChartTabPage, "pressureChartTabPage");
             this.pressureChartTabPage.Name = "pressureChartTabPage";
             this.pressureChartTabPage.UseVisualStyleBackColor = true;
             // 
             // pressuresChart
             // 
+            chartArea5.Area3DStyle.PointDepth = 5;
+            chartArea5.Area3DStyle.Rotation = 20;
+            chartArea5.AxisX.Minimum = 0D;
+            chartArea5.AxisX.Title = "Time (min)";
+            chartArea5.AxisY.Title = "Water Pressure (Pa)";
+            chartArea5.Name = "ChartArea1";
+            this.pressuresChart.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.pressuresChart.Legends.Add(legend5);
             resources.ApplyResources(this.pressuresChart, "pressuresChart");
-            chartArea2.Area3DStyle.PointDepth = 5;
-            chartArea2.Area3DStyle.Rotation = 20;
-            chartArea2.AxisX.Minimum = 0D;
-            chartArea2.AxisX.Title = "Time (min)";
-            chartArea2.AxisY.Title = "Water Pressure (Pa)";
-            chartArea2.Name = "ChartArea1";
-            this.pressuresChart.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.pressuresChart.Legends.Add(legend2);
             this.pressuresChart.Name = "pressuresChart";
-            series2.BorderWidth = 4;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
-            series2.IsValueShownAsLabel = true;
-            series2.LabelForeColor = System.Drawing.Color.DimGray;
-            series2.Legend = "Legend1";
-            series2.Name = "Water Pressure";
-            series2.XValueMember = "Minute";
-            series2.YValueMembers = "Value";
-            series2.YValuesPerPoint = 6;
-            this.pressuresChart.Series.Add(series2);
-            title2.Name = "Text";
-            this.pressuresChart.Titles.Add(title2);
+            series5.BorderWidth = 4;
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
+            series5.IsValueShownAsLabel = true;
+            series5.LabelForeColor = System.Drawing.Color.DimGray;
+            series5.Legend = "Legend1";
+            series5.Name = "Water Pressure";
+            series5.XValueMember = "Minute";
+            series5.YValueMembers = "Value";
+            series5.YValuesPerPoint = 6;
+            this.pressuresChart.Series.Add(series5);
+            title5.Name = "Text";
+            this.pressuresChart.Titles.Add(title5);
             // 
             // pressureTableTabPage
             // 
-            resources.ApplyResources(this.pressureTableTabPage, "pressureTableTabPage");
             this.pressureTableTabPage.Controls.Add(this.button3);
             this.pressureTableTabPage.Controls.Add(this.deletePressurePointButton);
             this.pressureTableTabPage.Controls.Add(this.button4);
             this.pressureTableTabPage.Controls.Add(this.pressurePointsListBox);
+            resources.ApplyResources(this.pressureTableTabPage, "pressureTableTabPage");
             this.pressureTableTabPage.Name = "pressureTableTabPage";
             this.pressureTableTabPage.UseVisualStyleBackColor = true;
             // 
@@ -816,60 +818,60 @@ namespace Oven_Interface
             // 
             // valvesPage
             // 
-            resources.ApplyResources(this.valvesPage, "valvesPage");
             this.valvesPage.Controls.Add(this.valvePointsTabControl);
+            resources.ApplyResources(this.valvesPage, "valvesPage");
             this.valvesPage.Name = "valvesPage";
             this.valvesPage.UseVisualStyleBackColor = true;
             // 
             // valvePointsTabControl
             // 
-            resources.ApplyResources(this.valvePointsTabControl, "valvePointsTabControl");
             this.valvePointsTabControl.Controls.Add(this.valveChartTabPage);
             this.valvePointsTabControl.Controls.Add(this.valveTableTabPage);
+            resources.ApplyResources(this.valvePointsTabControl, "valvePointsTabControl");
             this.valvePointsTabControl.Name = "valvePointsTabControl";
             this.valvePointsTabControl.SelectedIndex = 0;
             // 
             // valveChartTabPage
             // 
-            resources.ApplyResources(this.valveChartTabPage, "valveChartTabPage");
             this.valveChartTabPage.Controls.Add(this.valveChart);
+            resources.ApplyResources(this.valveChartTabPage, "valveChartTabPage");
             this.valveChartTabPage.Name = "valveChartTabPage";
             this.valveChartTabPage.UseVisualStyleBackColor = true;
             // 
             // valveChart
             // 
+            chartArea6.Area3DStyle.PointDepth = 5;
+            chartArea6.Area3DStyle.Rotation = 20;
+            chartArea6.AxisX.Minimum = 0D;
+            chartArea6.AxisX.Title = "Time (min)";
+            chartArea6.AxisY.Title = "Steam Level (%)";
+            chartArea6.Name = "ChartArea1";
+            this.valveChart.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.valveChart.Legends.Add(legend6);
             resources.ApplyResources(this.valveChart, "valveChart");
-            chartArea3.Area3DStyle.PointDepth = 5;
-            chartArea3.Area3DStyle.Rotation = 20;
-            chartArea3.AxisX.Minimum = 0D;
-            chartArea3.AxisX.Title = "Time (min)";
-            chartArea3.AxisY.Title = "Steam Level (%)";
-            chartArea3.Name = "ChartArea1";
-            this.valveChart.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.valveChart.Legends.Add(legend3);
             this.valveChart.Name = "valveChart";
-            series3.BorderWidth = 4;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastPoint;
-            series3.IsValueShownAsLabel = true;
-            series3.LabelForeColor = System.Drawing.Color.DimGray;
-            series3.Legend = "Legend1";
-            series3.Name = "Steam Level";
-            series3.XValueMember = "Minute";
-            series3.YValueMembers = "Value";
-            series3.YValuesPerPoint = 6;
-            this.valveChart.Series.Add(series3);
-            title3.Name = "Text";
-            this.valveChart.Titles.Add(title3);
+            series6.BorderWidth = 4;
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastPoint;
+            series6.IsValueShownAsLabel = true;
+            series6.LabelForeColor = System.Drawing.Color.DimGray;
+            series6.Legend = "Legend1";
+            series6.Name = "Steam Level";
+            series6.XValueMember = "Minute";
+            series6.YValueMembers = "Value";
+            series6.YValuesPerPoint = 6;
+            this.valveChart.Series.Add(series6);
+            title6.Name = "Text";
+            this.valveChart.Titles.Add(title6);
             // 
             // valveTableTabPage
             // 
-            resources.ApplyResources(this.valveTableTabPage, "valveTableTabPage");
             this.valveTableTabPage.Controls.Add(this.button5);
             this.valveTableTabPage.Controls.Add(this.button6);
             this.valveTableTabPage.Controls.Add(this.deleteSteamPointButton);
             this.valveTableTabPage.Controls.Add(this.valvePointsListBox);
+            resources.ApplyResources(this.valveTableTabPage, "valveTableTabPage");
             this.valveTableTabPage.Name = "valveTableTabPage";
             this.valveTableTabPage.UseVisualStyleBackColor = true;
             // 
@@ -902,8 +904,8 @@ namespace Oven_Interface
             // 
             // historyPage
             // 
-            resources.ApplyResources(this.historyPage, "historyPage");
             this.historyPage.Controls.Add(this.historyListBox);
+            resources.ApplyResources(this.historyPage, "historyPage");
             this.historyPage.Name = "historyPage";
             this.historyPage.UseVisualStyleBackColor = true;
             // 
@@ -915,8 +917,8 @@ namespace Oven_Interface
             // 
             // statusPage
             // 
-            resources.ApplyResources(this.statusPage, "statusPage");
             this.statusPage.Controls.Add(this.statusListBox);
+            resources.ApplyResources(this.statusPage, "statusPage");
             this.statusPage.Name = "statusPage";
             this.statusPage.UseVisualStyleBackColor = true;
             // 
@@ -928,7 +930,6 @@ namespace Oven_Interface
             // 
             // temperaturePointFormGroupBox
             // 
-            resources.ApplyResources(this.temperaturePointFormGroupBox, "temperaturePointFormGroupBox");
             this.temperaturePointFormGroupBox.Controls.Add(this.label13);
             this.temperaturePointFormGroupBox.Controls.Add(this.label14);
             this.temperaturePointFormGroupBox.Controls.Add(this.label15);
@@ -939,6 +940,7 @@ namespace Oven_Interface
             this.temperaturePointFormGroupBox.Controls.Add(this.newTemperaturePointValueTextBox);
             this.temperaturePointFormGroupBox.Controls.Add(this.temperaturePointValueLabel);
             this.temperaturePointFormGroupBox.Controls.Add(this.createTemperaturePointButton);
+            resources.ApplyResources(this.temperaturePointFormGroupBox, "temperaturePointFormGroupBox");
             this.temperaturePointFormGroupBox.Name = "temperaturePointFormGroupBox";
             this.temperaturePointFormGroupBox.TabStop = false;
             // 
@@ -1021,11 +1023,11 @@ namespace Oven_Interface
             // 
             // programsIndexGroupBox
             // 
-            resources.ApplyResources(this.programsIndexGroupBox, "programsIndexGroupBox");
             this.programsIndexGroupBox.Controls.Add(this.buttonDeleteProgram);
             this.programsIndexGroupBox.Controls.Add(this.programsListBox);
             this.programsIndexGroupBox.Controls.Add(this.buttonPreviousProgram);
             this.programsIndexGroupBox.Controls.Add(this.buttonNextProgram);
+            resources.ApplyResources(this.programsIndexGroupBox, "programsIndexGroupBox");
             this.programsIndexGroupBox.Name = "programsIndexGroupBox";
             this.programsIndexGroupBox.TabStop = false;
             // 
@@ -1038,8 +1040,8 @@ namespace Oven_Interface
             // 
             // programsListBox
             // 
-            resources.ApplyResources(this.programsListBox, "programsListBox");
             this.programsListBox.FormattingEnabled = true;
+            resources.ApplyResources(this.programsListBox, "programsListBox");
             this.programsListBox.Name = "programsListBox";
             this.programsListBox.SelectedIndexChanged += new System.EventHandler(this.programsListBox_SelectedIndexChanged);
             // 
@@ -1059,10 +1061,10 @@ namespace Oven_Interface
             // 
             // programFormGroupBox
             // 
-            resources.ApplyResources(this.programFormGroupBox, "programFormGroupBox");
             this.programFormGroupBox.Controls.Add(this.createProgramButton);
             this.programFormGroupBox.Controls.Add(this.programNameLabel);
             this.programFormGroupBox.Controls.Add(this.newProgramNameTextBox);
+            resources.ApplyResources(this.programFormGroupBox, "programFormGroupBox");
             this.programFormGroupBox.Name = "programFormGroupBox";
             this.programFormGroupBox.TabStop = false;
             // 
@@ -1135,10 +1137,22 @@ namespace Oven_Interface
             // 
             this.breadBindingSource.DataSource = typeof(Oven_Interface.Bread);
             // 
+            // label21
+            // 
+            resources.ApplyResources(this.label21, "label21");
+            this.label21.Name = "label21";
+            // 
+            // clickCounterLabel
+            // 
+            resources.ApplyResources(this.clickCounterLabel, "clickCounterLabel");
+            this.clickCounterLabel.Name = "clickCounterLabel";
+            // 
             // Dashboard
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.clickCounterLabel);
+            this.Controls.Add(this.label21);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button8);
@@ -1337,6 +1351,8 @@ namespace Oven_Interface
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.ToolStripMenuItem ventilationSettingsToolStripMenuItem;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label clickCounterLabel;
     }
 }
 

@@ -127,22 +127,28 @@ namespace Oven_Interface
 
         private void Session_OnDigitalStateReceived(object sender, FirmataEventArgs<DigitalPortState> eventArgs)
         {
-            var smth = eventArgs.Value.IsSet(6) ? "1" : "0";
-            form.UpdateStatusListBox(smth);
+            //form.UpdateClicksAsync();
         }
 
         private void Session_OnAnalogStateReceived(object sender, FirmataEventArgs<AnalogState> eventArgs)
         {
-            this.form.UpdateStatusListBoxAsync(form, eventArgs);
+            if (eventArgs.Value.Channel == Properties.Settings.Default.channelTemperatureSensor)
+            {
+                this.form.UpdateStatusListBoxAsync(form, eventArgs);
+            }
+            else if (eventArgs.Value.Channel == 3 && eventArgs.Value.Level < 300)
+            {
+                form.UpdateClicksAsync(form, eventArgs);
+            }
         }
 
         public void ListenTemperature()
         {
             firmata.AnalogStateReceived += Session_OnAnalogStateReceived;
-            firmata.DigitalStateReceived += Session_OnDigitalStateReceived;
             firmata.ResetBoard();
             firmata.SetAnalogReportMode(Properties.Settings.Default.channelTemperatureSensor, true);
-            firmata.SetSamplingInterval(500);
+            firmata.SetAnalogReportMode(3, true);
+            firmata.SetSamplingInterval(1);
         }
 
         public void Disconnect()
