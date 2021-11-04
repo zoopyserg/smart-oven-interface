@@ -36,6 +36,7 @@ namespace Oven_Interface
                     ReportConnection();
                     session = new ArduinoSession(connection);
                     firmata = session;
+                    firmata.ResetBoard();
                     ReportCapabilities();
                     PerformInitialization();
                     ListenTemperature();
@@ -61,6 +62,7 @@ namespace Oven_Interface
                 connection = EnhancedSerialConnection.Find();
                 Reconnect();
             }
+
         }
 
         private void ReportNoConnection()
@@ -147,6 +149,7 @@ namespace Oven_Interface
         {
             if (connection != null)
             {
+                firmata.ResetBoard();
                 connection.Close();
             }
         }
