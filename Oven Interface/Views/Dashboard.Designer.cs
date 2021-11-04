@@ -851,6 +851,7 @@ namespace Oven_Interface
             this.valveChart.Name = "valveChart";
             series3.BorderWidth = 4;
             series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastPoint;
             series3.IsValueShownAsLabel = true;
             series3.LabelForeColor = System.Drawing.Color.DimGray;
             series3.Legend = "Legend1";

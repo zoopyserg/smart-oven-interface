@@ -52,6 +52,23 @@ namespace Oven_Interface
 
         }
 
+        public ValvePoint CurrentExpectedValve(int minute)
+        {
+            ValvePoint lastPoint = new ValvePoint() { Minute = -1, Value = 0 };
+            List<ValvePoint> sortedValvePoints = this.ValvePoints;
+            if (sortedValvePoints.Count > 0)
+            {
+                sortedValvePoints = sortedValvePoints.Where(temperaturePoint => temperaturePoint.Minute <= minute).ToList();
+                if (sortedValvePoints.Count > 0)
+                {
+                    sortedValvePoints.Sort((a, b) => b.Minute.CompareTo(a.Minute));
+                    lastPoint = sortedValvePoints.First();
+                }
+            }
+
+            return lastPoint;
+        }
+
 
     }
 }

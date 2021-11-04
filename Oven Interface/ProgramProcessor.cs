@@ -1,4 +1,5 @@
 ﻿using Oven_Interface.Controllers;
+using Oven_Interface.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,13 +14,18 @@ namespace Oven_Interface
         public System.Timers.Timer timer { get; set; }
         public System.Timers.Timer turnOffHeatingOperationsTimer { get; set; }
         public System.Timers.Timer canChangeTempTimer { get; set; }
+        public System.Timers.Timer stopOpeningValveTimer { get; set; }
+        public System.Timers.Timer stopClosingValveTimer { get; set; }
         public int minutesPassed { get; set; }
         public Bread runningProgram { get; set; }
         public Dashboard form { get; set; }
         public bool IsRunning { get; set; }
         public bool canChangeTemp { get; set; }
+        public bool canChangeValve { get; set; }
 
         public long ExpectedTemperature { get; set; }
+        public ValvePoint ExpectedValvePoint { get; set; }
+        public long lastProcessedMinute { get; set; }
 
         public ProgramProcessor(Dashboard form)
         {
@@ -33,12 +39,21 @@ namespace Oven_Interface
             turnOffHeatingOperationsTimer = new System.Timers.Timer();
             turnOffHeatingOperationsTimer.Interval = 400; // todo: set duration in settings
             turnOffHeatingOperationsTimer.Elapsed += TurnOffAllHeatingOperations;
-            
+
             canChangeTempTimer = new System.Timers.Timer();
             canChangeTempTimer.Interval = 2000; // todo: set duration in settings
             canChangeTempTimer.Elapsed += SayTempsCanBeChangedAgain;
 
+            stopOpeningValveTimer = new System.Timers.Timer();
+            stopOpeningValveTimer.Elapsed += StopOpeningValve;
+
+            stopClosingValveTimer = new System.Timers.Timer();
+            stopClosingValveTimer.Interval = Properties.Settings.Default.timeToFullyOpenVentilationValve + 1000;
+            stopClosingValveTimer.Elapsed += StopClosingValve;
+
             canChangeTemp = true;
+            canChangeValve = true;
+            lastProcessedMinute = -1;
         }
 
         public void Start(int activeProgramId)
@@ -97,6 +112,8 @@ namespace Oven_Interface
                     else
                     {
                         minutesPassed += 1;
+
+                        // edit temperature
                         ExpectedTemperature = runningProgram.CurrentExpectedTemperature(minutesPassed);
                         form.UpdateExpectedTemperatureAsync(form, $"{ ExpectedTemperature.ToString() } C");
 
@@ -114,15 +131,59 @@ namespace Oven_Interface
                                 form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.temperatureDownPin);
                                 this.turnOffHeatingOperationsTimer.Start();
                             }
+
+                            this.canChangeTemp = false;
+                        }
+
+                        // edit valve
+
+                        ExpectedValvePoint = runningProgram.CurrentExpectedValve(minutesPassed);
+
+                        if (ExpectedValvePoint.Minute != -1 && canChangeValve && ((lastProcessedMinute == -1) || (lastProcessedMinute != -1 && lastProcessedMinute != ExpectedValvePoint.Minute)))
+                        {
+                            lastProcessedMinute = ExpectedValvePoint.Minute;
+                            form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.openVentilationPin);
+                            form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.closeVentilationPin);
+                            this.stopOpeningValveTimer.Interval = Properties.Settings.Default.timeToFullyOpenVentilationValve * ExpectedValvePoint.Value / 100;
+                            this.stopOpeningValveTimer.Start();
+
+                            this.canChangeValve = false;
                         }
 
                         BreadsController.Update(runningProgram.Id, minutesPassed);
                         form.UpdateProgressBarAsync(form, 0, minutesPassed, runningProgram.Duration);
-                        form.UpdateTimeLeftAsync(form, ((runningProgram.Duration - minutesPassed)/60).ToString());
+                        form.UpdateTimeLeftAsync(form, ((runningProgram.Duration - minutesPassed) / 60).ToString());
                     }
                 }));
 
-                this.canChangeTemp = false;
+            }
+        }
+
+        private void StopOpeningValve(object sender, ElapsedEventArgs e)
+        {
+            if (runningProgram != null)
+            {
+                form.Invoke(new Action(() =>
+                {
+                    form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.openVentilationPin);
+                    form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.closeVentilationPin);
+                    this.stopOpeningValveTimer.Stop();
+                    this.stopClosingValveTimer.Start();
+                }));
+            }
+        }
+
+        private void StopClosingValve(object sender, ElapsedEventArgs e)
+        {
+            if (runningProgram != null)
+            {
+                form.Invoke(new Action(() =>
+                {
+                    form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.closeVentilationPin);
+                    this.canChangeValve = true;
+                    this.stopClosingValveTimer.Stop();
+                }));
+
             }
         }
 
@@ -153,6 +214,7 @@ namespace Oven_Interface
             if (IsRunning)
             {
                 timer.Stop();
+                lastProcessedMinute = -1;
                 if (runningProgram != null)
                 {
                     form.UpdateStatusListBox($"Програму {runningProgram.Name} завершено");

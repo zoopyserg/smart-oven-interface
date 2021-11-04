@@ -229,9 +229,9 @@ namespace Oven_Interface.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("5000")]
-        public int timeToFullyOpenVentilationValve {
+        public long timeToFullyOpenVentilationValve {
             get {
-                return ((int)(this["timeToFullyOpenVentilationValve"]));
+                return ((long)(this["timeToFullyOpenVentilationValve"]));
             }
             set {
                 this["timeToFullyOpenVentilationValve"] = value;

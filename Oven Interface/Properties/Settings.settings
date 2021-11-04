@@ -58,7 +58,7 @@
     <Setting Name="turnOffTempOperationsAfter" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">1000</Value>
     </Setting>
-    <Setting Name="timeToFullyOpenVentilationValve" Type="System.Int32" Scope="User">
+    <Setting Name="timeToFullyOpenVentilationValve" Type="System.Int64" Scope="User">
       <Value Profile="(Default)">5000</Value>
     </Setting>
   </Settings>
