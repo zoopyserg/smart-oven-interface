@@ -12,12 +12,12 @@ namespace Oven_Interface.Models
 
         public int Minute { get; set; }
         
-        public int Value { get; set; }
+        public decimal Value { get; set; }
 
         public int BreadId { get; set; }
         public string DisplayString
         {
-            get { return $"На {(Minute/60).ToString()}й хвилині виставити тиск води {Value.ToString()} Па"; }
+            get { return $"На {(Minute/60).ToString()}й хвилині залити {Value.ToString()} л води"; }
         }
     }
 }

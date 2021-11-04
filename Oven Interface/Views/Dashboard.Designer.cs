@@ -70,6 +70,7 @@ namespace Oven_Interface
             this.роліПінівToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.хістерезисToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventilationSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.калібруванняЛічильникаВодиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.languageToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.українськаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -163,9 +164,9 @@ namespace Oven_Interface
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
-            this.breadBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label21 = new System.Windows.Forms.Label();
             this.clickCounterLabel = new System.Windows.Forms.Label();
+            this.breadBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.actionGroupBox.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -340,7 +341,8 @@ namespace Oven_Interface
             this.калібруванняТермодатчикаToolStripMenuItem,
             this.роліПінівToolStripMenuItem,
             this.хістерезисToolStripMenuItem,
-            this.ventilationSettingsToolStripMenuItem});
+            this.ventilationSettingsToolStripMenuItem,
+            this.калібруванняЛічильникаВодиToolStripMenuItem});
             this.налаштуванняToolStripMenuItem.Name = "налаштуванняToolStripMenuItem";
             resources.ApplyResources(this.налаштуванняToolStripMenuItem, "налаштуванняToolStripMenuItem");
             // 
@@ -367,6 +369,12 @@ namespace Oven_Interface
             this.ventilationSettingsToolStripMenuItem.Name = "ventilationSettingsToolStripMenuItem";
             resources.ApplyResources(this.ventilationSettingsToolStripMenuItem, "ventilationSettingsToolStripMenuItem");
             this.ventilationSettingsToolStripMenuItem.Click += new System.EventHandler(this.ventilationSettingsToolStripMenuItem_Click);
+            // 
+            // калібруванняЛічильникаВодиToolStripMenuItem
+            // 
+            this.калібруванняЛічильникаВодиToolStripMenuItem.Name = "калібруванняЛічильникаВодиToolStripMenuItem";
+            resources.ApplyResources(this.калібруванняЛічильникаВодиToolStripMenuItem, "калібруванняЛічильникаВодиToolStripMenuItem");
+            this.калібруванняЛічильникаВодиToolStripMenuItem.Click += new System.EventHandler(this.калібруванняЛічильникаВодиToolStripMenuItem_Click);
             // 
             // languageToolStripMenuItem2
             // 
@@ -473,16 +481,6 @@ namespace Oven_Interface
             // newValvePointValueTextBox
             // 
             resources.ApplyResources(this.newValvePointValueTextBox, "newValvePointValueTextBox");
-            this.newValvePointValueTextBox.Maximum = new decimal(new int[] {
-            6000,
-            0,
-            0,
-            0});
-            this.newValvePointValueTextBox.Minimum = new decimal(new int[] {
-            500,
-            0,
-            0,
-            -2147483648});
             this.newValvePointValueTextBox.Name = "newValvePointValueTextBox";
             // 
             // newValvePointHoursNumber
@@ -535,6 +533,7 @@ namespace Oven_Interface
             // 
             // newPressurePointValueTextBox
             // 
+            this.newPressurePointValueTextBox.DecimalPlaces = 3;
             resources.ApplyResources(this.newPressurePointValueTextBox, "newPressurePointValueTextBox");
             this.newPressurePointValueTextBox.Maximum = new decimal(new int[] {
             6000,
@@ -1133,10 +1132,6 @@ namespace Oven_Interface
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // breadBindingSource
-            // 
-            this.breadBindingSource.DataSource = typeof(Oven_Interface.Bread);
-            // 
             // label21
             // 
             resources.ApplyResources(this.label21, "label21");
@@ -1146,6 +1141,10 @@ namespace Oven_Interface
             // 
             resources.ApplyResources(this.clickCounterLabel, "clickCounterLabel");
             this.clickCounterLabel.Name = "clickCounterLabel";
+            // 
+            // breadBindingSource
+            // 
+            this.breadBindingSource.DataSource = typeof(Oven_Interface.Bread);
             // 
             // Dashboard
             // 
@@ -1353,6 +1352,7 @@ namespace Oven_Interface
         private System.Windows.Forms.ToolStripMenuItem ventilationSettingsToolStripMenuItem;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label clickCounterLabel;
+        private System.Windows.Forms.ToolStripMenuItem калібруванняЛічильникаВодиToolStripMenuItem;
     }
 }
 

@@ -191,28 +191,34 @@
     <value>Настройки</value>
   </data>
   <data name="калібруванняТермодатчикаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 22</value>
+    <value>227, 22</value>
   </data>
   <data name="калібруванняТермодатчикаToolStripMenuItem.Text" xml:space="preserve">
     <value>Калибровка Термодатчика</value>
   </data>
   <data name="роліПінівToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 22</value>
+    <value>227, 22</value>
   </data>
   <data name="роліПінівToolStripMenuItem.Text" xml:space="preserve">
     <value>Роли Пинов</value>
   </data>
   <data name="хістерезисToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 22</value>
+    <value>227, 22</value>
   </data>
   <data name="хістерезисToolStripMenuItem.Text" xml:space="preserve">
     <value>Настройки Гистерезиса</value>
   </data>
   <data name="ventilationSettingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 22</value>
+    <value>227, 22</value>
   </data>
   <data name="ventilationSettingsToolStripMenuItem.Text" xml:space="preserve">
     <value>Настройки Вентиляции</value>
+  </data>
+  <data name="калібруванняЛічильникаВодиToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 22</value>
+  </data>
+  <data name="калібруванняЛічильникаВодиToolStripMenuItem.Text" xml:space="preserve">
+    <value>Калибровка Счётчика Воды</value>
   </data>
   <data name="languageToolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 20</value>
@@ -256,6 +262,9 @@
   <data name="label6.Text" xml:space="preserve">
     <value>ч</value>
   </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 15</value>
+  </data>
   <data name="label3.Text" xml:space="preserve">
     <value>Значение:</value>
   </data>
@@ -273,6 +282,9 @@
   </data>
   <data name="label10.Text" xml:space="preserve">
     <value>м</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 15</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Значение:</value>
@@ -375,6 +387,9 @@
   </data>
   <data name="label16.Text" xml:space="preserve">
     <value>Вр.</value>
+  </data>
+  <data name="temperaturePointValueLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 15</value>
   </data>
   <data name="temperaturePointValueLabel.Text" xml:space="preserve">
     <value>Значение:</value>
@@ -511,5 +526,9 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
 </value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
   </data>
 </root>

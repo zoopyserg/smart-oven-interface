@@ -168,6 +168,12 @@
     <Compile Include="Views\VentilationSettings.Designer.cs">
       <DependentUpon>VentilationSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\WaterCounterCalibration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\WaterCounterCalibration.Designer.cs">
+      <DependentUpon>WaterCounterCalibration.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Views\Dashboard.en-US.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -239,6 +245,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\VentilationSettings.uk.resx">
       <DependentUpon>VentilationSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\WaterCounterCalibration.en-US.resx">
+      <DependentUpon>WaterCounterCalibration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\WaterCounterCalibration.resx">
+      <DependentUpon>WaterCounterCalibration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\WaterCounterCalibration.ru.resx">
+      <DependentUpon>WaterCounterCalibration.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="GrantAccessToFiles.bat" />
     <None Include="Oven Interface_TemporaryKey.pfx" />

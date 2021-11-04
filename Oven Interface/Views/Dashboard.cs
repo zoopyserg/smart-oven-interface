@@ -467,7 +467,7 @@ namespace Oven_Interface
         private void createPressurePointButton_Click(object sender, EventArgs e)
         {
             int persistedIndex = programsListBox.SelectedIndex;
-            PressurePointsController.Create(breads[persistedIndex].Id, (Decimal.ToInt32(newPressurePointHoursNumber.Value) * 3600 + Decimal.ToInt32(newPressurePointMinutesNumber.Value) * 60 + Decimal.ToInt32(newPressurePointSecondsNumber.Value)), Decimal.ToInt32(newPressurePointValueTextBox.Value));
+            PressurePointsController.Create(breads[persistedIndex].Id, (Decimal.ToInt32(newPressurePointHoursNumber.Value) * 3600 + Decimal.ToInt32(newPressurePointMinutesNumber.Value) * 60 + Decimal.ToInt32(newPressurePointSecondsNumber.Value)), newPressurePointValueTextBox.Value);
             newPressurePointHoursNumber.Value = 0;
             newPressurePointMinutesNumber.Value = 0;
             newPressurePointSecondsNumber.Value = 0;
@@ -605,6 +605,12 @@ namespace Oven_Interface
         {
             Form ventilationSettings = new VentilationSettings();
             ventilationSettings.Show();
+        }
+
+        private void калібруванняЛічильникаВодиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form waterCounterSettings = new WaterCounterCalibration();
+            waterCounterSettings.Show();
         }
     }
 }

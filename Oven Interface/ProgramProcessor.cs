@@ -172,8 +172,8 @@ namespace Oven_Interface
                             if (ExpectedWaterPoint.Minute != -1 && canChangeWater && ((lastProcessedWaterMinute == -1) || (lastProcessedWaterMinute != -1 && lastProcessedWaterMinute != ExpectedWaterPoint.Minute)))
                             {
                                 form.CurrentClicks = 0;
-                                form.ExpectedClicks = ExpectedWaterPoint.Value * Properties.Settings.Default.waterClicksPerLiter; // todo: convert liters to clicks, now I just store clicks
-                            lastProcessedWaterMinute = ExpectedWaterPoint.Minute;
+                                form.ExpectedClicks = Decimal.ToInt32(ExpectedWaterPoint.Value * Properties.Settings.Default.waterClicksPerLiter); // todo: convert liters to clicks, now I just store clicks
+                                lastProcessedWaterMinute = ExpectedWaterPoint.Minute;
                                 form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.waterSolenoidPin);
 
                                 this.canChangeWater = false;

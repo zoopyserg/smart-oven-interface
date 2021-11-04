@@ -519,6 +519,9 @@
   <data name="ventilationSettingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 22</value>
   </data>
+  <data name="калібруванняЛічильникаВодиToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 22</value>
+  </data>
   <data name="налаштуванняToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>101, 20</value>
   </data>
@@ -778,7 +781,7 @@
     <value>4</value>
   </data>
   <data name="newValvePointValueTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>94, 52</value>
+    <value>111, 52</value>
   </data>
   <data name="newValvePointValueTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 21</value>
@@ -832,13 +835,13 @@
     <value>2, 0, 2, 0</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 15</value>
+    <value>101, 15</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>Значення:</value>
+    <value>Значення (%):</value>
   </data>
   <data name="&gt;&gt;label3.Name" xml:space="preserve">
     <value>label3</value>
@@ -859,7 +862,7 @@
     <value>NoControl</value>
   </data>
   <data name="createValvePointButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 53</value>
+    <value>175, 52</value>
   </data>
   <data name="createValvePointButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -934,7 +937,7 @@
     <value>53</value>
   </data>
   <data name="valvePointFormGroupBox.Text" xml:space="preserve">
-    <value>Точка Подачі Пари</value>
+    <value>Точка Відкриття Вентиляції</value>
   </data>
   <data name="&gt;&gt;valvePointFormGroupBox.Name" xml:space="preserve">
     <value>valvePointFormGroupBox</value>
@@ -982,7 +985,7 @@
     <value>0</value>
   </data>
   <data name="newPressurePointValueTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>93, 51</value>
+    <value>111, 53</value>
   </data>
   <data name="newPressurePointValueTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 21</value>
@@ -1048,13 +1051,13 @@
     <value>2, 0, 2, 0</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 15</value>
+    <value>97, 15</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Значення:</value>
+    <value>Значення (л):</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -1108,7 +1111,7 @@
     <value>NoControl</value>
   </data>
   <data name="createPressurePointButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 55</value>
+    <value>175, 53</value>
   </data>
   <data name="createPressurePointButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -1246,7 +1249,7 @@
     <value>52</value>
   </data>
   <data name="pressurePointFormGroupBox.Text" xml:space="preserve">
-    <value>Точка Тиску Води</value>
+    <value>Точка Подачі Води</value>
   </data>
   <data name="&gt;&gt;pressurePointFormGroupBox.Name" xml:space="preserve">
     <value>pressurePointFormGroupBox</value>
@@ -2476,7 +2479,7 @@
     <value>6</value>
   </data>
   <data name="newTemperaturePointValueTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>94, 49</value>
+    <value>109, 48</value>
   </data>
   <data name="newTemperaturePointValueTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 21</value>
@@ -2503,19 +2506,19 @@
     <value>NoControl</value>
   </data>
   <data name="temperaturePointValueLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 55</value>
+    <value>6, 51</value>
   </data>
   <data name="temperaturePointValueLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="temperaturePointValueLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 15</value>
+    <value>98, 15</value>
   </data>
   <data name="temperaturePointValueLabel.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
   </data>
   <data name="temperaturePointValueLabel.Text" xml:space="preserve">
-    <value>Значення:</value>
+    <value>Значення (С):</value>
   </data>
   <data name="&gt;&gt;temperaturePointValueLabel.Name" xml:space="preserve">
     <value>temperaturePointValueLabel</value>
@@ -2536,7 +2539,7 @@
     <value>NoControl</value>
   </data>
   <data name="createTemperaturePointButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 48</value>
+    <value>173, 48</value>
   </data>
   <data name="createTemperaturePointButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -3072,11 +3075,11 @@
   <data name="&gt;&gt;button9.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="breadBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="label21.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="label21.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label21.Location" type="System.Drawing.Point, System.Drawing">
     <value>999, 159</value>
@@ -3105,6 +3108,9 @@
   <data name="clickCounterLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="clickCounterLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="clickCounterLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>1082, 159</value>
   </data>
@@ -3129,6 +3135,9 @@
   <data name="&gt;&gt;clickCounterLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="breadBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -3296,6 +3305,12 @@
     <value>ventilationSettingsToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;ventilationSettingsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;калібруванняЛічильникаВодиToolStripMenuItem.Name" xml:space="preserve">
+    <value>калібруванняЛічильникаВодиToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;калібруванняЛічильникаВодиToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;languageToolStripMenuItem2.Name" xml:space="preserve">

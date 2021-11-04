@@ -20,7 +20,7 @@ namespace Oven_Interface.Controllers
             return db.Query<PressurePoint>(sql, parameters);
         }
 
-        public static int Create(int breadId, int minute, int value)
+        public static int Create(int breadId, int minute, decimal value)
         {
             DynamicParameters parameters = new DynamicParameters();
             parameters.Add("@Id", 0, DbType.Int32, ParameterDirection.Output);
