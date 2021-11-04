@@ -111,118 +111,150 @@ namespace Oven_Interface
 
         private void OnTimeEvent(object sender, ElapsedEventArgs e)
         {
-            if (runningProgram != null)
+            try
             {
-                this.canChangeTempTimer.Start();
-                form.Invoke(new Action(() =>
+
+
+                if (runningProgram != null)
                 {
-                    if (minutesPassed >= runningProgram.Duration)
+                    this.canChangeTempTimer.Start();
+                    form.Invoke(new Action(() =>
                     {
-                        CommitProgramFinilization();
-                    }
-                    else
-                    {
-                        minutesPassed += 1;
+                        if (minutesPassed >= runningProgram.Duration)
+                        {
+                            CommitProgramFinilization();
+                        }
+                        else
+                        {
+                            minutesPassed += 1;
 
                         // edit temperature
                         ExpectedTemperature = runningProgram.CurrentExpectedTemperature(minutesPassed);
-                        form.UpdateExpectedTemperatureAsync(form, $"{ ExpectedTemperature.ToString() } C");
+                            form.UpdateExpectedTemperatureAsync(form, $"{ ExpectedTemperature.ToString() } C");
 
-                        if (canChangeTemp)
-                        {
-                            if (form.CurrentTemperature < ExpectedTemperature)
+                            if (canChangeTemp)
                             {
-                                form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.temperatureUpPin);
-                                form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.temperatureDownPin);
-                                this.turnOffHeatingOperationsTimer.Start();
-                            }
-                            else
-                            {
-                                form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.temperatureUpPin);
-                                form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.temperatureDownPin);
-                                this.turnOffHeatingOperationsTimer.Start();
-                            }
+                                if (form.CurrentTemperature < ExpectedTemperature)
+                                {
+                                    form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.temperatureUpPin);
+                                    form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.temperatureDownPin);
+                                    this.turnOffHeatingOperationsTimer.Start();
+                                }
+                                else
+                                {
+                                    form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.temperatureUpPin);
+                                    form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.temperatureDownPin);
+                                    this.turnOffHeatingOperationsTimer.Start();
+                                }
 
-                            this.canChangeTemp = false;
-                        }
+                                this.canChangeTemp = false;
+                            }
 
                         // edit valve
 
                         ExpectedValvePoint = runningProgram.CurrentExpectedValve(minutesPassed);
 
-                        if (ExpectedValvePoint.Minute != -1 && canChangeValve && ((lastProcessedValveMinute == -1) || (lastProcessedValveMinute != -1 && lastProcessedValveMinute != ExpectedValvePoint.Minute)))
-                        {
-                            lastProcessedValveMinute = ExpectedValvePoint.Minute;
-                            form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.openVentilationPin);
-                            form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.closeVentilationPin);
-                            this.stopOpeningValveTimer.Interval = Properties.Settings.Default.timeToFullyOpenVentilationValve * ExpectedValvePoint.Value / 100;
-                            this.stopOpeningValveTimer.Start();
+                            if (ExpectedValvePoint.Minute != -1 && canChangeValve && ((lastProcessedValveMinute == -1) || (lastProcessedValveMinute != -1 && lastProcessedValveMinute != ExpectedValvePoint.Minute)))
+                            {
+                                lastProcessedValveMinute = ExpectedValvePoint.Minute;
+                                form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.openVentilationPin);
+                                form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.closeVentilationPin);
+                                this.stopOpeningValveTimer.Interval = Properties.Settings.Default.timeToFullyOpenVentilationValve * ExpectedValvePoint.Value / 100;
+                                this.stopOpeningValveTimer.Start();
 
-                            this.canChangeValve = false;
-                        }
+                                this.canChangeValve = false;
+                            }
 
                         // edit water
 
                         ExpectedWaterPoint = runningProgram.CurrentExpectedWater(minutesPassed);
 
-                        if (ExpectedWaterPoint.Minute != -1 && canChangeWater && ((lastProcessedWaterMinute == -1) || (lastProcessedWaterMinute != -1 && lastProcessedWaterMinute != ExpectedWaterPoint.Minute)))
-                        {
-                            form.CurrentClicks = 0;
-                            form.ExpectedClicks = ExpectedWaterPoint.Value; // todo: convert liters to clicks, now I just store clicks
+                            if (ExpectedWaterPoint.Minute != -1 && canChangeWater && ((lastProcessedWaterMinute == -1) || (lastProcessedWaterMinute != -1 && lastProcessedWaterMinute != ExpectedWaterPoint.Minute)))
+                            {
+                                form.CurrentClicks = 0;
+                                form.ExpectedClicks = ExpectedWaterPoint.Value * Properties.Settings.Default.waterClicksPerLiter; // todo: convert liters to clicks, now I just store clicks
                             lastProcessedWaterMinute = ExpectedWaterPoint.Minute;
-                            form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.waterSolenoidPin);
+                                form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.waterSolenoidPin);
 
-                            this.canChangeWater = false;
+                                this.canChangeWater = false;
+                            }
+
+                            BreadsController.Update(runningProgram.Id, minutesPassed);
+                            form.UpdateProgressBarAsync(form, 0, minutesPassed, runningProgram.Duration);
+                            form.UpdateTimeLeftAsync(form, ((runningProgram.Duration - minutesPassed) / 60).ToString());
                         }
+                    }));
 
-                        BreadsController.Update(runningProgram.Id, minutesPassed);
-                        form.UpdateProgressBarAsync(form, 0, minutesPassed, runningProgram.Duration);
-                        form.UpdateTimeLeftAsync(form, ((runningProgram.Duration - minutesPassed) / 60).ToString());
-                    }
-                }));
-
+                }
+            } catch
+            {
+                // nothing
             }
         }
 
         private void StopOpeningValve(object sender, ElapsedEventArgs e)
         {
-            if (runningProgram != null)
+            try
             {
-                form.Invoke(new Action(() =>
+
+
+                if (runningProgram != null)
                 {
-                    form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.openVentilationPin);
-                    form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.closeVentilationPin);
-                    this.stopOpeningValveTimer.Stop();
-                    this.stopClosingValveTimer.Start();
-                }));
+                    form.Invoke(new Action(() =>
+                    {
+                        form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.openVentilationPin);
+                        form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.closeVentilationPin);
+                        this.stopOpeningValveTimer.Stop();
+                        this.stopClosingValveTimer.Start();
+                    }));
+                }
+            } catch
+            {
+
             }
         }
 
         private void StopClosingValve(object sender, ElapsedEventArgs e)
         {
-            if (runningProgram != null)
+            try
             {
-                form.Invoke(new Action(() =>
+
+
+                if (runningProgram != null)
                 {
-                    form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.closeVentilationPin);
-                    this.canChangeValve = true;
-                    this.stopClosingValveTimer.Stop();
-                }));
+                    form.Invoke(new Action(() =>
+                    {
+                        form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.closeVentilationPin);
+                        this.canChangeValve = true;
+                        this.stopClosingValveTimer.Stop();
+                    }));
+
+                }
+            } catch
+            {
 
             }
         }
 
         private void TurnOffAllHeatingOperations(object sender, ElapsedEventArgs e)
         {
-            if (runningProgram != null)
+            try
             {
-                form.Invoke(new Action(() =>
+
+
+                if (runningProgram != null)
                 {
-                    form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.temperatureDownPin);
-                    form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.temperatureUpPin);
-                }));
+                    form.Invoke(new Action(() =>
+                    {
+                        form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.temperatureDownPin);
+                        form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.temperatureUpPin);
+                    }));
+                }
+                this.turnOffHeatingOperationsTimer.Stop();
+            } catch
+            {
+
             }
-            this.turnOffHeatingOperationsTimer.Stop();
         }
 
         private void SayTempsCanBeChangedAgain(object sender, ElapsedEventArgs e)
@@ -236,34 +268,42 @@ namespace Oven_Interface
 
         public void CommitProgramFinilization()
         {
-            if (IsRunning)
+            try
             {
-                timer.Stop();
-                lastProcessedValveMinute = -1;
-                if (runningProgram != null)
+
+
+                if (IsRunning)
                 {
-                    form.UpdateStatusListBox($"Програму {runningProgram.Name} завершено");
-                    BreadsController.Finish(runningProgram.Id);
-                    form.UpdateProgressBarAsync(form, 0, 0, runningProgram.Duration);
-                    runningProgram = null;
-                    form.UpdateTimeLeftAsync(form, "-");
-                    form.UpdateBinding();
-                    form.UpdateExpectedTemperatureAsync(form, "-");
-                    Properties.Settings.Default.ActiveProgramId = -1;
-                    Properties.Settings.Default.Save();
-                    IsRunning = false;
-                    form.EnableDisableConnectButton();
-                    form.EnableDisableContinueButton();
-                    form.EnableDisableStartButton();
-                    form.EnableDisablePauseButton();
-                    form.EnableDisableStopButton();
+                    timer.Stop();
+                    lastProcessedValveMinute = -1;
+                    if (runningProgram != null)
+                    {
+                        form.UpdateStatusListBox($"Програму {runningProgram.Name} завершено");
+                        BreadsController.Finish(runningProgram.Id);
+                        form.UpdateProgressBarAsync(form, 0, 0, runningProgram.Duration);
+                        runningProgram = null;
+                        form.UpdateTimeLeftAsync(form, "-");
+                        form.UpdateBinding();
+                        form.UpdateExpectedTemperatureAsync(form, "-");
+                        Properties.Settings.Default.ActiveProgramId = -1;
+                        Properties.Settings.Default.Save();
+                        IsRunning = false;
+                        form.EnableDisableConnectButton();
+                        form.EnableDisableContinueButton();
+                        form.EnableDisableStartButton();
+                        form.EnableDisablePauseButton();
+                        form.EnableDisableStopButton();
 
-                    form.CurrentClicks = 0;
-                    form.ExpectedClicks = 0;
-                    form.UpdateCurrentClicks("0");
+                        form.CurrentClicks = 0;
+                        form.ExpectedClicks = 0;
+                        form.UpdateCurrentClicks("0");
 
-                    form.ArduinoConnection.TurnOffAllPins();
+                        form.ArduinoConnection.TurnOffAllPins();
+                    }
                 }
+            } catch
+            {
+
             }
         }
 

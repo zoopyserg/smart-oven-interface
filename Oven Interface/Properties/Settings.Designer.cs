@@ -237,5 +237,17 @@ namespace Oven_Interface.Properties {
                 this["timeToFullyOpenVentilationValve"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public long waterClicksPerLiter {
+            get {
+                return ((long)(this["waterClicksPerLiter"]));
+            }
+            set {
+                this["waterClicksPerLiter"] = value;
+            }
+        }
     }
 }
