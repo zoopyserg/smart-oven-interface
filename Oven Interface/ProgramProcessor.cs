@@ -270,8 +270,6 @@ namespace Oven_Interface
         {
             try
             {
-
-
                 if (IsRunning)
                 {
                     timer.Stop();
