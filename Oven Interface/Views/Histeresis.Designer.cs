@@ -35,11 +35,14 @@ namespace Oven_Interface.Views
             this.turnOffRelaysAfter = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.howOftenToCheckSensors = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
             this.saveCoefficientsButton = new System.Windows.Forms.Button();
             this.button55 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.allowChangeTempAfter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.turnOffRelaysAfter)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.howOftenToCheckSensors)).BeginInit();
             this.SuspendLayout();
             // 
             // allowChangeTempAfter
@@ -75,12 +78,29 @@ namespace Oven_Interface.Views
             // groupBox2
             // 
             resources.ApplyResources(this.groupBox2, "groupBox2");
+            this.groupBox2.Controls.Add(this.howOftenToCheckSensors);
+            this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.allowChangeTempAfter);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.turnOffRelaysAfter);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
+            // 
+            // howOftenToCheckSensors
+            // 
+            resources.ApplyResources(this.howOftenToCheckSensors, "howOftenToCheckSensors");
+            this.howOftenToCheckSensors.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.howOftenToCheckSensors.Name = "howOftenToCheckSensors";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
             // 
             // saveCoefficientsButton
             // 
@@ -108,6 +128,7 @@ namespace Oven_Interface.Views
             ((System.ComponentModel.ISupportInitialize)(this.turnOffRelaysAfter)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.howOftenToCheckSensors)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -120,5 +141,7 @@ namespace Oven_Interface.Views
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button saveCoefficientsButton;
         private System.Windows.Forms.Button button55;
+        private System.Windows.Forms.NumericUpDown howOftenToCheckSensors;
+        private System.Windows.Forms.Label label1;
     }
 }

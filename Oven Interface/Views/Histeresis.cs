@@ -18,13 +18,16 @@ namespace Oven_Interface.Views
 
             allowChangeTempAfter.Value = Properties.Settings.Default.canChangeTempsAgainAfter;
             turnOffRelaysAfter.Value = Properties.Settings.Default.turnOffTempOperationsAfter;
+            howOftenToCheckSensors.Value = Properties.Settings.Default.howOftenToCheckSensors;
         }
 
         private void saveCoefficientsButton_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.canChangeTempsAgainAfter = Decimal.ToInt32(allowChangeTempAfter.Value);
             Properties.Settings.Default.turnOffTempOperationsAfter = Decimal.ToInt32(turnOffRelaysAfter.Value);
+            Properties.Settings.Default.howOftenToCheckSensors = Decimal.ToInt32(howOftenToCheckSensors.Value);
             Properties.Settings.Default.Save();
+            this.Close();
         }
 
         private void button55_Click(object sender, EventArgs e)

@@ -159,7 +159,7 @@ namespace Oven_Interface
             firmata.ResetBoard();
             firmata.SetAnalogReportMode(Properties.Settings.Default.channelTemperatureSensor, true);
             firmata.SetAnalogReportMode(3, true);
-            firmata.SetSamplingInterval(1);
+            firmata.SetSamplingInterval(Properties.Settings.Default.howOftenToCheckSensors); // todo: edit this parameter
         }
 
         public void Disconnect()

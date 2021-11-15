@@ -207,6 +207,9 @@
     <EmbeddedResource Include="Views\Histeresis.ru.resx">
       <DependentUpon>Histeresis.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Histeresis.uk.resx">
+      <DependentUpon>Histeresis.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\PinSettings.en-US.resx">
       <DependentUpon>PinSettings.cs</DependentUpon>
     </EmbeddedResource>

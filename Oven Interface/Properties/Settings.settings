@@ -64,5 +64,8 @@
     <Setting Name="waterClicksPerLiter" Type="System.Int64" Scope="User">
       <Value Profile="(Default)">1</Value>
     </Setting>
+    <Setting Name="howOftenToCheckSensors" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">200</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

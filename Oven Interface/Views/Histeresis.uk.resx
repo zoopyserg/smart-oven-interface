@@ -117,32 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>490, 13</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Позволить снова изменить температуру через Х миллисекунд после предыдущего изменения</value>
-  </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>401, 13</value>
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>Исключить терморегулирующее реле через Х миллисекунд после включения</value>
-  </data>
-  <data name="groupBox2.Text" xml:space="preserve">
-    <value>Настройка Хистерезиса</value>
-  </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Как часто проверять датчики (каждые X миллисекунд):</value>
-  </data>
-  <data name="saveCoefficientsButton.Text" xml:space="preserve">
-    <value>Сохранить</value>
-  </data>
-  <data name="button55.Text" xml:space="preserve">
-    <value>Закрыть</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Настройки Хистерезиса</value>
+    <value>Як часто перевіряти датчики (кожні X мілісекунд):</value>
   </data>
 </root>

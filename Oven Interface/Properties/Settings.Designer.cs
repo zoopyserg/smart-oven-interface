@@ -249,5 +249,17 @@ namespace Oven_Interface.Properties {
                 this["waterClicksPerLiter"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("200")]
+        public int howOftenToCheckSensors {
+            get {
+                return ((int)(this["howOftenToCheckSensors"]));
+            }
+            set {
+                this["howOftenToCheckSensors"] = value;
+            }
+        }
     }
 }

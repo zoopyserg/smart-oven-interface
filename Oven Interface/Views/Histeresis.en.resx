@@ -130,14 +130,43 @@
   <data name="label7.Text" xml:space="preserve">
     <value>Switch off the thermostatic relays X milliseconds after switching on</value>
   </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>666, 161</value>
+  </data>
   <data name="groupBox2.Text" xml:space="preserve">
     <value>Hysteresis settings</value>
+  </data>
+  <data name="saveCoefficientsButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>423, 197</value>
   </data>
   <data name="saveCoefficientsButton.Text" xml:space="preserve">
     <value>Save</value>
   </data>
+  <data name="button55.Location" type="System.Drawing.Point, System.Drawing">
+    <value>554, 197</value>
+  </data>
   <data name="button55.Text" xml:space="preserve">
     <value>Close</value>
+  </data>
+  <data name="howOftenToCheckSensors.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 20</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 13</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>How often to check sensors (every X milliseconds): </value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>692, 249</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Hysteresis settings</value>
