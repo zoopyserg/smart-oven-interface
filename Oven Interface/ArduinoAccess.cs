@@ -5,6 +5,8 @@ using Solid.Arduino.Firmata;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -12,6 +14,10 @@ using System.Threading.Tasks;
 
 namespace Oven_Interface
 {
+    // todo: Need to override default SerialConnection.Find method: https://github.com/SolidSoils/Arduino/blob/master/Solid.Arduino/SerialConnection.cs
+    // as it finds only THE FIRST CONNECTION, and I want ALL connections.
+    // or re-run Find command many times and each time exclude all the "previously found" COM ports from the list to look at. Repeat until all are found, set to a new variable each time.
+    // Good idea but I don't know how to exclude COM port from the Find list.
     public class ArduinoAccess
     {
         public ISerialConnection connection { get; set; }
@@ -66,6 +72,51 @@ namespace Oven_Interface
             }
 
         }
+
+        // Redefine Connection.
+        private static List<EnhancedSerialConnection> FindAllConnections(Func<ArduinoSession, bool> isDeviceAvailable, string[] portNames, SerialBaudRate[] baudRates)
+        {
+            List<EnhancedSerialConnection> foundConnections = new List<EnhancedSerialConnection>();
+            var form = new Dashboard();
+
+            for (int x = portNames.Length - 1; x >= 0; x--)
+            {
+                foreach (SerialBaudRate rate in baudRates)
+                {
+                    try
+                    {
+                        using (var connection = new EnhancedSerialConnection(portNames[x], rate))
+                        {
+                            using (var session = new ArduinoSession(connection, 100))
+                            {
+                                Debug.WriteLine("{0}:{1}; ", portNames[x], (int)rate);
+                                if (isDeviceAvailable(session))
+                                    foundConnections.Add(new EnhancedSerialConnection(portNames[x], rate));
+                            }
+                        }
+                    }
+                    catch (UnauthorizedAccessException)
+                    {
+                        // Port is not available.
+                        // note that I access form incorrectly, I do Dashboard.new when really it's a public var.
+                        // so it's not available from this context probably I need to pass it or smth.
+                        form.UpdateStatusListBox($"{portNames[x]} NOT AVAILABLE; ");
+                        break;
+                    }
+                    catch (TimeoutException)
+                    {
+                        // Baudrate or protocol error.
+                    }
+                    catch (IOException ex)
+                    {
+                        // same thing here
+                        form.UpdateStatusListBox($"HResult 0x{ex.HResult:X} - {ex.Message}");
+                    }
+                }
+            }
+            return foundConnections;
+        }
+
 
         private void ReportNoConnection()
         {
