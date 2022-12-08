@@ -551,7 +551,8 @@ namespace Oven_Interface
 
         private void button7_Click_1(object sender, EventArgs e)
         {
-            ArduinoConnection.Reconnect();
+            // this.ArduinoConnection.Reconnect();
+            this.ArduinoConnection.FindAllConnections();
         }
 
         private void englishToolStripMenuItem_Click(object sender, EventArgs e)

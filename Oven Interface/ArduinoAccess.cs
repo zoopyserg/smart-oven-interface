@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
+using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -22,6 +23,9 @@ namespace Oven_Interface
     {
         public ISerialConnection connection { get; set; }
         public ArduinoSession session { get; set; }
+        public ArduinoSession relayBoardSession { get; set; }
+        public ArduinoSession tempSensorBoardSession { get; set; }
+        public ArduinoSession waterCounterBoardSession { get; set; }
         public IFirmataProtocol firmata { get; set; }
         public Dashboard form { get; set; }
         public long previousWaterSensorLockLevel { get; set; }
@@ -74,49 +78,83 @@ namespace Oven_Interface
 
         }
 
-        // Redefine Connection.
-        private static List<EnhancedSerialConnection> FindAllConnections(Func<ArduinoSession, bool> isDeviceAvailable, string[] portNames, SerialBaudRate[] baudRates)
+        // Find ALL devices connected to COM ports.
+        public void FindAllConnections()
         {
-            List<EnhancedSerialConnection> foundConnections = new List<EnhancedSerialConnection>();
-            var form = new Dashboard();
-
-            for (int x = portNames.Length - 1; x >= 0; x--)
+            foreach (string port in SerialPort.GetPortNames()) // Get all COM ports
             {
-                foreach (SerialBaudRate rate in baudRates)
+                // open an EnhancedSerialConnection to that port
+                var session = new ArduinoSession(new EnhancedSerialConnection(port, SerialBaudRate.Bps_57600));
+                int boardNumber = session.GetFirmware().MinorVersion;
+
+                // if the board number is equal to relayBoardNumber in settings, it's the relay board
+                if (boardNumber == Properties.Settings.Default.relayBoardNumber)
                 {
-                    try
-                    {
-                        using (var connection = new EnhancedSerialConnection(portNames[x], rate))
-                        {
-                            using (var session = new ArduinoSession(connection, 100))
-                            {
-                                Debug.WriteLine("{0}:{1}; ", portNames[x], (int)rate);
-                                if (isDeviceAvailable(session))
-                                    foundConnections.Add(new EnhancedSerialConnection(portNames[x], rate));
-                            }
-                        }
-                    }
-                    catch (UnauthorizedAccessException)
-                    {
-                        // Port is not available.
-                        // note that I access form incorrectly, I do Dashboard.new when really it's a public var.
-                        // so it's not available from this context probably I need to pass it or smth.
-                        form.UpdateStatusListBox($"{portNames[x]} NOT AVAILABLE; ");
-                        break;
-                    }
-                    catch (TimeoutException)
-                    {
-                        // Baudrate or protocol error.
-                    }
-                    catch (IOException ex)
-                    {
-                        // same thing here
-                        form.UpdateStatusListBox($"HResult 0x{ex.HResult:X} - {ex.Message}");
-                    }
+                    relayBoardSession = session;
+                    form.UpdateStatusListBox($"Плата Номер: {boardNumber.ToString()}, Порт: {port}, плата з реле.");
+                }
+
+                // if the board number is equal to tempSensorBoardNumber in settings, it's the temp sensor board
+                if (boardNumber == Properties.Settings.Default.temperatureSensorBoardNumber)
+                {
+                    tempSensorBoardSession = session;
+                    form.UpdateStatusListBox($"Плата Номер: {boardNumber.ToString()}, Порт: {port}, плата з температурним сенсором.");
+                }
+
+                // if the board number is equal to waterCounterBoardNumber in settings, it's the water counter board
+                if (boardNumber == Properties.Settings.Default.waterCounterBoardNumber)
+                {
+                    waterCounterBoardSession = session;
+                    form.UpdateStatusListBox($"Плата Номер: {boardNumber.ToString()}, Порт: {port}, плата з лічильником води.");
                 }
             }
-            return foundConnections;
+            
+            // display 3 boards in a dropdown somewhere etc.
         }
+
+        //public void FindAllConnections()
+        //{
+        //    List<EnhancedSerialConnection> foundConnections = new List<EnhancedSerialConnection>();
+        //    var form = new Dashboard();
+        //
+        //    for (int x = portNames.Length - 1; x >= 0; x--)
+        //    {
+        //        foreach (SerialBaudRate rate in baudRates)
+        //        {
+        //            try
+        //            {
+        //                using (var connection = new EnhancedSerialConnection(portNames[x], rate))
+        //                {
+        //                    using (var session = new ArduinoSession(connection, 100))
+        //                    {
+        //                        form.UpdateStatusListBox($"FOUND something");
+        //                        Debug.WriteLine("{0}:{1}; ", portNames[x], (int)rate);
+        //                        if (isDeviceAvailable(session))
+        //                            foundConnections.Add(new EnhancedSerialConnection(portNames[x], rate));
+        //                    }
+        //                }
+        //            }
+        //            catch (UnauthorizedAccessException)
+        //            {
+        //                // Port is not available.
+        //                // note that I access form incorrectly, I do Dashboard.new when really it's a public var.
+        //                // so it's not available from this context probably I need to pass it or smth.
+        //                form.UpdateStatusListBox($"{portNames[x]} NOT AVAILABLE; ");
+        //                break;
+        //            }
+        //            catch (TimeoutException)
+        //            {
+        //                // Baudrate or protocol error.
+        //            }
+        //            catch (IOException ex)
+        //            {
+        //                // same thing here
+        //                form.UpdateStatusListBox($"HResult 0x{ex.HResult:X} - {ex.Message}");
+        //            }
+        //        }
+        //    }
+        //    return foundConnections;
+        //}
 
 
         private void ReportNoConnection()

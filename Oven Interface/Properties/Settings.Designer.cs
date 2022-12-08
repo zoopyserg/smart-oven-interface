@@ -12,7 +12,7 @@ namespace Oven_Interface.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.1.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.4.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -259,6 +259,42 @@ namespace Oven_Interface.Properties {
         public string OvenDatabaseConnectionString {
             get {
                 return ((string)(this["OvenDatabaseConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public int relayBoardNumber {
+            get {
+                return ((int)(this["relayBoardNumber"]));
+            }
+            set {
+                this["relayBoardNumber"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2")]
+        public int temperatureSensorBoardNumber {
+            get {
+                return ((int)(this["temperatureSensorBoardNumber"]));
+            }
+            set {
+                this["temperatureSensorBoardNumber"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("3")]
+        public int waterCounterBoardNumber {
+            get {
+                return ((int)(this["waterCounterBoardNumber"]));
+            }
+            set {
+                this["waterCounterBoardNumber"] = value;
             }
         }
     }
