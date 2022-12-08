@@ -26,6 +26,7 @@ namespace Oven_Interface
         public Dashboard form { get; set; }
         public long previousWaterSensorLockLevel { get; set; }
         public long previousTemperatureLevel { get; set; }
+        public int boardNumber { get; set; }
 
         public List<int> AvailablePins { get; set; }
 
@@ -165,6 +166,11 @@ namespace Oven_Interface
         public void ReportCapabilities()
         {
             BoardCapability cap = session.GetBoardCapability();
+
+            boardNumber = session.GetFirmware().MinorVersion;
+
+            form.UpdateStatusListBox("Board Number: " + boardNumber.ToString());
+
             form.UpdateStatusListBox("Board Capability:");
 
             foreach (var pin in cap.Pins)
