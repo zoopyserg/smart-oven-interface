@@ -21,12 +21,20 @@ namespace Oven_Interface
     // Good idea but I don't know how to exclude COM port from the Find list.
     public class ArduinoAccess
     {
-        public ISerialConnection connection { get; set; }
-        public ArduinoSession session { get; set; }
+        public ISerialConnection relayBoardConnection { get; set; }
+        public ISerialConnection tempSensorBoardConnection { get; set; }
+        public ISerialConnection waterCounterBoardConnection { get; set; }
+        
+        //public ArduinoSession session { get; set; }
         public ArduinoSession relayBoardSession { get; set; }
         public ArduinoSession tempSensorBoardSession { get; set; }
         public ArduinoSession waterCounterBoardSession { get; set; }
-        public IFirmataProtocol firmata { get; set; }
+
+        // public IFirmataProtocol firmata { get; set; }
+        public IFirmataProtocol relayBoardFirmata { get; set; }
+        public IFirmataProtocol tempSensorBoardFirmata { get; set; }
+        public IFirmataProtocol waterCounterBoardFirmata { get; set; }
+        
         public Dashboard form { get; set; }
         public long previousWaterSensorLockLevel { get; set; }
         public long previousTemperatureLevel { get; set; }
@@ -42,15 +50,20 @@ namespace Oven_Interface
 
         public void Reconnect()
         {
-            if (connection != null)
+            if (AllConnectionsPresent())
             {
-                if (connection != null)
+                if (AllConnectionsPresent())
                 {
                     ReportConnection();
-                    session = new ArduinoSession(connection);
-                    firmata = session;
-                    firmata.ResetBoard();
-                    ReportCapabilities();
+                    
+                    relayBoardSession.ResetBoard();
+                    tempSensorBoardSession.ResetBoard();
+                    waterCounterBoardSession.ResetBoard();
+                    
+                    ReportCapabilities(relayBoardSession);
+                    ReportCapabilities(tempSensorBoardSession);
+                    ReportCapabilities(waterCounterBoardSession);
+                    
                     PerformInitialization();
                     ListenTemperature();
 
@@ -64,7 +77,7 @@ namespace Oven_Interface
                 {
                     ReportNoConnection();
                     Thread.Sleep(1000);
-                    connection = EnhancedSerialConnection.Find();
+                    FindAllConnections();
                     Reconnect();
                 }
             }
@@ -72,7 +85,7 @@ namespace Oven_Interface
             {
                 ReportNoConnection();
                 Thread.Sleep(1000);
-                connection = EnhancedSerialConnection.Find();
+                FindAllConnections();
                 Reconnect();
             }
 
@@ -84,13 +97,15 @@ namespace Oven_Interface
             foreach (string port in SerialPort.GetPortNames()) // Get all COM ports
             {
                 // open an EnhancedSerialConnection to that port
-                var session = new ArduinoSession(new EnhancedSerialConnection(port, SerialBaudRate.Bps_57600));
+                var connection = new EnhancedSerialConnection(port, SerialBaudRate.Bps_57600);
+                var session = new ArduinoSession(connection);
                 int boardNumber = session.GetFirmware().MinorVersion;
 
                 // if the board number is equal to relayBoardNumber in settings, it's the relay board
                 if (boardNumber == Properties.Settings.Default.relayBoardNumber)
                 {
                     relayBoardSession = session;
+                    relayBoardConnection = connection;
                     form.UpdateStatusListBox($"Плата Номер: {boardNumber.ToString()}, Порт: {port}, плата з реле.");
                 }
 
@@ -98,6 +113,7 @@ namespace Oven_Interface
                 if (boardNumber == Properties.Settings.Default.temperatureSensorBoardNumber)
                 {
                     tempSensorBoardSession = session;
+                    tempSensorBoardConnection = connection;
                     form.UpdateStatusListBox($"Плата Номер: {boardNumber.ToString()}, Порт: {port}, плата з температурним сенсором.");
                 }
 
@@ -105,107 +121,120 @@ namespace Oven_Interface
                 if (boardNumber == Properties.Settings.Default.waterCounterBoardNumber)
                 {
                     waterCounterBoardSession = session;
+                    waterCounterBoardConnection = connection;
                     form.UpdateStatusListBox($"Плата Номер: {boardNumber.ToString()}, Порт: {port}, плата з лічильником води.");
                 }
             }
-            
-            // display 3 boards in a dropdown somewhere etc.
         }
-
-        //public void FindAllConnections()
-        //{
-        //    List<EnhancedSerialConnection> foundConnections = new List<EnhancedSerialConnection>();
-        //    var form = new Dashboard();
-        //
-        //    for (int x = portNames.Length - 1; x >= 0; x--)
-        //    {
-        //        foreach (SerialBaudRate rate in baudRates)
-        //        {
-        //            try
-        //            {
-        //                using (var connection = new EnhancedSerialConnection(portNames[x], rate))
-        //                {
-        //                    using (var session = new ArduinoSession(connection, 100))
-        //                    {
-        //                        form.UpdateStatusListBox($"FOUND something");
-        //                        Debug.WriteLine("{0}:{1}; ", portNames[x], (int)rate);
-        //                        if (isDeviceAvailable(session))
-        //                            foundConnections.Add(new EnhancedSerialConnection(portNames[x], rate));
-        //                    }
-        //                }
-        //            }
-        //            catch (UnauthorizedAccessException)
-        //            {
-        //                // Port is not available.
-        //                // note that I access form incorrectly, I do Dashboard.new when really it's a public var.
-        //                // so it's not available from this context probably I need to pass it or smth.
-        //                form.UpdateStatusListBox($"{portNames[x]} NOT AVAILABLE; ");
-        //                break;
-        //            }
-        //            catch (TimeoutException)
-        //            {
-        //                // Baudrate or protocol error.
-        //            }
-        //            catch (IOException ex)
-        //            {
-        //                // same thing here
-        //                form.UpdateStatusListBox($"HResult 0x{ex.HResult:X} - {ex.Message}");
-        //            }
-        //        }
-        //    }
-        //    return foundConnections;
-        //}
-
 
         private void ReportNoConnection()
         {
-            if (connection == null)
-                form.UpdateStatusListBox("Немає з'єднання з контролером Arduino. Пробую перепідключитись.");
+            if (AnyConnectionsBlank())
+                form.UpdateStatusListBox("Немає з'єднання з контролерами Arduino. Пробую перепідключитись.");
         }
 
         private void ReportConnection()
         {
-            if (connection != null)
-                form.UpdateStatusListBox($"Arduino контролер підключений до порта {connection.PortName}.");
+            if (AllConnectionsPresent())
+            {
+                form.UpdateStatusListBox($"Arduino контролер підключений до порта {relayBoardConnection.PortName}.");
+                form.UpdateStatusListBox($"Arduino контролер підключений до порта {tempSensorBoardConnection.PortName}.");
+                form.UpdateStatusListBox($"Arduino контролер підключений до порта {waterCounterBoardConnection.PortName}.");
+            }
+        }
+
+        public bool AllConnectionsPresent()
+        {
+            return (relayBoardConnection != null && tempSensorBoardConnection != null && waterCounterBoardConnection != null);
+        }
+        
+        public bool AnyConnectionsBlank()
+        {
+            return (relayBoardConnection == null || tempSensorBoardConnection == null || waterCounterBoardConnection == null);
         }
 
         private void PerformInitialization()
         {
             for (int i = 3; i < 14; i++) // пропускаю 1 и 2 потому что их использует USB порт.
             {
-                session.SetDigitalPinMode(i, PinMode.DigitalOutput);
+                relayBoardSession.SetDigitalPinMode(i, PinMode.DigitalOutput);
                 // посылаю true потому что купил плату которая при LOW включена... пофиксить новой платой.
-                session.SetDigitalPin(i, true);
+                relayBoardSession.SetDigitalPin(i, true);
+
+                tempSensorBoardSession.SetDigitalPinMode(i, PinMode.DigitalOutput);
+                tempSensorBoardSession.SetDigitalPin(i, true);
+
+                waterCounterBoardSession.SetDigitalPinMode(i, PinMode.DigitalOutput);
+                waterCounterBoardSession.SetDigitalPin(i, true);
             }
         }
 
-        public void TurnOnPin(int pinNumber)
+        public void TurnOnPin(int pinNumber, int boardNumber)
         {
-            session.SetDigitalPin(pinNumber, false); //  посылаю true потому что купил плату которая при LOW включена... пофиксить новой платой.
+            if (boardNumber == Properties.Settings.Default.relayBoardNumber)
+            {
+                relayBoardSession.SetDigitalPin(pinNumber, false);
+            }
+            else if (boardNumber == Properties.Settings.Default.temperatureSensorBoardNumber)
+            {
+                tempSensorBoardSession.SetDigitalPin(pinNumber, false);
+            }
+            else if (boardNumber == Properties.Settings.Default.waterCounterBoardNumber)
+            {
+                waterCounterBoardSession.SetDigitalPin(pinNumber, false);
+            }
+            //  посылаю true потому что купил плату которая при LOW включена... пофиксить новой платой.
         }
 
-        public void TurnOffPin(int pinNumber)
+        public void TurnOffPin(int pinNumber, int boardNumber)
         {
-            session.SetDigitalPin(pinNumber, true); //  посылаю true потому что купил плату которая при LOW включена... пофиксить новой платой.
+            if (boardNumber == Properties.Settings.Default.relayBoardNumber)
+            {
+                relayBoardSession.SetDigitalPin(pinNumber, true);
+            }
+            else if (boardNumber == Properties.Settings.Default.temperatureSensorBoardNumber)
+            {
+                tempSensorBoardSession.SetDigitalPin(pinNumber, true);
+            }
+            else if (boardNumber == Properties.Settings.Default.waterCounterBoardNumber)
+            {
+                waterCounterBoardSession.SetDigitalPin(pinNumber, true);
+            }
+            //  посылаю true потому что купил плату которая при LOW включена... пофиксить новой платой.
         }
 
         public void TurnOffAllPins()
         {
             foreach (var pin in AvailablePins)
-                TurnOffPin(pin);
+            {
+                TurnOffPin(pin, 1);
+                TurnOffPin(pin, 2);
+                TurnOffPin(pin, 3);
+            }
         }
 
         public void TurnOnAllPins()
         {
             foreach (var pin in AvailablePins)
-                TurnOnPin(pin);
+            {
+                TurnOnPin(pin, 1);
+                TurnOnPin(pin, 2);
+                TurnOnPin(pin, 3);
+            }
         }
-
+        
         public void ReportCapabilities()
         {
-            BoardCapability cap = session.GetBoardCapability();
+            ReportCapabilities(relayBoardSession);
+            ReportCapabilities(tempSensorBoardSession);
+            ReportCapabilities(waterCounterBoardSession);
+        }
 
-            boardNumber = session.GetFirmware().MinorVersion;
+        public void ReportCapabilities(ArduinoSession selectedBoard)
+        {
+            BoardCapability cap = selectedBoard.GetBoardCapability();
+
+            boardNumber = selectedBoard.GetFirmware().MinorVersion;
 
             form.UpdateStatusListBox("Board Number: " + boardNumber.ToString());
 
@@ -250,21 +279,27 @@ namespace Oven_Interface
 
         public void ListenTemperature()
         {
-            firmata.AnalogStateReceived += Session_OnAnalogStateReceived;
-            firmata.ResetBoard();
-            firmata.SetAnalogReportMode(Properties.Settings.Default.channelTemperatureSensor, true);
-            firmata.SetAnalogReportMode(3, true);
-            firmata.SetSamplingInterval(Properties.Settings.Default.howOftenToCheckSensors); // todo: edit this parameter
+            // todo: check if this works (it was a different class last time it did);
+            tempSensorBoardSession.AnalogStateReceived += Session_OnAnalogStateReceived;
+            tempSensorBoardSession.ResetBoard();
+            tempSensorBoardSession.SetAnalogReportMode(Properties.Settings.Default.channelTemperatureSensor, true);
+            tempSensorBoardSession.SetAnalogReportMode(3, true);
+            tempSensorBoardSession.SetSamplingInterval(Properties.Settings.Default.howOftenToCheckSensors); // todo: edit this parameter
         }
 
         public void Disconnect()
         {
             try
             {
-                if (connection != null)
+                if (relayBoardSession != null && tempSensorBoardSession != null && waterCounterBoardSession != null)
                 {
-                    firmata.ResetBoard();
-                    connection.Close();
+                    relayBoardSession.ResetBoard();
+                    tempSensorBoardSession.ResetBoard();
+                    waterCounterBoardSession.ResetBoard();
+
+                    relayBoardConnection.Close();
+                    tempSensorBoardConnection.Close();
+                    waterCounterBoardConnection.Close();
                 }
             }
             catch

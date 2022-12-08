@@ -136,14 +136,14 @@ namespace Oven_Interface
                             {
                                 if (form.CurrentTemperature < ExpectedTemperature)
                                 {
-                                    form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.temperatureUpPin);
-                                    form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.temperatureDownPin);
+                                    form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.temperatureUpPin, Properties.Settings.Default.relayBoardNumber);
+                                    form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.temperatureDownPin, Properties.Settings.Default.relayBoardNumber);
                                     this.turnOffHeatingOperationsTimer.Start();
                                 }
                                 else
                                 {
-                                    form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.temperatureUpPin);
-                                    form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.temperatureDownPin);
+                                    form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.temperatureUpPin, Properties.Settings.Default.relayBoardNumber);
+                                    form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.temperatureDownPin, Properties.Settings.Default.relayBoardNumber);
                                     this.turnOffHeatingOperationsTimer.Start();
                                 }
 
@@ -157,8 +157,8 @@ namespace Oven_Interface
                             if (ExpectedValvePoint.Minute != -1 && canChangeValve && ((lastProcessedValveMinute == -1) || (lastProcessedValveMinute != -1 && lastProcessedValveMinute != ExpectedValvePoint.Minute)))
                             {
                                 lastProcessedValveMinute = ExpectedValvePoint.Minute;
-                                form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.openVentilationPin);
-                                form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.closeVentilationPin);
+                                form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.openVentilationPin, Properties.Settings.Default.relayBoardNumber);
+                                form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.closeVentilationPin, Properties.Settings.Default.relayBoardNumber);
                                 this.stopOpeningValveTimer.Interval = Properties.Settings.Default.timeToFullyOpenVentilationValve * ExpectedValvePoint.Value / 100;
                                 this.stopOpeningValveTimer.Start();
 
@@ -174,7 +174,7 @@ namespace Oven_Interface
                                 form.CurrentClicks = 0;
                                 form.ExpectedClicks = Decimal.ToInt32(ExpectedWaterPoint.Value * Properties.Settings.Default.waterClicksPerLiter); // todo: convert liters to clicks, now I just store clicks
                                 lastProcessedWaterMinute = ExpectedWaterPoint.Minute;
-                                form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.waterSolenoidPin);
+                                form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.waterSolenoidPin, Properties.Settings.Default.relayBoardNumber);
 
                                 this.canChangeWater = false;
                             }
@@ -202,8 +202,8 @@ namespace Oven_Interface
                 {
                     form.Invoke(new Action(() =>
                     {
-                        form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.openVentilationPin);
-                        form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.closeVentilationPin);
+                        form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.openVentilationPin, Properties.Settings.Default.relayBoardNumber);
+                        form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.closeVentilationPin, Properties.Settings.Default.relayBoardNumber);
                         this.stopOpeningValveTimer.Stop();
                         this.stopClosingValveTimer.Start();
                     }));
@@ -224,7 +224,7 @@ namespace Oven_Interface
                 {
                     form.Invoke(new Action(() =>
                     {
-                        form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.closeVentilationPin);
+                        form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.closeVentilationPin, Properties.Settings.Default.relayBoardNumber);
                         this.canChangeValve = true;
                         this.stopClosingValveTimer.Stop();
                     }));
@@ -246,8 +246,8 @@ namespace Oven_Interface
                 {
                     form.Invoke(new Action(() =>
                     {
-                        form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.temperatureDownPin);
-                        form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.temperatureUpPin);
+                        form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.temperatureDownPin, Properties.Settings.Default.relayBoardNumber);
+                        form.ArduinoConnection.TurnOffPin(Properties.Settings.Default.temperatureUpPin, Properties.Settings.Default.relayBoardNumber);
                     }));
                 }
                 this.turnOffHeatingOperationsTimer.Stop();

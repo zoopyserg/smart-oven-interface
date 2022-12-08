@@ -101,27 +101,27 @@ namespace Oven_Interface
 
         public void EnableDisableConnectButton()
         {
-            connectButton.Enabled = ArduinoConnection.connection == null;
+            connectButton.Enabled = ArduinoConnection.AnyConnectionsBlank();
         }
 
         public void EnableDisableContinueButton()
         {
-            continueProgramButton.Enabled = (Properties.Settings.Default.ActiveProgramId >= 0 && !programProcessor.IsRunning && ArduinoConnection.connection != null);
+            continueProgramButton.Enabled = (Properties.Settings.Default.ActiveProgramId >= 0 && !programProcessor.IsRunning && ArduinoConnection.AllConnectionsPresent());
         }
 
         public void EnableDisableStartButton()
         {
-            startProgramButton.Enabled = (!programProcessor.IsRunning && ArduinoConnection.connection != null);
+            startProgramButton.Enabled = (!programProcessor.IsRunning && ArduinoConnection.AllConnectionsPresent());
         }
 
         public void EnableDisablePauseButton()
         {
-            pauseProgramButton.Enabled = (programProcessor.IsRunning && ArduinoConnection.connection != null);
+            pauseProgramButton.Enabled = (programProcessor.IsRunning && ArduinoConnection.AllConnectionsPresent());
         }
 
         public void EnableDisableStopButton()
         {
-            stopProgramButton.Enabled = (programProcessor.IsRunning && ArduinoConnection.connection != null);
+            stopProgramButton.Enabled = (programProcessor.IsRunning && ArduinoConnection.AllConnectionsPresent()); ;
         }
 
         private void UpdateProgramsListBox()
@@ -197,7 +197,7 @@ namespace Oven_Interface
 
             if (CurrentClicks >= ExpectedClicks)
             {
-                this.ArduinoConnection.TurnOffPin(Properties.Settings.Default.waterSolenoidPin);
+                this.ArduinoConnection.TurnOffPin(Properties.Settings.Default.waterSolenoidPin, Properties.Settings.Default.waterCounterBoardNumber);
                 this.programProcessor.canChangeWater = true;
                 this.CurrentClicks = 0;
                 this.ExpectedClicks = 0;
@@ -308,12 +308,16 @@ namespace Oven_Interface
 
         private void button7_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(13);
+            this.ArduinoConnection.TurnOnPin(13, 1);
+            this.ArduinoConnection.TurnOnPin(13, 2);
+            this.ArduinoConnection.TurnOnPin(13, 3);
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(13);
+            this.ArduinoConnection.TurnOffPin(13, 1);
+            this.ArduinoConnection.TurnOffPin(13, 2);
+            this.ArduinoConnection.TurnOffPin(13, 3);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -488,32 +492,32 @@ namespace Oven_Interface
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(4);
+            this.ArduinoConnection.TurnOnPin(4, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(3);
+            this.ArduinoConnection.TurnOnPin(3, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(2);
+            this.ArduinoConnection.TurnOnPin(2, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(4);
+            this.ArduinoConnection.TurnOffPin(4, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(3);
+            this.ArduinoConnection.TurnOffPin(3, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(2);
+            this.ArduinoConnection.TurnOffPin(2, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void перевіркаПінівToolStripMenuItem_Click(object sender, EventArgs e)
@@ -551,8 +555,7 @@ namespace Oven_Interface
 
         private void button7_Click_1(object sender, EventArgs e)
         {
-            // this.ArduinoConnection.Reconnect();
-            this.ArduinoConnection.FindAllConnections();
+            this.ArduinoConnection.Reconnect();
         }
 
         private void englishToolStripMenuItem_Click(object sender, EventArgs e)
@@ -578,22 +581,22 @@ namespace Oven_Interface
 
         private void button7_Click_2(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(Properties.Settings.Default.lightsPin);
+            this.ArduinoConnection.TurnOnPin(Properties.Settings.Default.lightsPin, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button8_Click_1(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(Properties.Settings.Default.lightsPin);
+            this.ArduinoConnection.TurnOffPin(Properties.Settings.Default.lightsPin, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(Properties.Settings.Default.powerplantPin);
+            this.ArduinoConnection.TurnOnPin(Properties.Settings.Default.powerplantPin, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(Properties.Settings.Default.powerplantPin);
+            this.ArduinoConnection.TurnOffPin(Properties.Settings.Default.powerplantPin, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void хістерезисToolStripMenuItem_Click(object sender, EventArgs e)

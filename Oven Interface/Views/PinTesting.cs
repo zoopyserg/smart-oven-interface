@@ -190,137 +190,137 @@ namespace Oven_Interface.Views
 
         private void button31_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(1);
+            this.ArduinoConnection.TurnOnPin(1, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(2);
+            this.ArduinoConnection.TurnOnPin(2, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(3);
+            this.ArduinoConnection.TurnOnPin(3, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(4);
+            this.ArduinoConnection.TurnOnPin(4, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(5);
+            this.ArduinoConnection.TurnOnPin(5, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(6);
+            this.ArduinoConnection.TurnOnPin(6, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(7);
+            this.ArduinoConnection.TurnOnPin(7, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button13_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(8);
+            this.ArduinoConnection.TurnOnPin(8, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(9);
+            this.ArduinoConnection.TurnOnPin(9, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button18_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(10);
+            this.ArduinoConnection.TurnOnPin(10, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button20_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(11);
+            this.ArduinoConnection.TurnOnPin(11, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button22_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(12);
+            this.ArduinoConnection.TurnOnPin(12, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button24_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(13);
+            this.ArduinoConnection.TurnOnPin(13, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button26_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(14);
+            this.ArduinoConnection.TurnOnPin(14, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button28_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(15);
+            this.ArduinoConnection.TurnOnPin(15, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button30_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(16);
+            this.ArduinoConnection.TurnOnPin(16, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void turnOnTestDiodButton_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(17);
+            this.ArduinoConnection.TurnOnPin(17, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button34_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(18);
+            this.ArduinoConnection.TurnOnPin(18, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button50_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(19);
+            this.ArduinoConnection.TurnOnPin(19, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button48_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(20);
+            this.ArduinoConnection.TurnOnPin(20, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button46_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(21);
+            this.ArduinoConnection.TurnOnPin(21, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button44_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(22);
+            this.ArduinoConnection.TurnOnPin(22, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button42_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(23);
+            this.ArduinoConnection.TurnOnPin(23, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button40_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(24);
+            this.ArduinoConnection.TurnOnPin(24, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button38_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(25);
+            this.ArduinoConnection.TurnOnPin(25, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button52_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(26);
+            this.ArduinoConnection.TurnOnPin(26, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button36_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOnPin(27);
+            this.ArduinoConnection.TurnOnPin(27, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button53_Click(object sender, EventArgs e)
@@ -335,137 +335,137 @@ namespace Oven_Interface.Views
 
         private void button32_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(1);
+            this.ArduinoConnection.TurnOffPin(1, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(2);
+            this.ArduinoConnection.TurnOffPin(2, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(3);
+            this.ArduinoConnection.TurnOffPin(3, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(4);
+            this.ArduinoConnection.TurnOffPin(4, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(5);
+            this.ArduinoConnection.TurnOffPin(5, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(6);
+            this.ArduinoConnection.TurnOffPin(6, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(7);
+            this.ArduinoConnection.TurnOffPin(7, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(8);
+            this.ArduinoConnection.TurnOffPin(8, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button16_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(9);
+            this.ArduinoConnection.TurnOffPin(9, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button17_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(10);
+            this.ArduinoConnection.TurnOffPin(10, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button19_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(11);
+            this.ArduinoConnection.TurnOffPin(11, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button21_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(12);
+            this.ArduinoConnection.TurnOffPin(12, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button23_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(13);
+            this.ArduinoConnection.TurnOffPin(13, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button25_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(14);
+            this.ArduinoConnection.TurnOffPin(14, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button27_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(15);
+            this.ArduinoConnection.TurnOffPin(15, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button29_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(16);
+            this.ArduinoConnection.TurnOffPin(16, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void turnOffTestDiodButton_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(17);
+            this.ArduinoConnection.TurnOffPin(17, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button33_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(18);
+            this.ArduinoConnection.TurnOffPin(18, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button49_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(19);
+            this.ArduinoConnection.TurnOffPin(19, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button47_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(20);
+            this.ArduinoConnection.TurnOffPin(20, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button45_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(21);
+            this.ArduinoConnection.TurnOffPin(21, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button43_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(22);
+            this.ArduinoConnection.TurnOffPin(22, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button41_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(23);
+            this.ArduinoConnection.TurnOffPin(23, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button39_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(24);
+            this.ArduinoConnection.TurnOffPin(24, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button37_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(25);
+            this.ArduinoConnection.TurnOffPin(25, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button51_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(26);
+            this.ArduinoConnection.TurnOffPin(26, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button35_Click(object sender, EventArgs e)
         {
-            this.ArduinoConnection.TurnOffPin(27);
+            this.ArduinoConnection.TurnOffPin(27, Properties.Settings.Default.relayBoardNumber);
         }
 
         private void button54_Click(object sender, EventArgs e)
