@@ -472,5 +472,30 @@ namespace Oven_Interface.Views
         {
             this.ArduinoConnection.TurnOffAllPins();
         }
+
+        private void label25_Click(object sender, EventArgs e)
+        {
+            this.ArduinoConnection.TurnOnPin(13, Properties.Settings.Default.temperatureSensorBoardNumber);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.ArduinoConnection.TurnOffPin(13, Properties.Settings.Default.temperatureSensorBoardNumber);
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            this.ArduinoConnection.TurnOnPin(13, Properties.Settings.Default.waterCounterBoardNumber);
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            this.ArduinoConnection.TurnOffPin(13, Properties.Settings.Default.waterCounterBoardNumber);
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.ArduinoConnection.TurnOnPin(13, Properties.Settings.Default.temperatureSensorBoardNumber);
+        }
     }
 }

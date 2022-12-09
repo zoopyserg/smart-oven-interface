@@ -214,10 +214,16 @@
     <EmbeddedResource Include="Views\PinSettings.en-US.resx">
       <DependentUpon>PinSettings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\PinSettings.en.resx">
+      <DependentUpon>PinSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\PinSettings.resx">
       <DependentUpon>PinSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\PinSettings.ru.resx">
+      <DependentUpon>PinSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PinSettings.uk.resx">
       <DependentUpon>PinSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\PinTesting.en-US.resx">
@@ -227,6 +233,12 @@
       <DependentUpon>PinTesting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\PinTesting.ru.resx">
+      <DependentUpon>PinTesting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PinTesting.uk-UA.resx">
+      <DependentUpon>PinTesting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PinTesting.uk.resx">
       <DependentUpon>PinTesting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\TemperatureCalibration.en-US.resx">

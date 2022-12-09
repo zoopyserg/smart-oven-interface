@@ -264,7 +264,7 @@ namespace Oven_Interface.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        [global::System.Configuration.DefaultSettingValueAttribute("3")]
         public int relayBoardNumber {
             get {
                 return ((int)(this["relayBoardNumber"]));
@@ -288,7 +288,7 @@ namespace Oven_Interface.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("3")]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
         public int waterCounterBoardNumber {
             get {
                 return ((int)(this["waterCounterBoardNumber"]));

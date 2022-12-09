@@ -68,13 +68,13 @@
       <Value Profile="(Default)">Data Source=(localdb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\OvenDatabase.mdf;Integrated Security=True</Value>
     </Setting>
     <Setting Name="relayBoardNumber" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">1</Value>
+      <Value Profile="(Default)">3</Value>
     </Setting>
     <Setting Name="temperatureSensorBoardNumber" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">2</Value>
     </Setting>
     <Setting Name="waterCounterBoardNumber" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">3</Value>
+      <Value Profile="(Default)">1</Value>
     </Setting>
   </Settings>
 </SettingsFile>

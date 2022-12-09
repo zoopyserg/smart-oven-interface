@@ -28,6 +28,10 @@ namespace Oven_Interface.Views
             waterValveOpenRelayPin.Value = Properties.Settings.Default.waterSolenoidPin;
 
             waterCounterPin.Value = Properties.Settings.Default.waterCounterPin;
+
+            relayBoardNumber.Value = Properties.Settings.Default.relayBoardNumber;
+            temperatureSensorBoardNumber.Value = Properties.Settings.Default.temperatureSensorBoardNumber;
+            waterCounterBoardNumber.Value = Properties.Settings.Default.waterCounterBoardNumber;
         }
 
         private void button55_Click(object sender, EventArgs e)
@@ -46,6 +50,9 @@ namespace Oven_Interface.Views
             Properties.Settings.Default.closeVentilationPin = Decimal.ToInt32(ventilationCloseRelayPin.Value);
             Properties.Settings.Default.waterSolenoidPin = Decimal.ToInt32(waterValveOpenRelayPin.Value);
             Properties.Settings.Default.waterCounterPin = Decimal.ToInt32(waterCounterPin.Value);
+            Properties.Settings.Default.relayBoardNumber = Decimal.ToInt32(relayBoardNumber.Value);
+            Properties.Settings.Default.temperatureSensorBoardNumber = Decimal.ToInt32(temperatureSensorBoardNumber.Value);
+            Properties.Settings.Default.waterCounterBoardNumber = Decimal.ToInt32(waterCounterBoardNumber.Value);
             Properties.Settings.Default.Save();
             this.Close();
         }
