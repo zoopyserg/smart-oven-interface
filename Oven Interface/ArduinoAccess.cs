@@ -263,11 +263,19 @@ namespace Oven_Interface
         {
             if (previousWaterSensorLockLevel <= 300 && eventArgs.Value.Level > 300)
             {
+                System.Diagnostics.Debug.WriteLine("Changing from Low to High");
+                System.Diagnostics.Debug.WriteLine($"Previous Level: {previousWaterSensorLockLevel}");
+                System.Diagnostics.Debug.WriteLine($"Next Level: {eventArgs.Value.Level}");
+                System.Diagnostics.Debug.WriteLine($"Time: {DateTime.Now}");
                 previousWaterSensorLockLevel = eventArgs.Value.Level;
                 form.UpdateClicksAsync(form, eventArgs);
             }
             else if (previousWaterSensorLockLevel > 300 && eventArgs.Value.Level <= 300)
             {
+                System.Diagnostics.Debug.WriteLine("Changing from High to Low");
+                System.Diagnostics.Debug.WriteLine($"Previous Level: {previousWaterSensorLockLevel}");
+                System.Diagnostics.Debug.WriteLine($"Next Level: {eventArgs.Value.Level}");
+                System.Diagnostics.Debug.WriteLine($"Time: {DateTime.Now}");
                 previousWaterSensorLockLevel = eventArgs.Value.Level;
                 form.UpdateClicksAsync(form, eventArgs);
             }
