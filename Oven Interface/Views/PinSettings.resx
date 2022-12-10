@@ -339,6 +339,9 @@
   <data name="&gt;&gt;waterBoardNumber.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="&gt;&gt;numericUpDown8.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
   <data name="label11.TabIndex" type="System.Int32, mscorlib">
     <value>51</value>
   </data>
@@ -408,8 +411,8 @@
   <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
   </data>
-  <data name="&gt;&gt;numericUpDown8.Parent" xml:space="preserve">
-    <value>groupBox1</value>
+  <data name="relayBoardNumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>602, 31</value>
   </data>
   <data name="&gt;&gt;label7.Parent" xml:space="preserve">
     <value>groupBox2</value>
@@ -465,9 +468,6 @@
   <data name="ventilationOpenRelayPin.TabIndex" type="System.Int32, mscorlib">
     <value>48</value>
   </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 197</value>
   </data>
@@ -513,8 +513,8 @@
   <data name="&gt;&gt;label5.Name" xml:space="preserve">
     <value>label5</value>
   </data>
-  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 100</value>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;powerplantRelayPin.ZOrder" xml:space="preserve">
     <value>10</value>
@@ -552,8 +552,8 @@
   <data name="label4.Text" xml:space="preserve">
     <value>Реле Відкривання Провітрення (відкривання заслонки вентиляції): Цифровий Пін №</value>
   </data>
-  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="waterCounterBoardNumber.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 20</value>
   </data>
   <data name="&gt;&gt;label9.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -593,9 +593,6 @@
   </data>
   <data name="&gt;&gt;temperatureSensorBoardNumber.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="waterCounterBoardNumber.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 20</value>
   </data>
   <data name="&gt;&gt;label18.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -675,8 +672,8 @@
   <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="&gt;&gt;powerplantRelayPin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;temperatureSensorBoardNumber.Parent" xml:space="preserve">
     <value>groupBox1</value>
@@ -773,6 +770,9 @@
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>PinSettings</value>
+  </data>
+  <data name="&gt;&gt;ventilationOpenRelayPin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;numericUpDown8.ZOrder" xml:space="preserve">
     <value>14</value>
@@ -966,7 +966,7 @@
   <data name="ventilationCloseRelayPin.Location" type="System.Drawing.Point, System.Drawing">
     <value>602, 222</value>
   </data>
-  <data name="&gt;&gt;ventilationOpenRelayPin.Type" xml:space="preserve">
+  <data name="&gt;&gt;powerplantRelayPin.Type" xml:space="preserve">
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
@@ -978,9 +978,6 @@
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="relayBoardNumber.Location" type="System.Drawing.Point, System.Drawing">
-    <value>602, 31</value>
-  </data>
   <data name="&gt;&gt;ventilationCloseRelayPin.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
@@ -989,6 +986,9 @@
   </data>
   <data name="&gt;&gt;thermalIncreaseRelayPin.ZOrder" xml:space="preserve">
     <value>14</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 100</value>
   </data>
   <data name="waterCounterPin.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 20</value>

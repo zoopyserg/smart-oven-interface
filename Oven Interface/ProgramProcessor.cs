@@ -113,8 +113,6 @@ namespace Oven_Interface
         {
             try
             {
-
-
                 if (runningProgram != null)
                 {
                     this.canChangeTempTimer.Start();
@@ -128,8 +126,8 @@ namespace Oven_Interface
                         {
                             minutesPassed += 1;
 
-                        // edit temperature
-                        ExpectedTemperature = runningProgram.CurrentExpectedTemperature(minutesPassed);
+                            // edit temperature
+                            ExpectedTemperature = runningProgram.CurrentExpectedTemperature(minutesPassed);
                             form.UpdateExpectedTemperatureAsync(form, $"{ ExpectedTemperature.ToString() } C");
 
                             if (canChangeTemp)
@@ -150,10 +148,9 @@ namespace Oven_Interface
                                 this.canChangeTemp = false;
                             }
 
-                        // edit valve
+                            // edit valve
 
-                        ExpectedValvePoint = runningProgram.CurrentExpectedValve(minutesPassed);
-
+                            ExpectedValvePoint = runningProgram.CurrentExpectedValve(minutesPassed);
                             if (ExpectedValvePoint.Minute != -1 && canChangeValve && ((lastProcessedValveMinute == -1) || (lastProcessedValveMinute != -1 && lastProcessedValveMinute != ExpectedValvePoint.Minute)))
                             {
                                 lastProcessedValveMinute = ExpectedValvePoint.Minute;
@@ -165,20 +162,22 @@ namespace Oven_Interface
                                 this.canChangeValve = false;
                             }
 
-                        // edit water
+                            // edit water
 
-                        ExpectedWaterPoint = runningProgram.CurrentExpectedWater(minutesPassed);
-
-                            if (ExpectedWaterPoint.Minute != -1 && canChangeWater && ((lastProcessedWaterMinute == -1) || (lastProcessedWaterMinute != -1 && lastProcessedWaterMinute != ExpectedWaterPoint.Minute)))
+                            ExpectedWaterPoint = runningProgram.CurrentExpectedWater(minutesPassed);
+                            bool minuteIsProcessable = (lastProcessedWaterMinute == -1) || (lastProcessedWaterMinute != -1 && lastProcessedWaterMinute != ExpectedWaterPoint.Minute);
+                            bool shouldUpdateWaterClicks = ExpectedWaterPoint.Value > 0 && ExpectedWaterPoint.Minute != -1 && canChangeWater && minuteIsProcessable;
+                            
+                            if (shouldUpdateWaterClicks)
                             {
                                 form.CurrentClicks = 0;
                                 form.ExpectedClicks = Decimal.ToInt32(ExpectedWaterPoint.Value * Properties.Settings.Default.waterClicksPerLiter); // todo: convert liters to clicks, now I just store clicks
                                 lastProcessedWaterMinute = ExpectedWaterPoint.Minute;
                                 form.ArduinoConnection.TurnOnPin(Properties.Settings.Default.waterSolenoidPin, Properties.Settings.Default.relayBoardNumber);
-
+                            
                                 this.canChangeWater = false;
                             }
-
+                            
                             BreadsController.Update(runningProgram.Id, minutesPassed);
                             form.UpdateProgressBarAsync(form, 0, minutesPassed, runningProgram.Duration);
                             form.UpdateTimeLeftAsync(form, ((runningProgram.Duration - minutesPassed) / 60).ToString());
@@ -196,8 +195,6 @@ namespace Oven_Interface
         {
             try
             {
-
-
                 if (runningProgram != null)
                 {
                     form.Invoke(new Action(() =>
@@ -218,8 +215,6 @@ namespace Oven_Interface
         {
             try
             {
-
-
                 if (runningProgram != null)
                 {
                     form.Invoke(new Action(() =>
@@ -240,8 +235,6 @@ namespace Oven_Interface
         {
             try
             {
-
-
                 if (runningProgram != null)
                 {
                     form.Invoke(new Action(() =>

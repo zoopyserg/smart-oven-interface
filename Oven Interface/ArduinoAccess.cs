@@ -66,6 +66,7 @@ namespace Oven_Interface
                     
                     PerformInitialization();
                     ListenTemperature();
+                    ListenWater();
 
                     form.EnableDisableContinueButton();
                     form.EnableDisableStartButton();
@@ -249,42 +250,45 @@ namespace Oven_Interface
             form.allActionsTabControl.SelectedTab = form.statusPage;
         }
 
-        private void Session_OnAnalogStateReceived(object sender, FirmataEventArgs<AnalogState> eventArgs)
+        private void Session_OnTemperatureAnalogStateReceived(object sender, FirmataEventArgs<AnalogState> eventArgs)
         {
-            if (eventArgs.Value.Channel == Properties.Settings.Default.channelTemperatureSensor)
+            if (previousTemperatureLevel != eventArgs.Value.Level)
             {
-                if (previousTemperatureLevel != eventArgs.Value.Level)
-                {
-                    this.form.UpdateStatusListBoxAsync(form, eventArgs);
-                    previousTemperatureLevel = eventArgs.Value.Level;
-                }
+                this.form.UpdateStatusListBoxAsync(form, eventArgs);
+                previousTemperatureLevel = eventArgs.Value.Level;
             }
-            else if (eventArgs.Value.Channel == Properties.Settings.Default.waterCounterPin)
+        }
+
+        private void Session_OnWaterAnalogStateReceived(object sender, FirmataEventArgs<AnalogState> eventArgs)
+        {
+            if (previousWaterSensorLockLevel <= 300 && eventArgs.Value.Level > 300)
             {
-                if (previousWaterSensorLockLevel <= 300 && eventArgs.Value.Level > 300)
-                {
-                    previousWaterSensorLockLevel = eventArgs.Value.Level;
-                }
-                else if (previousWaterSensorLockLevel > 300 && eventArgs.Value.Level <= 300)
-                {
-                    previousWaterSensorLockLevel = eventArgs.Value.Level;
-                    form.UpdateClicksAsync(form, eventArgs);
-                }
-                else
-                {
-                    previousWaterSensorLockLevel = eventArgs.Value.Level;
-                }
+                previousWaterSensorLockLevel = eventArgs.Value.Level;
+                form.UpdateClicksAsync(form, eventArgs);
+            }
+            else if (previousWaterSensorLockLevel > 300 && eventArgs.Value.Level <= 300)
+            {
+                previousWaterSensorLockLevel = eventArgs.Value.Level;
+                form.UpdateClicksAsync(form, eventArgs);
             }
         }
 
         public void ListenTemperature()
         {
             // todo: check if this works (it was a different class last time it did);
-            tempSensorBoardSession.AnalogStateReceived += Session_OnAnalogStateReceived;
+            tempSensorBoardSession.AnalogStateReceived += Session_OnTemperatureAnalogStateReceived;
             tempSensorBoardSession.ResetBoard();
             tempSensorBoardSession.SetAnalogReportMode(Properties.Settings.Default.channelTemperatureSensor, true);
-            tempSensorBoardSession.SetAnalogReportMode(3, true);
             tempSensorBoardSession.SetSamplingInterval(Properties.Settings.Default.howOftenToCheckSensors); // todo: edit this parameter
+        }
+
+        public void ListenWater()
+        {
+            // todo: check if this works (it was a different class last time it did);
+            waterCounterBoardSession.AnalogStateReceived += Session_OnWaterAnalogStateReceived;
+            waterCounterBoardSession.ResetBoard();
+            waterCounterBoardSession.SetAnalogReportMode(Properties.Settings.Default.waterCounterPin, true);
+            waterCounterBoardSession.SetSamplingInterval(Properties.Settings.Default.howOftenToCheckSensors); // todo: edit this parameter
         }
 
         public void Disconnect()
