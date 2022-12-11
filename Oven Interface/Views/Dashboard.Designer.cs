@@ -166,6 +166,9 @@ namespace Oven_Interface
             this.button9 = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
             this.clickCounterLabel = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.literCounterLabel = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.breadBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.actionGroupBox.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -207,6 +210,7 @@ namespace Oven_Interface
             ((System.ComponentModel.ISupportInitialize)(this.newTemperaturePointValueTextBox)).BeginInit();
             this.programsIndexGroupBox.SuspendLayout();
             this.programFormGroupBox.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.breadBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -1142,6 +1146,26 @@ namespace Oven_Interface
             resources.ApplyResources(this.clickCounterLabel, "clickCounterLabel");
             this.clickCounterLabel.Name = "clickCounterLabel";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.literCounterLabel);
+            this.groupBox2.Controls.Add(this.clickCounterLabel);
+            this.groupBox2.Controls.Add(this.label23);
+            this.groupBox2.Controls.Add(this.label21);
+            resources.ApplyResources(this.groupBox2, "groupBox2");
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.TabStop = false;
+            // 
+            // literCounterLabel
+            // 
+            resources.ApplyResources(this.literCounterLabel, "literCounterLabel");
+            this.literCounterLabel.Name = "literCounterLabel";
+            // 
+            // label23
+            // 
+            resources.ApplyResources(this.label23, "label23");
+            this.label23.Name = "label23";
+            // 
             // breadBindingSource
             // 
             this.breadBindingSource.DataSource = typeof(Oven_Interface.Bread);
@@ -1150,8 +1174,7 @@ namespace Oven_Interface
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.clickCounterLabel);
-            this.Controls.Add(this.label21);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button8);
@@ -1224,6 +1247,8 @@ namespace Oven_Interface
             this.programsIndexGroupBox.ResumeLayout(false);
             this.programFormGroupBox.ResumeLayout(false);
             this.programFormGroupBox.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.breadBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1353,6 +1378,9 @@ namespace Oven_Interface
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label clickCounterLabel;
         private System.Windows.Forms.ToolStripMenuItem калібруванняЛічильникаВодиToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label literCounterLabel;
+        private System.Windows.Forms.Label label23;
     }
 }
 

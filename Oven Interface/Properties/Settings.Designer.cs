@@ -25,7 +25,7 @@ namespace Oven_Interface.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0.0023289618877854")]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.00683333")]
         public decimal temperatureCoefficientA {
             get {
                 return ((decimal)(this["temperatureCoefficientA"]));
@@ -37,7 +37,7 @@ namespace Oven_Interface.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("-0.8132904677022324")]
+        [global::System.Configuration.DefaultSettingValueAttribute("-4.84517")]
         public decimal temperatureCoefficientB {
             get {
                 return ((decimal)(this["temperatureCoefficientB"]));
@@ -49,7 +49,7 @@ namespace Oven_Interface.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("-60.54023427552839")]
+        [global::System.Configuration.DefaultSettingValueAttribute("823.974")]
         public decimal temperatureCoefficientC {
             get {
                 return ((decimal)(this["temperatureCoefficientC"]));
@@ -229,7 +229,7 @@ namespace Oven_Interface.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        [global::System.Configuration.DefaultSettingValueAttribute("12")]
         public long waterClicksPerLiter {
             get {
                 return ((long)(this["waterClicksPerLiter"]));

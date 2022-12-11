@@ -3,13 +3,13 @@
   <Profiles />
   <Settings>
     <Setting Name="temperatureCoefficientA" Type="System.Decimal" Scope="User">
-      <Value Profile="(Default)">0.0023289618877854</Value>
+      <Value Profile="(Default)">0.00683333</Value>
     </Setting>
     <Setting Name="temperatureCoefficientB" Type="System.Decimal" Scope="User">
-      <Value Profile="(Default)">-0.8132904677022324</Value>
+      <Value Profile="(Default)">-4.84517</Value>
     </Setting>
     <Setting Name="temperatureCoefficientC" Type="System.Decimal" Scope="User">
-      <Value Profile="(Default)">-60.54023427552839</Value>
+      <Value Profile="(Default)">823.974</Value>
     </Setting>
     <Setting Name="channelTemperatureSensor" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">5</Value>
@@ -54,7 +54,7 @@
       <Value Profile="(Default)">5000</Value>
     </Setting>
     <Setting Name="waterClicksPerLiter" Type="System.Int64" Scope="User">
-      <Value Profile="(Default)">1</Value>
+      <Value Profile="(Default)">12</Value>
     </Setting>
     <Setting Name="howOftenToCheckSensors" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">200</Value>

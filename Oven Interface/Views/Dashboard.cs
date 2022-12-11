@@ -6,6 +6,7 @@ using Solid.Arduino.Firmata;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Timers;
@@ -192,12 +193,20 @@ namespace Oven_Interface
                 return;
             }
 
+            // Log current clicks to debugger
+            System.Diagnostics.Debug.WriteLine(this.CurrentClicks.ToString());
+
             this.CurrentClicks += 1;
             UpdateCurrentClicks(this.CurrentClicks.ToString());
+            double liters = this.CurrentClicks * (1.0 / Properties.Settings.Default.waterClicksPerLiter);
+
+            // round liters
+            liters = Math.Round(liters, 2);
+            UpdateCurrentLiters(liters.ToString());
 
             if (CurrentClicks >= ExpectedClicks)
             {
-                this.ArduinoConnection.TurnOffPin(Properties.Settings.Default.waterSolenoidPin, Properties.Settings.Default.waterCounterBoardNumber);
+                this.ArduinoConnection.TurnOffPin(Properties.Settings.Default.waterSolenoidPin, Properties.Settings.Default.relayBoardNumber);
                 this.programProcessor.canChangeWater = true;
                 this.CurrentClicks = 0;
                 this.ExpectedClicks = 0;
@@ -209,6 +218,11 @@ namespace Oven_Interface
         public void UpdateCurrentClicks(string str)
         {
             clickCounterLabel.Text = str;
+        }
+
+        public void UpdateCurrentLiters(string str)
+        {
+            literCounterLabel.Text = str;
         }
 
         public void UpdateActiveProgramNameLabelAsync(object sender, string programName)
